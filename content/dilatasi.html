@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/output.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Dilatasi</title>
+    <style>
+      @font-face {
+        font-family: 'Lato';
+        src: url('../font/Lato-Regular.ttf') format('truetype');
+      }
+
+      @keyframes macan {
+        100% {
+          transform: translateX(70px) translateY(-5px) scale(1.5);
+        }
+      }
+
+      .macan {
+        animation: macan 3s forwards;
+        animation-delay: 1s;
+      }
+
+      @keyframes pusatTengah {
+        0% {
+          transform: translateY(0px) scale(1);
+        }
+        50% {
+          transform: translateY(-10px) scale(3);
+        }
+        100% {
+          transform: translateY(0px) scale(1);
+        }
+      }
+
+      @keyframes pusatLuar {
+        0% {
+          transform: translateX(0px) scale(1);
+        }
+        30% {
+          transform: translateX(100px) translateY(-51px) scale(2.2);
+        }
+        60% {
+          transform: translateX(0px) translateY(0px) scale(1);
+        }
+        80% {
+          transform: translateX(-50px) translateY(28px) scale(0.4);
+        }
+        100% {
+          transform: translateX(0px) scale(1);
+        }
+      }
+
+      .pusatTengah {
+        animation: pusatTengah 3s linear infinite;
+      }
+
+      .pusatLuar {
+        animation: pusatLuar 6s linear infinite;
+        animation-delay: 0s;
+      }
+
+      @keyframes garisLuar1 {
+        0% {
+          width: 72px;
+        }
+        30% {
+          width: 144px;
+        }
+        60% {
+          width: 72px;
+        }
+        100% {
+          width: 72px;
+        }
+      }
+
+      .garisLuar1 {
+        animation: garisLuar1 6s linear infinite;
+      }
+
+      @keyframes garisLuar2 {
+        0% {
+          width: 120px;
+        }
+        30% {
+          width: 263px;
+        }
+        60% {
+          width: 120px;
+        }
+        100% {
+          width: 120px;
+        }
+      }
+
+      .garisLuar2 {
+        animation: garisLuar2 6s linear infinite;
+      }
+
+      @keyframes garisLuar3 {
+        0% {
+          width: 107px;
+        }
+        30% {
+          width: 229px;
+        }
+        60% {
+          width: 107px;
+        }
+        100% {
+          width: 107px;
+        }
+      }
+
+      .garisLuar3 {
+        animation: garisLuar3 6s linear infinite;
+      }
+
+      @keyframes pembesaran {
+        0% {
+          transform: translateX(0px) scale(1);
+        }
+        100% {
+          transform: translateX(60px) translateY(-2px) scale(1.7);
+        }
+      }
+
+      .pembesaran {
+        animation: pembesaran 3s linear forwards;
+        animation-delay: 3s;
+      }
+
+      @keyframes pengecilan {
+        0% {
+          transform: translateX(0px) scale(1);
+        }
+        100% {
+          transform: translateX(-50px) translateY(5px) scale(0.5);
+        }
+      }
+
+      .pengecilan {
+        animation: pengecilan 3s linear forwards;
+        animation-delay: 3s;
+      }
+
+      @keyframes garisBesar1 {
+        0% {
+          width: 67px;
+        }
+        100% {
+          width: 99px;
+        }
+      }
+
+      .garisBesar1 {
+        animation: garisBesar1 3s linear forwards;
+        animation-delay: 3s;
+      }
+
+      @keyframes garisBesar2 {
+        0% {
+          width: 120px;
+        }
+        100% {
+          width: 191px;
+        }
+      }
+
+      .garisBesar2 {
+        animation: garisBesar2 3s linear forwards;
+        animation-delay: 3s;
+      }
+
+      @keyframes garisBesar3 {
+        0% {
+          width: 135px;
+        }
+        100% {
+          width: 225px;
+        }
+      }
+
+      .garisBesar3 {
+        animation: garisBesar3 3s linear forwards;
+        animation-delay: 3s;
+      }
+
+      @keyframes animasiTes1 {
+        0% {
+          transform: translateY(0px) scale(1);
+        }
+        100% {
+          transform: translateY(-50px) scale(1.6);
+        }
+      }
+
+      .animasiTes1 {
+        animation: animasiTes1 1.2s linear forwards;
+        animation-delay: 1.8s;
+      }
+
+      @keyframes garistes1 {
+        to {
+          height: 174px;
+        }
+      }
+
+      .garistes1 {
+        animation: garistes1 3s linear forwards;
+      }
+
+      @keyframes garistes2 {
+        to {
+          height: 212px;
+        }
+      }
+
+      .garistes2 {
+        animation: garistes2 3s linear forwards;
+      }
+
+      @keyframes garistes3 {
+        to {
+          height: 125px;
+        }
+      }
+
+      .garistes3 {
+        animation: garistes3 3s linear forwards;
+      }
+
+      @keyframes garistes4 {
+        to {
+          height: 152px;
+        }
+      }
+
+      .garistes4 {
+        animation: garistes4 3s linear forwards;
+      }
+
+      @keyframes Derajatmuncul {
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .Derajatmuncul {
+        animation: Derajatmuncul 1s linear forwards;
+        animation-delay: 3s;
+      }
+
+      @keyframes skalaSeperempat {
+        to {
+          transform: translateX(91px);
+        }
+      }
+
+      .skalaSeperempat {
+        animation: skalaSeperempat 3s forwards;
+        animation-delay: 1s;
+      }
+
+      @keyframes skalaDua {
+        0% {
+          transform: translate(0) scale(1);
+        }
+        100% {
+          transform: translateX(-60px) translateY(-60px) scale(2);
+        }
+      }
+
+      .skalaDua {
+        animation: skalaDua 3s forwards;
+        animation-delay: 1s;
+      }
+
+      @keyframes garisSkaladua1 {
+        to {
+          height: 85px;
+        }
+      }
+
+      @keyframes garisSkaladua2 {
+        to {
+          height: 190px;
+        }
+      }
+
+      .garisSkaladua1 {
+        animation: garisSkaladua1 3.9s forwards;
+      }
+
+      .garisSkaladua2 {
+        animation: garisSkaladua2 3.9s forwards;
+      }
+
+      @keyframes pilihanA {
+        0% {
+          transform: translate(0) scale(1);
+        }
+        100% {
+          transform: translateX(86px) translateY(30px) scale(0.5);
+        }
+      }
+
+      @keyframes pilihanB {
+        0% {
+          transform: translate(0) scale(1);
+        }
+        100% {
+          transform: translateX(86px) translateY(30px) scale(0.5) rotate(-30deg);
+        }
+      }
+
+      @keyframes pilihanC {
+        0% {
+          transform: translate(0) scale(1);
+        }
+        100% {
+          transform: translateX(86px) translateY(0px) scale(1);
+        }
+      }
+
+      .pilihanA {
+        animation: pilihanA 3s forwards;
+        animation-delay: 5s;
+      }
+
+      .pilihanB {
+        animation: pilihanB 3s forwards;
+        animation-delay: 5s;
+      }
+
+      .pilihanC {
+        animation: pilihanC 3s forwards;
+        animation-delay: 5s;
+      }
+    </style>
+  </head>
+  <body class="md:bg-gray-100">
+    <nav class="w-full flex justify-center">
+      <div
+        class="container flex flex-wrap px-2 top-0 py-5 flex-row items-center justify-between max-w-4xl md:px-4 z-50 bg-white bg-opacity-90 fixed"
+      >
+        <a class="flex font-bold items-center text-primary tras" id="judul">
+          <span class="ml-3 text-lg relative">Transformasi Geometri</span>
+        </a>
+
+        <div class="flex">
+          <div class="md:hidden mr-3">
+            <a
+              class="p-[10px] rounded-full bg-[#FFF5F5] shadow-custom inline-block"
+              id="home"
+              href="../index.html"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="20"
+                viewBox="0 0 30 25"
+                fill="none"
+              >
+                <path
+                  d="M15 3.95588L22.5 10.5735V22.0588H19.5V13.2353H10.5V22.0588H7.5V10.5735L15 3.95588ZM15 0L0 13.2353H4.5V25H13.5V16.1765H16.5V25H25.5V13.2353H30L15 0Z"
+                  fill="#094067"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="md:hidden">
+            <button
+              class="p-[13px] rounded-full bg-[#FFF5F5] shadow-custom"
+              id="sidebarToggle"
+              onclick="toggleNavbar()"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="19"
+                height="15"
+                viewBox="0 0 20 17"
+                fill="none"
+              >
+                <path
+                  d="M0 10.2H2.22222V6.8H0V10.2ZM0 17H2.22222V13.6H0V17ZM0 3.4H2.22222V0H0V3.4ZM4.44444 10.2H20V6.8H4.44444V10.2ZM4.44444 17H20V13.6H4.44444V17ZM4.44444 0V3.4H20V0H4.44444Z"
+                  fill="#094067"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="fixed top-4 text-right right-0 shadow-custom font-medium text-sm translate-x-full rounded-lg transition duration-300 ease-in-out w-48 bg-[#F3F4F6] text-primary p-5 md:relative md:rounded-none md:transform-none md:w-auto md:bg-transparent md:text-primary md:p-0 md:h-11 md:top-0 md:shadow-none"
+          id="sidebar"
+        >
+          <ul class="flex flex-col md:flex-row md:space-x-5">
+            <li class="mb-3 md:my-0">
+              <a
+                href="transformasi.html"
+                class="block p-2 hover:bg-white rounded md:hover:bg-transparent"
+                >Dasar Transformasi</a
+              >
+            </li>
+            <li class="mb-3 md:my-0">
+              <a
+                href="translasi.html"
+                class="block p-2 hover:bg-white rounded md:hover:bg-transparent"
+                >Translasi</a
+              >
+            </li>
+            <li class="mb-3 md:my-0">
+              <a
+                href="refleksi.html"
+                class="block p-2 hover:bg-white rounded md:hover:bg-transparent"
+                >Pencerminan</a
+              >
+            </li>
+            <li class="mb-3 md:my-0">
+              <a href="rotasi.html" class="block p-2 hover:bg-white rounded md:hover:bg-transparent"
+                >Rotasi</a
+              >
+            </li>
+            <li class="md:my-0">
+              <a
+                href="dilatasi.html"
+                class="block p-2 hover:bg-white rounded md:hover:bg-transparent"
+                >Dilatasi</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="container font-lato mt-[70px] px-5 text-[14px] font-medium text-secondary leading-6 tracking-wide w-full md:bg-gray-100"
+    >
+      <!-- Judul -->
+      <h2 class="text-hijau font-bold pt-8 md:mx-auto max-w-4xl md:px-8 bg-white">
+        Jenis transformasi
+      </h2>
+      <h1
+        class="text-[22px] pt-1 font-extrabold text-primary tracking-wider md:mx-auto max-w-4xl md:px-8 bg-white"
+      >
+        Dilatasi
+      </h1>
+      <!-- Akhir Judul -->
+
+      <!-- Hero Section -->
+      <div class="md:mx-auto max-w-4xl md:px-8 md:pb-10 bg-white">
+        <div class="w-48 h-64 flex justify-center items-center mx-auto pt-3">
+          <img src="../img/Dilatasi/Pohon.jpg" alt="" class="w-20 h-20 pohon" />
+        </div>
+
+        <p class="mt-4">
+          Jenis transformasi yang terakhir kita bahas adalah dilatasi. Pada dilatasi,
+          <span class="text-hijau font-semibold">ukuran</span> objek akan diperbesar dan
+          diperkecil.  Sangat mudah bukan?
+        </p>
+
+        <p class="mt-6 text-primary font-semibold">Perhatikan ilustrasi berikut!</p>
+        <p class="mt-1">
+          Bayangkan kamu mempunyai sebuah senter yang bisa memperbesar ukuran suatu benda
+        </p>
+
+        <button id="tombolSenter" class="py-1 px-3 bg-green-600 text-white rounded-md mt-4">
+          Nyala
+        </button>
+
+        <div class="w-72 h-64 flex items-center mx-auto relative -ml-3 md:mx-auto">
+          <img src="../img/Dilatasi/Senter.png" alt="" class="w-8 h-8 rotate-45 ml-9" />
+          <img src="../img/Dilatasi/Macan.png" alt="" class="w-20 h-20 ml-12 z-10" id="macan" />
+          <svg
+            width="207"
+            height="139"
+            viewBox="0 0 207 139"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="absolute ml-14 -mt-2 hidden cahayaSenter"
+          >
+            <path d="M0 66L207 0V139L0 83.5V66Z" fill="#FFFCE5" />
+          </svg>
+        </div>
+
+        <p class="mt-6">Dilatasi pada transformasi geometri memiliki konsep yang serupa</p>
+
+        <div class="mt-3" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="50">
+          <p class="border-l-8 border-hijau font-semibold pl-2 leading-relaxed text-primary">
+            <span class="font-bold text-hijau">Dilatasi</span> adalah bentuk transformasi geometri
+            yang mengubah ukuran suatu objek tanpa mengubah bentuknya dengan titik pusat dan skala
+            tertentu
+          </p>
+        </div>
+      </div>
+      <!-- Akhir Hero Section -->
+
+      <!-- Pusat Dilatasi -->
+      <div
+        class="md:mx-auto max-w-4xl bg-white md:px-8 md:mt-8 md:pb-8 border-b-2 pb-16 pt-14 md:pt-8"
+      >
+        <h2
+          class="md:-ml-3 h-14 w-44 shadow-custom flex items-center pl-3 font-bold text-primary text-base rounded-md border-l-2 border-b-2 border-hijau -ml-1"
+        >
+          Pusat Dilatasi
+        </h2>
+        <p class="mt-6">
+          <span class="text-hijau font-semibold">Pusat dilatasi</span> adalah titik acuan tetap
+          dimana dilatasi dilakukan. Objek yang dilatasikan bergerak menuju atau menjauhi pusat dan
+          akan tetap proporsional.
+        </p>
+        <p class="mt-4">
+          Pusat dilatasi bisa berada di dalam objek, juga bisa berada diluar objeknya.
+        </p>
+
+        <div class="mt-4 leading-5">
+          <div>
+            <div class="flex items-center">
+              <img src="../img/Point.png" alt="" class="w-8 h-8" />
+              <div class="ml-2">
+                Pusat dilatasi <span class="font-semibold text-hijau">di tengah objek</span>
+              </div>
+            </div>
+            <div
+              class="w-72 h-60 mt-4 ml-10 border-2 rounded-md relative flex justify-center items-center"
+              id=""
+            >
+              <div class="w-[8px] h-[8px] rounded-full bg-red absolute z-20"></div>
+              <svg
+                width="52"
+                height="45"
+                viewBox="0 0 52 45"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="absolute -mt-3 ml-[2px] pusatTengah"
+              >
+                <path d="M0.885262 44.5L26 0.999999L51.1147 44.5H0.885262Z" stroke="#7BFFD0" />
+              </svg>
+              <svg
+                width="88"
+                height="75"
+                viewBox="0 0 88 75"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="absolute -mt-5"
+              >
+                <path d="M1.56476 74.5L44 1L86.4352 74.5H1.56476Z" stroke="#D9D9D9" />
+              </svg>
+            </div>
+
+            <div class="flex items-center mt-8">
+              <img src="../img/Point.png" alt="" class="w-8 h-8" />
+              <div class="ml-2">
+                Pusat dilatasi
+                <span class="font-semibold text-hijau">di luar objek</span>
+              </div>
+            </div>
+            <div class="w-72 h-60 mt-4 ml-10 border-2 rounded-md relative px-7 py-7" id="">
+              <div class="w-[8px] h-[8px] rounded-full bg-red absolute z-20 bottom-7"></div>
+              <svg
+                width="35"
+                height="86"
+                viewBox="0 0 35 86"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="absolute bottom-7 left-24 z-20 pusatLuar"
+              >
+                <path
+                  d="M33.8566 58.619L1.55739 83.5356L18.76 4.17173L33.8566 58.619Z"
+                  stroke="#7BFFD0"
+                  stroke-width="2"
+                />
+              </svg>
+
+              <svg
+                width="35"
+                height="86"
+                viewBox="0 0 35 86"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="absolute bottom-7 left-24"
+              >
+                <path
+                  d="M34.4283 58.8095L0.778696 84.7678L18.7005 2.08587L34.4283 58.8095Z"
+                  stroke="#D9D9D9"
+                />
+              </svg>
+
+              <div class="h-[2px] w-[0px] bg-blue garisLuar1 opacity-40 absolute bottom-7"></div>
+              <div
+                class="h-[2px] w-[0px] bg-blue garisLuar2 opacity-40 absolute bottom-7 origin-bottom-left -rotate-[44deg]"
+              ></div>
+              <div
+                class="h-[2px] w-[0px] bg-blue garisLuar3 opacity-40 absolute bottom-7 origin-bottom-left -rotate-[15deg]"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Akhir Pusat Dilatasi -->
+
+      <!-- Skala Dilatasi -->
+      <div
+        class="md:mx-auto max-w-4xl bg-white md:px-8 border-b-2 pt-14 pb-16 md:pb-8 md:mt-8 md:pt-8"
+      >
+        <h2
+          class="md:-ml-3 h-14 w-44 shadow-custom flex items-center pl-3 font-bold text-primary text-base rounded-md border-l-2 border-b-2 border-hijau -ml-1"
+        >
+          Skala Dilatasi
+        </h2>
+        <p class="mt-6">
+          <span class="text-hijau font-semibold">Faktor skala</span> menentukan apakah suatu
+          dilatasi merupakan pembesaran atau pengecilan.
+        </p>
+
+        <p class="mt-6">
+          <span class="text-hijau font-semibold">Faktor skala</span> menggambarkan perubahan ukuran
+          pada objek, misalnya:
+        </p>
+        <ul class="list-disc list-outside ml-6">
+          <li>Skala 2 artinya objek akan berukuran 2 kali dari ukuran aslinya</li>
+          <li>Skala 0.5 atau 1/2 artinya objek akan berukuran setengah dari ukuran aslinya</li>
+        </ul>
+
+        <p class="mt-4">
+          Kita akan melambangkan faktor skala dengan huruf
+          <span class="italic font-semibold text-hijau">k</span>. Jika
+          <span class="italic font-semibold text-hijau">k</span> = 1 maka ukuran objek tidak berubah
+        </p>
+
+        <div class="mt-4 leading-5">
+          <div>
+            <div class="flex items-center">
+              <img src="../img/Point.png" alt="" class="w-8 h-8" />
+              <div class="ml-2">
+                Jika <span class="italic font-semibold text-hijau">k</span> > 1 maka terjadi
+                <span class="font-semibold text-hijau">pembesaran</span> dan objek menjauh dari
+                titik pusat
+              </div>
+            </div>
+            <div
+              class="w-72 h-60 mt-4 ml-10 border-2 rounded-md relative px-7 py-7"
+              id="pembesaranK"
+            >
+              <div class="w-full h-full hidden" id="animasipembesaranK">
+                <div class="w-[8px] h-[8px] rounded-full bg-red absolute z-20 bottom-[105px]"></div>
+                <svg
+                  width="81"
+                  height="83"
+                  viewBox="0 0 81 83"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute top-[60px] left-[80px] mt-5"
+                >
+                  <path
+                    d="M1.56142 15.8949L57.195 1.10996L79.5842 81.0833L1.56142 15.8949Z"
+                    stroke="#D9D9D9"
+                  />
+                </svg>
+
+                <svg
+                  width="81"
+                  height="83"
+                  viewBox="0 0 81 83"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute top-[60px] left-[80px] mt-5 pembesaran"
+                >
+                  <path
+                    d="M1.56142 15.8949L57.195 1.10996L79.5842 81.0833L1.56142 15.8949Z"
+                    stroke="#7BFFD0"
+                  />
+                </svg>
+
+                <div
+                  class="h-[2px] w-[67px] bg-blue garisBesar1 opacity-40 absolute bottom-[108px] origin-bottom-left -rotate-[30deg]"
+                ></div>
+                <div
+                  class="h-[2px] w-[120px] bg-blue garisBesar2 opacity-40 absolute bottom-[108px] origin-bottom-left -rotate-[23deg]"
+                ></div>
+                <div
+                  class="h-[2px] w-[135px] bg-blue garisBesar3 opacity-40 absolute bottom-[108px] origin-bottom-left rotate-[15deg]"
+                ></div>
+              </div>
+            </div>
+
+            <div class="flex items-center mt-8">
+              <img src="../img/Point.png" alt="" class="w-8 h-8" />
+              <div class="ml-2">
+                Jika 0 < <span class="italic font-semibold text-hijau">k</span> < 1 maka terjadi
+                <span class="font-semibold text-hijau">pengecilan</span> dan objek mendekat dari
+                titik pusat
+              </div>
+            </div>
+            <div
+              class="w-72 h-60 mt-4 ml-10 border-2 rounded-md relative px-7 py-7"
+              id="pengecilanK"
+            >
+              <div class="w-full h-full hidden" id="animasipengecilanK">
+                <div class="w-[8px] h-[8px] rounded-full bg-red absolute z-20 bottom-[105px]"></div>
+                <svg
+                  width="81"
+                  height="83"
+                  viewBox="0 0 81 83"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute top-[60px] left-[80px] mt-5"
+                >
+                  <path
+                    d="M1.56142 15.8949L57.195 1.10996L79.5842 81.0833L1.56142 15.8949Z"
+                    stroke="#D9D9D9"
+                  />
+                </svg>
+
+                <svg
+                  width="81"
+                  height="83"
+                  viewBox="0 0 81 83"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute top-[60px] left-[80px] mt-5 pengecilan"
+                >
+                  <path
+                    d="M1.56142 15.8949L57.195 1.10996L79.5842 81.0833L1.56142 15.8949Z"
+                    stroke="#7BFFD0"
+                  />
+                </svg>
+
+                <div
+                  class="h-[2px] w-[67px] bg-blue garisKecil1 opacity-40 absolute bottom-[108px] origin-bottom-left -rotate-[30deg]"
+                ></div>
+                <div
+                  class="h-[2px] w-[120px] bg-blue garisKecil2 opacity-40 absolute bottom-[108px] origin-bottom-left -rotate-[23deg]"
+                ></div>
+                <div
+                  class="h-[2px] w-[135px] bg-blue garisKecil3 opacity-40 absolute bottom-[108px] origin-bottom-left rotate-[15deg]"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="mt-6">
+          Fungsi garis biru di animasi untuk menunjukkan bahwa hasil dilatasi objek proporsional
+          terhada objek aslinya
+        </p>
+      </div>
+      <!-- Akhir Skala Dilatasi -->
+
+      <!-- Tes Pemahaman 1 -->
+      <div class="md:mx-auto max-w-4xl bg-white md:px-8 pt-8 md:mt-8 md:pt-8 md:pb-8">
+        <div class="max-w-md">
+          <div class="flex items-center">
+            <img src="../img/tespemahaman.png" alt="" class="w-16 h-16" />
+            <div class="text-xl font-semibold tracking-wides text-hijau ml-2">Tes Pemahaman</div>
+          </div>
+
+          <div
+            class="mt-3 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative pb-5"
+            id="TesPertama1"
+          >
+            <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40">TES PERTAMA</p>
+            <p class="mt-1">
+              Sebuah segitiga didilatasi pada pusat titik P dengan skala 1/2. Manakah animasi yang
+              sesuai?
+            </p>
+
+            <div class="hidden" id="pilihanTespertama">
+              <div
+                class="flex items-center border-t-2 border-b-2 py-[6px] cursor-pointer mt-3"
+                id="A1"
+              >
+                <button
+                  class="h-7 w-7 border-2 border-primary rounded-full text-black"
+                  id="buttonA1"
+                >
+                  A
+                </button>
+                <div class="ml-4 h-44 w-64 relative">
+                  <div class="h-[8px] w-[8px] bg-red rounded-full absolute right-10 bottom-9"></div>
+                  <div class="absolute text-red font-semibold right-6 bottom-[30px]">P</div>
+                  <svg
+                    width="59"
+                    height="118"
+                    viewBox="0 0 59 118"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="absolute bottom-[36px] left-5"
+                  >
+                    <path d="M29 0L58.5 12L29 118L0.5 104L29 0Z" fill="#D9D9D9" />
+                  </svg>
+                  <svg
+                    width="58"
+                    height="118"
+                    viewBox="0 0 58 118"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="absolute bottom-[36px] left-5 z-10 pilihanA"
+                  >
+                    <path d="M28.5 0L58 12L28.5 118L0 104L28.5 0Z" fill="#7BFFD0" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="flex items-center border-b-2 py-[6px] cursor-pointer" id="B1">
+                <button
+                  class="h-7 w-7 border-2 border-primary rounded-full text-black"
+                  id="buttonB1"
+                >
+                  B
+                </button>
+                <div class="ml-4 h-44 w-64 relative">
+                  <div class="h-[8px] w-[8px] bg-red rounded-full absolute right-10 bottom-9"></div>
+                  <div class="absolute text-red font-semibold right-6 bottom-[30px]">P</div>
+                  <svg
+                    width="59"
+                    height="118"
+                    viewBox="0 0 59 118"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="absolute bottom-[36px] left-5"
+                  >
+                    <path d="M29 0L58.5 12L29 118L0.5 104L29 0Z" fill="#D9D9D9" />
+                  </svg>
+                  <svg
+                    width="58"
+                    height="118"
+                    viewBox="0 0 58 118"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="absolute bottom-[36px] left-5 pilihanB"
+                  >
+                    <path d="M28.5 0L58 12L28.5 118L0 104L28.5 0Z" fill="#7BFFD0" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="flex items-center border-b-2 py-[6px] cursor-pointer" id="C1">
+                <button
+                  class="h-7 w-7 border-2 border-primary rounded-full text-black"
+                  id="buttonC1"
+                >
+                  C
+                </button>
+                <div class="ml-4 h-44 w-64 relative">
+                  <div class="h-[8px] w-[8px] bg-red rounded-full absolute right-10 bottom-9"></div>
+                  <div class="absolute text-red font-semibold right-6 bottom-[30px]">P</div>
+                  <svg
+                    width="59"
+                    height="118"
+                    viewBox="0 0 59 118"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="absolute bottom-[36px] left-5"
+                  >
+                    <path d="M29 0L58.5 12L29 118L0.5 104L29 0Z" fill="#D9D9D9" />
+                  </svg>
+                  <svg
+                    width="58"
+                    height="118"
+                    viewBox="0 0 58 118"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="absolute bottom-[36px] left-5 pilihanC"
+                  >
+                    <path d="M28.5 0L58 12L28.5 118L0 104L28.5 0Z" fill="#7BFFD0" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <button class="py-1 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]" id="Check1">
+              Check
+            </button>
+
+            <p class="ml-3 font-semibold text-hijau hidden" id="benar1">Benar 🗸</p>
+            <p class="ml-3 font-semibold text-red hidden" id="salah1">Salah X</p>
+          </div>
+
+          <div
+            class="mt-8 pb-6 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative"
+            id="TesKedua1"
+          >
+            <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40">TES KEDUA</p>
+            <p class="mt-1">Segitiga ABCD didilatasi yang pusatnya di titik P dengan skala 2</p>
+
+            <div class="h-[300px] w-[250px] mt-8 relative mx-auto">
+              <div class="w-full h-full relative" id="TesKedua1">
+                <button
+                  id="C2"
+                  class="w-[8px] h-[8px] bg-[#8D8383] rounded-full absolute bottom-[85px] left-[123px] cursor-pointer hover:border-2"
+                ></button>
+                <svg
+                  width="157"
+                  height="51"
+                  viewBox="0 0 157 51"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute top-[100px] left-[50px] z-20 animasiTes1 hidden"
+                  id="tes1"
+                >
+                  <path
+                    d="M3.47033 50L67.3367 1.5H154.781L127.188 50H3.47033Z"
+                    stroke="#7BFFD0"
+                    stroke-width="2"
+                  />
+                </svg>
+                <svg
+                  width="156"
+                  height="51"
+                  viewBox="0 0 156 51"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute top-[100px] left-[50px]"
+                >
+                  <path
+                    d="M2.97033 49.5L66.8367 1H154.281L126.688 49.5H2.97033Z"
+                    stroke="#D9D9D9"
+                    stroke-width="2"
+                  />
+                </svg>
+
+                <div
+                  class="text-red font-semibold absolute bottom-[78px] left-[108px] hidden"
+                  id="titikP"
+                >
+                  P
+                </div>
+
+                <div class="hidden" id="garisMuncul">
+                  <div
+                    class="w-[1px] h-[0px] garistes1 bg-blue absolute left-[125px] bottom-[90px] origin-bottom -rotate-6"
+                  ></div>
+                  <div
+                    class="w-[1px] h-[0px] garistes2 bg-blue rounded-full absolute left-[125px] bottom-[90px] origin-bottom rotate-[35deg]"
+                  ></div>
+                  <div
+                    class="w-[1px] h-[0px] garistes3 bg-blue rounded-full absolute left-[125px] bottom-[90px] origin-bottom rotate-[40deg]"
+                  ></div>
+                  <div
+                    class="w-[1px] h-[0px] garistes4 bg-blue rounded-full absolute left-[125px] bottom-[90px] origin-bottom -rotate-[52deg]"
+                  ></div>
+                </div>
+
+                <div class="text-xs absolute top-[82px] left-[110px]">A</div>
+                <div class="text-xs absolute top-[82px] right-[40px]">B</div>
+                <div class="text-xs absolute top-[154px] right-[75px]">D</div>
+                <div class="text-xs absolute top-[154px] left-[46px]">C</div>
+
+                <div class="hidden opacity-0 Derajatmuncul" id="titikMuncul">
+                  <div class="text-xs text-hijau font-semibold absolute top-[20px] left-[106px]">
+                    A'
+                  </div>
+                  <div class="text-xs text-hijau font-semibold absolute top-[20px] -right-[12px]">
+                    B'
+                  </div>
+                  <div class="text-xs text-hijau font-semibold absolute top-[122px] right-[35px]">
+                    D'
+                  </div>
+                  <div class="text-xs text-hijau font-semibold absolute top-[122px] left-[0px]">
+                    C'
+                  </div>
+                </div>
+
+                <button
+                  class="w-[8px] h-[8px] bg-[#8D8383] rounded-full cursor-pointer hover:border-2 border-[] absolute -top-[5px] left-[123px]"
+                ></button>
+                <button
+                  id=""
+                  class="w-[8px] h-[8px] bg-[#8D8383] rounded-full cursor-pointer hover:border-2 border-[] absolute top-[113px] -left-[25px]"
+                ></button>
+                <button
+                  id=""
+                  class="w-[8px] h-[8px] bg-[#8D8383] rounded-full cursor-pointer hover:border-2 border-[] absolute top-[33px] left-0"
+                ></button>
+                <button
+                  id=""
+                  class="w-[8px] h-[8px] bg-[#8D8383] rounded-full cursor-pointer hover:border-2 border-[] absolute bottom-[85px] left-0"
+                ></button>
+              </div>
+            </div>
+            <p class="">
+              Pilih titik abu abu yang merupakan pusat dilatasi atau
+              <span class="text-red">Titik P</span>
+            </p>
+
+            <button class="py-1 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]" id="Check2">
+              Check
+            </button>
+
+            <p class="ml-3 font-semibold text-hijau hidden" id="benar2">Benar 🗸</p>
+            <p class="ml-3 font-semibold text-red hidden" id="salah2">Salah X</p>
+          </div>
+        </div>
+      </div>
+      <!-- Akhir Tes Pemahaman 1 -->
+
+      <!-- Kordinat Dilatasi -->
+      <div
+        class="md:mx-auto max-w-4xl bg-white md:px-8 pt-16 border-b-2 pb-16 md:pb-8 md:pt-8 md:mt-8"
+      >
+        <h2
+          class="md:-ml-3 h-14 w-44 shadow-custom flex items-center pl-3 font-bold text-primary text-base rounded-md border-l-2 border-b-2 border-hijau -ml-1"
+        >
+          Kordinat Dilatasi
+        </h2>
+        <p class="mt-6">
+          Sebelumnya kita hanya melihat sebuah bangun yang didilatasi, apakah bisa jika hanya titik
+          yang didilatasi?
+        </p>
+        <p class="mt-4">
+          Tentu bisa, dilatasi pada titik tentu tidak membuat tiitknya membesar atau mengecil. Namun
+          dilatasi akan membuat sebuah titik menjauh atau mendekati pusat dilatasi.
+        </p>
+        <button class="mt-6 text-lg text-primary font-semibold ml-2">Dilatasi Titik</button>
+        <div
+          class="w-full relative border-t-2 border-hijau mt-2 py-2 px-2 max-w-md"
+          id="contohPertama"
+        >
+          <p class="leading-7">
+            Titik <span class="text-hijau font-semibold">A ( 0 , -4 ) </span> didilatasi pada pusat
+            titik <span class="text-red">P ( 0 , 0 )</span> dengan
+            <span class="text-hijau">skala 1/4</span>
+          </p>
+          <div class="w-64 h-64 mx-auto mt-4">
+            <div class="w-64 h-64 relative hidden" id="animasiDilatasititik">
+              <img src="../img/Rotasi/sebuahtitik.jpg" alt="" class="w-full h-full opacity-80" />
+              <div
+                class="w-[8px] h-[8px] absolute top-[124px] left-[124px] bg-red rounded-full"
+              ></div>
+              <div class="text-red font-semibold absolute top-[116px] right-[112px]">P</div>
+              <div
+                class="w-[8px] h-[8px] absolute top-[124px] left-[3px] bg-hijau rounded-full z-10 skalaSeperempat"
+              ></div>
+              <div
+                class="w-[8px] h-[8px] absolute top-[124px] left-[3px] bg-secondary rounded-full"
+              ></div>
+              <div class="text-xs absolute left-[3px] top-[110px]">A</div>
+              <div
+                class="text-xs absolute left-[93px] top-[110px] text-hijau font-semibold opacity-0 Derajatmuncul"
+              >
+                A'
+              </div>
+            </div>
+          </div>
+          <div class="flex items-start mt-6 pb-4 border-b-2">
+            <p class="text-primary font-semibold">Diketahui:</p>
+            <p class="ml-4">
+              Pusat dilatasi adalah titik <span class="text-red">P ( 0 , 0 )</span> dengan
+              <span class="text-hijau">skala dilatasi 1/4</span> artinya diperkecil
+            </p>
+          </div>
+          <div class="flex items-start mt-4 pb-4 border-b-2">
+            <p class="text-primary font-semibold">Catatan:</p>
+            <p class="ml-7">
+              Dengan skala 1/4, karena hanya titik yang didilatasi maka titik hanya akan mendekat
+              1/4 dari jarak aslinya
+            </p>
+          </div>
+          <div class="flex items-start mt-4 mb-3">
+            <p class="text-primary font-semibold">Diperoleh:</p>
+            <p class="ml-4">
+              Titik A ( 0 , -4 ) didilatasi pada titk P dengan skala 1/4 menghasilkan titik
+              <span class="text-hijau font-semibold">A’ ( 0 , -1 ) </span>
+            </p>
+          </div>
+        </div>
+
+        <button class="mt-12 text-lg text-primary font-semibold ml-2">Dilatasi Bangun Datar</button>
+        <div
+          class="w-full relative border-t-2 border-hijau mt-2 py-2 px-2 max-w-md"
+          id="contohKedua"
+        >
+          <p class="leading-7">
+            Segitiga ABC dengan kordinat
+            <span class="text-hijau font-semibold">A ( 2 , -2 ), B ( 0 , -2 ) , C ( 2 , 0 ) </span>
+            didilatasi pada pusat titik <span class="text-red">P ( 3 , -3 )</span> dengan
+            <span class="text-hijau">skala 1/4</span>
+          </p>
+          <div class="w-64 h-64 mx-auto mt-4">
+            <div class="w-64 h-64 relative hidden" id="animasiDilatasibangun">
+              <img src="../img/Rotasi/sebuahtitik.jpg" alt="" class="w-full h-full opacity-80" />
+              <svg
+                width="64"
+                height="63"
+                viewBox="0 0 64 63"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="absolute top-[127px] right-[66px] opacity-60"
+              >
+                <path d="M0.5 63L63.5 63L63.5 0L0.5 63Z" fill="#D9D9D9" />
+              </svg>
+
+              <svg
+                width="64"
+                height="63"
+                viewBox="0 0 64 63"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="absolute top-[127px] right-[66px] z-20 opacity-60 skalaDua"
+              >
+                <path d="M0.5 63L63.5 63L63.5 0L0.5 63Z" fill="#7BFFD0" />
+              </svg>
+
+              <div
+                class="w-[8px] h-[8px] absolute top-[217px] right-[33px] bg-red rounded-full"
+              ></div>
+              <div class="text-red font-semibold absolute top-[209px] right-[22px]">P</div>
+
+              <div class="text-xs absolute right-[63px] bottom-[50px] text-hijau">A</div>
+              <div class="text-xs absolute left-[123px] bottom-[50px] text-hijau">B</div>
+              <div class="text-xs absolute right-[63px] top-[110px] text-hijau">C</div>
+              <div class="opacity-0 Derajatmuncul">
+                <div class="text-xs absolute right-[90px] bottom-[78px] text-hijau font-semibold">
+                  A'
+                </div>
+                <div class="text-xs absolute left-[32px] bottom-[78px] text-hijau font-semibold">
+                  B'
+                </div>
+                <div class="text-xs absolute right-[90px] top-[22px] text-hijau font-semibold">
+                  C'
+                </div>
+              </div>
+              <div
+                class="w-[1px] h-[0px] garisSkaladua1 bg-blue rounded-full absolute right-[36px] bottom-[36px] origin-bottom rotate-[-45deg]"
+              ></div>
+              <div
+                class="w-[1px] h-[0px] garisSkaladua2 bg-blue rounded-full absolute right-[36px] bottom-[36px] origin-bottom rotate-[-72deg]"
+              ></div>
+              <div
+                class="w-[1px] h-[0px] garisSkaladua2 bg-blue rounded-full absolute right-[36px] bottom-[36px] origin-bottom rotate-[-18deg]"
+              ></div>
+            </div>
+          </div>
+          <div class="flex items-start mt-6 pb-4 border-b-2">
+            <p class="text-primary font-semibold">Diketahui:</p>
+            <p class="ml-4">
+              Pusat dilatasi adalah titik <span class="text-red">P ( 3 , -3 )</span> dengan
+              <span class="text-hijau">skala dilatasi 2</span> artinya diperbesar dua kali lipat dan
+              menjauh dari titik pusat
+            </p>
+          </div>
+
+          <div class="flex items-start mt-4 mb-3">
+            <p class="text-primary font-semibold">Diperoleh:</p>
+            <p class="ml-4">
+              Segitiga A'B'C' dengan kordinat
+              <span class="text-hijau block"
+                >A' ( 1 , -1 ), <span class="block">B' ( -3 , -1 ), </span>C' ( 1 , 3)</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Akhir Kordinat Rotasi -->
+
+      <!-- Tes Pemahaman 2 -->
+      <div class="md:mx-auto max-w-4xl bg-white md:px-8 pb-40 pt-8 md:mt-8">
+        <div class="flex items-center">
+          <img src="../img/tespemahaman.png" alt="" class="w-16 h-16" />
+          <div class="text-xl font-semibold tracking-wides text-hijau ml-2">Tes Pemahaman</div>
+        </div>
+        <div
+          class="mt-3 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative pb-4 max-w-md"
+          id="TesPertama1"
+        >
+          <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40">TES KETIGA</p>
+          <p class="mt-1">Segitiga di bawah didilatasi pada titik ( 4 , -4 ) dengan skala 2</p>
+
+          <div
+            id="content"
+            class="w-[240px] h-[240px] relative bg-[url('../img/Rotasi/Grapik.jpg')] bg-cover mx-auto mt-4"
+          >
+            <canvas id="geometryCanvas"></canvas>
+            <div id="notification"></div>
+            <div
+              class="w-2 h-2 bg-red absolute rounded-full left-[19px] top-[19px]"
+              id="pusatRotasisoal"
+            ></div>
+          </div>
+          <p class="mt-4">Pindahkan segitiga hijau hingga membentuk segitiga hasil dilatasinya</p>
+
+          <button class="py-1 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]" id="Check4">
+            Check
+          </button>
+
+          <p class="ml-3 font-semibold text-hijau hidden" id="benar3">Benar 🗸</p>
+          <p class="ml-3 font-semibold text-red hidden" id="salah3">Salah X</p>
+        </div>
+      </div>
+      <!-- AKhir Tes Pemahaman 2 -->
+    </div>
+
+    <script src="../java/script5.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+    <script>
+      gsap.to('.pohon', { duration: 5, scale: 2.7, ease: 'steps(6)' });
+    </script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+  </body>
+</html>
