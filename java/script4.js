@@ -558,16 +558,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function toggleNavbar() {
   var sidebar = document.getElementById('sidebar');
-  var wacawbutton = document.getElementById('sidebarToggle');
-  var homeButton = document.getElementById('home');
+  var wacawbutton = document.getElementById('iniloh');
+
   var judul = document.getElementById('judul');
 
   sidebar.classList.toggle('translate-x-full');
-  sidebar.classList.toggle('translate-x-0');
+  sidebar.classList.toggle('-translate-x-14');
 
   // Menggunakan kelas 'translate' yang telah didefinisikan
-  wacawbutton.classList.toggle('translate-x-full');
-  homeButton.classList.toggle('translate-x-full');
+  wacawbutton.classList.toggle('translate-x-1/2');
 
   judul.classList.toggle('hidden');
 }

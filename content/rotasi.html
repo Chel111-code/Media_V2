@@ -329,15 +329,15 @@
     }
   </style>
   <body class="md:bg-gray-100">
-    <nav class="w-full flex justify-center">
+    <header class="w-full flex justify-center z-50 container fixed top-0">
       <div
-        class="container flex flex-wrap px-2 top-0 py-5 flex-row items-center justify-between max-w-4xl md:px-4 z-50 bg-white bg-opacity-90 fixed"
+        class="flex flex-wrap px-2 py-5 w-full flex-row items-center max-w-4xl justify-between md:px-4 bg-opacity-90 relative bg-white"
       >
         <a class="flex font-bold items-center text-primary tras" id="judul">
           <span class="ml-3 text-lg relative">Transformasi Geometri</span>
         </a>
 
-        <div class="flex">
+        <div class="flex -translate-x-14" id="iniloh">
           <div class="md:hidden mr-3">
             <a
               class="p-[10px] rounded-full bg-[#FFF5F5] shadow-custom inline-block"
@@ -422,10 +422,10 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </header>
 
     <div
-      class="container font-lato mt-[70px] px-5 text-[14px] font-medium text-secondary leading-6 tracking-wide w-full md:bg-gray-100"
+      class="container absolute max-4-xl font-lato mt-[70px] px-5 text-[14px] font-medium text-secondary leading-6 tracking-wide w-full md:bg-gray-100"
     >
       <!-- Judul -->
       <h2 class="text-hijau font-bold pt-8 md:mx-auto max-w-4xl md:px-8 bg-white">
@@ -1283,7 +1283,9 @@
           id="TesPertama1"
         >
           <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40">TES KETIGA</p>
-          <p class="mt-1">Segitiga di bawah dirotasikan terhadap titik ( 0 , 0 ) sejauh -90°</p>
+          <p class="mt-1">
+            Segitiga berwarna abu abu di bawah dirotasikan terhadap titik ( 0 , 0 ) sejauh -90°
+          </p>
 
           <div
             id="content"
