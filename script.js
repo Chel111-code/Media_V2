@@ -396,3 +396,26 @@ document.getElementById('slider2').addEventListener('input', function () {
   // Mengatur skala elemen berdasarkan nilai slider
   scaledElement.style.transform = 'scale(' + scaleValue + ')';
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var handle = document.querySelector('.resize-handle');
+
+  // Mendeteksi event sentuhan
+  handle.addEventListener('touchstart', function (e) {
+    var touch = e.touches[0];
+    // Menyimpan posisi awal sentuhan
+    this.startX = touch.clientX - this.offsetLeft;
+    this.startY = touch.clientY - this.offsetTop;
+  });
+
+  handle.addEventListener('touchmove', function (e) {
+    e.preventDefault();
+    var touch = e.touches[0];
+    // Menghitung perubahan posisi sentuhan
+    var offsetX = touch.clientX - this.startX;
+    var offsetY = touch.clientY - this.startY;
+    // Menyesuaikan posisi elemen
+    this.style.left = offsetX + 'px';
+    this.style.top = offsetY + 'px';
+  });
+});
