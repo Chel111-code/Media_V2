@@ -401,26 +401,14 @@ function divClickHandler() {
   // Menambahkan kelas "bg-secondary" ke tombol di dalam div yang diklik
   const button = this.querySelector('button');
   button.classList.add('bg-secondary');
+
+  // Aktifkan tombol "Check1"
+  checkButton.removeAttribute('disabled');
 }
 
 // batas
-function divClickHandler2() {
-  // Menghapus kelas "bg-secondary" dari semua tombol
-  const buttons = document.querySelectorAll('#TesPertama2 button');
-  buttons.forEach((button) => {
-    button.classList.remove('bg-secondary');
-  });
-  // Menambahkan kelas "bg-secondary" ke tombol di dalam div yang diklik
-  const button = this.querySelector('#TesPertama2 button');
-  button.classList.add('bg-secondary');
-}
-
-const divs2 = document.querySelectorAll('#TesPertama2 .flex');
-divs2.forEach((div) => {
-  div.addEventListener('click', divClickHandler2);
-});
-
-// Mendapatkan referensi ke tombol "Check"
+// Fungsi untuk menangani klik pada div ABCD
+// Mendapatkan referensi ke tombol "Check2"
 const checkButton2 = document.getElementById('Check2');
 
 checkButton2.addEventListener('click', function () {
@@ -451,6 +439,29 @@ checkButton2.addEventListener('click', function () {
       div.removeEventListener('click', divClickHandler2);
     });
   }
+});
+
+// Fungsi untuk menangani klik pada div ABCD
+function divClickHandler2() {
+  // Menghapus kelas "bg-secondary" dari semua tombol
+  const buttons = document.querySelectorAll('#TesPertama2 button');
+  buttons.forEach((button) => {
+    button.classList.remove('bg-secondary');
+  });
+  // Menambahkan kelas "bg-secondary" ke tombol di dalam div yang diklik
+  const button = this.querySelector('#TesPertama2 button');
+  button.classList.add('bg-secondary');
+
+  // Mengaktifkan tombol "Check2" dengan menghapus atribut disabled
+  checkButton2.removeAttribute('disabled');
+}
+
+// Dapatkan referensi ke semua elemen div ABCD di konten kedua
+const divs2 = document.querySelectorAll('#TesPertama2 .flex');
+
+// Tambahkan event listener ke setiap div ABCD di konten kedua
+divs2.forEach((div) => {
+  div.addEventListener('click', divClickHandler2);
 });
 
 document.addEventListener('DOMContentLoaded', function () {

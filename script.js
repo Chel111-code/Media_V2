@@ -297,14 +297,6 @@ checkButton.addEventListener('click', function checkHandler() {
   });
 });
 
-// Dapatkan referensi ke semua elemen div ABCD
-const divs = document.querySelectorAll('#TesPertama1 .flex');
-
-// Tambahkan event listener ke setiap div ABCD
-divs.forEach((div) => {
-  div.addEventListener('click', divClickHandler);
-});
-
 // Fungsi untuk menangani klik pada div ABCD
 function divClickHandler() {
   // Menghapus kelas "bg-secondary" dari semua tombol
@@ -315,7 +307,19 @@ function divClickHandler() {
   // Menambahkan kelas "bg-secondary" ke tombol di dalam div yang diklik
   const button = this.querySelector('button');
   button.classList.add('bg-secondary');
+
+  // Aktifkan tombol "Check1"
+  checkButton.removeAttribute('disabled');
 }
+
+// Dapatkan referensi ke semua elemen div ABCD
+const divs = document.querySelectorAll('#TesPertama1 .flex');
+
+// Tambahkan event listener ke setiap div ABCD
+divs.forEach((div) => {
+  div.addEventListener('click', divClickHandler);
+});
+
 function changeBorderColor() {
   var spanElement = document.getElementById('posisi_benar');
   spanElement.classList.remove('border-gray-300');
@@ -399,9 +403,10 @@ document.getElementById('slider2').addEventListener('input', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
   var handle = document.querySelector('.resize-handle');
+  var isDragging = false; // Menandakan apakah sedang menggeser atau tidak
 
-  // Mendeteksi event sentuhan
   handle.addEventListener('touchstart', function (e) {
+    isDragging = true;
     var touch = e.touches[0];
     // Menyimpan posisi awal sentuhan
     this.startX = touch.clientX - this.offsetLeft;
@@ -409,6 +414,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   handle.addEventListener('touchmove', function (e) {
+    if (!isDragging) return; // Berhenti jika tidak sedang menggeser
     e.preventDefault();
     var touch = e.touches[0];
     // Menghitung perubahan posisi sentuhan
@@ -417,5 +423,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Menyesuaikan posisi elemen
     this.style.left = offsetX + 'px';
     this.style.top = offsetY + 'px';
+  });
+
+  handle.addEventListener('touchend', function () {
+    isDragging = false; // Menghentikan menggeser ketika sentuhan dilepas
   });
 });

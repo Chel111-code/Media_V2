@@ -436,4 +436,7 @@ function divClickHandler() {
   // Menambahkan kelas "bg-secondary" ke tombol di dalam div yang diklik
   const button = this.querySelector('button');
   button.classList.add('bg-secondary');
+
+  // Aktifkan tombol "Check1"
+  checkButton.removeAttribute('disabled');
 }

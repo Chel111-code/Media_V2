@@ -264,7 +264,6 @@ divs.forEach((div) => {
   div.addEventListener('click', divClickHandler);
 });
 
-// Fungsi untuk menangani klik pada div ABCD
 function divClickHandler() {
   // Menghapus kelas "bg-secondary" dari semua tombol
   const buttons = document.querySelectorAll('#TesPertama1 button');
@@ -274,6 +273,9 @@ function divClickHandler() {
   // Menambahkan kelas "bg-secondary" ke tombol di dalam div yang diklik
   const button = this.querySelector('button');
   button.classList.add('bg-secondary');
+
+  // Aktifkan tombol "Check1"
+  checkButton.removeAttribute('disabled');
 }
 
 document.getElementById('tombolSenter').addEventListener('click', function () {
@@ -386,10 +388,17 @@ document.addEventListener('DOMContentLoaded', function () {
   observer.observe(contohKedua);
 });
 
-document.getElementById('Check2').addEventListener('click', function () {
+// Dapatkan referensi ke tombol "Check2"
+const checkButton2 = document.getElementById('Check2');
+
+checkButton2.disabled = true; // Menonaktifkan tombol "Check2" secara default
+
+// Tambahkan event listener ke tombol "Check2"
+checkButton2.addEventListener('click', function () {
   const activeButton = document.querySelector('#TesKedua1 .animate-ping');
 
   if (activeButton && activeButton.id === 'C2') {
+    // Logika jika kondisi terpenuhi
     buttonsTesKedua1.forEach((button) => {
       if (button.id !== 'C2') {
         button.classList.add('hidden');
@@ -405,7 +414,11 @@ document.getElementById('Check2').addEventListener('click', function () {
     document.getElementById('titikP').classList.remove('hidden');
     document.getElementById('C2').classList.remove('bg-primary', 'animate-ping');
     document.getElementById('Bhasil').classList.remove('hidden');
+
+    // Menonaktifkan tombol "Check2" setelah diklik
+    this.disabled = true;
   } else {
+    // Logika jika kondisi tidak terpenuhi
     buttonsTesKedua1.forEach((button) => {
       if (button.id !== 'C2') {
         button.classList.add('hidden');
@@ -428,18 +441,24 @@ document.getElementById('Check2').addEventListener('click', function () {
   });
 });
 
+// Fungsi untuk menangani klik pada tombol di dalam div TesKedua1
 function buttonClickHandler() {
-  // Menghapus kelas "bg-primary" dari semua tombol
+  // Menghapus kelas "animate-ping" dari semua tombol
   const buttons = document.querySelectorAll('#TesKedua1 button');
   buttons.forEach((button) => {
     button.classList.remove('animate-ping');
   });
-  // Menambahkan kelas "bg-primary" ke tombol yang diklik
+  // Menambahkan kelas "animate-ping" ke tombol yang diklik
   this.classList.add('animate-ping');
+
+  // Mengaktifkan tombol "Check2" jika ada tombol yang diklik
+  checkButton2.disabled = false;
 }
 
-// Tambahkan event listener ke setiap tombol di dalam div TesKedua1
+// Dapatkan referensi ke semua tombol di dalam div TesKedua1 kecuali tombol "Check2"
 const buttonsTesKedua1 = document.querySelectorAll('#TesKedua1 button:not(#Check2)');
+
+// Tambahkan event listener ke setiap tombol di dalam div TesKedua1
 buttonsTesKedua1.forEach((button) => {
   button.addEventListener('click', buttonClickHandler);
 });
