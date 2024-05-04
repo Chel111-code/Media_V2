@@ -374,57 +374,29 @@ document.getElementById('slider2').addEventListener('input', function () {
 document.addEventListener('DOMContentLoaded', function () {
   var handle = document.querySelector('.resize-handle');
   var isDragging = false; // Menandakan apakah sedang menggeser atau tidak
+  var offsetX, offsetY;
 
   handle.addEventListener('touchstart', function (e) {
     isDragging = true;
     var touch = e.touches[0];
     // Menyimpan posisi awal sentuhan
-    this.startX = touch.clientX - this.offsetLeft;
-    this.startY = touch.clientY - this.offsetTop;
+    offsetX = touch.clientX - this.offsetLeft;
+    offsetY = touch.clientY - this.offsetTop;
   });
 
-  handle.addEventListener('touchmove', function (e) {
+  document.addEventListener('touchmove', function (e) {
     if (!isDragging) return; // Berhenti jika tidak sedang menggeser
     e.preventDefault();
     var touch = e.touches[0];
-    // Menghitung perubahan posisi sentuhan
-    var offsetX = touch.clientX - this.startX;
-    var offsetY = touch.clientY - this.startY;
+    // Menghitung posisi baru elemen
+    var newX = touch.clientX - offsetX;
+    var newY = touch.clientY - offsetY;
     // Menyesuaikan posisi elemen
-    this.style.left = offsetX + 'px';
-    this.style.top = offsetY + 'px';
+    handle.style.left = newX + 'px';
+    handle.style.top = newY + 'px';
   });
 
-  handle.addEventListener('touchend', function () {
+  document.addEventListener('touchend', function () {
     isDragging = false; // Menghentikan menggeser ketika sentuhan dilepas
   });
-
-  // Tambahan: Menangani sentuhan mouse untuk perangkat non-touchscreen
-  handle.addEventListener('mousedown', function (e) {
-    isDragging = true;
-    // Menyimpan posisi awal mouse
-    this.startX = e.clientX - this.offsetLeft;
-    this.startY = e.clientY - this.offsetTop;
-
-    // Mengaktifkan pemantauan pergerakan mouse
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('mouseup', onMouseUp);
-  });
-
-  function onMouseMove(e) {
-    if (!isDragging) return;
-    // Menghitung perubahan posisi mouse
-    var offsetX = e.clientX - handle.startX;
-    var offsetY = e.clientY - handle.startY;
-    // Menyesuaikan posisi elemen
-    handle.style.left = offsetX + 'px';
-    handle.style.top = offsetY + 'px';
-  }
-
-  function onMouseUp() {
-    isDragging = false;
-    // Menghentikan pemantauan pergerakan mouse
-    document.removeEventListener('mousemove', onMouseMove);
-    document.removeEventListener('mouseup', onMouseUp);
-  }
 });
