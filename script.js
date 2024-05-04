@@ -359,6 +359,7 @@ function toggleNavbar() {
 
 document.addEventListener('DOMContentLoaded', function () {
   var shape = document.getElementById('shape');
+  var handle = shape.querySelector('.resize-handle');
   var isDragging = false;
   var startTouchX, startTouchY;
   var startWidth, startHeight;
@@ -372,7 +373,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var deltaX = touch.clientX - startTouchX;
     var deltaY = touch.clientY - startTouchY;
     var newWidth = startWidth + deltaX;
-    var newHeight = startHeight + deltaY;
+    var newHeight = startHeight - deltaY; // Use subtraction for height to prevent resizing to the left
 
     // Limit resize within container
     newWidth = Math.min(newWidth, shape.parentElement.clientWidth);
@@ -381,7 +382,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return { width: newWidth, height: newHeight };
   }
 
-  shape.addEventListener('touchstart', function (e) {
+  handle.addEventListener('touchstart', function (e) {
     isDragging = true;
     var touch = e.touches[0];
     startTouchX = touch.clientX;
@@ -400,24 +401,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.addEventListener('touchend', function () {
     isDragging = false;
-  });
-
-  // Menambahkan event listener untuk memindahkan elemen dengan drag
-  var resizeHandles = document.querySelectorAll('.resize-handle');
-  resizeHandles.forEach(function (handle) {
-    handle.addEventListener('touchstart', function (e) {
-      var touch = e.touches[0];
-      var initialX = touch.clientX - shape.offsetLeft;
-      var initialY = touch.clientY - shape.offsetTop;
-
-      handle.addEventListener('touchmove', function (e) {
-        var touch = e.touches[0];
-        var newX = touch.clientX - initialX;
-        var newY = touch.clientY - initialY;
-
-        shape.style.left = newX + 'px';
-        shape.style.top = newY + 'px';
-      });
-    });
   });
 });
