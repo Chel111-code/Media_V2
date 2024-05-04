@@ -401,4 +401,23 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('touchend', function () {
     isDragging = false;
   });
+
+  // Menambahkan event listener untuk memindahkan elemen dengan drag
+  var resizeHandles = document.querySelectorAll('.resize-handle');
+  resizeHandles.forEach(function (handle) {
+    handle.addEventListener('touchstart', function (e) {
+      var touch = e.touches[0];
+      var initialX = touch.clientX - shape.offsetLeft;
+      var initialY = touch.clientY - shape.offsetTop;
+
+      handle.addEventListener('touchmove', function (e) {
+        var touch = e.touches[0];
+        var newX = touch.clientX - initialX;
+        var newY = touch.clientY - initialY;
+
+        shape.style.left = newX + 'px';
+        shape.style.top = newY + 'px';
+      });
+    });
+  });
 });
