@@ -357,46 +357,48 @@ function toggleNavbar() {
   judul.classList.toggle('hidden');
 }
 
-document.getElementById('slider1').addEventListener('input', function () {
-  var value = this.value;
-  var image = document.getElementById('image-to-translate');
-  image.style.transform = 'translateX(' + value + 'px)';
-});
-
-document.getElementById('slider2').addEventListener('input', function () {
-  var scaleValue = this.value;
-  var scaledElement = document.getElementById('image-to-dilate');
-
-  // Mengatur skala elemen berdasarkan nilai slider
-  scaledElement.style.transform = 'scale(' + scaleValue + ')';
-});
-
 document.addEventListener('DOMContentLoaded', function () {
-  var handle = document.querySelector('.resize-handle');
-  var isDragging = false; // Menandakan apakah sedang menggeser atau tidak
-  var offsetX, offsetY;
+  var shape = document.getElementById('shape');
+  var isDragging = false;
+  var startTouchX, startTouchY;
+  var startWidth, startHeight;
 
-  handle.addEventListener('touchstart', function (e) {
+  function updateSize(width, height) {
+    shape.style.width = width + 'px';
+    shape.style.height = height + 'px';
+  }
+
+  function getNewSize(touch) {
+    var deltaX = touch.clientX - startTouchX;
+    var deltaY = touch.clientY - startTouchY;
+    var newWidth = startWidth + deltaX;
+    var newHeight = startHeight + deltaY;
+
+    // Limit resize within container
+    newWidth = Math.min(newWidth, shape.parentElement.clientWidth);
+    newHeight = Math.min(newHeight, shape.parentElement.clientHeight);
+
+    return { width: newWidth, height: newHeight };
+  }
+
+  shape.addEventListener('touchstart', function (e) {
     isDragging = true;
     var touch = e.touches[0];
-    // Menyimpan posisi awal sentuhan
-    offsetX = touch.clientX - this.offsetLeft;
-    offsetY = touch.clientY - this.offsetTop;
+    startTouchX = touch.clientX;
+    startTouchY = touch.clientY;
+    startWidth = shape.offsetWidth;
+    startHeight = shape.offsetHeight;
   });
 
   document.addEventListener('touchmove', function (e) {
-    if (!isDragging) return; // Berhenti jika tidak sedang menggeser
+    if (!isDragging) return;
     e.preventDefault();
     var touch = e.touches[0];
-    // Menghitung posisi baru elemen
-    var newX = touch.clientX - offsetX;
-    var newY = touch.clientY - offsetY;
-    // Menyesuaikan posisi elemen
-    handle.style.left = newX + 'px';
-    handle.style.top = newY + 'px';
+    var newSize = getNewSize(touch);
+    updateSize(newSize.width, newSize.height);
   });
 
   document.addEventListener('touchend', function () {
-    isDragging = false; // Menghentikan menggeser ketika sentuhan dilepas
+    isDragging = false;
   });
 });
