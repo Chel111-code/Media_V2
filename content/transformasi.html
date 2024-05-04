@@ -123,9 +123,17 @@
       animation-delay: 4s;
     }
 
-    .animasi_cermin_tes2 {
-      animation: muncul 1s ease-in forwards;
-      animation-delay: 6s;
+    .titikA {
+      animation: muncul 2s ease-in forwards;
+      animation-delay: 5s;
+    }
+    .titikB {
+      animation: muncul 2s ease-in forwards;
+      animation-delay: 7s;
+    }
+    .titikC {
+      animation: muncul 2s ease-in forwards;
+      animation-delay: 9s;
     }
 
     .green-border {
@@ -163,6 +171,39 @@
 
     #tes_pengetahuan4 {
       animation: tespengetahuan4 6s linear infinite;
+    }
+
+    @keyframes garisA {
+      to {
+        width: 100px;
+      }
+    }
+
+    .garisA {
+      animation: garisA 2s forwards;
+      animation-delay: 11s;
+    }
+
+    @keyframes garisB {
+      to {
+        width: 72px;
+      }
+    }
+
+    .garisB {
+      animation: garisB 2s forwards;
+      animation-delay: 13s;
+    }
+
+    @keyframes garisC {
+      to {
+        width: 130px;
+      }
+    }
+
+    .garisC {
+      animation: garisC 2s forwards;
+      animation-delay: 15s;
     }
   </style>
 
@@ -354,68 +395,39 @@
             >.
           </p>
 
-          <div
-            id="jajargenjang"
-            class="h-28 w-52 -skew-x-12 mt-14 mb-14 mx-auto relative border-2 border-transparent"
-          >
-            <div id="ohini" class="hidden">
-              <!-- Top Border -->
-              <div
-                id="top-border"
-                class="absolute top-0 left-0 h-1 w-full bg-green-300 opacity-0"
-              ></div>
-              <!-- Left Border -->
-              <div
-                id="left-border"
-                class="absolute top-0 left-0 w-1 h-full bg-green-300 opacity-0"
-              ></div>
-              <!-- Bottom Border -->
-              <div
-                id="bottom-border"
-                class="absolute bottom-0 left-0 h-1 w-full bg-green-300 opacity-0"
-              ></div>
-              <!-- Right Border -->
-              <div
-                id="right-border"
-                class="absolute top-0 right-0 w-1 h-full bg-green-300 opacity-0"
-              ></div>
+          <p class="leading-relaxed mt-8">
+            Contoh bangun datar adalah <span class="font-bold">segitiga</span>.
+          </p>
 
-              <!-- Tetap pertahankan titik-titik ini -->
-
-              <!-- Top-left dot -->
-              <div id="top-left" class="skew-x-12">
-                <span class="absolute w-2 h-2 bg-[#8FBFFF] rounded-full -left-0.5 -top-0.5"></span>
-                <span class="absolute -left-4 -top-4 text-sm">A</span>
+          <div class="w-60 h-48 mt-4 relative" id="jajargenjang">
+            <img src="../img/blackboard_11246638.png" class="w-full h-full" alt="" />
+            <div class="hidden" id="ohini">
+              <div>
+                <div
+                  class="w-2 h-2 bg-white rounded-full absolute top-14 left-16 titikA opacity-0"
+                ></div>
+                <div
+                  class="w-2 h-2 bg-white rounded-full absolute bottom-14 left-16 opacity-0 titikB"
+                ></div>
+                <div
+                  class="w-2 h-2 bg-white rounded-full absolute bottom-14 right-16 opacity-0 titikC"
+                ></div>
               </div>
-              <!-- Added Text A -->
-
-              <!-- Top-right dot -->
-              <div id="top-right" class="skew-x-12">
-                <span class="absolute w-2 h-2 bg-[#8FBFFF] rounded-full -right-0.5 -top-0.5"></span>
-                <span class="absolute -right-4 -top-4 text-sm">B</span>
-              </div>
-
-              <!-- Added Text B -->
-
-              <!-- Bottom-left dot -->
-              <div id="bottom-left">
-                <span
-                  class="absolute w-2 h-2 bg-[#8FBFFF] rounded-full -left-0.5 -bottom-0.5 skew-x-12"
-                ></span>
-                <span class="absolute -left-3 -bottom-4 text-sm skew-x-12">C</span>
-              </div>
-
-              <!-- Added Text C -->
-
-              <!-- Bottom-right dot -->
-              <div id="bottom-right">
-                <span
-                  class="absolute w-2 h-2 bg-[#8FBFFF] rounded-full -right-0.5 -bottom-0.5 skew-x-12"
-                ></span>
-                <span class="absolute -right-4 -bottom-4 text-sm skew-x-12">D</span>
+              <div>
+                <div class="absolute bg-white h-[3px] w-[0] bottom-[58px] left-[70px] garisA"></div>
+                <div
+                  class="absolute bg-white h-[3px] w-[0] bottom-[58px] left-[69px] garisB -rotate-90 origin-bottom-left"
+                ></div>
+                <div
+                  class="absolute bg-white h-[3px] w-[0] top-14 left-16 rotate-[34deg] garisC origin-bottom-left"
+                ></div>
               </div>
             </div>
           </div>
+          <p class="leading-relaxed mt-4">
+            Jika terdapat tiga titik yang dihubungkan oleh garis maka kita telah memiliki sebuah
+            segitiga
+          </p>
         </div>
 
         <div class="px-6 pt-10" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="50">
@@ -430,7 +442,7 @@
 
       <div class="max-w-4xl md:mx-auto bg-white md:px-8 pb-12 md:pb-10 px-5">
         <p class="text-sm pt-8 mb-6 text-secondary font-medium text-center">
-          Cobalah untuk mentransformasikan persegi di bawah!
+          Berikut adalah sebuah persegi yang bisa kamu pindahkan dan ubah ukurannya
         </p>
         <div id="shape" class="bg-[#8FBFFF] w-28 h-28 relative mx-auto opacity-60">
           <div class="resize-handle ne"></div>
@@ -442,8 +454,8 @@
 
       <div class="max-w-4xl md:mx-auto bg-white md:px-8 pb-12 md:pt-8 md:pb-10 px-5">
         <p class="mb-8">
-          Sekarang kamu tau kan, sebuah objek jika diubah posisinya atau diperbesar / diperkecil
-          dikatakan sebagai transformasi.
+          Jika kamu telah mengubah posisi maupun ukuran dari persegi di atas maka kamu telah
+          melakukan transformasi
         </p>
         <p class="mb-4">
           Lalu bagaimana membedakan objek

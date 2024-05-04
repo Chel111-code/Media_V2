@@ -320,36 +320,6 @@ divs.forEach((div) => {
   div.addEventListener('click', divClickHandler);
 });
 
-function changeBorderColor() {
-  var spanElement = document.getElementById('posisi_benar');
-  spanElement.classList.remove('border-gray-300');
-  spanElement.classList.add('green-border');
-}
-
-function changeBorderAgain() {
-  var spanElement = document.getElementById('ukuran_salah');
-  spanElement.classList.remove('border-gray-300');
-  spanElement.classList.add('red-border');
-}
-
-function tesPengetahuan5() {
-  var spanElement = document.getElementById('border_tespengetahuan5');
-  spanElement.classList.remove('border-gray-300');
-  spanElement.classList.add('green-border');
-}
-
-function tesPengetahuan3() {
-  var spanElement = document.getElementById('border_tespengetahuan3');
-  spanElement.classList.remove('border-gray-300');
-  spanElement.classList.add('red-border');
-}
-
-function tesPengetahuan4() {
-  var spanElement = document.getElementById('border_tespengetahuan4');
-  spanElement.classList.remove('border-gray-300');
-  spanElement.classList.add('red-border');
-}
-
 setTimeout(function () {
   gsap.to('#tes_pengetahuan5', {
     duration: 3,
@@ -428,4 +398,33 @@ document.addEventListener('DOMContentLoaded', function () {
   handle.addEventListener('touchend', function () {
     isDragging = false; // Menghentikan menggeser ketika sentuhan dilepas
   });
+
+  // Tambahan: Menangani sentuhan mouse untuk perangkat non-touchscreen
+  handle.addEventListener('mousedown', function (e) {
+    isDragging = true;
+    // Menyimpan posisi awal mouse
+    this.startX = e.clientX - this.offsetLeft;
+    this.startY = e.clientY - this.offsetTop;
+
+    // Mengaktifkan pemantauan pergerakan mouse
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseup', onMouseUp);
+  });
+
+  function onMouseMove(e) {
+    if (!isDragging) return;
+    // Menghitung perubahan posisi mouse
+    var offsetX = e.clientX - handle.startX;
+    var offsetY = e.clientY - handle.startY;
+    // Menyesuaikan posisi elemen
+    handle.style.left = offsetX + 'px';
+    handle.style.top = offsetY + 'px';
+  }
+
+  function onMouseUp() {
+    isDragging = false;
+    // Menghentikan pemantauan pergerakan mouse
+    document.removeEventListener('mousemove', onMouseMove);
+    document.removeEventListener('mouseup', onMouseUp);
+  }
 });
