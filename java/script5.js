@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function updateNotification() {
-    const checkButton = document.getElementById('Check4');
+    const checkButton = document.getElementById('Check5');
     // Memeriksa apakah tombol "Check" telah diklik
     if (!checkButton.clicked) {
       // Jika belum diklik, tidak melakukan apa-apa
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Event listener untuk tombol "Check"
-  document.getElementById('Check4').addEventListener('click', function () {
+  document.getElementById('Check5').addEventListener('click', function () {
     // Set flag clicked ke true ketika tombol "Check" diklik
     this.clicked = true;
     // Panggil fungsi updateNotification setelah tombol diklik
