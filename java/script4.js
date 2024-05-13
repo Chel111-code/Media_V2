@@ -61,30 +61,8 @@ document.addEventListener('DOMContentLoaded', function () {
   observer.observe(rotasiBerlawanan);
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const pusatTitik = document.getElementById('pusatTitik');
-  const animasipusatTitik = document.getElementById('animasipusatTitik');
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === pusatTitik && entry.intersectionRatio >= 0.7) {
-          observer.unobserve(pusatTitik);
-          animasipusatTitik.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 0.7,
-    }
-  );
-
-  observer.observe(pusatTitik);
-});
-
 var specialAngles = [
-  -360, -330, -315, -300, -270, -240, -225, -210, -180, -150, -135, -120, -90, -60, -45, -30, 0, 30,
-  45, 60, 90, 120, 135, 150, 180, 210, 225, 240, 270, 300, 315, 330, 360,
+  -180, -150, -135, -120, -90, -60, -45, -30, 0, 30, 45, 60, 90, 120, 135, 150, 180,
 ];
 
 function setRotation(degrees) {
@@ -130,6 +108,7 @@ function adjustRotation(direction) {
         break;
       }
     }
+    document.getElementById('rotateButton').disabled = false; // Mengaktifkan tombol kanan
   } else {
     // Tombol panah kanan (+)
     for (var i = 0; i < specialAngles.length; i++) {
@@ -142,6 +121,13 @@ function adjustRotation(direction) {
         break;
       }
     }
+    document.getElementById('rotateButton1').disabled = false; // Mengaktifkan tombol kiri
+  }
+
+  if (currentAngle === -180) {
+    document.getElementById('rotateButton1').disabled = true; // Menonaktifkan tombol kiri saat mencapai -180 derajat
+  } else if (currentAngle === 180) {
+    document.getElementById('rotateButton').disabled = true; // Menonaktifkan tombol kanan saat mencapai 360 derajat
   }
 
   degreeInput.value = currentAngle;
@@ -155,48 +141,6 @@ function setRotationFromInput() {
   degreeInput.value = nearestAngle;
   setRotation(nearestAngle);
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-  const contohPertama = document.getElementById('contohPertama');
-  const animasicontohPertama = document.getElementById('animasicontohPertama');
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === contohPertama && entry.intersectionRatio >= 1) {
-          observer.unobserve(contohPertama);
-          animasicontohPertama.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
-
-  observer.observe(contohPertama);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const bangunDatar = document.getElementById('bangunDatar');
-  const rotasibangunDatar = document.getElementById('rotasibangunDatar');
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === bangunDatar && entry.intersectionRatio >= 1) {
-          observer.unobserve(bangunDatar);
-          rotasibangunDatar.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
-
-  observer.observe(bangunDatar);
-});
 
 document.addEventListener('DOMContentLoaded', function () {
   const canvas = document.getElementById('geometryCanvas');
@@ -215,9 +159,9 @@ document.addEventListener('DOMContentLoaded', function () {
     { x: 1 * gridSize, y: 4 * gridSize },
   ];
   let points = [
-    { x: 48, y: 144 },
-    { x: 24, y: 216 },
-    { x: 96, y: 216 },
+    { x: 192, y: 144 },
+    { x: 168, y: 192 },
+    { x: 216, y: 192 },
   ];
   let dragPoint = null;
 
@@ -230,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Function to draw grid
   function drawGrid() {
-    ctx.strokeStyle = 'transparent'; // Warna grid
+    ctx.strokeStyle = '#ddd'; // Warna grid
 
     // Menggambar garis vertikal
     for (let x = 0; x <= canvas.width; x += gridSize) {
@@ -559,38 +503,158 @@ buttonsTesKedua1.forEach((button) => {
   button.addEventListener('click', buttonClickHandler);
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const TesPertama1 = document.getElementById('TesPertama1');
-  const animasiTesPertama1 = document.getElementById('animasiTesPertama1');
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === TesPertama1 && entry.intersectionRatio >= 1) {
-          observer.unobserve(TesPertama1);
-          animasiTesPertama1.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
-
-  observer.observe(TesPertama1);
-});
-
 function toggleNavbar() {
   var sidebar = document.getElementById('sidebar');
-  var wacawbutton = document.getElementById('iniloh');
-
+  var wacawbutton = document.getElementById('sidebarToggle');
+  var homeButton = document.getElementById('home');
   var judul = document.getElementById('judul');
 
   sidebar.classList.toggle('translate-x-full');
-  sidebar.classList.toggle('-translate-x-14');
+  sidebar.classList.toggle('translate-x-0');
 
   // Menggunakan kelas 'translate' yang telah didefinisikan
-  wacawbutton.classList.toggle('translate-x-1/2');
+  wacawbutton.classList.toggle('translate-x-4');
+  homeButton.classList.toggle('translate-x-4');
 
   judul.classList.toggle('hidden');
 }
+
+function removeanimasiTesPertama1() {
+  var animasiTesPertama1o = document.getElementById('animasiTesPertama1o');
+  animasiTesPertama1o.classList.remove('opacity-30');
+
+  var play1 = document.getElementById('play1');
+  play1.classList.toggle('hidden');
+
+  var animasiTesPertama1 = document.getElementById('animasiTesPertama1');
+  animasiTesPertama1.classList.toggle('hidden');
+}
+
+function removeanimasicontohPertama() {
+  var animasicontohPertama = document.getElementById('animasicontohPertama');
+  animasicontohPertama.classList.remove('opacity-30');
+
+  var play2 = document.getElementById('play2');
+  play2.classList.toggle('hidden');
+
+  var animasicontohPertamao = document.getElementById('animasicontohPertamao');
+  animasicontohPertamao.classList.toggle('hidden');
+}
+
+function removerotasibangunDatar() {
+  var rotasibangunDatar = document.getElementById('rotasibangunDatar');
+  rotasibangunDatar.classList.remove('opacity-30');
+
+  var play3 = document.getElementById('play3');
+  play3.classList.toggle('hidden');
+
+  var rotasibangunDataro = document.getElementById('rotasibangunDataro');
+  rotasibangunDataro.classList.toggle('hidden');
+}
+
+function removeanimasipusatTitik() {
+  var animasipusatTitik = document.getElementById('animasipusatTitik');
+  animasipusatTitik.classList.remove('opacity-30');
+
+  var play4 = document.getElementById('play4');
+  play4.classList.toggle('hidden');
+
+  var animasipusatTitiko = document.getElementById('animasipusatTitiko');
+  animasipusatTitiko.classList.toggle('hidden');
+}
+
+document.getElementById('playback').addEventListener('click', function () {
+  location.reload(); // Reload halaman
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  var canvas1 = document.getElementById('canvas');
+  var ctx1 = canvas1.getContext('2d');
+  var gridSize1 = 24; // Ukuran grid
+  var correctPoint = { x: 5, y: 3 }; // Contoh titik yang benar
+  var clickedPoint = { x: -1, y: -1 }; // Titik yang dipilih oleh pengguna
+  var checkButton2 = document.getElementById('Check4'); // Tombol "Check"
+  var isCorrectPointClicked = false; // Status apakah titik yang benar telah diklik
+  var isPointClicked = false; // Status apakah titik telah diklik
+
+  canvas1.width = 240;
+  canvas1.height = 240;
+
+  function drawGrid() {
+    ctx1.beginPath();
+    for (var x = 0; x <= canvas1.width; x += gridSize1) {
+      ctx1.moveTo(x, 0);
+      ctx1.lineTo(x, canvas1.height);
+    }
+    for (var y = 0; y <= canvas1.height; y += gridSize1) {
+      ctx1.moveTo(0, y);
+      ctx1.lineTo(canvas1.width, y);
+    }
+    ctx1.strokeStyle = '#ddd';
+    ctx1.stroke();
+  }
+
+  function drawPoint(x, y) {
+    ctx1.beginPath();
+    ctx1.arc(x * gridSize1, y * gridSize1, 4, 0, Math.PI * 2);
+    ctx1.fillStyle = '#079292';
+    ctx1.fill();
+  }
+
+  function clearcanvas1() {
+    ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
+    drawGrid();
+  }
+
+  function snapToGrid(mouseX, mouseY) {
+    return {
+      x: Math.round(mouseX / gridSize1),
+      y: Math.round(mouseY / gridSize1),
+    };
+  }
+
+  function updateNotification() {
+    if (isCorrectPointClicked) {
+      document.getElementById('benar4').classList.remove('hidden');
+      document.getElementById('benar4').classList.add('inline-block');
+      document.getElementById('salah4').classList.add('hidden');
+      document.getElementById('benarA').classList.remove('hidden');
+    } else {
+      document.getElementById('salah4').classList.remove('hidden');
+      document.getElementById('salah4').classList.add('inline-block');
+      document.getElementById('benar4').classList.add('hidden');
+    }
+  }
+
+  canvas1.addEventListener('click', function (e) {
+    if (isCorrectPointClicked) {
+      // Jika titik yang benar sudah diklik, tidak melakukan apa-apa
+      return;
+    }
+
+    var rect = canvas1.getBoundingClientRect();
+    var mouseX = e.clientX - rect.left;
+    var mouseY = e.clientY - rect.top;
+
+    var snappedPoint = snapToGrid(mouseX, mouseY);
+    clickedPoint.x = snappedPoint.x;
+    clickedPoint.y = snappedPoint.y;
+    isPointClicked = true; // Menandai bahwa titik telah diklik
+
+    clearcanvas1();
+    drawPoint(clickedPoint.x, clickedPoint.y);
+  });
+
+  checkButton2.addEventListener('click', function () {
+    if (!isPointClicked || isCorrectPointClicked) {
+      // Jika titik belum diklik atau titik yang benar sudah diklik, tidak melakukan apa-apa
+      return;
+    }
+
+    var correctPosition = clickedPoint.x === correctPoint.x && clickedPoint.y === correctPoint.y;
+    isCorrectPointClicked = correctPosition; // Menandai status apakah titik yang benar telah diklik
+    updateNotification();
+  });
+
+  drawGrid();
+});

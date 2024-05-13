@@ -19,8 +19,22 @@
         transform: translateX(0) rotateY(0);
       }
       100% {
-        transform: translateX(137px) rotateY(180deg);
+        transform: translateX(192px) rotateY(180deg);
       }
+    }
+
+    @keyframes pencerminan1Salah {
+      0% {
+        transform: translateX(0) rotateY(0);
+      }
+      100% {
+        transform: translateX(146px);
+      }
+    }
+
+    .pencerminan1Salah {
+      animation: pencerminan1Salah 5s forwards;
+      animation-delay: 2s;
     }
 
     @keyframes pencerminan2 {
@@ -28,7 +42,7 @@
         transform: translateX(0) rotateY(0);
       }
       100% {
-        transform: translateX(123px) rotateY(180deg);
+        transform: translateX(128px) rotateY(180deg);
       }
     }
 
@@ -46,7 +60,7 @@
         transform: translateX(0) rotateY(0);
       }
       100% {
-        transform: translateY(123px) rotateX(180deg);
+        transform: translateY(100px) rotateX(180deg);
       }
     }
 
@@ -70,13 +84,10 @@
 
     @keyframes sumbuTitik {
       0% {
-        transform: translateX(0) rotateY(0) rotate3d(1, 1, 0, 0deg);
-      }
-      50% {
-        transform: rotate3d(1, 1, 0, 180deg) translateY(70px) translateX(-70px);
+        transform: translateX(0) rotateY(0);
       }
       100% {
-        transform: rotate(180deg) translateY(138px) translateX(-138px);
+        transform: translateX(141px) translateY(-141px) rotateZ(180deg);
       }
     }
 
@@ -132,7 +143,7 @@
 
     .refleksiAneh {
       animation: refleksiAneh 5s forwards;
-      animation-delay: 3s;
+      animation-delay: 2s;
     }
 
     @keyframes pencerminanBangun {
@@ -145,13 +156,13 @@
     }
 
     .animate-pencerminan1 {
-      animation: pencerminan1 7s forwards;
+      animation: pencerminan1 5s forwards;
       animation-delay: 2s;
     }
 
     .animate-pencerminan2 {
       animation: pencerminan2 5s forwards;
-      animation-delay: 27s;
+      animation-delay: 23s;
     }
 
     .animate-tes1Pemahaman1 {
@@ -171,17 +182,17 @@
 
     .animate-sumbucermin {
       animation: SumbuCermin 5s forwards;
-      animation-delay: 22s;
+      animation-delay: 18s;
     }
 
     .animate-sumbuTitik {
       animation: sumbuTitik 5s forwards;
-      animation-delay: 7s;
+      animation-delay: 4s;
     }
 
     .animate-pencerminanBangun {
       animation: pencerminanBangun 5s forwards;
-      animation-delay: 22s;
+      animation-delay: 18s;
     }
 
     @keyframes garisCermin1 {
@@ -196,6 +207,12 @@
       }
     }
 
+    @keyframes garisCerminOi {
+      to {
+        height: 100%;
+      }
+    }
+
     .animate-garisCermin1 {
       animation: garisCermin1 2s forwards;
     }
@@ -206,8 +223,8 @@
     }
 
     .animate-garisCermin3 {
-      animation: garisCermin1 2s forwards;
-      animation-delay: 5s;
+      animation: garisCerminOi 2s forwards;
+      animation-delay: 0s;
     }
 
     @keyframes jarak1Contoh {
@@ -238,22 +255,22 @@
 
     .jarak1Contoh1 {
       animation: jarak1Contoh 4s ease-in-out;
-      animation-delay: 8s;
+      animation-delay: 3s;
     }
 
     .jarak2Contoh1 {
       animation: jarak1Contoh 4s ease-in-out;
-      animation-delay: 13s;
+      animation-delay: 8s;
     }
 
     .jarak3Contoh1 {
       animation: jarak1Contoh 4s ease-in-out;
-      animation-delay: 18s;
+      animation-delay: 13s;
     }
 
     .jarak4Contoh1 {
       animation: jarak1Contoh 4s ease-in-out;
-      animation-delay: 23s;
+      animation-delay: 18s;
     }
 
     @keyframes titik1 {
@@ -264,7 +281,7 @@
 
     .titikA1 {
       animation: titik1 1s linear forwards;
-      animation-delay: 11s;
+      animation-delay: 7s;
     }
 
     .titikoi {
@@ -274,17 +291,17 @@
 
     .titikB1 {
       animation: titik1 1s linear forwards;
-      animation-delay: 16s;
+      animation-delay: 12s;
     }
 
     .titikC1 {
       animation: titik1 1s linear forwards;
-      animation-delay: 21s;
+      animation-delay: 17s;
     }
 
     .titikD1 {
       animation: titik1 1s linear forwards;
-      animation-delay: 26s;
+      animation-delay: 22s;
     }
 
     @keyframes JarakMiring1 {
@@ -300,24 +317,24 @@
         opacity: 1;
       }
       60% {
-        transform: translateX(-48px) translateY(-48px) rotate(42deg);
+        transform: translateX(-55px) translateY(-57px) rotate(42deg);
         opacity: 1;
       }
 
       100% {
         opacity: 0;
-        transform: translateX(-48px) translateY(-48px) rotate(42deg);
+        transform: translateX(-55px) translateY(-57px) rotate(42deg);
       }
     }
 
     .JarakMiring1 {
       animation: JarakMiring1 4s linear forwards;
-      animation-delay: 18s;
+      animation-delay: 13s;
     }
 
     .JarakMiring3 {
       animation: JarakMiring1 4s linear forwards;
-      animation-delay: 13s;
+      animation-delay: 8s;
     }
 
     @keyframes JarakMiring2 {
@@ -333,19 +350,19 @@
         opacity: 1;
       }
       60% {
-        transform: translateX(-105px) translateY(-105px) rotate(44deg);
+        transform: translateX(-110px) translateY(-110px) rotate(44deg);
         opacity: 1;
       }
 
       100% {
-        transform: translateX(-105px) translateY(-105px) rotate(44deg);
+        transform: translateX(-110px) translateY(-110px) rotate(44deg);
         opacity: 0;
       }
     }
 
     .JarakMiring2 {
       animation: JarakMiring2 4s linear forwards;
-      animation-delay: 8s;
+      animation-delay: 3s;
     }
 
     @keyframes garisSumbu {
@@ -356,7 +373,7 @@
 
     .garisSumbu {
       animation: garisSumbu 2s linear forwards;
-      animation-delay: 5s;
+      animation-delay: 0s;
     }
 
     @keyframes titikSumbu {
@@ -371,8 +388,8 @@
     }
 
     .titikSumbu {
-      animation: titikSumbu 2s linear forwards;
-      animation-delay: 4s;
+      animation: titikSumbu 1s linear forwards;
+      animation-delay: 0s;
     }
 
     @keyframes Bangun {
@@ -416,7 +433,7 @@
 
     .garisBangun2 {
       animation: garisBangun 2s forwards;
-      animation-delay: 5s;
+      animation-delay: 0s;
     }
 
     @keyframes jarakBangun {
@@ -447,17 +464,17 @@
 
     .jarakBangun1 {
       animation: jarakBangun 4s ease-in-out;
-      animation-delay: 8s;
+      animation-delay: 3s;
     }
 
     .jarakBangun2 {
       animation: jarakBangun 4s ease-in-out;
-      animation-delay: 13s;
+      animation-delay: 8s;
     }
 
     .jarakBangun3 {
       animation: jarakBangun 4s ease-in-out;
-      animation-delay: 18s;
+      animation-delay: 13s;
     }
 
     @keyframes refleksiTitik {
@@ -468,7 +485,7 @@
 
     .refleksiTitik {
       animation: refleksiTitik 4s forwards;
-      animation-delay: 8s;
+      animation-delay: 3s;
     }
 
     @keyframes garisTitik8 {
@@ -479,15 +496,15 @@
 
     .garisTitik8 {
       animation: garisTitik8 2s forwards;
-      animation-delay: 5s;
+      animation-delay: 0s;
     }
   </style>
-  <body>
+  <body class="bg-gray-100">
     <nav class="w-full flex justify-center">
       <div
         class="container flex flex-wrap px-2 top-0 py-5 flex-row items-center justify-between max-w-4xl md:px-4 z-50 bg-white bg-opacity-90 fixed"
       >
-        <a class="flex font-bold items-center text-primary tras" id="judul">
+        <a class="flex font-bold items-center text-primary tras" id="judul" href="../index.html">
           <span class="ml-3 text-lg relative">Transformasi Geometri</span>
         </a>
 
@@ -579,21 +596,21 @@
     </nav>
 
     <div
-      class="container font-lato pt-[70px] px-5 text-[14px] font-medium text-secondary leading-6 tracking-wide w-full md:bg-gray-100"
+      class="container max-w-4xl font-lato pt-[70px] text-[14px] md:mx-auto font-medium text-secondary leading-6 tracking-wide w-full md:bg-gray-100"
     >
       <!-- Judul -->
-      <h2 class="text-xs text-hijau font-bold pt-8 md:mx-auto max-w-4xl md:px-8 bg-white">
+      <h2 class="text-xs text-hijau font-bold pt-8 md:mx-auto max-w-4xl bg-white px-5 md:px-8">
         Jenis transformasi
       </h2>
       <h1
-        class="text-[22px] font-extrabold text-primary tracking-wide pt-1 md:mx-auto max-w-4xl md:px-8 bg-white"
+        class="text-[22px] font-extrabold text-primary tracking-wide pt-1 md:mx-auto max-w-4xl bg-white px-5 md:px-8"
       >
         Refleksi / Pencerminan
       </h1>
       <!-- Akhir Judul -->
 
       <!-- Hero Section -->
-      <div class="max-w-4xl md:mx-auto bg-white md:px-8 md:pt-7 md:pb-16">
+      <div class="md:mx-auto px-5 md:px-8 bg-white pt-7 md:pb-16">
         <img src="../img/Refleksi Pria.jpg" alt="" class="w-72 h-72 mx-auto mt-4" />
         <p class="mt-3">Coba kamu perhatikan saat kamu bercermin!</p>
         <p class="mt-4">
@@ -613,42 +630,6 @@
           <span class="text-hijau font-semibold">refleksi</span> pada transformasi geometri
         </p>
 
-        <div class="w-80 h-32 relative mt-8 mx-auto">
-          <svg
-            width="73"
-            height="84"
-            viewBox="0 0 73 84"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="absolute top-6 left-14"
-          >
-            <path
-              d="M72 40.2679C73.3333 41.0378 73.3333 42.9622 72 43.7321L3 83.5692C1.66667 84.339 0 83.3768 0 81.8372V2.16283C0 0.623233 1.66666 -0.339019 3 0.430781L72 40.2679Z"
-              fill="#F1F1F1"
-            />
-          </svg>
-          <svg
-            width="73"
-            height="84"
-            viewBox="0 0 73 84"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="absolute z-10 top-6 left-14"
-            id="pencerminan1"
-          >
-            <path
-              d="M72 40.2679C73.3333 41.0378 73.3333 42.9622 72 43.7321L3 83.5692C1.66667 84.339 0 83.3768 0 81.8372V2.16283C0 0.623233 1.66666 -0.339019 3 0.430781L72 40.2679Z"
-              fill="#7BFFD0"
-            />
-          </svg>
-
-          <div
-            class="w-[2px] h-0 bg-[#CEBEBE] mx-auto absolute top-0 left-1/2"
-            data-aos="zoom-in"
-            id="garisCermin1"
-          ></div>
-        </div>
-
         <div class="mt-6" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="50">
           <p
             class="mt-12 border-l-8 border-hijau font-semibold pl-2 leading-relaxed font-lato text-primary"
@@ -657,13 +638,135 @@
             titik, garis ataupun bidang yang disebut sumbu pencerminan.
           </p>
         </div>
+
+        <div
+          class="flex justify-between items-center w-3/5 mx-auto mt-10 h-10 text-[11px] rounded-xl bg-gray-100 relative"
+        >
+          <div
+            id="translasi"
+            class="text-teal-600 font-bold bg-white w-2/5 h-8 rounded-xl ml-1 flex justify-center items-center cursor-pointer"
+            onclick="toggleTabs('translasi')"
+          >
+            Refleksi
+          </div>
+          <div
+            id="bukanTranslasi"
+            class="w-3/5 h-8 rounded-xl flex justify-center items-center cursor-pointer"
+            onclick="toggleTabs('bukanTranslasi')"
+          >
+            Bukan Refleksi
+          </div>
+        </div>
+        <div>
+          <div class="w-72 h-72 relative mt-7 mx-auto flex border-b-2 items-center" id="kotakBiru">
+            <div class="h-72 w-full flex justify-center items-center mx-auto relative z-20">
+              <div class="hidden" id="iniya">
+                <svg
+                  width="97"
+                  height="98"
+                  viewBox="0 0 97 98"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute top-[95px] left-[0px] opacity-60"
+                >
+                  <path
+                    d="M95.5168 47.2192C96.9695 47.9619 96.9696 50.038 95.5168 50.7808L3.6604 97.7416C2.32963 98.4219 0.75 97.4554 0.75 95.9608V2.03922C0.75 0.54462 2.32963 -0.421898 3.66041 0.258447L95.5168 47.2192Z"
+                    fill="#F1F1F1"
+                  />
+                </svg>
+
+                <svg
+                  width="97"
+                  height="98"
+                  viewBox="0 0 97 98"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute z-10 top-[95px] left-[0px] opacity-60 animate-pencerminan1"
+                >
+                  <path
+                    d="M95.5168 47.2192C96.9695 47.9619 96.9696 50.038 95.5168 50.7808L3.6604 97.7416C2.32963 98.4219 0.75 97.4554 0.75 95.9608V2.03922C0.75 0.54462 2.32963 -0.421898 3.66041 0.258447L95.5168 47.2192Z"
+                    fill="#7BFFD0"
+                  />
+                </svg>
+
+                <div
+                  class="w-[2px] h-0 bg-hijau mx-auto absolute top-0 left-1/2 animate-garisCermin1"
+                  data-aos="zoom-in"
+                ></div>
+                <img
+                  src="../img/Grid6.jpeg"
+                  class="absolute left-0 top-0 h-full w-full -z-10"
+                  alt=""
+                />
+              </div>
+              <svg
+                width="54"
+                height="54"
+                viewBox="0 0 54 54"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="absolute cursor-pointer -mt-10"
+                onclick="removeIniya()"
+                id="play1"
+              >
+                <path
+                  d="M21.332 38.6643L37.331 26.665L21.332 14.6658V38.6643ZM26.665 0C11.9459 0 0 11.9459 0 26.665C0 41.3841 11.9459 53.33 26.665 53.33C41.3841 53.33 53.33 41.3841 53.33 26.665C53.33 11.9459 41.3841 0 26.665 0ZM26.665 47.997C14.9057 47.997 5.333 38.4243 5.333 26.665C5.333 14.9057 14.9057 5.333 26.665 5.333C38.4243 5.333 47.997 14.9057 47.997 26.665C47.997 38.4243 38.4243 47.997 26.665 47.997Z"
+                  fill="#D9D9D9"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="w-72 h-72 relative mt-7 mx-auto hidden" id="kotakOrange">
+            <div class="h-72 w-full mx-auto relative z-20">
+              <div class="" id="">
+                <svg
+                  width="97"
+                  height="98"
+                  viewBox="0 0 97 98"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute top-[95px] left-[0px] opacity-60"
+                >
+                  <path
+                    d="M95.5168 47.2192C96.9695 47.9619 96.9696 50.038 95.5168 50.7808L3.6604 97.7416C2.32963 98.4219 0.75 97.4554 0.75 95.9608V2.03922C0.75 0.54462 2.32963 -0.421898 3.66041 0.258447L95.5168 47.2192Z"
+                    fill="#F1F1F1"
+                  />
+                </svg>
+
+                <svg
+                  width="97"
+                  height="98"
+                  viewBox="0 0 97 98"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute z-10 top-[95px] left-[0px] opacity-60 pencerminan1Salah"
+                >
+                  <path
+                    d="M95.5168 47.2192C96.9695 47.9619 96.9696 50.038 95.5168 50.7808L3.6604 97.7416C2.32963 98.4219 0.75 97.4554 0.75 95.9608V2.03922C0.75 0.54462 2.32963 -0.421898 3.66041 0.258447L95.5168 47.2192Z"
+                    fill="#8FBFFF"
+                  />
+                </svg>
+
+                <div
+                  class="w-[2px] h-0 bg-hijau mx-auto absolute top-0 left-1/2 animate-garisCermin1"
+                  data-aos="zoom-in"
+                ></div>
+                <img
+                  src="../img/Grid6.jpeg"
+                  class="absolute left-0 top-0 h-full w-full -z-10"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- Akhir Hero Section -->
 
       <!-- Sifat Refleksi -->
-      <div class="max-w-4xl md:mx-auto bg-white md:px-8 pb-12 md:pt-8 md:pb-10 md:mt-8">
+      <div class="md:mx-auto px-5 md:px-8 bg-white pb-12 md:pt-8 pt-4 md:pb-10 md:mt-8">
         <h2
-          class="mt-10 md:mt-0 h-14 w-44 shadow-custom flex items-center pl-3 font-bold text-primary text-base rounded-md border-l-2 border-b-2 border-hijau -ml-1"
+          class="mt-16 md:mt-0 h-14 w-44 shadow-custom flex items-center pl-3 font-bold text-primary text-base rounded-md border-l-2 border-b-2 border-hijau -ml-1"
         >
           Sifat Refleksi
         </h2>
@@ -714,112 +817,143 @@
       <!-- Akhir Sifat Refleksi -->
 
       <!-- Contoh Refleksi -->
-      <div class="max-w-4xl md:mx-auto bg-white md:px-8 border-b-2 pb-12 md:pb-8">
+      <div class="md:mx-auto px-5 md:px-8 bg-white pb-12 md:pb-8 border-b-2">
         <p class="inline">Berikut adalah contoh pencerminan yang benar.</p>
         <p class="mt-4 inline">
           Perhatikan animasi berikut dimana trapesium dicerminkan pada
           <span class="text-hijau font-semibold">garis vertikal</span>
         </p>
-        <div class="w-80 h-80 relative mt-8 mx-auto" id="ContohRefleksi">
-          <div class="hidden" id="yahuu">
-            <div>
-              <svg
-                width="135"
-                height="100"
-                viewBox="0 0 135 100"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute rotate-90 top-[79px] left-[31px]"
-              >
-                <path d="M36.4286 19.7671L67.9766 79.9417H4.8805L36.4286 19.7671Z" fill="#F1F1F1" />
-                <path d="M98.5715 19.7671L130.12 79.9417H67.0234L98.5715 19.7671Z" fill="#F1F1F1" />
-                <path
-                  d="M67.4998 80.2329L35.9518 20.0583L99.0479 20.0583L67.4998 80.2329Z"
-                  fill="#F1F1F1"
-                />
-              </svg>
+        <div
+          class="w-80 h-80 relative mt-8 mx-auto flex justify-center items-center"
+          id="ContohRefleksi"
+        >
+          <div class="opacity-30" id="yahuu1">
+            <img src="../img/GridBanyak.jpeg" alt="" class="absolute w-full h-full left-0 top-0" />
+            <svg
+              width="106"
+              height="138"
+              viewBox="0 0 106 138"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute top-[58px] left-[41px]"
+            >
+              <path
+                d="M23.1043 5.97704L83.8187 37.7673L22.2967 68.3684L23.1043 5.97704Z"
+                fill="#F1F1F1"
+                stroke="#F1F1F1"
+              />
+              <path
+                d="M22.289 69.0337L83.0034 100.824L21.4814 131.425L22.289 69.0337Z"
+                fill="#F1F1F1"
+                stroke="#F1F1F1"
+              />
+              <path
+                d="M83.3035 100.494L22.5891 68.7039L84.1111 38.1028L83.3035 100.494Z"
+                fill="#F1F1F1"
+                stroke="#F1F1F1"
+              />
+            </svg>
 
-              <svg
-                width="101"
-                height="136"
-                viewBox="0 0 101 136"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute top-[61px] left-[48px] animate-pencerminan2"
-              >
-                <path
-                  d="M80.7327 36.9286L20.558 68.4766L20.558 5.3805L80.7327 36.9286Z"
-                  fill="#7BFFD0"
-                />
-                <path
-                  d="M80.7329 99.0716L20.5583 130.62L20.5583 67.5236L80.7329 99.0716Z"
-                  fill="#7BFFD0"
-                />
-                <path
-                  d="M20.2671 67.9997L80.4417 36.4516V99.5477L20.2671 67.9997Z"
-                  fill="#7BFFD0"
-                />
-              </svg>
-
-              <div class="w-[2px] h-0 bg-hijau absolute top-0 left-1/2 animate-garisCermin3"></div>
-            </div>
-
-            <div class="text-hijau font-semibold text-sm">
-              <span class="left-[62px] top-[47px] absolute">A</span>
+            <div class="text-hijau font-semibold text-sm z-20">
+              <span class="left-[60px] top-[45px] absolute">A</span>
               <span class="left-[133px] top-[85px] absolute">B</span>
               <span class="top-1/2 left-[128px] absolute">C</span>
               <span class="absolute left-[62px] bottom-[107px]">D</span>
             </div>
 
-            <div class="text-hijau font-semibold text-sm">
-              <span class="right-[62px] top-[47px] absolute opacity-0 titikA1">A'</span>
-              <span class="right-[133px] top-[85px] absolute opacity-0 titikB1">B'</span>
-              <span class="top-1/2 right-[128px] absolute opacity-0 titikC1">C'</span>
-              <span class="absolute opacity-0 right-[64px] bottom-[107px] titikD1">D'</span>
-            </div>
+            <div class="hidden" id="yahuu">
+              <svg
+                width="106"
+                height="138"
+                viewBox="0 0 106 138"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="absolute top-[58px] left-[41px] animate-pencerminan2"
+              >
+                <path
+                  d="M23.1043 5.97704L83.8187 37.7673L22.2967 68.3684L23.1043 5.97704Z"
+                  fill="#7BFFD0"
+                  stroke="#7BFFD0"
+                />
+                <path
+                  d="M22.289 69.0337L83.0034 100.824L21.4814 131.425L22.289 69.0337Z"
+                  fill="#7BFFD0"
+                  stroke="#7BFFD0"
+                />
+                <path
+                  d="M83.3035 100.494L22.5891 68.7039L84.1111 38.1028L83.3035 100.494Z"
+                  fill="#7BFFD0"
+                  stroke="#7BFFD0"
+                />
+              </svg>
 
-            <div class="absolute top-[60px] left-[69px] opacity-0 jarak1Contoh1">
-              <div
-                class="w-[28px] h-[25px] rounded-full border-t-4 border-red inline-block delay-7"
-              ></div>
-              <div
-                class="w-[28px] h-[25px] rounded-full border-t-4 border-red inline-block delay-8"
-              ></div>
-              <div
-                class="w-[28px] h-[25px] rounded-full border-t-4 border-red inline-block delay-9"
-              ></div>
-            </div>
+              <div class="w-[2px] h-0 bg-hijau absolute top-0 left-1/2 animate-garisCermin3"></div>
 
-            <div class="absolute top-[90px] left-[133px] jarak2Contoh1 opacity-0">
-              <div
-                class="w-[28px] h-[25px] rounded-full border-t-4 border-red inline-block delay-7"
-              ></div>
-            </div>
+              <div class="text-hijau font-semibold text-sm">
+                <span class="right-[62px] top-[47px] absolute opacity-0 titikA1">A'</span>
+                <span class="right-[133px] top-[85px] absolute opacity-0 titikB1">B'</span>
+                <span class="top-1/2 right-[128px] absolute opacity-0 titikC1">C'</span>
+                <span class="absolute opacity-0 right-[64px] bottom-[107px] titikD1">D'</span>
+              </div>
 
-            <div class="absolute top-[150px] left-[133px] opacity-0 jarak3Contoh1">
-              <div
-                class="w-[28px] h-[25px] rounded-full border-t-4 border-red inline-block delay-7"
-              ></div>
-            </div>
+              <div class="absolute top-[57px] left-[66px] opacity-0 jarak1Contoh1">
+                <div
+                  class="w-[30px] h-[25px] rounded-full border-t-4 border-red inline-block delay-7"
+                ></div>
+                <div
+                  class="w-[30px] h-[25px] rounded-full border-t-4 border-red inline-block delay-8"
+                ></div>
+                <div
+                  class="w-[30px] h-[25px] rounded-full border-t-4 border-red inline-block delay-9"
+                ></div>
+              </div>
 
-            <div class="absolute bottom-[110px] left-[69px] jarak4Contoh1 opacity-0">
-              <div
-                class="w-[28px] h-[25px] rounded-full border-t-4 border-red inline-block delay-7"
-              ></div>
-              <div
-                class="w-[28px] h-[25px] rounded-full border-t-4 border-red inline-block delay-8"
-              ></div>
-              <div
-                class="w-[28px] h-[25px] rounded-full border-t-4 border-red inline-block delay-9"
-              ></div>
+              <div class="absolute top-[87px] left-[130px] jarak2Contoh1 opacity-0">
+                <div
+                  class="w-[30px] h-[25px] rounded-full border-t-4 border-red inline-block delay-7"
+                ></div>
+              </div>
+
+              <div class="absolute top-[147px] left-[130px] opacity-0 jarak3Contoh1">
+                <div
+                  class="w-[30px] h-[25px] rounded-full border-t-4 border-red inline-block delay-7"
+                ></div>
+              </div>
+
+              <div class="absolute bottom-[110px] left-[66px] jarak4Contoh1 opacity-0">
+                <div
+                  class="w-[30px] h-[25px] rounded-full border-t-4 border-red inline-block delay-7"
+                ></div>
+                <div
+                  class="w-[30px] h-[25px] rounded-full border-t-4 border-red inline-block delay-8"
+                ></div>
+                <div
+                  class="w-[30px] h-[25px] rounded-full border-t-4 border-red inline-block delay-9"
+                ></div>
+              </div>
             </div>
           </div>
+          <svg
+            width="54"
+            height="54"
+            viewBox="0 0 54 54"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="absolute cursor-pointer -mt-14"
+            id="play2"
+            onclick="removeyahuu()"
+          >
+            <path
+              d="M21.332 38.6643L37.331 26.665L21.332 14.6658V38.6643ZM26.665 0C11.9459 0 0 11.9459 0 26.665C0 41.3841 11.9459 53.33 26.665 53.33C41.3841 53.33 53.33 41.3841 53.33 26.665C53.33 11.9459 41.3841 0 26.665 0ZM26.665 47.997C14.9057 47.997 5.333 38.4243 5.333 26.665C5.333 14.9057 14.9057 5.333 26.665 5.333C38.4243 5.333 47.997 14.9057 47.997 26.665C47.997 38.4243 38.4243 47.997 26.665 47.997Z"
+              fill="#079292"
+            />
+          </svg>
         </div>
       </div>
       <!-- Contoh Refleksi -->
 
       <!-- Tes Pemahaman 1 -->
-      <div class="max-w-4xl md:mx-auto bg-white md:px-8 md:pt-8 md:pb-8 md:mt-8">
+      <div class="md:mx-auto px-5 md:px-8 bg-white md:pt-8 pt-6 md:pb-8 md:mt-8">
         <div class="flex items-center mt-8 md:mt-0">
           <img src="../img/tespemahaman.png" alt="" class="w-16 h-16" />
           <div class="text-xl font-semibold tracking-wides text-hijau ml-2">Tes Pemahaman</div>
@@ -834,130 +968,154 @@
             sifat refleski?
           </p>
 
-          <div class="flex items-center border-t-2 border-b-2 py-[6px] cursor-pointer mt-3" id="C1">
-            <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="buttonC1">
-              A
-            </button>
+          <div class="" id="tes1">
             <div
-              class="w-[210px] h-[260px] p-4 rounded-lg relative cursor-pointer m-4"
-              id="muncul1"
-              data-aos="zoom-in"
-              data-aos-offset="400"
+              class="flex items-center border-t-2 border-b-2 py-[6px] cursor-pointer mt-3"
+              id="C1"
             >
-              <svg
-                width="96"
-                height="62"
-                viewBox="0 0 96 62"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute top-[70px] left-[55px] opacity-50"
+              <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="buttonC1">
+                A
+              </button>
+              <div
+                class="w-[210px] h-[210px] p-4 rounded-lg relative cursor-pointer m-4"
+                id="muncul1"
+                data-aos="zoom-in"
+                data-aos-offset="400"
               >
-                <path d="M0 0L96 62H0V0Z" fill="#D9D9D9" />
-              </svg>
-              <svg
-                width="96"
-                height="62"
-                viewBox="0 0 96 62"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute top-[70px] left-[55px] opacity-50"
-                id="svg1"
-              >
-                <path d="M0 0L96 62H0V0Z" fill="#7BFFD0" />
-              </svg>
+                <svg
+                  width="96"
+                  height="62"
+                  viewBox="0 0 96 62"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute top-[44px] left-[55px] opacity-50"
+                >
+                  <path d="M0 0L96 62H0V0Z" fill="#D9D9D9" />
+                </svg>
+                <svg
+                  width="96"
+                  height="62"
+                  viewBox="0 0 96 62"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute top-[44px] left-[55px] opacity-50"
+                  id="svg1"
+                >
+                  <path d="M0 0L96 62H0V0Z" fill="#7BFFD0" />
+                </svg>
 
-              <div class="h-[2px] w-0 bg-hijau relative top-1/2 left-0" id="garisCermin3"></div>
+                <div class="h-[2px] w-0 bg-hijau relative top-1/2 left-0" id="garisCermin3"></div>
+              </div>
+            </div>
+
+            <div class="flex items-center border-b-2 py-[6px] cursor-pointer" id="B1">
+              <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="buttonB1">
+                B
+              </button>
+              <div
+                class="w-[210px] h-[210px] p-4 rounded-lg relative cursor-pointer m-4"
+                id="muncul2"
+                data-aos="zoom-in"
+                data-aos-offset="400"
+              >
+                <svg
+                  width="96"
+                  height="62"
+                  viewBox="0 0 96 62"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute top-[44px] left-[45px] opacity-50"
+                >
+                  <path d="M0 0L96 62H0V0Z" fill="#D9D9D9" />
+                </svg>
+                <svg
+                  width="96"
+                  height="62"
+                  viewBox="0 0 96 62"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute top-[44px] left-[45px] opacity-50"
+                  id="svg2"
+                >
+                  <path d="M0 0L96 62H0V0Z" fill="#7BFFD0" />
+                </svg>
+
+                <div class="h-[2px] w-0 bg-hijau relative top-1/2 left-0" id="garisCermin4"></div>
+              </div>
+            </div>
+
+            <div class="flex items-center border-b-2 py-[6px] cursor-pointer" id="A1">
+              <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="buttonA1">
+                C
+              </button>
+              <div
+                class="w-[210px] h-[210px] p-4 rounded-lg relative cursor-pointer m-4"
+                id="muncul3"
+                data-aos="zoom-in"
+                data-aos-offset=""
+              >
+                <svg
+                  width="96"
+                  height="62"
+                  viewBox="0 0 96 62"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute top-[26px] left-[45px] opacity-50"
+                >
+                  <path d="M0 0L96 62H0V0Z" fill="#D9D9D9" />
+                </svg>
+                <svg
+                  width="96"
+                  height="62"
+                  viewBox="0 0 96 62"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute top-[26px] left-[45px] opacity-50"
+                  id="svg3"
+                >
+                  <path d="M0 0L96 62H0V0Z" fill="#7BFFD0" />
+                </svg>
+
+                <div class="h-[2px] w-0 bg-hijau relative top-1/2 left-0" id="garisCermin5"></div>
+              </div>
             </div>
           </div>
 
-          <div class="flex items-center border-b-2 py-[6px] cursor-pointer" id="B1">
-            <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="buttonB1">
-              B
-            </button>
-            <div
-              class="w-[210px] h-[260px] p-4 rounded-lg relative cursor-pointer m-4"
-              id="muncul2"
-              data-aos="zoom-in"
-              data-aos-offset="400"
-            >
+          <div class="relative w-full">
+            <div>
+              <button
+                class="py-2 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]"
+                disabled
+                id="Check1"
+              >
+                Check
+              </button>
+              <p class="ml-3 font-semibold text-hijau hidden" id="benar1">Benar 🗸</p>
+              <p class="ml-3 font-semibold text-red hidden" id="salah1">Salah X</p>
+            </div>
+            <div class="flex items-center cursor-pointer mt-3 absolute right-3 top-3" id="play3">
+              <p class="hover:text-gray-500 underline text-hijau">Reset</p>
               <svg
-                width="96"
-                height="62"
-                viewBox="0 0 96 62"
+                width="25"
+                height="20"
+                viewBox="0 0 25 20"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                class="absolute top-[70px] left-[45px] opacity-50"
+                class="ml-1"
               >
-                <path d="M0 0L96 62H0V0Z" fill="#D9D9D9" />
+                <path
+                  d="M16.6667 10C16.6667 8.77778 15.5952 7.77778 14.2857 7.77778C12.9762 7.77778 11.9048 8.77778 11.9048 10C11.9048 11.2222 12.9762 12.2222 14.2857 12.2222C15.5952 12.2222 16.6667 11.2222 16.6667 10ZM14.2857 0C8.36905 0 3.57143 4.47778 3.57143 10H0L4.7619 14.4444L9.52381 10H5.95238C5.95238 5.7 9.67857 2.22222 14.2857 2.22222C18.8929 2.22222 22.619 5.7 22.619 10C22.619 14.3 18.8929 17.7778 14.2857 17.7778C12.4881 17.7778 10.8214 17.2333 9.45238 16.3333L7.7619 17.9333C9.57143 19.2222 11.8333 20 14.2857 20C20.2024 20 25 15.5222 25 10C25 4.47778 20.2024 0 14.2857 0Z"
+                  fill="#079292"
+                />
               </svg>
-              <svg
-                width="96"
-                height="62"
-                viewBox="0 0 96 62"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute top-[70px] left-[45px] opacity-50"
-                id="svg2"
-              >
-                <path d="M0 0L96 62H0V0Z" fill="#7BFFD0" />
-              </svg>
-
-              <div class="h-[2px] w-0 bg-hijau relative top-1/2 left-0" id="garisCermin4"></div>
             </div>
           </div>
-
-          <div class="flex items-center border-b-2 py-[6px] cursor-pointer" id="A1">
-            <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="buttonA1">
-              C
-            </button>
-            <div
-              class="w-[210px] h-[260px] p-4 rounded-lg relative cursor-pointer m-4"
-              id="muncul3"
-              data-aos="zoom-in"
-              data-aos-offset=""
-            >
-              <svg
-                width="96"
-                height="62"
-                viewBox="0 0 96 62"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute top-[50px] left-[45px] opacity-50"
-              >
-                <path d="M0 0L96 62H0V0Z" fill="#D9D9D9" />
-              </svg>
-              <svg
-                width="96"
-                height="62"
-                viewBox="0 0 96 62"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute top-[50px] left-[45px] opacity-50"
-                id="svg3"
-              >
-                <path d="M0 0L96 62H0V0Z" fill="#7BFFD0" />
-              </svg>
-
-              <div class="h-[2px] w-0 bg-hijau relative top-1/2 left-0" id="garisCermin5"></div>
-            </div>
-          </div>
-
-          <button
-            class="py-2 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]"
-            disabled
-            id="Check1"
-          >
-            Check
-          </button>
-
-          <p class="ml-3 font-semibold text-hijau hidden" id="benar1">Benar 🗸</p>
-          <p class="ml-3 font-semibold text-red hidden" id="salah1">Salah X</p>
         </div>
       </div>
       <!-- Akhir Tes Pemahaman 1 -->
 
       <!-- Sumbu Cermin -->
-      <div class="max-w-4xl md:mx-auto bg-white md:px-8 border-b-2 pb-12 pt-10 md:pb-12 md:mt-8">
+      <div class="md:mx-auto px-5 md:px-8 bg-white border-b-2 pb-12 pt-16 md:pt-8 md:pb-12 md:mt-8">
         <h2
           class="h-14 w-44 shadow-custom flex items-center pl-3 font-bold text-primary text-base rounded-md border-l-2 border-b-2 border-hijau -ml-1"
         >
@@ -984,69 +1142,105 @@
         </div>
 
         <div
-          class="w-80 h-80 relative mt-4 mx-auto border-2 rounded-lg p-5"
+          class="w-80 h-80 relative mt-4 mx-auto border-2 rounded-lg p-5 flex justify-center items-center"
           data-aos="zoom-in"
           id="subjekHapusSumbu"
         >
-          <div class="hidden" id="hapusSumbu">
-            <div>
-              <svg
-                width="105"
-                height="105"
-                viewBox="0 0 105 105"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute bottom-[52px] left-[153px] opacity-50 animate-sumbucermin z-10"
-              >
-                <path d="M-0.003479 105L104.997 1.90735e-06V105H-0.003479Z" fill="#7BFFD0" />
-              </svg>
+          <div class="opacity-30" id="hapusSumbu">
+            <img src="../img/GridBanyak.jpeg" alt="" />
+            <svg
+              width="113"
+              height="112"
+              viewBox="0 0 113 112"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute bottom-[48px] left-[156px] opacity-50"
+            >
+              <path d="M0.5 112L112.5 112L112.5 0L0.5 112Z" fill="#F1F1F1" />
+            </svg>
 
+            <div class="text-hijau font-bold text-sm">
+              <span class="right-[42px] bottom-[27px] absolute">A</span>
+              <span class="right-[155px] bottom-[27px] absolute">B</span>
+              <span class="bottom-[159px] right-[42px] absolute">C</span>
+            </div>
+            <div class="hidden" id="hapusSumbu0">
               <svg
-                width="105"
-                height="105"
-                viewBox="0 0 105 105"
+                width="113"
+                height="112"
+                viewBox="0 0 113 112"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                class="absolute bottom-[52px] left-[153px] opacity-80"
+                class="absolute bottom-[48px] left-[156px] opacity-50 animate-sumbucermin z-10"
               >
-                <path d="M-0.003479 105L104.997 1.90735e-06V105H-0.003479Z" fill="#F1F1F1" />
+                <path d="M0.5 112L112.5 112L112.5 0L0.5 112Z" fill="#7BFFD0" />
               </svg>
 
               <div
                 class="w-[2px] h-0 bg-hijau absolute bottom-0 left-0 rotate-45 origin-bottom-left garisSumbu"
               ></div>
-            </div>
-            <div class="text-hijau font-bold text-sm">
-              <span class="right-[50px] bottom-[35px] absolute">A</span>
-              <span class="right-[169px] bottom-[35px] absolute">B</span>
-              <span class="bottom-[154px] right-[58px] absolute">C</span>
-            </div>
 
-            <div class="text-hijau font-bold text-sm">
-              <span class="left-[35px] top-[44px] absolute opacity-0 titikA1">A'</span>
-              <span class="left-[35px] top-[155px] absolute opacity-0 titikB1">B'</span>
-              <span class="top-[44px] left-[150px] absolute opacity-0 titikC1">C'</span>
-            </div>
+              <div class="text-hijau font-bold text-sm">
+                <span class="left-[40px] top-[25px] absolute opacity-0 titikA1">A'</span>
+                <span class="left-[40px] top-[158px] absolute opacity-0 titikB1">B'</span>
+                <span class="top-[25px] left-[151px] absolute opacity-0 titikC1">C'</span>
+              </div>
 
-            <div
-              class="absolute right-[96px] bottom-[126px] opacity-0 rotate-[42deg] origin-bottom-right JarakMiring1"
-            >
-              <div class="w-[67px] h-[67px] rounded-full border-t-4 border-red inline-block"></div>
-            </div>
+              <div
+                class="absolute right-[68px] bottom-[139px] opacity-0 rotate-[42deg] origin-bottom-right JarakMiring1"
+              >
+                <div
+                  class="w-[37px] h-[37px] rounded-full border-t-4 border-red inline-block"
+                ></div>
+                <div
+                  class="w-[37px] h-[37px] rounded-full border-t-4 border-red inline-block"
+                ></div>
+              </div>
 
-            <div
-              class="absolute bottom-[20px] right-[96px] opacity-0 rotate-[44deg] origin-bottom-right JarakMiring2"
-            >
-              <div class="w-[67px] h-[67px] rounded-full border-t-4 border-red inline-block"></div>
-              <div class="w-[67px] h-[67px] rounded-full border-t-4 border-red inline-block"></div>
-            </div>
+              <div
+                class="absolute bottom-[27px] right-[68px] opacity-0 rotate-[44deg] origin-bottom-right JarakMiring2"
+              >
+                <div
+                  class="w-[37px] h-[37px] rounded-full border-t-4 border-red inline-block"
+                ></div>
+                <div
+                  class="w-[37px] h-[37px] rounded-full border-t-4 border-red inline-block"
+                ></div>
+                <div
+                  class="w-[37px] h-[37px] rounded-full border-t-4 border-red inline-block"
+                ></div>
+                <div
+                  class="w-[37px] h-[37px] rounded-full border-t-4 border-red inline-block"
+                ></div>
+              </div>
 
-            <div
-              class="absolute bottom-[20px] left-[55px] opacity-0 rotate-[42deg] origin-bottom-right JarakMiring3"
-            >
-              <div class="w-[67px] h-[67px] rounded-full border-t-4 border-red inline-block"></div>
+              <div
+                class="absolute bottom-[25px] left-[59px] opacity-0 rotate-[42deg] origin-bottom-right JarakMiring3"
+              >
+                <div
+                  class="w-[37px] h-[37px] rounded-full border-t-4 border-red inline-block"
+                ></div>
+                <div
+                  class="w-[37px] h-[37px] rounded-full border-t-4 border-red inline-block"
+                ></div>
+              </div>
             </div>
           </div>
+          <svg
+            width="54"
+            height="54"
+            viewBox="0 0 54 54"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="absolute cursor-pointer"
+            id="play4"
+            onclick="removehapusSumbu()"
+          >
+            <path
+              d="M21.332 38.6643L37.331 26.665L21.332 14.6658V38.6643ZM26.665 0C11.9459 0 0 11.9459 0 26.665C0 41.3841 11.9459 53.33 26.665 53.33C41.3841 53.33 53.33 41.3841 53.33 26.665C53.33 11.9459 41.3841 0 26.665 0ZM26.665 47.997C14.9057 47.997 5.333 38.4243 5.333 26.665C5.333 14.9057 14.9057 5.333 26.665 5.333C38.4243 5.333 47.997 14.9057 47.997 26.665C47.997 38.4243 38.4243 47.997 26.665 47.997Z"
+              fill="#079292"
+            />
+          </svg>
         </div>
 
         <div class="flex items-center mt-12">
@@ -1058,31 +1252,37 @@
         </div>
 
         <div
-          class="w-80 h-80 relative mt-4 mx-auto border-2 rounded-lg p-3"
+          class="w-80 h-80 relative mt-4 mx-auto border-2 rounded-lg p-5 flex justify-center items-center"
           data-aos="zoom-in"
           id="subjkeHapusTitik"
         >
-          <div class="hidden" id="hapusTitik">
-            <div>
+          <div class="opacity-30" id="hapusTitik">
+            <img src="../img/Grid8.jpeg" alt="" />
+            <svg
+              width="70"
+              height="70"
+              viewBox="0 0 70 70"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute bottom-[52px] left-[52px] opacity-70"
+            >
+              <path d="M-0.00341797 0L69.9966 70H-0.00341797L-0.00341797 0Z" fill="#F1F1F1" />
+            </svg>
+            <div class="text-hijau font-bold text-sm">
+              <span class="left-[40px] bottom-[33px] absolute">A</span>
+              <span class="right-[185px] bottom-[33px] absolute">B</span>
+              <span class="bottom-[120px] left-[38px] absolute">C</span>
+            </div>
+            <div class="hidden" id="hapusTitik0">
               <svg
                 width="70"
                 height="70"
                 viewBox="0 0 70 70"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                class="absolute bottom-[53px] left-[55px] opacity-70 animate-sumbuTitik z-10"
+                class="absolute bottom-[52px] left-[52px] opacity-70 animate-sumbuTitik z-10"
               >
                 <path d="M-0.00341797 0L69.9966 70H-0.00341797L-0.00341797 0Z" fill="#7BFFD0" />
-              </svg>
-              <svg
-                width="70"
-                height="70"
-                viewBox="0 0 70 70"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute bottom-[53px] left-[55px] opacity-70"
-              >
-                <path d="M-0.00341797 0L69.9966 70H-0.00341797L-0.00341797 0Z" fill="#F1F1F1" />
               </svg>
 
               <div
@@ -1093,19 +1293,29 @@
               >
                 O
               </div>
-            </div>
-            <div class="text-hijau font-bold text-sm">
-              <span class="left-[38px] bottom-[43px] absolute">A</span>
-              <span class="right-[176px] bottom-[43px] absolute">B</span>
-              <span class="bottom-[120px] left-[38px] absolute">C</span>
-            </div>
 
-            <div class="text-hijau font-bold text-sm">
-              <span class="right-[38px] top-[43px] absolute opacity-0 titikA1">A'</span>
-              <span class="left-[176px] top-[43px] absolute opacity-0 titikB1">B'</span>
-              <span class="top-[120px] right-[38px] absolute opacity-0 titikC1">C'</span>
+              <div class="text-hijau font-bold text-sm">
+                <span class="right-[38px] top-[35px] absolute opacity-0 titikA1">A'</span>
+                <span class="left-[176px] top-[35px] absolute opacity-0 titikB1">B'</span>
+                <span class="top-[124px] right-[38px] absolute opacity-0 titikC1">C'</span>
+              </div>
             </div>
           </div>
+          <svg
+            width="54"
+            height="54"
+            viewBox="0 0 54 54"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="absolute cursor-pointer"
+            id="play5"
+            onclick="removehapusTitik()"
+          >
+            <path
+              d="M21.332 38.6643L37.331 26.665L21.332 14.6658V38.6643ZM26.665 0C11.9459 0 0 11.9459 0 26.665C0 41.3841 11.9459 53.33 26.665 53.33C41.3841 53.33 53.33 41.3841 53.33 26.665C53.33 11.9459 41.3841 0 26.665 0ZM26.665 47.997C14.9057 47.997 5.333 38.4243 5.333 26.665C5.333 14.9057 14.9057 5.333 26.665 5.333C38.4243 5.333 47.997 14.9057 47.997 26.665C47.997 38.4243 38.4243 47.997 26.665 47.997Z"
+              fill="#079292"
+            />
+          </svg>
         </div>
 
         <p class="mt-8">
@@ -1121,7 +1331,7 @@
       <!--Akhir Sumbu Cermin -->
 
       <!-- Tes Pemahaman 2 -->
-      <div class="max-w-4xl md:mx-auto bg-white md:px-8 md:pb-10 md:mt-8">
+      <div class="md:mx-auto px-5 md:px-8 bg-white md:pb-10 md:mt-8">
         <div class="flex items-center pt-10 md:mt-0">
           <img src="../img/tespemahaman.png" alt="" class="w-16 h-16" />
           <div class="text-xl font-semibold tracking-wides text-hijau ml-2">Tes Pemahaman</div>
@@ -1130,7 +1340,7 @@
           class="w-full mt-3 pb-4 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative max-w-md"
           id="TesPertama2"
         >
-          <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40">TES PERTAMA</p>
+          <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40">TES KEDUA</p>
           <p class="mt-1">
             Sebuah trapesium direfleksikan terhadap sebuah titik. Manakah refleksi yang benar?
           </p>
@@ -1282,22 +1492,29 @@
             </div>
           </div>
 
-          <button
-            class="py-2 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]"
-            disabled
-            id="Check2"
-          >
-            Check
-          </button>
-
-          <p class="ml-3 font-semibold text-hijau hidden" id="benar2">Benar 🗸</p>
-          <p class="ml-3 font-semibold text-red hidden" id="salah2">Salah X</p>
+          <div class="relative w-full">
+            <div>
+              <button
+                class="py-2 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]"
+                disabled
+                id="Check2"
+              >
+                Check
+              </button>
+              <p class="ml-3 font-semibold text-hijau hidden" id="benar2">Benar 🗸</p>
+              <p class="ml-3 font-semibold text-red hidden" id="salah2">Salah X</p>
+            </div>
+            <div class="flex items-center cursor-pointer mt-3 absolute right-3 top-3" id="play6">
+              <p class="hover:text-gray-500 underline text-hijau">Reset</p>
+              <img src="../img/again_9365052.png" alt="" class="w-6 h-6 ml-1" />
+            </div>
+          </div>
         </div>
       </div>
       <!-- Akhir Tes Pemahaman 1 -->
 
       <!-- Refleksi Bangun Datar -->
-      <div class="max-w-4xl md:mx-auto bg-white md:px-8 pt-10 md:pb-8 md:mt-8">
+      <div class="md:mx-auto px-5 md:px-8 bg-white pt-10 md:pb-8 md:mt-8 mt-12">
         <h2
           class="h-14 w-56 shadow-custom flex items-center pl-3 font-bold text-primary text-base rounded-md border-l-2 border-b-2 border-hijau -ml-1"
         >
@@ -1320,29 +1537,41 @@
             <span class="text-hijau font-semibold">Titik A ( 2 , 2 )</span> direfleksikan terhadap
             garis <span class="text-hijau font-semibold">y = 0</span>.
           </p>
-          <div class="w-80 h-80 mx-auto mt-4">
-            <div
-              class="p-4 rounded-lg mt-4 w-full h-full relative"
-              id="hapusKedua"
-              data-aos="zoom-in"
-            >
+          <div class="w-80 h-80 mx-auto mt-4 relative flex justify-center items-center">
+            <div class="p-4 rounded-lg mt-4 w-full h-full relative opacity-30" id="hapusKedua">
               <img src="../img/pencerminan/Grapik.jpg" alt="" />
+              <div
+                class="w-[8px] h-[8px] bg-secondary rounded-full absolute right-[88px] top-[88px]"
+              ></div>
+              <div class="text-hijau font-semibold absolute top-[80px] right-[100px]">A</div>
               <div id="kedua" class="hidden">
                 <div
                   class="w-[8px] h-[8px] bg-hijau rounded-full absolute right-[88px] top-[88px] z-10 refleksiTitik"
                 ></div>
+
                 <div
-                  class="w-[8px] h-[8px] bg-secondary rounded-full absolute right-[88px] top-[88px]"
-                ></div>
-                <div class="text-hijau font-semibold absolute top-[84px] right-[100px]">A</div>
-                <div
-                  class="text-hijau font-semibold absolute bottom-[84px] right-[100px] titikA1 opacity-0"
+                  class="text-hijau font-semibold absolute bottom-[80px] right-[100px] titikA1 opacity-0"
                 >
                   A'
                 </div>
                 <div class="w-[0px] h-[2px] bg-hijau top-1/2 absolute garisTitik8"></div>
               </div>
             </div>
+            <svg
+              width="54"
+              height="54"
+              viewBox="0 0 54 54"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute cursor-pointer"
+              onclick="removehapusKedua()"
+              id="play7"
+            >
+              <path
+                d="M21.332 38.6643L37.331 26.665L21.332 14.6658V38.6643ZM26.665 0C11.9459 0 0 11.9459 0 26.665C0 41.3841 11.9459 53.33 26.665 53.33C41.3841 53.33 53.33 41.3841 53.33 26.665C53.33 11.9459 41.3841 0 26.665 0ZM26.665 47.997C14.9057 47.997 5.333 38.4243 5.333 26.665C5.333 14.9057 14.9057 5.333 26.665 5.333C38.4243 5.333 47.997 14.9057 47.997 26.665C47.997 38.4243 38.4243 47.997 26.665 47.997Z"
+                fill="#079292"
+              />
+            </svg>
           </div>
           <div class="flex items-start mt-6 pb-4 border-b-2">
             <p class="text-primary font-semibold">Diketahui:</p>
@@ -1384,13 +1613,28 @@
             <span class="text-hijau font-semibold"> C ( 3 , -1 )</span> yang akan dicerminkan pada
             garis <span class="text-hijau font-semibold">x = 1</span>
           </p>
-          <div class="w-80 h-80 mx-auto mt-4">
-            <div
-              class="p-4 rounded-lg mt-4 w-full h-full relative"
-              id="hapusKetiga"
-              data-aos="zoom-in"
-            >
+          <div class="w-80 h-80 mx-auto mt-4 relative flex justify-center items-center">
+            <div class="p-4 rounded-lg mt-4 w-full h-full relative opacity-30" id="hapusKetiga">
               <img src="../img/pencerminan/Grapik.jpg" alt="" />
+              <svg
+                width="72"
+                height="138"
+                viewBox="0 0 72 138"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="absolute top-[55px] right-[20px] opacity-70"
+              >
+                <path
+                  d="M0.500018 36.9999L71.652 0.181103L37 137.5L0.500018 36.9999Z"
+                  fill="#F1F1F1"
+                />
+              </svg>
+
+              <div class="absolute text-sm font-semibold text-hijau top-[38px] right-[16px]">A</div>
+              <div class="absolute text-sm font-semibold text-hijau top-[83px] right-[95px]">B</div>
+              <div class="absolute text-sm font-semibold text-hijau bottom-[105px] right-[51px]">
+                C
+              </div>
               <div id="ketiga" class="hidden">
                 <svg
                   width="72"
@@ -1405,30 +1649,6 @@
                     fill="#7BFFD0"
                   />
                 </svg>
-
-                <svg
-                  width="72"
-                  height="138"
-                  viewBox="0 0 72 138"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="absolute top-[55px] right-[20px] opacity-70"
-                >
-                  <path
-                    d="M0.500018 36.9999L71.652 0.181103L37 137.5L0.500018 36.9999Z"
-                    fill="#F1F1F1"
-                  />
-                </svg>
-
-                <div class="absolute text-sm font-semibold text-hijau top-[38px] right-[16px]">
-                  A
-                </div>
-                <div class="absolute text-sm font-semibold text-hijau top-[83px] right-[95px]">
-                  B
-                </div>
-                <div class="absolute text-sm font-semibold text-hijau bottom-[105px] right-[51px]">
-                  C
-                </div>
 
                 <div
                   class="absolute opacity-0 text-sm font-semibold text-hijau top-[38px] left-[85px] titikA1"
@@ -1478,6 +1698,21 @@
                 </div>
               </div>
             </div>
+            <svg
+              width="54"
+              height="54"
+              viewBox="0 0 54 54"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute cursor-pointer"
+              id="play8"
+              onclick="removehapusKetiga()"
+            >
+              <path
+                d="M21.332 38.6643L37.331 26.665L21.332 14.6658V38.6643ZM26.665 0C11.9459 0 0 11.9459 0 26.665C0 41.3841 11.9459 53.33 26.665 53.33C41.3841 53.33 53.33 41.3841 53.33 26.665C53.33 11.9459 41.3841 0 26.665 0ZM26.665 47.997C14.9057 47.997 5.333 38.4243 5.333 26.665C5.333 14.9057 14.9057 5.333 26.665 5.333C38.4243 5.333 47.997 14.9057 47.997 26.665C47.997 38.4243 38.4243 47.997 26.665 47.997Z"
+                fill="#079292"
+              />
+            </svg>
           </div>
           <div class="flex items-start mt-6 pb-4 border-b-2">
             <p class="text-primary font-semibold">Diketahui:</p>
@@ -1514,13 +1749,25 @@
             <span class="text-hijau font-semibold"> C ( -3 , 1 )</span> yang akan dicerminkan pada
             titik <span class="text-hijau font-semibold">( -1 , 1 )</span>
           </p>
-          <div class="w-80 h-80 mx-auto mt-4">
-            <div
-              class="p-4 rounded-lg mt-4 w-full h-full relative"
-              id="hapusKeenam"
-              data-aos="zoom-in"
-            >
+          <div class="w-80 h-80 mx-auto mt-4 relative flex justify-center items-center">
+            <div class="p-4 rounded-lg mt-4 w-full h-full relative opacity-30" id="hapusKeenam">
               <img src="../img/pencerminan/Grapik.jpg" alt="" />
+              <svg
+                width="35"
+                height="105"
+                viewBox="0 0 35 105"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg "
+                class="absolute top-[21px] left-[57px] opacity-60"
+                s
+              >
+                <path d="M35 0.5V104.5H0L35 0.5Z" fill="#D9D9D9" />
+              </svg>
+              <div>
+                <div class="text-hijau font-semibold absolute left-[86px] top-[5px]">A</div>
+                <div class="text-hijau font-semibold absolute left-[86px] top-[125px]">B</div>
+                <div class="text-hijau font-semibold absolute left-[48px] top-[125px]">C</div>
+              </div>
               <div id="keenam" class="hidden">
                 <svg
                   width="35"
@@ -1533,26 +1780,11 @@
                 >
                   <path d="M35 0.5V104.5H0L35 0.5Z" fill="#7BFFD0" />
                 </svg>
-                <svg
-                  width="35"
-                  height="105"
-                  viewBox="0 0 35 105"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg "
-                  class="absolute top-[21px] left-[57px] opacity-60"
-                  s
-                >
-                  <path d="M35 0.5V104.5H0L35 0.5Z" fill="#D9D9D9" />
-                </svg>
-                <div>
-                  <div class="text-hijau font-semibold absolute left-[86px] top-[5px]">A</div>
-                  <div class="text-hijau font-semibold absolute left-[86px] top-[125px]">B</div>
-                  <div class="text-hijau font-semibold absolute left-[48px] top-[125px]">C</div>
-                </div>
+
                 <div class="opacity-0 titikoi">
-                  <div class="text-hijau font-semibold absolute left-[191px] bottom-[74px]">A'</div>
-                  <div class="text-hijau font-semibold absolute left-[156px] top-[109px]">B'</div>
-                  <div class="text-hijau font-semibold absolute left-[191px] top-[109px]">C'</div>
+                  <div class="text-hijau font-semibold absolute left-[191px] bottom-[72px]">A'</div>
+                  <div class="text-hijau font-semibold absolute left-[156px] top-[104px]">B'</div>
+                  <div class="text-hijau font-semibold absolute left-[191px] top-[104px]">C'</div>
                 </div>
 
                 <div
@@ -1560,6 +1792,21 @@
                 ></div>
               </div>
             </div>
+            <svg
+              width="54"
+              height="54"
+              viewBox="0 0 54 54"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute cursor-pointer"
+              id="play9"
+              onclick="removehapusKeenam()"
+            >
+              <path
+                d="M21.332 38.6643L37.331 26.665L21.332 14.6658V38.6643ZM26.665 0C11.9459 0 0 11.9459 0 26.665C0 41.3841 11.9459 53.33 26.665 53.33C41.3841 53.33 53.33 41.3841 53.33 26.665C53.33 11.9459 41.3841 0 26.665 0ZM26.665 47.997C14.9057 47.997 5.333 38.4243 5.333 26.665C5.333 14.9057 14.9057 5.333 26.665 5.333C38.4243 5.333 47.997 14.9057 47.997 26.665C47.997 38.4243 38.4243 47.997 26.665 47.997Z"
+                fill="#079292"
+              />
+            </svg>
           </div>
           <div class="flex items-start mt-6 pb-4 border-b-2">
             <p class="text-primary font-semibold">Diketahui:</p>
@@ -1583,8 +1830,43 @@
       </div>
       <!--Akhir Refleksi Bangun Datar -->
 
-      <!-- Tes Pemahaman 2 -->
-      <div class="max-w-4xl md:mx-auto bg-white md:px-8 pb-40 md:pt-8 md:mt-8">
+      <!-- Tes Pemahaman 3 -->
+      <div class="md:mx-auto px-5 md:px-8 bg-white pt-8">
+        <div class="bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative pb-4 max-w-md" id="">
+          <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40 mb-1">TES KETIGA</p>
+          <p class="mt-2 inline">
+            Terdapat titik A ( 2 , 3 ). Jika titik A direfleksikan terhadap garis x = -1, tentukan
+            kordinat titik A'
+          </p>
+
+          <div
+            id="content"
+            class="w-[240px] h-[240px] relative bg-[url('../img/Rotasi/Grapik.jpg')] bg-cover mx-auto mt-4"
+          >
+            <canvas id="canvas" width="240" height="240"></canvas>
+            <div
+              class="w-[8px] h-[8px] bg-gray-500 rounded-full absolute top-[43px] right-[67px]"
+            ></div>
+            <div class="text-[12px] absolute top-[24px] right-[67px]">A</div>
+            <div class="text-[12px] absolute top-[24px] left-[20px] text-hijau hidden" id="benarA">
+              A'
+            </div>
+            <div class="w-[2px] h-full bg-hijau absolute top-0 left-[95px]"></div>
+          </div>
+          <p class="mt-4">
+            Klik pada kordinat untuk memunculkan titik lalu cek jawabanmu pada tombol "Check"
+          </p>
+
+          <button class="py-1 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]" id="Check4">
+            Check
+          </button>
+
+          <p class="ml-3 font-semibold text-hijau hidden" id="benar4">Benar 🗸</p>
+          <p class="ml-3 font-semibold text-red hidden" id="salah4">Salah X</p>
+        </div>
+      </div>
+
+      <div class="md:mx-auto px-5 md:px-8 bg-white pb-40 md:pt-8 md:mt-8">
         <div class="flex items-center mt-8 md:mt-0">
           <img src="../img/tespemahaman.png" alt="" class="w-16 h-16" />
           <div class="text-xl font-semibold tracking-wides text-hijau ml-2">Tes Pemahaman</div>
@@ -1593,8 +1875,11 @@
           class="mt-3 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative pb-4 max-w-md"
           id="TesPertama1"
         >
-          <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40">TES KETIGA</p>
-          <p class="mt-1">Segitiga berwarna abu abu di bawah direfleksikan terhadap garis y = x</p>
+          <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40">TES KEEMPAT</p>
+          <p class="mt-1">
+            Terdapat segitiga ABC. Segitiga ABC direfleksikan terhadap garis y = x, tentukan
+            kordinat segitiga A'B'C'
+          </p>
 
           <div
             id="content"
@@ -1606,8 +1891,13 @@
               class="h-[2px] w-[340px] absolute bg-hijau origin-bottom-left -rotate-45"
               id="pusatRotasisoal"
             ></div>
+            <div class="absolute font-semibold text-[12px] top-[3px] left-[67px]">A</div>
+            <div class="absolute font-semibold text-[12px] top-[110px] left-[10px]">B</div>
+            <div class="absolute font-semibold text-[12px] top-[84px] left-[99px]">C</div>
           </div>
-          <p class="mt-4">Pindahkan segitiga hijau hingga membentuk segitiga hasil refleksinya</p>
+          <p class="mt-4">
+            Pindahkan titik-titik sudut segitiga hijau hingga membentuk kordinat segitiga A'B'C'
+          </p>
 
           <button class="py-1 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]" id="Check3">
             Check

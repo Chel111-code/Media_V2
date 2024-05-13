@@ -1,32 +1,90 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const garisCermin1 = document.getElementById('garisCermin1'); // Ganti 'ID_element' dengan ID yang sesuai
+function removeIniya() {
+  var iniya = document.getElementById('iniya');
+  iniya.classList.remove('hidden', 'opacity-30');
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-garisCermin1');
-        observer.unobserve(entry.target);
-      }
-    });
-  });
+  var play1 = document.getElementById('play1');
+  play1.classList.toggle('hidden');
+}
 
-  observer.observe(garisCermin1);
+function removeyahuu() {
+  var yahuu = document.getElementById('yahuu');
+  yahuu.classList.remove('hidden');
+
+  var play2 = document.getElementById('play2');
+  play2.classList.toggle('hidden');
+
+  var yahuu1 = document.getElementById('yahuu1');
+  yahuu1.classList.toggle('opacity-30');
+}
+
+function removetes1() {
+  var tes1 = document.getElementById('tes1');
+  tes1.classList.toggle('inline');
+}
+
+document.getElementById('play3').addEventListener('click', function () {
+  location.reload(); // Reload halaman
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const pencerminan1 = document.getElementById('pencerminan1'); // Ganti 'ID_element' dengan ID yang sesuai
+function removehapusSumbu() {
+  var hapusSumbu = document.getElementById('hapusSumbu');
+  hapusSumbu.classList.remove('opacity-30');
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-pencerminan1');
-        observer.unobserve(entry.target);
-      }
-    });
-  });
+  var play4 = document.getElementById('play4');
+  play4.classList.toggle('hidden');
 
-  observer.observe(pencerminan1);
+  var hapusSumbu0 = document.getElementById('hapusSumbu0');
+  hapusSumbu0.classList.toggle('hidden');
+}
+
+function removehapusTitik() {
+  var hapusTitik = document.getElementById('hapusTitik');
+  hapusTitik.classList.remove('opacity-30');
+
+  var play5 = document.getElementById('play5');
+  play5.classList.toggle('hidden');
+
+  var hapusTitik0 = document.getElementById('hapusTitik0');
+  hapusTitik0.classList.toggle('hidden');
+}
+
+document.getElementById('play6').addEventListener('click', function () {
+  location.reload(); // Reload halaman
 });
+
+function removehapusKedua() {
+  var hapusKedua = document.getElementById('hapusKedua');
+  hapusKedua.classList.remove('opacity-30');
+
+  var play7 = document.getElementById('play7');
+  play7.classList.toggle('hidden');
+
+  var kedua = document.getElementById('kedua');
+  kedua.classList.toggle('hidden');
+}
+
+function removehapusKetiga() {
+  var hapusKetiga = document.getElementById('hapusKetiga');
+  hapusKetiga.classList.remove('opacity-30');
+
+  var play8 = document.getElementById('play8');
+  play8.classList.toggle('hidden');
+
+  var ketiga = document.getElementById('ketiga');
+  ketiga.classList.toggle('hidden');
+}
+
+function removehapusKeenam() {
+  var hapusKeenam = document.getElementById('hapusKeenam');
+  hapusKeenam.classList.remove('opacity-30');
+
+  var play9 = document.getElementById('play9');
+  play9.classList.toggle('hidden');
+
+  var keenam = document.getElementById('keenam');
+  keenam.classList.toggle('hidden');
+}
+// Batas baru
 
 function toggleNavbar() {
   var sidebar = document.getElementById('sidebar');
@@ -43,27 +101,6 @@ function toggleNavbar() {
 
   judul.classList.toggle('hidden');
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-  const ContohRefleksi = document.getElementById('ContohRefleksi');
-  const yahuu = document.getElementById('yahuu');
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === ContohRefleksi && entry.intersectionRatio >= 1) {
-          observer.unobserve(ContohRefleksi);
-          yahuu.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
-
-  observer.observe(ContohRefleksi);
-});
 
 document.addEventListener('DOMContentLoaded', function () {
   const muncul1 = document.getElementById('muncul1');
@@ -198,48 +235,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  const subjekHapusSumbu = document.getElementById('subjekHapusSumbu');
-  const hapusSumbu = document.getElementById('hapusSumbu');
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === subjekHapusSumbu && entry.intersectionRatio >= 1) {
-          observer.unobserve(subjekHapusSumbu);
-          hapusSumbu.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
-
-  observer.observe(subjekHapusSumbu);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const subjkeHapusTitik = document.getElementById('subjkeHapusTitik');
-  const hapusTitik = document.getElementById('hapusTitik');
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === subjkeHapusTitik && entry.intersectionRatio >= 1) {
-          observer.unobserve(subjkeHapusTitik);
-          hapusTitik.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
-
-  observer.observe(subjkeHapusTitik);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
   const selectPertama = document.getElementById('selectPertama');
   const pertama = document.getElementById('pertama');
 
@@ -258,90 +253,6 @@ document.addEventListener('DOMContentLoaded', function () {
   );
 
   observer.observe(selectPertama);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const subjekKedua = document.getElementById('subjekKedua');
-  const hapusKedua = document.getElementById('hapusKedua');
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === subjekKedua && entry.intersectionRatio >= 1) {
-          observer.unobserve(subjekKedua);
-          hapusKedua.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
-
-  observer.observe(subjekKedua);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const hapusKeenam = document.getElementById('hapusKeenam');
-  const keenam = document.getElementById('keenam');
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === hapusKeenam && entry.intersectionRatio >= 1) {
-          observer.unobserve(hapusKeenam);
-          keenam.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
-
-  observer.observe(hapusKeenam);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const hapusKetiga = document.getElementById('hapusKetiga');
-  const ketiga = document.getElementById('ketiga');
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === hapusKetiga && entry.intersectionRatio >= 1) {
-          observer.unobserve(hapusKetiga);
-          ketiga.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
-
-  observer.observe(hapusKetiga);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const hapusKedua = document.getElementById('hapusKedua');
-  const kedua = document.getElementById('kedua');
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === hapusKedua && entry.intersectionRatio >= 1) {
-          observer.unobserve(hapusKedua);
-          kedua.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
-
-  observer.observe(hapusKedua);
 });
 
 const checkButton = document.getElementById('Check1');
@@ -481,9 +392,9 @@ document.addEventListener('DOMContentLoaded', function () {
     { x: 1 * gridSize, y: 5 * gridSize },
   ];
   let points = [
-    { x: 48, y: 144 },
-    { x: 24, y: 192 },
-    { x: 96, y: 216 },
+    { x: 192, y: 144 },
+    { x: 168, y: 192 },
+    { x: 216, y: 192 },
   ];
   let dragPoint = null;
 
@@ -496,7 +407,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Function to draw grid
   function drawGrid() {
-    ctx.strokeStyle = 'transparent'; // Warna grid
+    ctx.strokeStyle = '#ddd'; // Warna grid
 
     // Menggambar garis vertikal
     for (let x = 0; x <= canvas.width; x += gridSize) {
@@ -682,3 +593,123 @@ document.addEventListener('DOMContentLoaded', function () {
 
   drawInitialState();
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var canvas1 = document.getElementById('canvas');
+  var ctx1 = canvas1.getContext('2d');
+  var gridSize1 = 24; // Ukuran grid
+  var correctPoint = { x: 1, y: 2 }; // Contoh titik yang benar
+  var clickedPoint = { x: -1, y: -1 }; // Titik yang dipilih oleh pengguna
+  var checkButton2 = document.getElementById('Check4'); // Tombol "Check"
+  var isCorrectPointClicked = false; // Status apakah titik yang benar telah diklik
+  var isPointClicked = false; // Status apakah titik telah diklik
+
+  canvas1.width = 240;
+  canvas1.height = 240;
+
+  function drawGrid() {
+    ctx1.beginPath();
+    for (var x = 0; x <= canvas1.width; x += gridSize1) {
+      ctx1.moveTo(x, 0);
+      ctx1.lineTo(x, canvas1.height);
+    }
+    for (var y = 0; y <= canvas1.height; y += gridSize1) {
+      ctx1.moveTo(0, y);
+      ctx1.lineTo(canvas1.width, y);
+    }
+    ctx1.strokeStyle = '#ddd';
+    ctx1.stroke();
+  }
+
+  function drawPoint(x, y) {
+    ctx1.beginPath();
+    ctx1.arc(x * gridSize1, y * gridSize1, 4, 0, Math.PI * 2);
+    ctx1.fillStyle = '#079292';
+    ctx1.fill();
+  }
+
+  function clearcanvas1() {
+    ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
+    drawGrid();
+  }
+
+  function snapToGrid(mouseX, mouseY) {
+    return {
+      x: Math.round(mouseX / gridSize1),
+      y: Math.round(mouseY / gridSize1),
+    };
+  }
+
+  function updateNotification() {
+    if (isCorrectPointClicked) {
+      document.getElementById('benar4').classList.remove('hidden');
+      document.getElementById('benar4').classList.add('inline-block');
+      document.getElementById('salah4').classList.add('hidden');
+      document.getElementById('benarA').classList.remove('hidden');
+    } else {
+      document.getElementById('salah4').classList.remove('hidden');
+      document.getElementById('salah4').classList.add('inline-block');
+      document.getElementById('benar4').classList.add('hidden');
+    }
+  }
+
+  canvas1.addEventListener('click', function (e) {
+    if (isCorrectPointClicked) {
+      // Jika titik yang benar sudah diklik, tidak melakukan apa-apa
+      return;
+    }
+
+    var rect = canvas1.getBoundingClientRect();
+    var mouseX = e.clientX - rect.left;
+    var mouseY = e.clientY - rect.top;
+
+    var snappedPoint = snapToGrid(mouseX, mouseY);
+    clickedPoint.x = snappedPoint.x;
+    clickedPoint.y = snappedPoint.y;
+    isPointClicked = true; // Menandai bahwa titik telah diklik
+
+    clearcanvas1();
+    drawPoint(clickedPoint.x, clickedPoint.y);
+  });
+
+  checkButton2.addEventListener('click', function () {
+    if (!isPointClicked || isCorrectPointClicked) {
+      // Jika titik belum diklik atau titik yang benar sudah diklik, tidak melakukan apa-apa
+      return;
+    }
+
+    var correctPosition = clickedPoint.x === correctPoint.x && clickedPoint.y === correctPoint.y;
+    isCorrectPointClicked = correctPosition; // Menandai status apakah titik yang benar telah diklik
+    updateNotification();
+  });
+
+  drawGrid();
+});
+
+function toggleTabs(selectedTab) {
+  // Identifikasi elemen-elemen tab dan kotak
+  const translasiTab = document.getElementById('translasi');
+  const bukanTranslasiTab = document.getElementById('bukanTranslasi');
+  const kotakBiru = document.getElementById('kotakBiru');
+  const kotakOrange = document.getElementById('kotakOrange');
+  const hapusplay = document.getElementById('play1');
+
+  // Cek tab mana yang dipilih dan terapkan kelas yang sesuai
+  if (selectedTab === 'translasi') {
+    translasiTab.className =
+      'text-teal-600  bg-white w-2/5 h-8 rounded-xl ml-1  flex justify-center items-center cursor-pointer';
+    bukanTranslasiTab.className =
+      'w-3/5 h-8 rounded-xl flex justify-center items-center cursor-pointer';
+
+    kotakBiru.classList.remove('hidden');
+    kotakOrange.classList.add('hidden');
+  } else {
+    bukanTranslasiTab.className =
+      'text-teal-600  bg-white w-3/5 h-8 rounded-xl  flex justify-center items-center cursor-pointer';
+    translasiTab.className =
+      'w-2/5 h-8 rounded-xl ml-1 flex justify-center items-center cursor-pointer';
+
+    kotakBiru.classList.add('hidden');
+    kotakOrange.classList.remove('hidden');
+  }
+}

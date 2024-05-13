@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
     { x: 6 * gridSize, y: 6 * gridSize },
   ];
   let points = [
-    { x: 48, y: 144 },
-    { x: 24, y: 192 },
-    { x: 96, y: 216 },
+    { x: 48, y: 24 },
+    { x: 24, y: 72 },
+    { x: 72, y: 72 },
   ];
   let dragPoint = null;
 
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Function to draw grid
   function drawGrid() {
-    ctx.strokeStyle = 'transparent'; // Warna grid
+    ctx.strokeStyle = '#ddd'; // Warna grid
 
     // Menggambar garis vertikal
     for (let x = 0; x <= canvas.width; x += gridSize) {
@@ -217,6 +217,98 @@ document.addEventListener('DOMContentLoaded', function () {
   drawInitialState();
 }); // Fungsi untuk menganimasikan elemen
 
+document.addEventListener('DOMContentLoaded', function () {
+  var canvas1 = document.getElementById('canvas');
+  var ctx1 = canvas1.getContext('2d');
+  var gridSize1 = 24; // Ukuran grid
+  var correctPoint = { x: 7, y: 4 }; // Contoh titik yang benar
+  var clickedPoint = { x: -1, y: -1 }; // Titik yang dipilih oleh pengguna
+  var checkButton2 = document.getElementById('Check2'); // Tombol "Check"
+  var isCorrectPointClicked = false; // Status apakah titik yang benar telah diklik
+  var isPointClicked = false; // Status apakah titik telah diklik
+
+  canvas1.width = 240;
+  canvas1.height = 240;
+
+  function drawGrid() {
+    ctx1.beginPath();
+    for (var x = 0; x <= canvas1.width; x += gridSize1) {
+      ctx1.moveTo(x, 0);
+      ctx1.lineTo(x, canvas1.height);
+    }
+    for (var y = 0; y <= canvas1.height; y += gridSize1) {
+      ctx1.moveTo(0, y);
+      ctx1.lineTo(canvas1.width, y);
+    }
+    ctx1.strokeStyle = '#ddd';
+    ctx1.stroke();
+  }
+
+  function drawPoint(x, y) {
+    ctx1.beginPath();
+    ctx1.arc(x * gridSize1, y * gridSize1, 4, 0, Math.PI * 2);
+    ctx1.fillStyle = '#079292';
+    ctx1.fill();
+  }
+
+  function clearcanvas1() {
+    ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
+    drawGrid();
+  }
+
+  function snapToGrid(mouseX, mouseY) {
+    return {
+      x: Math.round(mouseX / gridSize1),
+      y: Math.round(mouseY / gridSize1),
+    };
+  }
+
+  function updateNotification() {
+    if (isCorrectPointClicked) {
+      document.getElementById('benar2').classList.remove('hidden');
+      document.getElementById('benar2').classList.add('inline-block');
+      document.getElementById('salah2').classList.add('hidden');
+      document.getElementById('benarA').classList.remove('hidden');
+    } else {
+      document.getElementById('salah2').classList.remove('hidden');
+      document.getElementById('salah2').classList.add('inline-block');
+      document.getElementById('benar2').classList.add('hidden');
+    }
+  }
+
+  canvas1.addEventListener('click', function (e) {
+    if (isCorrectPointClicked) {
+      // Jika titik yang benar sudah diklik, tidak melakukan apa-apa
+      return;
+    }
+
+    var rect = canvas1.getBoundingClientRect();
+    var mouseX = e.clientX - rect.left;
+    var mouseY = e.clientY - rect.top;
+
+    var snappedPoint = snapToGrid(mouseX, mouseY);
+    clickedPoint.x = snappedPoint.x;
+    clickedPoint.y = snappedPoint.y;
+    isPointClicked = true; // Menandai bahwa titik telah diklik
+
+    clearcanvas1();
+    drawPoint(clickedPoint.x, clickedPoint.y);
+  });
+
+  checkButton2.addEventListener('click', function () {
+    if (!isPointClicked || isCorrectPointClicked) {
+      // Jika titik belum diklik atau titik yang benar sudah diklik, tidak melakukan apa-apa
+      return;
+    }
+
+    var correctPosition = clickedPoint.x === correctPoint.x && clickedPoint.y === correctPoint.y;
+    isCorrectPointClicked = correctPosition; // Menandai status apakah titik yang benar telah diklik
+    updateNotification();
+  });
+
+  drawGrid();
+});
+
 function animateElement() {
   gsap.to('.contohTranslasi1_after', {
     opacity: 1,
@@ -253,6 +345,7 @@ function toggleTabs(selectedTab) {
   const bukanTranslasiTab = document.getElementById('bukanTranslasi');
   const kotakBiru = document.getElementById('kotakBiru');
   const kotakOrange = document.getElementById('kotakOrange');
+  const hapusplay = document.getElementById('play1');
 
   // Cek tab mana yang dipilih dan terapkan kelas yang sesuai
   if (selectedTab === 'translasi') {
@@ -274,110 +367,65 @@ function toggleTabs(selectedTab) {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  const kotakBiru = document.getElementById('kotakBiru');
-  const animateKotakbiru = document.getElementById('animateKotakbiru');
+function removeanimateKotakbiru() {
+  var animateKotakbiru = document.getElementById('animateKotakbiru');
+  animateKotakbiru.classList.remove('hidden');
 
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === kotakBiru && entry.intersectionRatio >= 1) {
-          observer.unobserve(kotakBiru);
-          animateKotakbiru.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
+  var play1 = document.getElementById('play1');
+  play1.classList.toggle('hidden');
+}
 
-  observer.observe(kotakBiru);
-});
+function removeanimatejarakPertama() {
+  var animatejarakPertama = document.getElementById('animatejarakPertama');
+  animatejarakPertama.classList.remove('hidden');
 
-document.addEventListener('DOMContentLoaded', function () {
-  const jarakPertama = document.getElementById('jarakPertama');
-  const animatejarakPertama = document.getElementById('animatejarakPertama');
+  var play2 = document.getElementById('play2');
+  play2.classList.toggle('hidden');
 
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === jarakPertama && entry.intersectionRatio >= 1) {
-          observer.unobserve(jarakPertama);
-          animatejarakPertama.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
+  var buram1 = document.getElementById('buram1');
+  buram1.classList.toggle('opacity-30');
+}
 
-  observer.observe(jarakPertama);
-});
+function removeanimatejarakKedua() {
+  var animatejarakKedua = document.getElementById('animatejarakKedua');
+  animatejarakKedua.classList.remove('opacity-30');
 
-document.addEventListener('DOMContentLoaded', function () {
-  const jarakKedua = document.getElementById('jarakKedua');
-  const animatejarakKedua = document.getElementById('animatejarakKedua');
+  var play3 = document.getElementById('play3');
+  play3.classList.toggle('hidden');
 
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === jarakKedua && entry.intersectionRatio >= 1) {
-          observer.unobserve(jarakKedua);
-          animatejarakKedua.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
+  var buram2 = document.getElementById('buram2');
+  buram2.classList.toggle('hidden');
+}
 
-  observer.observe(jarakKedua);
-});
+function removeanimatejarakKetiga() {
+  var animatejarakKetiga = document.getElementById('animatejarakKetiga');
+  animatejarakKetiga.classList.remove('opacity-30');
 
-document.addEventListener('DOMContentLoaded', function () {
-  const jarakKetiga = document.getElementById('jarakKetiga');
-  const animatejarakKetiga = document.getElementById('animatejarakKetiga');
+  var play4 = document.getElementById('play4');
+  play4.classList.toggle('hidden');
 
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === jarakKetiga && entry.intersectionRatio >= 1) {
-          observer.unobserve(jarakKetiga);
-          animatejarakKetiga.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
+  var buram3 = document.getElementById('buram3');
+  buram3.classList.toggle('hidden');
+}
 
-  observer.observe(jarakKetiga);
-});
+function removeTransBangundatar() {
+  var TransBangundatar = document.getElementById('TransBangundatar');
+  TransBangundatar.classList.remove('hidden');
 
-document.addEventListener('DOMContentLoaded', function () {
-  const pusatTitik = document.getElementById('pusatTitik');
-  const iniya = document.getElementById('iniya');
+  var play5 = document.getElementById('play5');
+  play5.classList.toggle('hidden');
+}
 
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === pusatTitik && entry.intersectionRatio >= 1) {
-          observer.unobserve(pusatTitik);
-          iniya.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
+function removeIniya() {
+  var iniya = document.getElementById('iniya');
+  iniya.classList.remove('hidden');
 
-  observer.observe(pusatTitik);
-});
+  var play6 = document.getElementById('play6');
+  play6.classList.toggle('hidden');
+
+  var ohiniya = document.getElementById('ohiniya');
+  ohiniya.classList.toggle('opacity-30');
+}
 
 const checkButton = document.getElementById('Check1');
 

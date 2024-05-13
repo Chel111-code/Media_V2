@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
     { x: 1 * gridSize, y: 4 * gridSize },
   ];
   let points = [
-    { x: 72, y: 144 },
-    { x: 24, y: 216 },
-    { x: 96, y: 216 },
+    { x: 192, y: 144 },
+    { x: 168, y: 192 },
+    { x: 216, y: 192 },
   ];
   let dragPoint = null;
 
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Function to draw grid
   function drawGrid() {
-    ctx.strokeStyle = 'transparent'; // Warna grid
+    ctx.strokeStyle = '#ddd'; // Warna grid
 
     // Menggambar garis vertikal
     for (let x = 0; x <= canvas.width; x += gridSize) {
@@ -283,6 +283,25 @@ document.getElementById('tombolSenter').addEventListener('click', function () {
   document.getElementById('macan').classList.add('macan');
 });
 
+document.getElementById('tombolFoto').addEventListener('click', function () {
+  document.getElementById('foto').classList.add('awwwww');
+
+  document.getElementById('4x6').classList.add('wuss');
+  document.getElementById('2x3').classList.add('hidden');
+});
+
+const foto = document.getElementById('foto');
+const tombolFoto = document.getElementById('tombolFoto');
+
+tombolFoto.addEventListener('click', function () {
+  gsap.to(foto, {
+    duration: 1,
+    scale: 2,
+    y: -104,
+    ease: 'power2.inOut',
+  });
+});
+
 document.addEventListener('DOMContentLoaded', function () {
   const pembesaranK = document.getElementById('pembesaranK');
   const animasipembesaranK = document.getElementById('animasipembesaranK');
@@ -344,27 +363,6 @@ document.addEventListener('DOMContentLoaded', function () {
   );
 
   observer.observe(TesPertama1);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const contohPertama = document.getElementById('contohPertama');
-  const animasiDilatasititik = document.getElementById('animasiDilatasititik');
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === contohPertama && entry.intersectionRatio >= 1) {
-          observer.unobserve(contohPertama);
-          animasiDilatasititik.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
-
-  observer.observe(contohPertama);
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -499,3 +497,133 @@ function toggleNavbar() {
 
   judul.classList.toggle('hidden');
 }
+
+document.getElementById('playback').addEventListener('click', function () {
+  location.reload(); // Reload halaman
+});
+
+document.getElementById('playback1').addEventListener('click', function () {
+  location.reload(); // Reload halaman
+});
+
+document.getElementById('playback2').addEventListener('click', function () {
+  location.reload(); // Reload halaman
+});
+
+document.getElementById('playback3').addEventListener('click', function () {
+  location.reload(); // Reload halaman
+});
+
+function removeanimasiDilatasititik() {
+  var animasiDilatasititik = document.getElementById('animasiDilatasititik');
+  animasiDilatasititik.classList.remove('opacity-30');
+
+  var play1 = document.getElementById('play1');
+  play1.classList.toggle('hidden');
+
+  var animasiDilatasititiko = document.getElementById('animasiDilatasititiko');
+  animasiDilatasititiko.classList.toggle('hidden');
+}
+
+function removeanimasiDilatasibangun() {
+  var animasiDilatasibangun = document.getElementById('animasiDilatasibangun');
+  animasiDilatasibangun.classList.remove('opacity-30');
+
+  var play2 = document.getElementById('play2');
+  play2.classList.toggle('hidden');
+
+  var animasiDilatasibanguno = document.getElementById('animasiDilatasibanguno');
+  animasiDilatasibanguno.classList.toggle('hidden');
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  var canvas1 = document.getElementById('canvas');
+  var ctx1 = canvas1.getContext('2d');
+  var gridSize1 = 24; // Ukuran grid
+  var correctPoint = { x: 6, y: 4 }; // Contoh titik yang benar
+  var clickedPoint = { x: -1, y: -1 }; // Titik yang dipilih oleh pengguna
+  var checkButton2 = document.getElementById('Check4'); // Tombol "Check"
+  var isCorrectPointClicked = false; // Status apakah titik yang benar telah diklik
+  var isPointClicked = false; // Status apakah titik telah diklik
+
+  canvas1.width = 240;
+  canvas1.height = 240;
+
+  function drawGrid() {
+    ctx1.beginPath();
+    for (var x = 0; x <= canvas1.width; x += gridSize1) {
+      ctx1.moveTo(x, 0);
+      ctx1.lineTo(x, canvas1.height);
+    }
+    for (var y = 0; y <= canvas1.height; y += gridSize1) {
+      ctx1.moveTo(0, y);
+      ctx1.lineTo(canvas1.width, y);
+    }
+    ctx1.strokeStyle = '#ddd';
+    ctx1.stroke();
+  }
+
+  function drawPoint(x, y) {
+    ctx1.beginPath();
+    ctx1.arc(x * gridSize1, y * gridSize1, 4, 0, Math.PI * 2);
+    ctx1.fillStyle = '#079292';
+    ctx1.fill();
+  }
+
+  function clearcanvas1() {
+    ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
+    drawGrid();
+  }
+
+  function snapToGrid(mouseX, mouseY) {
+    return {
+      x: Math.round(mouseX / gridSize1),
+      y: Math.round(mouseY / gridSize1),
+    };
+  }
+
+  function updateNotification() {
+    if (isCorrectPointClicked) {
+      document.getElementById('benar4').classList.remove('hidden');
+      document.getElementById('benar4').classList.add('inline-block');
+      document.getElementById('salah4').classList.add('hidden');
+      document.getElementById('benarA').classList.remove('hidden');
+    } else {
+      document.getElementById('salah4').classList.remove('hidden');
+      document.getElementById('salah4').classList.add('inline-block');
+      document.getElementById('benar4').classList.add('hidden');
+    }
+  }
+
+  canvas1.addEventListener('click', function (e) {
+    if (isCorrectPointClicked) {
+      // Jika titik yang benar sudah diklik, tidak melakukan apa-apa
+      return;
+    }
+
+    var rect = canvas1.getBoundingClientRect();
+    var mouseX = e.clientX - rect.left;
+    var mouseY = e.clientY - rect.top;
+
+    var snappedPoint = snapToGrid(mouseX, mouseY);
+    clickedPoint.x = snappedPoint.x;
+    clickedPoint.y = snappedPoint.y;
+    isPointClicked = true; // Menandai bahwa titik telah diklik
+
+    clearcanvas1();
+    drawPoint(clickedPoint.x, clickedPoint.y);
+  });
+
+  checkButton2.addEventListener('click', function () {
+    if (!isPointClicked || isCorrectPointClicked) {
+      // Jika titik belum diklik atau titik yang benar sudah diklik, tidak melakukan apa-apa
+      return;
+    }
+
+    var correctPosition = clickedPoint.x === correctPoint.x && clickedPoint.y === correctPoint.y;
+    isCorrectPointClicked = correctPosition; // Menandai status apakah titik yang benar telah diklik
+    updateNotification();
+  });
+
+  drawGrid();
+});

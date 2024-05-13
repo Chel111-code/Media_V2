@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Triangle coordinates and draggable points
   const triangle = [
-    { x: 5 * gridSize, y: 1 * gridSize },
+    { x: 3 * gridSize, y: 1 * gridSize },
     { x: 4 * gridSize, y: 4 * gridSize },
     { x: 1 * gridSize, y: 5 * gridSize },
   ];
   let points = [
-    { x: 48, y: 48 },
-    { x: 24, y: 120 },
-    { x: 96, y: 144 },
+    { x: 48, y: 144 },
+    { x: 24, y: 192 },
+    { x: 96, y: 216 },
   ];
   let dragPoint = null;
 
@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ctx.stroke();
 
     // Draw static triangle
+    drawTriangle(triangle, 'transparent');
 
     // Draw draggable points
     points.forEach((point) => {
@@ -216,47 +217,21 @@ document.addEventListener('DOMContentLoaded', function () {
   drawInitialState();
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const jajargenjang = document.getElementById('jajargenjang');
-  const ohini = document.getElementById('ohini');
+function removeOhini() {
+  var ohini = document.getElementById('ohini');
+  ohini.classList.remove('hidden');
 
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === jajargenjang && entry.intersectionRatio >= 1) {
-          observer.unobserve(jajargenjang);
-          ohini.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
+  var play1 = document.getElementById('play1');
+  play1.classList.add('hidden');
+}
 
-  observer.observe(jajargenjang);
-});
+function removeanimateTescuy1() {
+  var animateTescuy1 = document.getElementById('animateTescuy1');
+  animateTescuy1.classList.remove('hidden');
 
-document.addEventListener('DOMContentLoaded', function () {
-  const TesPertama1 = document.getElementById('TesPertama1');
-  const animateTescuy1 = document.getElementById('animateTescuy1');
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === TesPertama1 && entry.intersectionRatio >= 1) {
-          observer.unobserve(TesPertama1);
-          animateTescuy1.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
-
-  observer.observe(TesPertama1);
-});
+  var play2 = document.getElementById('play2');
+  play2.classList.add('hidden');
+}
 
 const checkButton = document.getElementById('Check1');
 
@@ -359,7 +334,7 @@ function toggleNavbar() {
 
 document.addEventListener('DOMContentLoaded', function () {
   var shape = document.getElementById('shape');
-  var handle = shape.querySelector('.resize-handle');
+  var handles = shape.querySelectorAll('.resize-handle');
   var isDragging = false;
   var startTouchX, startTouchY;
   var startWidth, startHeight;
@@ -373,7 +348,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var deltaX = touch.clientX - startTouchX;
     var deltaY = touch.clientY - startTouchY;
     var newWidth = startWidth + deltaX;
-    var newHeight = startHeight - deltaY; // Use subtraction for height to prevent resizing to the left
+    var newHeight = startHeight + deltaY;
 
     // Limit resize within container
     newWidth = Math.min(newWidth, shape.parentElement.clientWidth);
@@ -382,13 +357,15 @@ document.addEventListener('DOMContentLoaded', function () {
     return { width: newWidth, height: newHeight };
   }
 
-  handle.addEventListener('touchstart', function (e) {
-    isDragging = true;
-    var touch = e.touches[0];
-    startTouchX = touch.clientX;
-    startTouchY = touch.clientY;
-    startWidth = shape.offsetWidth;
-    startHeight = shape.offsetHeight;
+  handles.forEach(function (handle) {
+    handle.addEventListener('touchstart', function (e) {
+      isDragging = true;
+      var touch = e.touches[0];
+      startTouchX = touch.clientX;
+      startTouchY = touch.clientY;
+      startWidth = shape.offsetWidth;
+      startHeight = shape.offsetHeight;
+    });
   });
 
   document.addEventListener('touchmove', function (e) {
@@ -402,4 +379,95 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('touchend', function () {
     isDragging = false;
   });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  var canvas1 = document.getElementById('canvas');
+  var ctx1 = canvas1.getContext('2d');
+  var gridSize1 = 24; // Ukuran grid
+  var correctPoint = { x: 2, y: 3 }; // Contoh titik yang benar
+  var clickedPoint = { x: -1, y: -1 }; // Titik yang dipilih oleh pengguna
+  var checkButton2 = document.getElementById('Check2'); // Tombol "Check"
+  var isCorrectPointClicked = false; // Status apakah titik yang benar telah diklik
+  var isPointClicked = false; // Status apakah titik telah diklik
+
+  canvas1.width = 240;
+  canvas1.height = 240;
+
+  function drawGrid() {
+    ctx1.beginPath();
+    for (var x = 0; x <= canvas1.width; x += gridSize1) {
+      ctx1.moveTo(x, 0);
+      ctx1.lineTo(x, canvas1.height);
+    }
+    for (var y = 0; y <= canvas1.height; y += gridSize1) {
+      ctx1.moveTo(0, y);
+      ctx1.lineTo(canvas1.width, y);
+    }
+    ctx1.strokeStyle = '#ddd';
+    ctx1.stroke();
+  }
+
+  function drawPoint(x, y) {
+    ctx1.beginPath();
+    ctx1.arc(x * gridSize1, y * gridSize1, 3, 0, Math.PI * 2);
+    ctx1.fillStyle = '#079292';
+    ctx1.fill();
+  }
+
+  function clearcanvas1() {
+    ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
+    drawGrid();
+  }
+
+  function snapToGrid(mouseX, mouseY) {
+    return {
+      x: Math.round(mouseX / gridSize1),
+      y: Math.round(mouseY / gridSize1),
+    };
+  }
+
+  function updateNotification() {
+    if (isCorrectPointClicked) {
+      document.getElementById('benar2').classList.remove('hidden');
+      document.getElementById('benar2').classList.add('inline-block');
+      document.getElementById('salah2').classList.add('hidden');
+    } else {
+      document.getElementById('salah2').classList.remove('hidden');
+      document.getElementById('salah2').classList.add('inline-block');
+      document.getElementById('benar2').classList.add('hidden');
+    }
+  }
+
+  canvas1.addEventListener('click', function (e) {
+    if (isCorrectPointClicked) {
+      // Jika titik yang benar sudah diklik, tidak melakukan apa-apa
+      return;
+    }
+
+    var rect = canvas1.getBoundingClientRect();
+    var mouseX = e.clientX - rect.left;
+    var mouseY = e.clientY - rect.top;
+
+    var snappedPoint = snapToGrid(mouseX, mouseY);
+    clickedPoint.x = snappedPoint.x;
+    clickedPoint.y = snappedPoint.y;
+    isPointClicked = true; // Menandai bahwa titik telah diklik
+
+    clearcanvas1();
+    drawPoint(clickedPoint.x, clickedPoint.y);
+  });
+
+  checkButton2.addEventListener('click', function () {
+    if (!isPointClicked || isCorrectPointClicked) {
+      // Jika titik belum diklik atau titik yang benar sudah diklik, tidak melakukan apa-apa
+      return;
+    }
+
+    var correctPosition = clickedPoint.x === correctPoint.x && clickedPoint.y === correctPoint.y;
+    isCorrectPointClicked = correctPosition; // Menandai status apakah titik yang benar telah diklik
+    updateNotification();
+  });
+
+  drawGrid();
 });
