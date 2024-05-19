@@ -284,8 +284,6 @@ document.getElementById('tombolSenter').addEventListener('click', function () {
 });
 
 document.getElementById('tombolFoto').addEventListener('click', function () {
-  document.getElementById('foto').classList.add('awwwww');
-
   document.getElementById('4x6').classList.add('wuss');
   document.getElementById('2x3').classList.add('hidden');
 });
@@ -296,8 +294,8 @@ const tombolFoto = document.getElementById('tombolFoto');
 tombolFoto.addEventListener('click', function () {
   gsap.to(foto, {
     duration: 1,
-    scale: 2,
-    y: -104,
+    scale: 1.7,
+    y: -74,
     ease: 'power2.inOut',
   });
 });
