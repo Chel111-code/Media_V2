@@ -471,3 +471,107 @@ document.addEventListener('DOMContentLoaded', function () {
 
   drawGrid();
 });
+
+function tomboline1() {
+  document.getElementById('line1').classList.add('hidden');
+  document.getElementById('line2').classList.remove('hidden');
+}
+
+function tunggu() {
+  document.getElementById('imgline2').classList.add('hidden');
+  document.getElementById('img2line2').classList.remove('hidden');
+  document.getElementById('textline2').classList.add('hidden');
+  document.getElementById('text2line2').classList.remove('hidden');
+  document.getElementById('tunggu').classList.add('hidden');
+}
+
+function ayo() {
+  document.getElementById('line2').classList.add('hidden');
+  document.getElementById('line3').classList.remove('hidden');
+}
+
+function tomboline2() {
+  document.getElementById('imgline3').classList.remove('scale-x-[-1]');
+  document.getElementById('imgline3').classList.add('transisi3');
+  document.getElementById('textline3').classList.add('-translate-x-[152px]', 'translate-y-[50px]');
+  document.getElementById('textline3').classList.add('rounded-br-none');
+  document.getElementById('text2line3').classList.add('hidden');
+  document.getElementById('tomboline2').classList.add('hidden');
+  document.getElementById('tomboline3').classList.remove('hidden');
+}
+
+function tomboline3() {
+  document.getElementById('line3').classList.add('hidden');
+  document.getElementById('line4').classList.remove('hidden');
+  document.getElementById('ikan').classList.add('ikan');
+}
+
+function tomboline4() {
+  document.getElementById('line4').classList.add('hidden');
+  document.getElementById('line5').classList.remove('hidden');
+}
+
+function tomboline5() {
+  document.getElementById('line5').classList.add('hidden');
+  document.getElementById('line6').classList.remove('hidden');
+}
+
+function tomboline6() {
+  document.getElementById('line6').classList.add('hidden');
+  document.getElementById('line7').classList.remove('hidden');
+}
+
+function yaline7() {
+  document.getElementById('correctline7').classList.remove('hidden');
+  document.getElementById('tomboline7').classList.remove('hidden');
+  document.getElementById('questline7').classList.add('hidden');
+}
+
+function bukanline7() {
+  document.getElementById('wrongline7').classList.remove('hidden');
+  document.getElementById('tomboline7').classList.remove('hidden');
+  document.getElementById('questline7').classList.add('hidden');
+}
+
+function yaline8() {
+  document.getElementById('correctline8').classList.remove('hidden');
+  document.getElementById('tomboline8').classList.remove('hidden');
+  document.getElementById('questline8').classList.add('hidden');
+}
+
+function bukanline8() {
+  document.getElementById('wrongline8').classList.remove('hidden');
+  document.getElementById('tomboline8').classList.remove('hidden');
+  document.getElementById('questline8').classList.add('hidden');
+}
+
+function tomboline7() {
+  document.getElementById('line7').classList.add('hidden');
+  document.getElementById('line8').classList.remove('hidden');
+}
+
+function tomboline8() {
+  document.getElementById('line8').classList.add('hidden');
+  document.getElementById('line9').classList.remove('hidden');
+}
+
+function tomboline9() {
+  document.getElementById('line9').classList.add('hidden');
+  document.getElementById('line10').classList.remove('hidden');
+}
+
+function tomboline11() {
+  document.getElementById('line11').classList.add('hidden');
+  document.getElementById('line10').classList.add('hidden');
+  document.getElementById('line12').classList.remove('hidden');
+}
+
+function tomboline12() {
+  document.getElementById('line12').classList.add('hidden');
+  document.getElementById('line13').classList.remove('hidden');
+}
+
+function tomboline13() {
+  document.getElementById('line13').classList.add('hidden');
+  document.getElementById('line14').classList.remove('hidden');
+}

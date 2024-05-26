@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../src/output.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../keyframes/transformasi.css" />
   </head>
 
   <style>
@@ -14,283 +15,47 @@
       font-family: 'Lato';
       src: url('../font/Lato-Regular.ttf') format('truetype');
     }
-
-    .scene {
-      width: 80px;
-      height: 80px;
-      perspective: 500px;
-      position: relative;
-      margin: 50px auto;
-    }
-
-    .pyramid {
-      width: 80px;
-      height: 80px;
-      position: absolute;
-      transform-style: preserve-3d;
-      transform-origin: 50% 50%;
-    }
-
-    .face {
-      position: absolute;
-      width: 80px;
-      height: 80px;
-      background: #9ce89c;
-      border: 1px solid #fff;
-      opacity: 0.9;
-    }
-
-    .front {
-      transform: rotateY(0deg) translateZ(40px);
-    }
-
-    .back {
-      transform: rotateY(180deg) translateZ(40px);
-    }
-
-    .left {
-      transform: rotateY(-90deg) translateZ(40px);
-    }
-
-    .right {
-      transform: rotateY(90deg) translateZ(40px);
-    }
-
-    .bottom {
-      transform: rotateX(90deg) translateZ(40px);
-    }
-
-    .resize-handle {
-      width: 10px;
-      height: 10px;
-      background-color: greenyellow;
-      position: absolute;
-    }
-    .resize-handle.ne {
-      top: -5px;
-      right: -5px;
-      cursor: nesw-resize;
-    }
-    .resize-handle.se {
-      bottom: -5px;
-      right: -5px;
-      cursor: nwse-resize;
-    }
-    .resize-handle.sw {
-      bottom: -5px;
-      left: -5px;
-      cursor: nesw-resize;
-    }
-    .resize-handle.nw {
-      top: -5px;
-      left: -5px;
-      cursor: nwse-resize;
-    }
-    #kotak1:active {
-      opacity: 0.5;
-    }
-
-    #kotak2:hover {
-      background-color: lightgray;
-    }
-
-    @keyframes moveAndRotate {
-      0% {
-        transform: rotate(0deg) translate(0);
-      }
-      50% {
-        opacity: 1;
-      }
-
-      100% {
-        transform: translateX(141px) rotateY(180deg);
-        opacity: 0;
-      }
-    }
-
-    @keyframes moveAndRotate1 {
-      0% {
-        transform: rotate(0deg) translate(0);
-      }
-      85% {
-        opacity: 0;
-      }
-
-      100% {
-        transform: translateX(141px) rotateY(180deg);
-        opacity: 1;
-      }
-    }
-
-    @keyframes muncul {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    @keyframes muncului {
-      0% {
-        opacity: 0;
-      }
-      90% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(141px);
-      }
-    }
-
-    .animasi_cermin_tes {
-      animation: moveAndRotate 3s linear forwards;
-      animation-delay: 0s;
-    }
-
-    .animasi_cermin_tes2 {
-      animation: moveAndRotate1 3s linear forwards;
-      animation-delay: 0s;
-    }
-
-    .muncului {
-      animation: muncului 3s linear forwards;
-      animation-delay: 0s;
-    }
-
-    .titikA {
-      animation: muncul 2s ease-in forwards;
-      animation-delay: 0s;
-    }
-    .titikB {
-      animation: muncul 2s ease-in forwards;
-      animation-delay: 2s;
-    }
-    .titikC {
-      animation: muncul 2s ease-in forwards;
-      animation-delay: 4s;
-    }
-
-    .green-border {
-      border-color: #9ce89c;
-    }
-
-    .red-border {
-      border-color: #ff5757;
-    }
-
-    @keyframes tespengetahuan3 {
-      50% {
-        transform: translateY(170%) skewX(12deg);
-      }
-      100% {
-        transform: translateY(0) skewX(0);
-      }
-    }
-
-    #tes_pengetahuan3 {
-      animation: tespengetahuan3 6s linear infinite;
-    }
-
-    @keyframes tespengetahuan4 {
-      50% {
-        transform: translateY(170%) scale(0.5);
-        border-radius: 0;
-      }
-
-      100% {
-        transform: translateY(0) scale(1);
-        border-radius: 50%;
-      }
-    }
-
-    #tes_pengetahuan4 {
-      animation: tespengetahuan4 6s linear infinite;
-    }
-
-    @keyframes garisA {
-      to {
-        width: 100px;
-      }
-    }
-
-    .garisA {
-      animation: garisA 2s forwards;
-      animation-delay: 5s;
-    }
-
-    @keyframes garisB {
-      to {
-        width: 72px;
-      }
-    }
-
-    .garisB {
-      animation: garisB 2s forwards;
-      animation-delay: 7s;
-    }
-
-    @keyframes garisC {
-      to {
-        width: 130px;
-      }
-    }
-
-    .garisC {
-      animation: garisC 2s forwards;
-      animation-delay: 9s;
-    }
   </style>
 
-  <body class="bg-gray-100">
+  <body class="">
     <nav class="w-full flex justify-center">
       <div
-        class="container flex flex-wrap px-2 top-0 py-5 flex-row items-center justify-between max-w-4xl md:px-4 z-50 bg-white bg-opacity-90 fixed"
+        class="container flex flex-wrap px-2 top-0 py-5 bg-[#3DCCC7] bg-opacity-90 flex-row items-center font-sans justify-between max-w-4xl md:px-4 z-50 fixed"
       >
-        <a class="flex font-bold items-center text-primary tras" id="judul" href="../index.html">
-          <span class="ml-3 text-lg relative">Transformasi Geometri</span>
+        <a class="flex font-semibold items-center text-nowrap tras" id="judul" href="../index.html">
+          <span class="ml-3 text-lg relative text-[white]">Transformasi Geometri</span>
         </a>
 
-        <div class="flex">
+        <div class="flex items-center">
           <div class="md:hidden mr-3">
-            <a
-              class="p-[10px] rounded-full bg-[#FFF5F5] shadow-custom inline-block"
-              id="home"
-              href="../index.html"
-            >
+            <a class="inline-block" id="home" href="../index.html">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
                 width="25"
                 height="20"
-                viewBox="0 0 30 25"
+                viewBox="0 0 25 20"
                 fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M15 3.95588L22.5 10.5735V22.0588H19.5V13.2353H10.5V22.0588H7.5V10.5735L15 3.95588ZM15 0L0 13.2353H4.5V25H13.5V16.1765H16.5V25H25.5V13.2353H30L15 0Z"
-                  fill="#094067"
+                  d="M10 20V12.9412H15V20H21.25V10.5882H25L12.5 0L0 10.5882H3.75V20H10Z"
+                  fill="white"
                 />
               </svg>
             </a>
           </div>
 
           <div class="md:hidden">
-            <button
-              class="p-[13px] rounded-full bg-[#FFF5F5] shadow-custom"
-              id="sidebarToggle"
-              onclick="toggleNavbar()"
-            >
+            <button class="mt-1 mr-2" id="sidebarToggle" onclick="toggleNavbar()">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="19"
-                height="15"
-                viewBox="0 0 20 17"
+                width="30"
+                height="35"
+                viewBox="0 0 30 35"
                 fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M0 10.2H2.22222V6.8H0V10.2ZM0 17H2.22222V13.6H0V17ZM0 3.4H2.22222V0H0V3.4ZM4.44444 10.2H20V6.8H4.44444V10.2ZM4.44444 17H20V13.6H4.44444V17ZM4.44444 0V3.4H20V0H4.44444Z"
-                  fill="#094067"
+                  d="M3.75 18.9583H6.25V16.0416H3.75V18.9583ZM3.75 24.7916H6.25V21.875H3.75V24.7916ZM3.75 13.125H6.25V10.2083H3.75V13.125ZM8.75 18.9583H26.25V16.0416H8.75V18.9583ZM8.75 24.7916H26.25V21.875H8.75V24.7916ZM8.75 10.2083V13.125H26.25V10.2083H8.75Z"
+                  fill="white"
                 />
               </svg>
             </button>
@@ -341,238 +106,703 @@
     </nav>
 
     <div
-      class="container font-lato pt-[70px] text-[14px] font-medium max-w-4xl md:mx-auto text-secondary leading-6 tracking-wide w-full"
+      class="h-dvh w-full mx-auto bg-[#C4FFF9] flex items-center text-[15px] justify-center opacity-95 font-lato tracking-wide"
     >
-      <div class="md:mx-auto bg-white md:px-8 md:pt-7 md:pb-16">
-        <div class="w-64 h-64 mx-auto">
-          <div class="relative w-full h-full flex justify-center items-end">
-            <img
-              id="treeSmall"
-              src="../img/bocil.png"
-              class="absolute object-cover w-32 h-32"
-              style="opacity: 1"
+      <div class="relative mx-auto w-80" data-aos="zoom-in" id="line1">
+        <img src="../img/Grafis/Halo.png" class="w-32 -translate-x-3 scale-x-[-1]" alt="" />
+        <div
+          class="bg-[#68d8d6] text-white absolute left-[130px] top-16 p-4 w-52 rounded-lg rounded-tl-none max-w-xs"
+        >
+          Hi! Namaku Aliando. Aku akan menemani kalian belajar transformasi geometri
+        </div>
+        <div>
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="absolute bottom-2 -right-1 cursor-pointer"
+            onclick="tomboline1()"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.862 20.2349L5.4315 24.6219C4.18684 25.4711 2.49927 24.5793 2.49927 23.0731V6.87813C2.49927 5.37101 4.18655 4.47875 5.43145 5.32806L17.3027 13.4256C18.394 14.17 18.394 15.7806 17.3027 16.5232L13.112 19.3821V23.0715C13.112 23.5741 13.6745 23.8711 14.0895 23.5879L25.9442 15.4919C26.3087 15.2426 26.3087 14.7073 25.9445 14.4589L14.0898 6.36281C13.6745 6.07946 13.112 6.37644 13.112 6.879V7.4665C13.112 7.81169 12.8322 8.0915 12.487 8.0915C12.1418 8.0915 11.862 7.81169 11.862 7.4665V6.879C11.862 5.37183 13.5493 4.48091 14.7945 5.33038L26.6492 13.4264C27.7403 14.1708 27.7403 15.7779 26.6495 16.5239L14.7942 24.6203C13.5493 25.4696 11.862 24.5787 11.862 23.0715V20.2349ZM11.862 18.7217L4.72704 23.5893C4.31215 23.8724 3.74927 23.5749 3.74927 23.0731V6.87813C3.74927 6.37519 4.31206 6.07756 4.72704 6.36069L16.5983 14.4582C16.962 14.7063 16.962 15.2431 16.5989 15.4901L13.112 17.869V15.574C13.112 15.2288 12.8322 14.949 12.487 14.949C12.1418 14.949 11.862 15.2288 11.862 15.574V18.7217Z"
+              fill="#8C4D4D"
             />
-            <img
-              id="treeLarge"
-              src="../img/remaja.png"
-              class="absolute w-full h-4/5 object-contain"
-              style="opacity: 0"
-            />
-          </div>
+          </svg>
         </div>
       </div>
 
-      <div class="md:mx-auto bg-white md:px-8 pb-12 pt-8 md:pb-10 px-5">
-        <p class="mb-4 mt-4 md:mt-0">
-          Kamu pernah dengar kata <span class="font-bold text-primary">Transformasi?</span>
-        </p>
-        <p class="mb-4">
-          Ulat yang bertransformasi menjadi kepompong lalu akhirnya menjadi kupu kupu.
-        </p>
-        <p class="mb-4">
-          Atau contoh lainnya, kamu yang dulunya adalah anak kecil sekarang telah bertransformasi
-          menjadi seorang remaja yang cerdas.
-        </p>
-        <p class="leading-relaxed">
-          Yap, transformasi secara sederhana bisa dikatakan sebagai
-          <span
-            id="tanya1"
-            class="bg-hijau rounded-md py-1 px-3 text-white cursor-pointer"
-            onclick="toggleElements()"
-            >???</span
-          >
-          <span id="perubahan" class="text-hijau font-bold hidden">perubahan</span>
-        </p>
+      <div class="relative mx-auto w-80 hidden" id="line2">
+        <img
+          src="../img/Grafis/Unyu.png"
+          class="w-36 h-56 -translate-x-9 transisi2"
+          id="imgline2"
+          alt=""
+        />
+
+        <img
+          src="../img/Grafis/Tunggu.png"
+          class="w-28 h-[218px] transisi -translate-x-5 hidden"
+          id="img2line2"
+          alt=""
+        />
+
+        <div
+          id="textline2"
+          class="bg-[#68d8d6] text-white absolute left-[130px] transisi top-9 p-4 w-52 rounded-lg rounded-tl-none"
+        >
+          Pertama, kita akan belajar pengertian transformasi dulu. Kalian siap?
+        </div>
+        <div
+          id="text2line2"
+          class="bg-[#68d8d6] text-white hidden absolute left-[130px] transisi top-20 p-4 w-52 rounded-lg rounded-tl-none"
+        >
+          Yahh, alau sudah siap klik tombol "Ayo" yaaa!
+        </div>
+        <div class="absolute flex justify-around w-56 left-[117px] transisi bottom-1">
+          <button class="bg-white text-hijau py-1 px-2 rounded-md" onclick="ayo()">Ayoo</button>
+          <button class="bg-white text-hijau py-1 px-2 rounded-md" onclick="tunggu()" id="tunggu">
+            Tunggu
+          </button>
+        </div>
       </div>
 
-      <div class="md:mx-auto bg-white md:px-8 pb-12 md:pt-8 md:pb-10">
-        <div class="px-6 pt-10 font-lato text-sm font-medium">
-          <div class="scene">
-            <div class="pyramid">
-              <div class="face front"></div>
-              <div class="face back"></div>
-              <div class="face left"></div>
-              <div class="face right"></div>
-              <div class="face bottom"></div>
-            </div>
+      <div class="relative mx-auto w-80 hidden" id="line3">
+        <div class="transisi">
+          <img
+            src="../img/Grafis/Nih.png"
+            class="w-32 -translate-x-3 scale-x-[-1]"
+            alt=""
+            id="imgline3"
+          />
+          <div
+            id="textline3"
+            class="bg-[#68d8d6] text-white absolute duration-1000 left-[130px] -top-10 p-4 w-52 rounded-lg rounded-bl-none"
+          >
+            <span class="font-semibold">Transformasi</span> adalah proses mengubah posisi atau
+            ukuran suatu objek
           </div>
-
-          <p class="mb-4 text-secondary">
-            Bagaimana dengan <span class="font-bold text-primary">Geometri?</span>
-          </p>
-
-          <p class="mb-4 leading-relaxed text-secondary">
-            Geometri adalah cabang matematika yang berhubungan dengan
-
-            <span class="font-bold relative cursor-pointer tooltip border-b-4 border-b-green-300"
-              >titik
-              <span
-                class="z-10 font-semibold leading-5 text-xs tooltiptext absolute bg-[#9ce89c] text-left text-white rounded -bottom-[73px] px-3 py-1 -left-1 transform opacity-0 transition-opacity duration-300 w-[180px] invisible"
-              >
-                Titik adalah posisi di ruang yang tak memiliki panjang, lebar, dan tinggi</span
-              > </span
-            >,
-
-            <span class="font-bold relative cursor-pointer tooltip border-b-4 border-b-green-300"
-              >garis
-              <span
-                class="z-10 font-semibold leading-5 text-xs tooltiptext absolute bg-[#9ce89c] text-left text-white rounded -bottom-[95px] px-3 py-1 -left-1 transform opacity-0 transition-opacity duration-300 w-[160px] invisible"
-              >
-                Garis adalah objek geometris yang lurus dan panjangnya tidak terbatas</span
-              > </span
-            >, atau
-
-            <span class="font-bold relative cursor-pointer tooltip border-b-4 border-b-green-300"
-              ><br class="md:hidden" />bangun datar
-              <span
-                class="z-10 font-semibold leading-5 text-xs tooltiptext absolute bg-[#9ce89c] text-white rounded -bottom-[95px] px-3 py-1 -left-[245px] md:left-0 md:top-5 transform opacity-0 transition-opacity duration-300 w-[160px] invisible"
-              >
-                Bangun datar adalah kumpulan titik yang dihubungkan dan dibatasi oleh garis
-              </span> </span
-            >.
-          </p>
-
-          <p class="leading-relaxed mt-8">
-            Contoh bangun datar adalah <span class="font-bold">segitiga</span>.
-          </p>
-
-          <div class="w-60 h-48 mt-4 relative" id="jajargenjang">
-            <img src="../img/blackboard_11246638.png" class="w-full h-full" alt="" />
-            <div class="hidden" id="ohini">
-              <div>
-                <div
-                  class="w-2 h-2 bg-white rounded-full absolute top-14 left-16 titikA opacity-0"
-                ></div>
-                <div
-                  class="w-2 h-2 bg-white rounded-full absolute bottom-14 left-16 opacity-0 titikB"
-                ></div>
-                <div
-                  class="w-2 h-2 bg-white rounded-full absolute bottom-14 right-16 opacity-0 titikC"
-                ></div>
-              </div>
-              <div>
-                <div class="absolute bg-white h-[3px] w-[0] bottom-[58px] left-[70px] garisA"></div>
-                <div
-                  class="absolute bg-white h-[3px] w-[0] bottom-[58px] left-[69px] garisB -rotate-90 origin-bottom-left"
-                ></div>
-                <div
-                  class="absolute bg-white h-[3px] w-[0] top-14 left-16 rotate-[34deg] garisC origin-bottom-left"
-                ></div>
-              </div>
-            </div>
+          <div
+            id="text2line3"
+            class="bg-[#68d8d6] text-white absolute duration-1000 left-[130px] top-16 p-4 w-52 rounded-lg rounded-tl-none max-w-xs"
+          >
+            Tunggu, aku mau pindah posisi dulu deh.
+          </div>
+          <div>
             <svg
-              width="54"
-              height="54"
-              viewBox="0 0 54 54"
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              class="absolute top-[70px] left-[90px] cursor-pointer"
-              onclick="removeOhini()"
-              id="play1"
+              class="absolute bottom-8 duration-1000 -right-1 cursor-pointer"
+              onclick="tomboline2()"
+              id="tomboline2"
             >
               <path
-                d="M21.3333 38.6667L37.3333 26.6667L21.3333 14.6667V38.6667ZM26.6667 0C11.9467 0 0 11.9467 0 26.6667C0 41.3867 11.9467 53.3333 26.6667 53.3333C41.3867 53.3333 53.3333 41.3867 53.3333 26.6667C53.3333 11.9467 41.3867 0 26.6667 0ZM26.6667 48C14.9067 48 5.33333 38.4267 5.33333 26.6667C5.33333 14.9067 14.9067 5.33333 26.6667 5.33333C38.4267 5.33333 48 14.9067 48 26.6667C48 38.4267 38.4267 48 26.6667 48Z"
-                fill="gray"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.862 20.2349L5.4315 24.6219C4.18684 25.4711 2.49927 24.5793 2.49927 23.0731V6.87813C2.49927 5.37101 4.18655 4.47875 5.43145 5.32806L17.3027 13.4256C18.394 14.17 18.394 15.7806 17.3027 16.5232L13.112 19.3821V23.0715C13.112 23.5741 13.6745 23.8711 14.0895 23.5879L25.9442 15.4919C26.3087 15.2426 26.3087 14.7073 25.9445 14.4589L14.0898 6.36281C13.6745 6.07946 13.112 6.37644 13.112 6.879V7.4665C13.112 7.81169 12.8322 8.0915 12.487 8.0915C12.1418 8.0915 11.862 7.81169 11.862 7.4665V6.879C11.862 5.37183 13.5493 4.48091 14.7945 5.33038L26.6492 13.4264C27.7403 14.1708 27.7403 15.7779 26.6495 16.5239L14.7942 24.6203C13.5493 25.4696 11.862 24.5787 11.862 23.0715V20.2349ZM11.862 18.7217L4.72704 23.5893C4.31215 23.8724 3.74927 23.5749 3.74927 23.0731V6.87813C3.74927 6.37519 4.31206 6.07756 4.72704 6.36069L16.5983 14.4582C16.962 14.7063 16.962 15.2431 16.5989 15.4901L13.112 17.869V15.574C13.112 15.2288 12.8322 14.949 12.487 14.949C12.1418 14.949 11.862 15.2288 11.862 15.574V18.7217Z"
+                fill="#8C4D4D"
               />
             </svg>
           </div>
-          <p class="leading-relaxed mt-4">
-            Jika terdapat tiga titik yang dihubungkan oleh garis maka kita telah memiliki sebuah
-            segitiga
-          </p>
-        </div>
-
-        <div class="px-6 pt-10" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="50">
-          <p
-            class="border-l-8 border-hijau font-bold pl-2 leading-relaxed font-lato text-sm text-primary"
-          >
-            Jadi, Transformasi geometri adalah suatu perubahan posisi atau ukuran pada titik, garis,
-            atau bidang.
-          </p>
-        </div>
-      </div>
-
-      <div class="md:mx-auto bg-white md:px-8 pb-12 md:pb-10 px-5">
-        <p class="text-sm pt-8 mb-6 text-secondary font-medium text-center">
-          Berikut adalah sebuah persegi yang bisa kamu pindahkan dan ubah ukurannya
-        </p>
-        <div class="w-60 h-48 mx-auto relative">
-          <div
-            id="shape"
-            class="bg-[#8FBFFF] w-28 h-28 relative mx-auto opacity-60 touch-action-none"
-          >
-            <div class="resize-handle ne"></div>
-            <div class="resize-handle se"></div>
-            <div class="resize-handle sw"></div>
-            <div class="resize-handle nw"></div>
+          <div>
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute bottom-16 duration-1000 -translate-x-[148px] hidden -right-1 cursor-pointer"
+              onclick="tomboline3()"
+              id="tomboline3"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.862 20.2349L5.4315 24.6219C4.18684 25.4711 2.49927 24.5793 2.49927 23.0731V6.87813C2.49927 5.37101 4.18655 4.47875 5.43145 5.32806L17.3027 13.4256C18.394 14.17 18.394 15.7806 17.3027 16.5232L13.112 19.3821V23.0715C13.112 23.5741 13.6745 23.8711 14.0895 23.5879L25.9442 15.4919C26.3087 15.2426 26.3087 14.7073 25.9445 14.4589L14.0898 6.36281C13.6745 6.07946 13.112 6.37644 13.112 6.879V7.4665C13.112 7.81169 12.8322 8.0915 12.487 8.0915C12.1418 8.0915 11.862 7.81169 11.862 7.4665V6.879C11.862 5.37183 13.5493 4.48091 14.7945 5.33038L26.6492 13.4264C27.7403 14.1708 27.7403 15.7779 26.6495 16.5239L14.7942 24.6203C13.5493 25.4696 11.862 24.5787 11.862 23.0715V20.2349ZM11.862 18.7217L4.72704 23.5893C4.31215 23.8724 3.74927 23.5749 3.74927 23.0731V6.87813C3.74927 6.37519 4.31206 6.07756 4.72704 6.36069L16.5983 14.4582C16.962 14.7063 16.962 15.2431 16.5989 15.4901L13.112 17.869V15.574C13.112 15.2288 12.8322 14.949 12.487 14.949C12.1418 14.949 11.862 15.2288 11.862 15.574V18.7217Z"
+                fill="#8C4D4D"
+              />
+            </svg>
           </div>
         </div>
       </div>
 
-      <div class="md:mx-auto bg-white md:px-8 pb-12 md:pt-8 md:pb-10 px-5">
-        <p class="mb-8">
-          Jika kamu telah mengubah posisi maupun ukuran dari persegi di atas maka kamu telah
-          melakukan transformasi
-        </p>
-        <p class="mb-4">
-          Lalu bagaimana membedakan objek
-          <span class="text-[#8FBFFF] font-semibold">sebelum</span> ditransformasi dan
-          <span class="text-green-500 font-semibold">setelah</span> ditransformasi?
-        </p>
-        <p class="">
-          Coba kamu ubah posisi persegi ABCD dibawah ini ke daerah yang bergaris putus putus
-        </p>
-
-        <div class="mt-12 mb-12 flex justify-around items-center z-50">
+      <div class="relative mx-auto w-80 -mt-10 hidden" id="line4">
+        <div class="transisi">
+          <img
+            src="../img/Grafis/Senang.png"
+            class="w-32 -translate-x-3 scale-x-[-1]"
+            alt=""
+            id="imgline4"
+          />
           <div
-            id="kotak1"
-            class="bg-[#8FBFFF] w-16 h-16 rounded-sm relative text-xs cursor-pointer"
-            draggable="true"
+            id="textline4"
+            class="bg-[#68d8d6] text-white absolute duration-1000 left-[130px] -top-10 p-4 w-52 rounded-lg rounded-bl-none"
+          >
+            Berpindah posisi tadi merupakan contoh transformasi lohh
+          </div>
+          <div
+            id="text2line4"
+            class="bg-[#68d8d6] text-white absolute duration-1000 left-[130px] top-16 p-4 w-52 rounded-lg rounded-tl-none max-w-xs"
+          >
+            Contoh lain transformasi adalah saat ikan di bawah membesar
+          </div>
+          <div>
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute bottom-8 duration-1000 -right-1 cursor-pointer"
+              onclick="tomboline4()"
+              id="tomboline4"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.862 20.2349L5.4315 24.6219C4.18684 25.4711 2.49927 24.5793 2.49927 23.0731V6.87813C2.49927 5.37101 4.18655 4.47875 5.43145 5.32806L17.3027 13.4256C18.394 14.17 18.394 15.7806 17.3027 16.5232L13.112 19.3821V23.0715C13.112 23.5741 13.6745 23.8711 14.0895 23.5879L25.9442 15.4919C26.3087 15.2426 26.3087 14.7073 25.9445 14.4589L14.0898 6.36281C13.6745 6.07946 13.112 6.37644 13.112 6.879V7.4665C13.112 7.81169 12.8322 8.0915 12.487 8.0915C12.1418 8.0915 11.862 7.81169 11.862 7.4665V6.879C11.862 5.37183 13.5493 4.48091 14.7945 5.33038L26.6492 13.4264C27.7403 14.1708 27.7403 15.7779 26.6495 16.5239L14.7942 24.6203C13.5493 25.4696 11.862 24.5787 11.862 23.0715V20.2349ZM11.862 18.7217L4.72704 23.5893C4.31215 23.8724 3.74927 23.5749 3.74927 23.0731V6.87813C3.74927 6.37519 4.31206 6.07756 4.72704 6.36069L16.5983 14.4582C16.962 14.7063 16.962 15.2431 16.5989 15.4901L13.112 17.869V15.574C13.112 15.2288 12.8322 14.949 12.487 14.949C12.1418 14.949 11.862 15.2288 11.862 15.574V18.7217Z"
+                fill="#8C4D4D"
+              />
+            </svg>
+          </div>
+          <div class="mt-20">
+            <img src="../img/Grafis/air.png" alt="" class="absolute" />
+            <img
+              src="../img/Grafis/ikan.png"
+              class="w-14 absolute left-32 mt-6 ikan"
+              alt=""
+              id="ikan"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="relative mx-auto w-80 -mt-10 hidden" id="line5">
+        <div class="transisi">
+          <img src="../img/Grafis/Tanya.png" class="w-32 -translate-x-3" alt="" id="imgline5" />
+          <div
+            id="textline5"
+            class="bg-[#68d8d6] text-white absolute duration-1000 left-[130px] -top-6 p-4 w-52 rounded-lg rounded-bl-none"
+          >
+            Sedangkan <span class="font-semibold">geometri</span>? kamu sudah mempelajarinya bukan.
+          </div>
+          <div
+            id="text2line5"
+            class="bg-[#68d8d6] text-white absolute duration-1000 left-[130px] top-20 p-4 w-52 rounded-lg rounded-tl-none max-w-xs"
+          >
+            Geometri pasti berkaitan dengan titik, garis, dan bangun datar.
+          </div>
+          <div>
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute bottom-8 duration-1000 -right-1 cursor-pointer"
+              onclick="tomboline5()"
+              id="tomboline5"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.862 20.2349L5.4315 24.6219C4.18684 25.4711 2.49927 24.5793 2.49927 23.0731V6.87813C2.49927 5.37101 4.18655 4.47875 5.43145 5.32806L17.3027 13.4256C18.394 14.17 18.394 15.7806 17.3027 16.5232L13.112 19.3821V23.0715C13.112 23.5741 13.6745 23.8711 14.0895 23.5879L25.9442 15.4919C26.3087 15.2426 26.3087 14.7073 25.9445 14.4589L14.0898 6.36281C13.6745 6.07946 13.112 6.37644 13.112 6.879V7.4665C13.112 7.81169 12.8322 8.0915 12.487 8.0915C12.1418 8.0915 11.862 7.81169 11.862 7.4665V6.879C11.862 5.37183 13.5493 4.48091 14.7945 5.33038L26.6492 13.4264C27.7403 14.1708 27.7403 15.7779 26.6495 16.5239L14.7942 24.6203C13.5493 25.4696 11.862 24.5787 11.862 23.0715V20.2349ZM11.862 18.7217L4.72704 23.5893C4.31215 23.8724 3.74927 23.5749 3.74927 23.0731V6.87813C3.74927 6.37519 4.31206 6.07756 4.72704 6.36069L16.5983 14.4582C16.962 14.7063 16.962 15.2431 16.5989 15.4901L13.112 17.869V15.574C13.112 15.2288 12.8322 14.949 12.487 14.949C12.1418 14.949 11.862 15.2288 11.862 15.574V18.7217Z"
+                fill="#8C4D4D"
+              />
+            </svg>
+          </div>
+          <div class="absolute -top-10 -left-14 transisi2">
+            <div
+              class="w-2 h-2 bg-black rounded-full absolute bottom-14 left-16 opacity-0 titikB"
+            ></div>
+            <div
+              class="w-2 h-2 bg-black rounded-full absolute bottom-14 left-[165px] opacity-0 titikC"
+            ></div>
+            <div class="absolute bg-black h-[3px] w-[0] bottom-[58px] left-[70px] garisA"></div>
+            <div class="absolute left-24 -top-24 opacity-0 titikC">Garis</div>
+          </div>
+          <div class="w-60 h-48 absolute left-28 transisi2" id="">
+            <div>
+              <div
+                class="w-2 h-2 bg-black rounded-full absolute top-14 left-16 titikA opacity-0"
+              ></div>
+              <div
+                class="w-2 h-2 bg-black rounded-full absolute bottom-14 left-16 opacity-0 titikB"
+              ></div>
+              <div
+                class="w-2 h-2 bg-black rounded-full absolute bottom-14 right-16 opacity-0 titikC"
+              ></div>
+            </div>
+            <div>
+              <div class="absolute bg-black h-[3px] w-[0] bottom-[58px] left-[70px] garisA"></div>
+              <div
+                class="absolute bg-black h-[3px] w-[0] bottom-[58px] left-[69px] garisB -rotate-90 origin-bottom-left"
+              ></div>
+              <div
+                class="absolute bg-black h-[3px] w-[0] top-14 left-16 rotate-[34deg] garisC origin-bottom-left"
+              ></div>
+            </div>
+            <div class="absolute bottom-5 left-12 opacity-0 titikzz">Bangun datar segitiga</div>
+          </div>
+          <div class="absolute -bottom-64 transisi4">
+            <div class="w-2 h-2 bg-black rounded-full absolute bottom-14 left-16"></div>
+            <div class="absolute -top-11 left-[54px] opacity-0 titikC">Titik</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative mx-auto w-80 -mt-24 hidden" id="line6">
+        <div class="transisi">
+          <img
+            src="../img/Grafis/Senang.png"
+            class="w-32 -translate-x-3 scale-x-[-1]"
+            alt=""
+            id="imgline6"
+          />
+          <div
+            id="textline6"
+            class="bg-[#68d8d6] text-white absolute duration-1000 left-[130px] top-3 p-4 w-52 rounded-lg rounded-bl-none"
+          >
+            Ayo kita gabungkan pengertian transformasi dan geometri!
+          </div>
+
+          <div>
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute bottom-20 duration-1000 -right-1 cursor-pointer turun opacity-0"
+              onclick="tomboline6()"
+              id="tomboline6"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.862 20.2349L5.4315 24.6219C4.18684 25.4711 2.49927 24.5793 2.49927 23.0731V6.87813C2.49927 5.37101 4.18655 4.47875 5.43145 5.32806L17.3027 13.4256C18.394 14.17 18.394 15.7806 17.3027 16.5232L13.112 19.3821V23.0715C13.112 23.5741 13.6745 23.8711 14.0895 23.5879L25.9442 15.4919C26.3087 15.2426 26.3087 14.7073 25.9445 14.4589L14.0898 6.36281C13.6745 6.07946 13.112 6.37644 13.112 6.879V7.4665C13.112 7.81169 12.8322 8.0915 12.487 8.0915C12.1418 8.0915 11.862 7.81169 11.862 7.4665V6.879C11.862 5.37183 13.5493 4.48091 14.7945 5.33038L26.6492 13.4264C27.7403 14.1708 27.7403 15.7779 26.6495 16.5239L14.7942 24.6203C13.5493 25.4696 11.862 24.5787 11.862 23.0715V20.2349ZM11.862 18.7217L4.72704 23.5893C4.31215 23.8724 3.74927 23.5749 3.74927 23.0731V6.87813C3.74927 6.37519 4.31206 6.07756 4.72704 6.36069L16.5983 14.4582C16.962 14.7063 16.962 15.2431 16.5989 15.4901L13.112 17.869V15.574C13.112 15.2288 12.8322 14.949 12.487 14.949C12.1418 14.949 11.862 15.2288 11.862 15.574V18.7217Z"
+                fill="#8C4D4D"
+              />
+            </svg>
+          </div>
+          <div class="text-primary mt-12 flex flex-col items-center absolute left-4 gap-3">
+            <div class="bg-[#F0F0F0] px-3 py-2 rounded-md w-72 text-justify nyatu1">
+              Transformasi : proses mengubah posisi atau ukuran suatu objek
+            </div>
+            <div class="bg-[#F0F0F0] px-3 py-2 rounded-md nyatu2 w-72 text-justify">
+              Geometri : titik, garis, dan bangun datar
+            </div>
+          </div>
+          <div
+            class="bg-[#68d8d6] text-white absolute top-72 left-14 p-4 w-52 opacity-0 power-out rounded-lg rounded-tl-none"
+          >
+            Transformasi geometri adalah suatu perubahan posisi atau ukuran pada titik, garis, atau
+            bidang
+          </div>
+        </div>
+      </div>
+
+      <div class="relative mx-auto w-80 -mt-48 hidden" id="line7">
+        <div class="transisi">
+          <img
+            src="../img/Grafis/tanya2.png"
+            class="w-32 -translate-x-3 mx-auto"
+            alt=""
+            id="imgline7"
+          />
+          <div
+            id="textline7"
+            class="bg-[#68d8d6] text-white absolute duration-1000 left-5 text-justify top-52 p-4 w-72 rounded-lg rounded-t-none"
+          >
+            Menurut kamu, apakah persegi di bawah mengalami transformasi?
+          </div>
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="absolute -bottom-[153px] right-0 cursor-pointer hidden transisi2"
+            onclick="tomboline7()"
+            id="tomboline7"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.862 20.2349L5.4315 24.6219C4.18684 25.4711 2.49927 24.5793 2.49927 23.0731V6.87813C2.49927 5.37101 4.18655 4.47875 5.43145 5.32806L17.3027 13.4256C18.394 14.17 18.394 15.7806 17.3027 16.5232L13.112 19.3821V23.0715C13.112 23.5741 13.6745 23.8711 14.0895 23.5879L25.9442 15.4919C26.3087 15.2426 26.3087 14.7073 25.9445 14.4589L14.0898 6.36281C13.6745 6.07946 13.112 6.37644 13.112 6.879V7.4665C13.112 7.81169 12.8322 8.0915 12.487 8.0915C12.1418 8.0915 11.862 7.81169 11.862 7.4665V6.879C11.862 5.37183 13.5493 4.48091 14.7945 5.33038L26.6492 13.4264C27.7403 14.1708 27.7403 15.7779 26.6495 16.5239L14.7942 24.6203C13.5493 25.4696 11.862 24.5787 11.862 23.0715V20.2349ZM11.862 18.7217L4.72704 23.5893C4.31215 23.8724 3.74927 23.5749 3.74927 23.0731V6.87813C3.74927 6.37519 4.31206 6.07756 4.72704 6.36069L16.5983 14.4582C16.962 14.7063 16.962 15.2431 16.5989 15.4901L13.112 17.869V15.574C13.112 15.2288 12.8322 14.949 12.487 14.949C12.1418 14.949 11.862 15.2288 11.862 15.574V18.7217Z"
+              fill="#8C4D4D"
+            />
+          </svg>
+          <div id="questline7">
+            <div class="flex gap-3 absolute -bottom-[151px] left-5">
+              <button class="w-14 py-1 px-3 bg-white rounded-md" onclick="yaline7()">Ya</button>
+              <button class="w-16 py-1 px-3 bg-white rounded-md" onclick="bukanline7()">
+                Bukan
+              </button>
+            </div>
+            <div class="w-16 h-16 bg-white -bottom-64 left-5 absolute membesar z-10"></div>
+            <div class="w-16 h-16 bg-secondary -bottom-64 left-5 absolute text-[13px]">
+              <div class="absolute -top-5 -left-[10px]">A</div>
+              <div class="absolute -top-5 -right-[10px]">B</div>
+              <div class="absolute -bottom-5 -left-[10px]">C</div>
+              <div class="absolute -bottom-5 -right-[10px]">D</div>
+            </div>
+          </div>
+          <img
+            src="../img/Grafis/Benar.png"
+            class="absolute w-28 z-20 left-24 -bottom-64 hidden transisi"
+            alt=""
+            id="correctline7"
+          />
+          <img
+            src="../img/Grafis/Salah.png"
+            class="absolute w-28 z-20 left-24 -bottom-64 hidden transisi"
+            alt=""
+            id="wrongline7"
+          />
+        </div>
+      </div>
+
+      <div class="relative mx-auto w-80 -mt-56 hidden" id="line8">
+        <div class="transisi">
+          <img
+            src="../img/Grafis/tanya2.png"
+            class="w-32 -translate-x-3 mx-auto"
+            alt=""
+            id="imgline8"
+          />
+          <div
+            id="textline8"
+            class="bg-[#68d8d6] text-white absolute duration-1000 left-3 text-justify top-52 p-4 w-[295px] rounded-lg rounded-t-none"
+          >
+            Persegi di bawah mengalami perubahan pada ......nya
+          </div>
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="absolute -bottom-[153px] right-0 cursor-pointer hidden transisi2"
+            onclick="tomboline8()"
+            id="tomboline8"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.862 20.2349L5.4315 24.6219C4.18684 25.4711 2.49927 24.5793 2.49927 23.0731V6.87813C2.49927 5.37101 4.18655 4.47875 5.43145 5.32806L17.3027 13.4256C18.394 14.17 18.394 15.7806 17.3027 16.5232L13.112 19.3821V23.0715C13.112 23.5741 13.6745 23.8711 14.0895 23.5879L25.9442 15.4919C26.3087 15.2426 26.3087 14.7073 25.9445 14.4589L14.0898 6.36281C13.6745 6.07946 13.112 6.37644 13.112 6.879V7.4665C13.112 7.81169 12.8322 8.0915 12.487 8.0915C12.1418 8.0915 11.862 7.81169 11.862 7.4665V6.879C11.862 5.37183 13.5493 4.48091 14.7945 5.33038L26.6492 13.4264C27.7403 14.1708 27.7403 15.7779 26.6495 16.5239L14.7942 24.6203C13.5493 25.4696 11.862 24.5787 11.862 23.0715V20.2349ZM11.862 18.7217L4.72704 23.5893C4.31215 23.8724 3.74927 23.5749 3.74927 23.0731V6.87813C3.74927 6.37519 4.31206 6.07756 4.72704 6.36069L16.5983 14.4582C16.962 14.7063 16.962 15.2431 16.5989 15.4901L13.112 17.869V15.574C13.112 15.2288 12.8322 14.949 12.487 14.949C12.1418 14.949 11.862 15.2288 11.862 15.574V18.7217Z"
+              fill="#8C4D4D"
+            />
+          </svg>
+          <div id="questline8">
+            <div class="flex gap-3 absolute -bottom-[151px] left-3">
+              <button class="py-1 px-3 bg-white rounded-md" onclick="bukanline8()">ukuran</button>
+              <button class="py-1 px-3 bg-white rounded-md" onclick="bukanline8()">posisi</button>
+              <button class="py-1 px-3 bg-white rounded-md" onclick="yaline8()">
+                ukuran dan posisi
+              </button>
+            </div>
+            <div class="w-16 h-16 bg-white -bottom-72 left-5 absolute membesar z-10"></div>
+            <div class="w-16 h-16 bg-secondary -bottom-72 left-5 absolute text-[13px]">
+              <div class="absolute -top-5 -left-[10px]">A</div>
+              <div class="absolute -top-5 -right-[10px]">B</div>
+              <div class="absolute -bottom-5 -left-[10px]">C</div>
+              <div class="absolute -bottom-5 -right-[10px]">D</div>
+            </div>
+          </div>
+          <img
+            src="../img/Grafis/Benar.png"
+            class="absolute w-28 z-20 left-24 -bottom-64 hidden transisi"
+            alt=""
+            id="correctline8"
+          />
+          <img
+            src="../img/Grafis/Salah.png"
+            class="absolute w-28 z-20 left-24 -bottom-64 hidden transisi"
+            alt=""
+            id="wrongline8"
+          />
+        </div>
+      </div>
+
+      <div class="relative mx-auto w-80 -mt-24 hidden" id="line9">
+        <div class="transisi">
+          <img src="../img/Grafis/Tanya.png" class="w-32 -translate-x-3" alt="" id="imgline9" />
+          <div
+            id="textline9"
+            class="bg-[#68d8d6] text-white absolute duration-1000 left-[130px] top-16 p-4 w-52 rounded-lg rounded-tl-none"
+          >
+            Lalu, bagaimana membedakan objek yang telah mengalami transformasi dan belum?
+          </div>
+
+          <div>
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute bottom-7 duration-1000 -right-1 cursor-pointer"
+              onclick="tomboline9()"
+              id="tomboline9"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.862 20.2349L5.4315 24.6219C4.18684 25.4711 2.49927 24.5793 2.49927 23.0731V6.87813C2.49927 5.37101 4.18655 4.47875 5.43145 5.32806L17.3027 13.4256C18.394 14.17 18.394 15.7806 17.3027 16.5232L13.112 19.3821V23.0715C13.112 23.5741 13.6745 23.8711 14.0895 23.5879L25.9442 15.4919C26.3087 15.2426 26.3087 14.7073 25.9445 14.4589L14.0898 6.36281C13.6745 6.07946 13.112 6.37644 13.112 6.879V7.4665C13.112 7.81169 12.8322 8.0915 12.487 8.0915C12.1418 8.0915 11.862 7.81169 11.862 7.4665V6.879C11.862 5.37183 13.5493 4.48091 14.7945 5.33038L26.6492 13.4264C27.7403 14.1708 27.7403 15.7779 26.6495 16.5239L14.7942 24.6203C13.5493 25.4696 11.862 24.5787 11.862 23.0715V20.2349ZM11.862 18.7217L4.72704 23.5893C4.31215 23.8724 3.74927 23.5749 3.74927 23.0731V6.87813C3.74927 6.37519 4.31206 6.07756 4.72704 6.36069L16.5983 14.4582C16.962 14.7063 16.962 15.2431 16.5989 15.4901L13.112 17.869V15.574C13.112 15.2288 12.8322 14.949 12.487 14.949C12.1418 14.949 11.862 15.2288 11.862 15.574V18.7217Z"
+                fill="#8C4D4D"
+              />
+            </svg>
+          </div>
+          <div class="w-16 h-16 bg-secondary absolute left-3 -bottom-28 text-[13px]">
+            <div class="absolute -top-5 -left-[10px]">A</div>
+            <div class="absolute -top-5 -right-[10px]">B</div>
+            <div class="absolute -bottom-5 -left-[10px]">C</div>
+            <div class="absolute -bottom-5 -right-[10px]">D</div>
+          </div>
+          <div class="w-16 h-16 bg-white absolute left-3 -bottom-28 transformBox"></div>
+        </div>
+      </div>
+
+      <div class="relative mx-auto w-80 -mt-24 duration-1000 hidden" id="line10">
+        <div class="transisi">
+          <div id="removeline10">
+            <img
+              src="../img/Grafis/Nih.png"
+              class="w-32 -translate-x-3 scale-x-[-1]"
+              alt=""
+              id="imgline10"
+            />
+            <div
+              id="textline10"
+              class="bg-[#68d8d6] text-white absolute duration-1000 left-[130px] top-10 p-4 w-52 rounded-lg rounded-tl-none"
+            >
+              Coba kamu pindahkan persegi ABCD ke daerah yang bergaris putus putus
+            </div>
+          </div>
+          <div
+            class="bg-secondary w-16 h-16 rounded-sm absolute left-7 -bottom-28 text-xs opacity-20"
           >
             <span class="absolute -top-3 -left-3">A</span>
             <span class="absolute -top-3 -right-3">B</span>
             <span class="absolute -bottom-3 -left-3">C</span>
             <span class="absolute -bottom-3 -right-3">D</span>
           </div>
-          <svg
-            width="24"
-            height="9"
-            viewBox="0 0 24 9"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M18.015 3.375H0V5.625H18.015V9L24 4.5L18.015 0V3.375Z" fill="black" />
-          </svg>
+          <div class="mt-12 flex justify-around absolute w-80 items-center z-50">
+            <div
+              id="kotak1"
+              class="bg-[#8FBFFF] w-16 h-16 rounded-sm relative text-xs cursor-pointer"
+              draggable="true"
+            >
+              <span class="absolute -top-3 -left-3">A</span>
+              <span class="absolute -top-3 -right-3">B</span>
+              <span class="absolute -bottom-3 -left-3">C</span>
+              <span class="absolute -bottom-3 -right-3">D</span>
+            </div>
+            <svg
+              width="24"
+              height="9"
+              viewBox="0 0 24 9"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M18.015 3.375H0V5.625H18.015V9L24 4.5L18.015 0V3.375Z" fill="black" />
+            </svg>
 
-          <div
-            id="kotak2"
-            class="border-dashed border-4 border-gray-400 w-16 h-16 flex justify-center items-center"
-          ></div>
+            <div
+              id="kotak2"
+              class="border-dashed border-4 border-gray-400 w-16 h-16 flex justify-center items-center"
+            ></div>
+          </div>
         </div>
+      </div>
 
-        <p>
-          <span class="text-[#8FBFFF] font-semibold">Persegi ABCD</span> setelah diubah posisinya,
-          berubah menjadi <span class="text-green-500 font-semibold">persegi A'B'C'D'</span>
-        </p>
-
-        <div class="pt-12" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="50">
-          <p
-            class="border-l-8 border-hijau font-bold pl-2 leading-relaxed font-lato text-sm text-primary"
+      <div class="absolute mx-auto w-80 translate-y-32 hidden" id="line11">
+        <div class="transisi">
+          <img src="../img/Grafis/tanya.png" class="w-28 translate-x-3" alt="" id="imgline11" />
+          <div
+            id="textline11"
+            class="bg-[#68d8d6] text-white absolute left-[130px] top-10 p-4 w-52 rounded-lg rounded-tl-none"
           >
-            Jadi sebagai penanda bahwa objek tersebut adalah hasil transformasi, kita menambahkan (
-            ' ) atau aksen ke objeknya
-          </p>
+            Kamu menemukan perbedaannya?
+          </div>
+          <div
+            id="text2line11"
+            class="bg-[#68d8d6] text-white absolute left-[130px] top-[121px] p-4 w-52 rounded-lg rounded-tl-none"
+          >
+            Yaaa.... Persegi ABCD menjadi persegi A'B'C'D'
+          </div>
+          <div>
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute -bottom-4 duration-1000 -right-1 cursor-pointer"
+              onclick="tomboline11()"
+              id="tomboline10"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.862 20.2349L5.4315 24.6219C4.18684 25.4711 2.49927 24.5793 2.49927 23.0731V6.87813C2.49927 5.37101 4.18655 4.47875 5.43145 5.32806L17.3027 13.4256C18.394 14.17 18.394 15.7806 17.3027 16.5232L13.112 19.3821V23.0715C13.112 23.5741 13.6745 23.8711 14.0895 23.5879L25.9442 15.4919C26.3087 15.2426 26.3087 14.7073 25.9445 14.4589L14.0898 6.36281C13.6745 6.07946 13.112 6.37644 13.112 6.879V7.4665C13.112 7.81169 12.8322 8.0915 12.487 8.0915C12.1418 8.0915 11.862 7.81169 11.862 7.4665V6.879C11.862 5.37183 13.5493 4.48091 14.7945 5.33038L26.6492 13.4264C27.7403 14.1708 27.7403 15.7779 26.6495 16.5239L14.7942 24.6203C13.5493 25.4696 11.862 24.5787 11.862 23.0715V20.2349ZM11.862 18.7217L4.72704 23.5893C4.31215 23.8724 3.74927 23.5749 3.74927 23.0731V6.87813C3.74927 6.37519 4.31206 6.07756 4.72704 6.36069L16.5983 14.4582C16.962 14.7063 16.962 15.2431 16.5989 15.4901L13.112 17.869V15.574C13.112 15.2288 12.8322 14.949 12.487 14.949C12.1418 14.949 11.862 15.2288 11.862 15.574V18.7217Z"
+                fill="#8C4D4D"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute mx-auto w-80 -translate-y-12 hidden" id="line12">
+        <div class="transisi">
+          <img
+            src="../img/Grafis/unyu.png"
+            class="w-32 h-52 -translate-x-5"
+            alt=""
+            id="imgline12"
+          />
+          <div
+            id="textline12"
+            class="bg-[#68d8d6] text-white absolute left-[130px] text-justify top-8 p-4 w-52 rounded-lg rounded-tl-none"
+          >
+            Jadi, untuk menandakan sebuah objek telah ditransformasi dengan menambahkan ( ' ) atau
+            aksen
+          </div>
+          <div>
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute -bottom-3 duration-1000 -right-1 cursor-pointer"
+              onclick="tomboline12()"
+              id="tomboline12"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.862 20.2349L5.4315 24.6219C4.18684 25.4711 2.49927 24.5793 2.49927 23.0731V6.87813C2.49927 5.37101 4.18655 4.47875 5.43145 5.32806L17.3027 13.4256C18.394 14.17 18.394 15.7806 17.3027 16.5232L13.112 19.3821V23.0715C13.112 23.5741 13.6745 23.8711 14.0895 23.5879L25.9442 15.4919C26.3087 15.2426 26.3087 14.7073 25.9445 14.4589L14.0898 6.36281C13.6745 6.07946 13.112 6.37644 13.112 6.879V7.4665C13.112 7.81169 12.8322 8.0915 12.487 8.0915C12.1418 8.0915 11.862 7.81169 11.862 7.4665V6.879C11.862 5.37183 13.5493 4.48091 14.7945 5.33038L26.6492 13.4264C27.7403 14.1708 27.7403 15.7779 26.6495 16.5239L14.7942 24.6203C13.5493 25.4696 11.862 24.5787 11.862 23.0715V20.2349ZM11.862 18.7217L4.72704 23.5893C4.31215 23.8724 3.74927 23.5749 3.74927 23.0731V6.87813C3.74927 6.37519 4.31206 6.07756 4.72704 6.36069L16.5983 14.4582C16.962 14.7063 16.962 15.2431 16.5989 15.4901L13.112 17.869V15.574C13.112 15.2288 12.8322 14.949 12.487 14.949C12.1418 14.949 11.862 15.2288 11.862 15.574V18.7217Z"
+                fill="#8C4D4D"
+              />
+            </svg>
+          </div>
+          <div
+            class="bg-secondary w-16 h-16 rounded-sm absolute left-7 -bottom-28 text-xs"
+            style="background-color: rgba(0, 0, 0, 0.1)"
+          >
+            <span class="absolute -top-3 -left-3">A</span>
+            <span class="absolute -top-3 -right-3">B</span>
+            <span class="absolute -bottom-3 -left-3">C</span>
+            <span class="absolute -bottom-3 -right-3">D</span>
+          </div>
+          <div
+            class="bg-[#8FBFFF] w-16 h-16 rounded-sm absolute left-7 -bottom-28 text-xs rotasiline12"
+          >
+            <span class="absolute opacity-0 munculine12 -top-3 -left-3">A'</span>
+            <span class="absolute opacity-0 munculine12 -top-3 -right-3">B'</span>
+            <span class="absolute opacity-0 munculine12 -bottom-3 -left-3">C'</span>
+            <span class="absolute opacity-0 munculine12 -bottom-3 -right-3">D'</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute mx-auto w-80 hidden" id="line13">
+        <div class="transisi">
+          <img src="../img/Grafis/Uhui.png" class="w-36 -translate-x-5" alt="" id="imgline13" />
+          <div
+            id="textline13"
+            class="bg-[#68d8d6] text-white absolute left-[130px] text-justify top-0 p-4 w-52 rounded-lg rounded-bl-none"
+          >
+            Segitu dulu yaa perkenalan awal transformasi geometri
+          </div>
+          <div
+            id="textline13"
+            class="bg-[#68d8d6] text-white absolute left-[130px] text-justify top-[104px] p-4 w-52 rounded-lg rounded-tl-none"
+          >
+            Setelah ini, akan ada rangkuman dan tes yang bisa kamu kerjakan. Semangat!!!
+          </div>
+          <div>
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute -bottom-11 duration-1000 -right-1 cursor-pointer"
+              onclick="tomboline13()"
+              id="tomboline13"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.862 20.2349L5.4315 24.6219C4.18684 25.4711 2.49927 24.5793 2.49927 23.0731V6.87813C2.49927 5.37101 4.18655 4.47875 5.43145 5.32806L17.3027 13.4256C18.394 14.17 18.394 15.7806 17.3027 16.5232L13.112 19.3821V23.0715C13.112 23.5741 13.6745 23.8711 14.0895 23.5879L25.9442 15.4919C26.3087 15.2426 26.3087 14.7073 25.9445 14.4589L14.0898 6.36281C13.6745 6.07946 13.112 6.37644 13.112 6.879V7.4665C13.112 7.81169 12.8322 8.0915 12.487 8.0915C12.1418 8.0915 11.862 7.81169 11.862 7.4665V6.879C11.862 5.37183 13.5493 4.48091 14.7945 5.33038L26.6492 13.4264C27.7403 14.1708 27.7403 15.7779 26.6495 16.5239L14.7942 24.6203C13.5493 25.4696 11.862 24.5787 11.862 23.0715V20.2349ZM11.862 18.7217L4.72704 23.5893C4.31215 23.8724 3.74927 23.5749 3.74927 23.0731V6.87813C3.74927 6.37519 4.31206 6.07756 4.72704 6.36069L16.5983 14.4582C16.962 14.7063 16.962 15.2431 16.5989 15.4901L13.112 17.869V15.574C13.112 15.2288 12.8322 14.949 12.487 14.949C12.1418 14.949 11.862 15.2288 11.862 15.574V18.7217Z"
+                fill="#8C4D4D"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container font-lato pt-[85px] text-[14px] font-medium max-w-4xl hidden md:mx-auto text-secondary leading-6 tracking-wide w-full"
+      id="line14"
+    >
+      <div class="md:mx-auto bg-[#EDF6F9] md:px-8 pb-12 pt-8 md:pb-10 px-7 bg-opacity-90">
+        <div class="flex items-center md:mt-0">
+          <img src="../img/rangkuman.png" alt="" class="w-20 h-20" />
+          <div class="text-lg font-semibold tracking-wides text-[#3DCCC7] ml-2">Rangkuman</div>
+        </div>
+        <div class="flex items-center mt-7 ml-4">
+          <img src="../img/Point.png" alt="" class="w-8 h-8" />
+          <div class="ml-2">
+            <span class="font-semibold text-primary">Transformasi Geometri</span> adalah suatu
+            perubahan posisi atau ukuran pada titik, garis atau bidang.
+          </div>
+        </div>
+        <div class="mx-auto w-64 h-20 translate-x-6 relative mt-9">
+          <div
+            class="bg-secondary w-16 h-16 rounded-sm absolute text-xs"
+            style="background-color: rgba(0, 0, 0, 0.1)"
+          >
+            <span class="absolute -top-3 -left-3">A</span>
+            <span class="absolute -top-3 -right-3">B</span>
+            <span class="absolute -bottom-3 -left-3">C</span>
+            <span class="absolute -bottom-3 -right-3">D</span>
+          </div>
+          <div class="bg-[#8FBFFF] w-16 h-16 rounded-sm absolute text-xs rotasiline13">
+            <span class="absolute opacity-0 munculine13 -top-3 -left-3">A'</span>
+            <span class="absolute opacity-0 munculine13 -top-3 -right-3">B'</span>
+            <span class="absolute opacity-0 munculine13 -bottom-3 -left-3">C'</span>
+            <span class="absolute opacity-0 munculine13 -bottom-3 -right-3">D'</span>
+          </div>
+        </div>
+        <div class="flex items-center mt-6 ml-4">
+          <img src="../img/Point.png" alt="" class="w-8 h-8" />
+          <div class="ml-2">
+            Jika subuah objek telah ditransformasi maka nama objek akan diberi tanda
+            <span class="font-semibold text-primary">( ' )</span> atau
+            <span class="font-semibold text-primary">aksen</span>.
+          </div>
         </div>
       </div>
 
       <!-- Tes Pemahaman 1 -->
-      <div class="md:mx-auto bg-white md:px-8 md:pt-8 md:pb-8 md:mt-8 pt-8 px-5">
+      <div class="md:mx-auto bg-[#EDF6F9] md:px-8 md:pt-8 md:pb-8 md:mt-8 pt-8 px-6">
         <div class="flex items-center md:mt-0">
-          <img src="../img/tespemahaman.png" alt="" class="w-16 h-16" />
-          <div class="text-xl font-semibold tracking-wides text-hijau ml-2">Tes Pemahaman</div>
+          <img src="../img/tespemahaman.png" alt="" class="w-20 h-20" />
+          <div class="text-lg font-semibold tracking-wides text-[#3DCCC7] ml-2">Tes Pemahaman</div>
         </div>
         <div
-          class="w-full mt-3 pb-4 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative max-w-md"
+          class="w-full mt-3 pb-4 bg-[#fffafb] border-t-[2px] border-b-[2px] px-4 relative max-w-md"
           id="TesPertama1"
         >
           <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40">TES PERTAMA</p>
@@ -694,8 +924,8 @@
       <!-- Akhir Tes Pemahaman 1 -->
 
       <!-- Tes Pemahaman 2 -->
-      <div class="md:mx-auto bg-white md:px-8 pt-8 px-5">
-        <div class="bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative pb-4 max-w-md" id="">
+      <div class="md:mx-auto bg-[#EDF6F9] md:px-8 pt-8 px-6">
+        <div class="bg-[#fffafb] border-t-[2px] border-b-[2px] px-4 relative pb-4 max-w-md" id="">
           <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40">TES KEDUA</p>
           <p class="mt-1">Tentukan titik kordinat ( -3 , 2 ) pada kordinat kartesius di bawah</p>
 
@@ -720,8 +950,8 @@
       <!-- Akhir Tes Pemahaman 2 -->
 
       <!-- Tes Pemahaman 3 -->
-      <div class="md:mx-auto bg-white md:px-8 pb-40 pt-8 px-5">
-        <div class="bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative pb-4 max-w-md" id="">
+      <div class="md:mx-auto bg-[#EDF6F9] md:px-8 pb-40 pt-8 px-6">
+        <div class="bg-[#fffafb] border-t-[2px] border-b-[2px] px-4 relative pb-4 max-w-md" id="">
           <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40">TES KETIGA</p>
           <p class="mt-1">
             Cobalah kamu menggambar segitiga dengan kordinat titik sudutnya di ( -2 , 0 ) , ( 1 , -2
@@ -922,11 +1152,14 @@
             kotak1Clone.querySelectorAll('span').forEach((span) => {
               span.textContent += "'"; // Menambahkan karakter ' pada setiap elemen span
             });
-            kotak1Clone.style.backgroundColor = '#86efac'; // Mengubah warna klon kotak1 menjadi hijau
+            // Mengubah warna klon kotak1 menjadi hijau
             kotak2.innerHTML = ''; // Bersihkan isi kotak2 jika ada
             kotak2.appendChild(kotak1Clone); // Tambahkan klon kotak1 yang telah diubah ke dalam kotak2
             kotak1.style.opacity = '0'; // Membuat kotak1 asli menjadi tidak terlihat
             kotak2.style.border = 'none';
+            document.getElementById('line10').classList.add('-translate-y-32');
+            document.getElementById('removeline10').classList.add('hidden');
+            document.getElementById('line11').classList.remove('hidden');
           }
         });
       });
