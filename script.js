@@ -324,6 +324,8 @@ function toggleNavbar() {
 
   sidebar.classList.toggle('translate-x-full');
   sidebar.classList.toggle('translate-x-0');
+  sidebar.classList.toggle('text-primary');
+  sidebar.classList.toggle('text-white');
 
   // Menggunakan kelas 'translate' yang telah didefinisikan
   wacawbutton.classList.toggle('translate-x-4');
