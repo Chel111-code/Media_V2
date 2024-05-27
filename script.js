@@ -485,6 +485,9 @@ function tunggu() {
   document.getElementById('textline2').classList.add('hidden');
   document.getElementById('text2line2').classList.remove('hidden');
   document.getElementById('tunggu').classList.add('hidden');
+  document
+    .getElementById('ayo')
+    .classList.add('-translate-y-7', '-translate-x-8', 'md:-translate-x-10', 'md:-translate-y-1');
 }
 
 function ayo() {
@@ -495,7 +498,14 @@ function ayo() {
 function tomboline2() {
   document.getElementById('imgline3').classList.remove('scale-x-[-1]');
   document.getElementById('imgline3').classList.add('transisi3');
-  document.getElementById('textline3').classList.add('-translate-x-[152px]', 'translate-y-[50px]');
+  document
+    .getElementById('textline3')
+    .classList.add(
+      '-translate-x-[132px]',
+      'translate-y-[30px]',
+      'md:-translate-x-[222px]',
+      'md:translate-y-[10px]'
+    );
   document.getElementById('textline3').classList.add('rounded-br-none');
   document.getElementById('text2line3').classList.add('hidden');
   document.getElementById('tomboline2').classList.add('hidden');
@@ -575,5 +585,6 @@ function tomboline12() {
 
 function tomboline13() {
   document.getElementById('line13').classList.add('hidden');
+  document.getElementById('komik').classList.add('hidden');
   document.getElementById('line14').classList.remove('hidden');
 }

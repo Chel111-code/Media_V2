@@ -26,7 +26,7 @@
 
 @keyframes transisi3 {
   100% {
-    transform: translateX(150%);
+    transform: translateX(180%);
   }
 }
 
@@ -251,6 +251,24 @@
 }
 
 @keyframes powerOut {
+  25% {
+    opacity: 0.5;
+    transform: translate(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    transform: translateX(53px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(53px) translateY(-187px);
+    opacity: 1;
+  }
+}
+
+@keyframes powerOutsm {
   0% {
     transform: scale(0.5);
   }
@@ -263,11 +281,11 @@
     transform: scale(1);
   }
   75% {
-    transform: translateX(80px);
+    transform: translateX(23px);
     opacity: 1;
   }
   100% {
-    transform: translateX(73px) translateY(-172px);
+    transform: translateX(23px) translateY(-142px);
     opacity: 1;
   }
 }
@@ -278,14 +296,21 @@
     transform: translate(0);
   }
   100% {
-    transform: translateY(120px);
+    transform: translateY(140px);
     opacity: 1;
   }
 }
 
 .power-out {
   animation: powerOut 3s ease-out forwards;
-  animation-delay: 9s;
+  animation-delay: 8s;
+}
+
+@media (min-width: 768px) {
+  .power-outsm {
+    animation: powerOutsm 3s ease-out forwards;
+    animation-delay: 9s;
+  }
 }
 
 .turun {
@@ -295,7 +320,7 @@
 
 @keyframes membesar {
   100% {
-    transform: translateX(200px) scale(1.7);
+    transform: translateX(190px) scale(1.5);
     opacity: 1;
   }
 }
@@ -306,17 +331,14 @@
 }
 
 @keyframes transformBox {
-  0% {
-    transform: translate(0, 0) rotate(0deg) scale(1);
-  }
   25% {
     transform: translate(230px, 0) rotate(90deg) scale(1.5);
   }
   50% {
-    transform: translate(230px, 170px) rotate(180deg) scale(1);
+    transform: translate(230px, 70px) rotate(180deg) scale(1);
   }
   75% {
-    transform: translate(0, 170px) rotate(270deg) scale(0.5);
+    transform: translate(0, 70px) rotate(270deg) scale(0.5);
   }
   100% {
     transform: translate(0, 100px) rotate(360deg) scale(1);
@@ -334,7 +356,7 @@
   }
 
   100% {
-    transform: translate(200px, 170px) rotate(360deg) scale(1);
+    transform: translate(200px, 110px) rotate(360deg) scale(1);
   }
 }
 
