@@ -488,3 +488,227 @@ function divClickHandler() {
   // Aktifkan tombol "Check1"
   checkButton.removeAttribute('disabled');
 }
+
+function tomboline1() {
+  document.getElementById('line1').classList.add('hidden');
+  document.getElementById('line2').classList.remove('hidden');
+}
+
+function tunggu() {
+  document.getElementById('imgline2').classList.add('hidden');
+  document.getElementById('img2line2').classList.remove('hidden');
+  document.getElementById('textline2').classList.add('hidden');
+  document.getElementById('text2line2').classList.remove('hidden');
+  document.getElementById('tunggu').classList.add('hidden');
+  document
+    .getElementById('ayo')
+    .classList.add('-translate-y-7', '-translate-x-8', 'md:-translate-x-10', 'md:-translate-y-1');
+}
+
+function ayo() {
+  document.getElementById('line2').classList.add('hidden');
+  document.getElementById('line3').classList.remove('hidden');
+}
+
+function tomboline2() {
+  document.getElementById('line2').classList.add('hidden');
+  document.getElementById('line3').classList.remove('hidden');
+}
+
+function tomboline3() {
+  document.getElementById('line3').classList.add('hidden');
+  document.getElementById('line4').classList.remove('hidden');
+  document.getElementById('ikan').classList.add('ikan');
+}
+
+function tomboline4() {
+  document.getElementById('line4').classList.add('hidden');
+  document.getElementById('line5').classList.remove('hidden');
+}
+
+function tomboline5() {
+  document.getElementById('line5').classList.add('hidden');
+  document.getElementById('line6').classList.remove('hidden');
+}
+
+function tomboline6() {
+  document.getElementById('line6').classList.add('hidden');
+  document.getElementById('line6stengah').classList.remove('hidden');
+}
+
+function tomboline6stengah() {
+  document.getElementById('line6stengah').classList.add('hidden');
+  document.getElementById('linestengah2').classList.remove('hidden');
+}
+
+function tombolinestengah2() {
+  document.getElementById('linestengah2').classList.add('hidden');
+  document.getElementById('line7').classList.remove('hidden');
+}
+
+function yaline8() {
+  document.getElementById('correctline8').classList.remove('hidden');
+  document.getElementById('tomboline8').classList.remove('hidden');
+  document.getElementById('questline8').classList.add('hidden');
+}
+
+function bukanline8() {
+  document.getElementById('wrongline8').classList.remove('hidden');
+  document.getElementById('tomboline8').classList.remove('hidden');
+  document.getElementById('questline8').classList.add('hidden');
+}
+
+function tomboline7() {
+  document.getElementById('line7').classList.add('hidden');
+  document.getElementById('line8').classList.remove('hidden');
+}
+
+function tomboline8() {
+  document.getElementById('line8').classList.add('hidden');
+  document.getElementById('line9').classList.remove('hidden');
+}
+
+function tomboline9() {
+  document.getElementById('line9').classList.add('hidden');
+  document.getElementById('line10').classList.remove('hidden');
+}
+
+function tomboline10() {
+  document.getElementById('line10').classList.add('hidden');
+  document.getElementById('line11').classList.remove('hidden');
+}
+
+function tomboline11() {
+  document.getElementById('line11').classList.add('hidden');
+  document.getElementById('line10').classList.add('hidden');
+  document.getElementById('line12').classList.remove('hidden');
+}
+
+function tomboline12() {
+  document.getElementById('line12').classList.add('hidden');
+  document.getElementById('line12stengah').classList.remove('hidden');
+}
+
+function tomboline12stengah() {
+  document.getElementById('line12stengah').classList.add('hidden');
+  document.getElementById('line13').classList.remove('hidden');
+}
+
+function tomboline13() {
+  document.getElementById('line13').classList.add('hidden');
+  document.getElementById('komik').classList.add('hidden');
+  document.getElementById('line14').classList.remove('hidden');
+}
+
+const moveButton = document.getElementById('moveButton');
+const movable = document.getElementById('movable');
+const buttonline2 = document.getElementById('tomboline2');
+const container = movable.parentElement;
+let clickCount = 0;
+
+moveButton.addEventListener('click', () => {
+  if (clickCount < 3) {
+    const containerWidth = container.clientWidth;
+    const movableWidth = movable.clientWidth;
+    const maxLeft = containerWidth - movableWidth;
+    const moveDistance = maxLeft / 3;
+
+    const currentLeft = parseInt(window.getComputedStyle(movable).left, 10) || 0;
+    const newLeft = currentLeft + moveDistance;
+    movable.style.left = `${newLeft}px`;
+    clickCount++;
+
+    if (clickCount === 3) {
+      moveButton.disabled = true;
+      moveButton.classList.add('opacity-0');
+      buttonline2.classList.remove('hidden');
+    }
+  }
+});
+
+const draggable = document.getElementById('draggable');
+const label = document.getElementById('label');
+let isDragging = false;
+let offsetX = 0;
+let offsetY = 0;
+
+draggable.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  offsetX = e.clientX - draggable.getBoundingClientRect().left;
+  offsetY = e.clientY - draggable.getBoundingClientRect().top;
+  draggable.style.cursor = 'grabbing';
+  label.classList.remove('hidden'); // Menampilkan label
+});
+
+document.addEventListener('mousemove', (e) => {
+  if (isDragging) {
+    const container = draggable.parentElement;
+    const containerRect = container.getBoundingClientRect();
+    const newX = e.clientX - containerRect.left - offsetX;
+    const newY = e.clientY - containerRect.top - offsetY;
+
+    // Ensure the element stays within the container
+    if (
+      newX >= 0 &&
+      newX <= containerRect.width - draggable.offsetWidth &&
+      newY >= 0 &&
+      newY <= containerRect.height - draggable.offsetHeight
+    ) {
+      draggable.style.left = `${newX}px`;
+      draggable.style.top = `${newY}px`;
+    }
+  }
+});
+
+document.addEventListener('mouseup', () => {
+  if (isDragging) {
+    isDragging = false;
+    draggable.style.cursor = 'pointer';
+  }
+});
+
+function yaline7() {
+  document.getElementById('correctline7').classList.remove('hidden');
+  document.getElementById('tomboline7').classList.remove('hidden');
+  document.getElementById('questline7').classList.add('hidden');
+  document.getElementById('img2line7').classList.remove('hidden');
+  document.getElementById('imgline7').classList.add('hidden');
+}
+
+function bukanline7() {
+  document.getElementById('wrongline7').classList.remove('hidden');
+  document.getElementById('tomboline7').classList.remove('hidden');
+  document.getElementById('questline7').classList.add('hidden');
+  document.getElementById('img3line7').classList.remove('hidden');
+  document.getElementById('imgline7').classList.add('hidden');
+}
+
+function yaline8() {
+  document.getElementById('correctline8').classList.remove('hidden');
+  document.getElementById('tomboline8').classList.remove('hidden');
+  document.getElementById('questline8').classList.add('hidden');
+  document.getElementById('img2line8').classList.remove('hidden');
+  document.getElementById('imgline8').classList.add('hidden');
+}
+
+function bukanline8() {
+  document.getElementById('wrongline8').classList.remove('hidden');
+  document.getElementById('tomboline8').classList.remove('hidden');
+  document.getElementById('questline8').classList.add('hidden');
+  document.getElementById('img3line8').classList.remove('hidden');
+  document.getElementById('imgline8').classList.add('hidden');
+}
+
+function yaline11() {
+  document.getElementById('correctline11').classList.remove('hidden');
+  document.getElementById('tomboline11').classList.remove('hidden');
+  document.getElementById('questline11').classList.add('hidden');
+  document.getElementById('gridline11').classList.add('hidden');
+}
+
+function bukanline11() {
+  document.getElementById('wrongline11').classList.remove('hidden');
+  document.getElementById('tomboline11').classList.remove('hidden');
+  document.getElementById('questline11').classList.add('hidden');
+  document.getElementById('gridline11').classList.add('hidden');
+}

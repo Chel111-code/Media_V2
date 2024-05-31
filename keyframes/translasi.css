@@ -1,0 +1,526 @@
+@keyframes translasiAnakPulang {
+  0% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(87px, 0);
+  }
+  66% {
+    transform: translate(87px, 128px);
+  }
+  100% {
+    transform: translate(183px, 128px);
+  }
+}
+
+.animate-translasiAnakPulang {
+  animation: translasiAnakPulang 5s ease-in-out forwards;
+}
+
+@keyframes translasiBenar1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(-115px, 0);
+  }
+  100% {
+    transform: translate(-115px, 116px);
+  }
+}
+
+.animate-translasiBenar1 {
+  animation: translasiBenar1 5s forwards;
+}
+
+@keyframes translasiSalah1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(-85px, 11px) rotate(45deg) scale(1);
+  }
+  100% {
+    transform: translate(-85px, 85px) rotate(45deg) scale(1.5);
+  }
+}
+
+.animate-translasiSalah1 {
+  animation: translasiSalah1 5s forwards;
+}
+
+@keyframes contohTranslasi1 {
+  20% {
+    transform: translate(31px, 0px);
+  }
+  40% {
+    transform: translate(31px, 93px);
+  }
+  99% {
+    transform: translate(31px, 93px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes cekArah {
+  17% {
+    transform: translateX(55px);
+  }
+  34% {
+    transform: translateX(-55px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  66% {
+    transform: translateY(-55px);
+  }
+  85% {
+    transform: translateY(55px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.cekArah {
+  animation: cekArah 10s infinite;
+}
+
+.animate-contohTranslasi1 {
+  animation: contohTranslasi1 8s infinite;
+  animation-delay: 3s;
+}
+
+@keyframes contohTranslasi1_after {
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-contohTranslasi1_after {
+  animation: contohTranslasi1_after 8s infinite;
+  animation-delay: 3s;
+}
+
+@keyframes tesTranslasi4 {
+  20% {
+    transform: translate(-58px, 0px);
+  }
+  40% {
+    transform: translate(-58px, -30px);
+  }
+  99.9% {
+    transform: translate(-58px, -30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.tesTranslasi4 {
+  animation: tesTranslasi4 10s infinite;
+  animation-delay: 3s;
+}
+
+@keyframes after_tesTranslasi4 {
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.after_tesTranslasi4 {
+  animation: after_tesTranslasi4 10s infinite;
+  animation-delay: 3s;
+}
+
+@keyframes tesTranslasi5 {
+  25% {
+    transform: translate(-29px, 0px);
+  }
+  50% {
+    transform: translate(-29px, 60px);
+  }
+
+  99% {
+    transform: translate(-29px, 60px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.tesTranslasi5 {
+  animation: tesTranslasi5 10s infinite;
+  animation-delay: 3s;
+}
+
+@keyframes tesTranslasi6 {
+  25% {
+    transform: translate(-57px, 0px);
+  }
+  50% {
+    transform: translate(-57px, 31px);
+  }
+  99.9% {
+    transform: translate(-57px, 31px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.tesTranslasi6 {
+  animation: tesTranslasi6 10s infinite;
+  animation-delay: 3s;
+}
+
+@keyframes garis1Translasi {
+  to {
+    width: 97px;
+    opacity: 1;
+  }
+}
+
+@keyframes panjangGaris3Translasi {
+  to {
+    width: 110px;
+    opacity: 1;
+  }
+}
+
+.delayed-animation {
+  animation-name: panjangGaris3Translasi;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  opacity: 0;
+}
+
+.garis-translasi {
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 3s;
+}
+
+@keyframes titikMuncul_Translasi {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.titikMuncul_Translasi {
+  animation: titikMuncul_Translasi 1.5s forwards;
+}
+
+.animate-iniya {
+  animation: iniya 4s forwards;
+  animation-delay: 18s;
+}
+
+@keyframes iniya {
+  50% {
+    transform: translateX(129px);
+  }
+  100% {
+    transform: translateX(129px) translateY(-31px);
+  }
+}
+
+.delay-1 {
+  animation: fadeIn 5.5s ease-in-out backwards;
+  animation-delay: 5s;
+}
+
+.delay-2 {
+  animation: fadeIn 4s ease-in-out backwards;
+  animation-delay: 6s;
+}
+
+.delay1 {
+  animation: fadeIn 5.5s ease-in-out forwards;
+  animation-delay: 3s;
+}
+
+.delay2 {
+  animation: fadeIn 4s ease-in-out forwards;
+  animation-delay: 4s;
+}
+
+.delay3 {
+  animation: fadeIn 4s ease-in-out forwards;
+  animation-delay: 5s;
+}
+
+.delay-3 {
+  animation: fadeIn 3s ease-in-out backwards;
+  animation-delay: 7s;
+}
+
+.delay-4 {
+  animation: fadeIn 2s ease-in-out backwards;
+  animation-delay: 8s;
+}
+
+.delay-5 {
+  animation: fadeIn 1s ease-in-out backwards;
+  animation-delay: 9s;
+}
+
+.delay-6 {
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 10s;
+}
+
+.delay-7 {
+  animation: fadeIn 5s ease-in-out backwards;
+  animation-delay: 11s;
+}
+
+.delay-8 {
+  animation: fadeIn 4s ease-in-out backwards;
+  animation-delay: 7s;
+}
+
+.delay-9 {
+  animation: fadeIn 3s ease-in-out backwards;
+  animation-delay: 8s;
+}
+
+.delay-10 {
+  animation: fadeIn 2s ease-in-out backwards;
+  animation-delay: 9s;
+}
+
+.delay-11 {
+  animation: fadeIn 1s ease-in-out backwards;
+  animation-delay: 10s;
+}
+
+.delay-12 {
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 11s;
+}
+
+.delay-13 {
+  animation: fadeIn 5s ease-in-out backwards;
+  animation-delay: 12s;
+}
+
+.delay-14 {
+  animation: fadeIn 4s ease-in-out backwards;
+  animation-delay: 13s;
+}
+
+.delay-15 {
+  animation: fadeIn 3s ease-in-out backwards;
+  animation-delay: 14s;
+}
+
+.delay-16 {
+  animation: fadeIn 2s ease-in-out backwards;
+  animation-delay: 15s;
+}
+
+.delay-17 {
+  animation: fadeIn 1s ease-in-out backwards;
+  animation-delay: 16s;
+}
+
+.delay-18 {
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 17s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes jarakPertama {
+  100% {
+    transform: translateY(82px);
+  }
+}
+
+.jarakPertama {
+  animation: jarakPertama 3s forwards;
+  animation-delay: 6s;
+}
+
+@keyframes jarakKedua {
+  100% {
+    transform: translateX(120px);
+  }
+}
+
+.jarakKedua {
+  animation: jarakKedua 3s forwards;
+  animation-delay: 7s;
+}
+
+@keyframes jarakKetiga {
+  50% {
+    transform: translateX(-40px);
+  }
+  100% {
+    transform: translateX(-40px) translateY(119px);
+  }
+}
+
+.jarakKetiga {
+  animation: jarakKetiga 3s forwards;
+  animation-delay: 11s;
+}
+
+@keyframes transisi {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.transisi {
+  animation: transisi 1s forwards;
+}
+
+@keyframes transisi2 {
+  0% {
+    transform: scale(0) translateX(-300px);
+  }
+  100% {
+    transform: scale(1) translateX(-20px);
+  }
+}
+
+.transisi2 {
+  animation: transisi2 1s forwards;
+}
+
+@keyframes transisi3 {
+  100% {
+    transform: translateX(180%);
+  }
+}
+
+.transisi3 {
+  animation: transisi3 1s forwards;
+}
+
+@keyframes transisi4 {
+  0% {
+    transform: translateY(150px);
+  }
+  33% {
+    transform: translateY(-150px);
+  }
+  66% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.transisi4 {
+  animation: transisi4 4s forwards;
+}
+
+@keyframes gerakline6 {
+  15% {
+    transform: translateX(120px);
+  }
+  30% {
+    transform: translateX(120px) translateY(80px);
+  }
+  45% {
+    transform: translateX(80px) translateY(80px);
+  }
+  60% {
+    transform: translateX(80px) translateY(120px);
+  }
+  75% {
+    transform: translateX(0px) translateY(120px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.gerakline6 {
+  animation: gerakline6 6s infinite;
+}
+
+@keyframes gerakline7 {
+  50% {
+    transform: translateX(120px) translateY(0px);
+  }
+  100% {
+    transform: translateX(120px) translateY(-80px);
+  }
+}
+
+.gerakline7 {
+  animation: gerakline7 5s forwards;
+  animation-delay: 5s;
+}
+
+.munculine7 {
+  animation: titikMuncul_Translasi 1s forwards;
+  animation-delay: 15s;
+}
+
+@keyframes gerakline11 {
+  50% {
+    transform: translateX(121px) translateY(0px);
+  }
+  100% {
+    transform: translateX(121px) translateY(91px);
+  }
+}
+
+.gerakline11 {
+  animation: gerakline11 5s forwards;
+  animation-delay: 5s;
+}
+
+.gerakline12 {
+  animation: gerakline11 5s forwards;
+  animation-delay: 10s;
+}
+
+@keyframes gerak2line11 {
+  50% {
+    transform: translateY(121px) translateY(0px);
+  }
+  100% {
+    transform: translateY(121px) translateX(-107px) scaleX(1.5);
+  }
+}
+
+.gerak2line11 {
+  animation: gerak2line11 5s forwards;
+  animation-delay: 6s;
+}
+
+.munculine11 {
+  animation: titikMuncul_Translasi 1s forwards;
+  animation-delay: 10s;
+}
+
+.muncul2line11 {
+  animation: titikMuncul_Translasi 1s forwards;
+  animation-delay: 18s;
+}
