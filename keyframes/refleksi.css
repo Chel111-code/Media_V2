@@ -1,0 +1,534 @@
+@keyframes pencerminan1 {
+  0% {
+    transform: translateX(0) rotateY(0);
+  }
+  100% {
+    transform: translateX(192px) rotateY(180deg);
+  }
+}
+
+@keyframes pencerminan1Salah {
+  0% {
+    transform: translateX(0) rotateY(0);
+  }
+  100% {
+    transform: translateX(146px);
+  }
+}
+
+.pencerminan1Salah {
+  animation: pencerminan1Salah 5s forwards;
+  animation-delay: 2s;
+}
+
+@keyframes pencerminan2 {
+  0% {
+    transform: translateX(0) rotateY(0);
+  }
+  100% {
+    transform: translateX(128px) rotateY(180deg);
+  }
+}
+
+@keyframes Tes1Pemahaman1 {
+  0% {
+    transform: translateX(0) rotateY(0);
+  }
+  100% {
+    transform: translateX(107px) rotateY(180deg);
+  }
+}
+
+@keyframes Tes1Pemahaman2 {
+  0% {
+    transform: translateX(0) rotateY(0);
+  }
+  100% {
+    transform: translateX(133px) rotateY(180deg);
+  }
+}
+
+@keyframes Tes1Pemahaman3 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(107px);
+  }
+}
+
+@keyframes SumbuCermin {
+  0% {
+    transform: translateX(0) translateY(0) rotate3d(1, 1, 0, 0deg);
+  }
+  100% {
+    transform: translateX(-102px) translateY(-102px) rotate3d(-1, 1, 0, 180deg);
+  }
+}
+
+@keyframes sumbuTitik {
+  0% {
+    transform: translateX(0) rotateY(0);
+  }
+  100% {
+    transform: translateX(141px) translateY(-141px) rotateZ(180deg);
+  }
+}
+
+@keyframes pilihanA {
+  0% {
+    transform: translateX(0) rotateY(0);
+  }
+  100% {
+    transform: translateX(105px) rotateY(180deg) rotateX(180deg);
+  }
+}
+
+@keyframes pilihanB {
+  0% {
+    transform: translateX(0) rotateY(0);
+  }
+  100% {
+    transform: translateX(105px) rotateX(180deg);
+  }
+}
+@keyframes pilihanC {
+  0% {
+    transform: translateX(0) rotateY(0);
+  }
+  100% {
+    transform: translateX(105px) rotateY(180deg);
+  }
+}
+
+.pilihanA {
+  animation: pilihanA 5s forwards;
+  animation-delay: 3s;
+}
+
+.pilihanB {
+  animation: pilihanB 5s forwards;
+  animation-delay: 3s;
+}
+
+.pilihanC {
+  animation: pilihanC 5s forwards;
+  animation-delay: 3s;
+}
+
+@keyframes refleksiAneh {
+  0% {
+    transform: translateX(0) rotateY(0);
+  }
+  100% {
+    transform: translateX(102px) translateY(104px) rotateX(180deg);
+  }
+}
+
+.refleksiAneh {
+  animation: refleksiAneh 5s forwards;
+  animation-delay: 2s;
+}
+
+@keyframes pencerminanBangun {
+  0% {
+    transform: translateX(0) rotateY(0);
+  }
+  100% {
+    transform: translateX(-135px) rotateY(180deg);
+  }
+}
+
+.animate-pencerminan1 {
+  animation: pencerminan1 5s forwards;
+  animation-delay: 2s;
+}
+
+.animate-pencerminan2 {
+  animation: pencerminan2 5s forwards;
+  animation-delay: 23s;
+}
+
+.aspect-ratio-iframe1 {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; /* 4:3 aspect ratio */
+}
+
+.aspect-ratio-iframe2 {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 85%; /* 4:3 aspect ratio */
+}
+
+.aspect-ratio-iframe2 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.aspect-ratio-iframe1 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.animate-tes1Pemahaman1 {
+  animation: Tes1Pemahaman1 5s forwards;
+  animation-delay: 4s;
+}
+
+.animate-tes1Pemahaman2 {
+  animation: Tes1Pemahaman2 5s forwards;
+  animation-delay: 4s;
+}
+
+.animate-tes1Pemahaman3 {
+  animation: Tes1Pemahaman3 5s forwards;
+  animation-delay: 4s;
+}
+
+.animate-sumbucermin {
+  animation: SumbuCermin 5s forwards;
+  animation-delay: 18s;
+}
+
+.animate-sumbuTitik {
+  animation: sumbuTitik 5s forwards;
+  animation-delay: 4s;
+}
+
+.animate-pencerminanBangun {
+  animation: pencerminanBangun 5s forwards;
+  animation-delay: 18s;
+}
+
+@keyframes garisCermin1 {
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes garisCermin2 {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes garisCerminOi {
+  to {
+    height: 100%;
+  }
+}
+
+.animate-garisCermin1 {
+  animation: garisCermin1 2s forwards;
+}
+
+.animate-garisCermin2 {
+  animation: garisCermin1 2s forwards;
+  animation-delay: 3s;
+}
+
+.animate-garisCermin3 {
+  animation: garisCerminOi 2s forwards;
+  animation-delay: 0s;
+}
+
+@keyframes jarak1Contoh {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+    scale: 0;
+  }
+  20%,
+  40% {
+    transform: translateX(0);
+    scale: 1;
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(50%) translateY(-15px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.jarak1Contoh1 {
+  animation: jarak1Contoh 4s ease-in-out;
+  animation-delay: 3s;
+}
+
+.jarak2Contoh1 {
+  animation: jarak1Contoh 4s ease-in-out;
+  animation-delay: 8s;
+}
+
+.jarak3Contoh1 {
+  animation: jarak1Contoh 4s ease-in-out;
+  animation-delay: 13s;
+}
+
+.jarak4Contoh1 {
+  animation: jarak1Contoh 4s ease-in-out;
+  animation-delay: 18s;
+}
+
+.aksen {
+  animation: titik1 1s forwards;
+  animation-delay: 7s;
+}
+
+@keyframes titik1 {
+  100% {
+    opacity: 1;
+  }
+}
+
+#containerWahyu {
+  position: relative;
+  width: 330px;
+  height: 200px;
+}
+#wahyu,
+#wahyu-bayang {
+  position: absolute;
+  cursor: pointer;
+  user-select: none;
+}
+#wahyu img,
+#wahyu-bayang img {
+  width: 64px; /* Adjust this value as needed */
+}
+
+.titikA1 {
+  animation: titik1 1s linear forwards;
+  animation-delay: 7s;
+}
+
+.titikoi {
+  animation: titik1 1s linear forwards;
+  animation-delay: 8s;
+}
+
+.titikB1 {
+  animation: titik1 1s linear forwards;
+  animation-delay: 12s;
+}
+
+.titikC1 {
+  animation: titik1 1s linear forwards;
+  animation-delay: 17s;
+}
+
+.titikD1 {
+  animation: titik1 1s linear forwards;
+  animation-delay: 22s;
+}
+
+@keyframes JarakMiring1 {
+  0% {
+    transform: translateX(0) translateY(0) rotate(42deg);
+    opacity: 0;
+    scale: 0;
+  }
+  20%,
+  40% {
+    transform: translateX(0) translateY(0) rotate(42deg);
+    scale: 1;
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(-55px) translateY(-57px) rotate(42deg);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-55px) translateY(-57px) rotate(42deg);
+  }
+}
+
+.JarakMiring1 {
+  animation: JarakMiring1 4s linear forwards;
+  animation-delay: 13s;
+}
+
+.JarakMiring3 {
+  animation: JarakMiring1 4s linear forwards;
+  animation-delay: 8s;
+}
+
+@keyframes JarakMiring2 {
+  0% {
+    transform: translateX(0) translateY(0) rotate(44deg);
+    opacity: 0;
+    scale: 0;
+  }
+  20%,
+  40% {
+    transform: translateX(0) translateY(0) rotate(44deg);
+    scale: 1;
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(-110px) translateY(-110px) rotate(44deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-110px) translateY(-110px) rotate(44deg);
+    opacity: 0;
+  }
+}
+
+.JarakMiring2 {
+  animation: JarakMiring2 4s linear forwards;
+  animation-delay: 3s;
+}
+
+@keyframes garisSumbu {
+  to {
+    height: 445px;
+  }
+}
+
+.garisSumbu {
+  animation: garisSumbu 2s linear forwards;
+  animation-delay: 0s;
+}
+
+@keyframes titikSumbu {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.titikSumbu {
+  animation: titikSumbu 1s linear forwards;
+  animation-delay: 0s;
+}
+
+@keyframes Bangun {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  100% {
+    opacity: 0.5;
+    scale: 1;
+  }
+}
+
+.animate-pertama {
+  animation: Bangun 2s forwards;
+  animation-delay: 7s;
+}
+
+.titikPertama {
+  animation: titikSumbu 2s forwards;
+}
+.titikKedua {
+  animation: titikSumbu 2s forwards;
+  animation-delay: 3s;
+}
+.titikKetiga {
+  animation: titikSumbu 2s forwards;
+  animation-delay: 5s;
+}
+
+@keyframes garisBangun {
+  to {
+    height: 282px;
+  }
+}
+
+.garisBangun {
+  animation: garisBangun 2s forwards;
+  animation-delay: 2s;
+}
+
+.garisBangun2 {
+  animation: garisBangun 2s forwards;
+  animation-delay: 0s;
+}
+
+@keyframes jarakBangun {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+    scale: 0;
+  }
+  20%,
+  40% {
+    transform: translateX(0);
+    scale: 1;
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(-50%) translateY(-15px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+.jarakBangun1 {
+  animation: jarakBangun 4s ease-in-out;
+  animation-delay: 3s;
+}
+
+.jarakBangun2 {
+  animation: jarakBangun 4s ease-in-out;
+  animation-delay: 8s;
+}
+
+.jarakBangun3 {
+  animation: jarakBangun 4s ease-in-out;
+  animation-delay: 13s;
+}
+
+@keyframes refleksiTitik {
+  100% {
+    transform: translateY(136px);
+  }
+}
+
+.refleksiTitik {
+  animation: refleksiTitik 4s forwards;
+  animation-delay: 3s;
+}
+
+@keyframes garisTitik8 {
+  to {
+    width: 287px;
+  }
+}
+
+.garisTitik8 {
+  animation: garisTitik8 2s forwards;
+  animation-delay: 0s;
+}

@@ -1,3 +1,189 @@
+const wahyu = document.getElementById('wahyu');
+const wahyuBayang = document.getElementById('wahyu-bayang');
+const containerWahyu = document.getElementById('containerWahyu');
+const mirrorLineX = containerWahyu.offsetWidth / 2;
+
+// Initial positions
+const wahyuInitialX = 50; // Initial X position of wahyu
+wahyu.style.left = `${wahyuInitialX}px`;
+wahyuBayang.style.left = `${2 * mirrorLineX - wahyuInitialX - wahyu.offsetWidth}px`;
+
+function startDrag(event) {
+  event.preventDefault(); // Prevent default behavior
+  let startX = event.clientX || event.touches[0].clientX;
+
+  function onMouseMove(event) {
+    let x = event.clientX || event.touches[0].clientX;
+    let deltaX = x - startX;
+    let newLeft = wahyu.offsetLeft + deltaX;
+
+    // Ensure the element stays within the horizontal bounds of the container
+    if (newLeft < 0) newLeft = 0;
+    if (newLeft > mirrorLineX - wahyu.offsetWidth / 2)
+      newLeft = mirrorLineX - wahyu.offsetWidth / 2;
+
+    wahyu.style.left = newLeft + 'px';
+    // Update the mirrored element's position
+    let wahyuCenterX = newLeft + wahyu.offsetWidth / 2;
+    let wahyuBayangCenterX = 2 * mirrorLineX - wahyuCenterX;
+    wahyuBayang.style.left = wahyuBayangCenterX - wahyuBayang.offsetWidth / 2 + 'px';
+
+    startX = x;
+  }
+
+  function onMouseUp() {
+    document.removeEventListener('mousemove', onMouseMove);
+    document.removeEventListener('mouseup', onMouseUp);
+    document.removeEventListener('touchmove', onMouseMove);
+    document.removeEventListener('touchend', onMouseUp);
+  }
+
+  document.addEventListener('mousemove', onMouseMove);
+  document.addEventListener('mouseup', onMouseUp);
+  document.addEventListener('touchmove', onMouseMove);
+  document.addEventListener('touchend', onMouseUp);
+}
+
+wahyu.addEventListener('mousedown', startDrag);
+wahyu.addEventListener('touchstart', startDrag);
+
+document.addEventListener('DOMContentLoaded', function () {
+  const muncul1 = document.getElementById('muncul1');
+  const svg1 = document.getElementById('svg1');
+  const garisCermin3 = document.getElementById('garisCermin3');
+  const aksenA = document.getElementById('aksenA');
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.target === muncul1 && entry.intersectionRatio >= 1) {
+          observer.unobserve(muncul1);
+          svg1.classList.add('animate-tes1Pemahaman1');
+          garisCermin3.classList.add('animate-garisCermin2');
+          aksenA.classList.add('aksen');
+        }
+      });
+    },
+    {
+      threshold: 1,
+    }
+  );
+
+  observer.observe(muncul1);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const muncul2 = document.getElementById('muncul2');
+  const svg2 = document.getElementById('svg2');
+  const garisCermin4 = document.getElementById('garisCermin4');
+  const aksenB = document.getElementById('aksenB');
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.target === muncul2 && entry.intersectionRatio >= 1) {
+          observer.unobserve(muncul2);
+          svg2.classList.add('animate-tes1Pemahaman2');
+          garisCermin4.classList.add('animate-garisCermin2');
+          aksenB.classList.add('aksen');
+        }
+      });
+    },
+    {
+      threshold: 1,
+    }
+  );
+
+  observer.observe(muncul2);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const muncul3 = document.getElementById('muncul3');
+  const svg3 = document.getElementById('svg3');
+  const garisCermin5 = document.getElementById('garisCermin5');
+  const aksenC = document.getElementById('aksenC');
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.target === muncul3 && entry.intersectionRatio >= 1) {
+          observer.unobserve(muncul3);
+          svg3.classList.add('animate-tes1Pemahaman3');
+          garisCermin5.classList.add('animate-garisCermin2');
+          aksenC.classList.add('aksen');
+        }
+      });
+    },
+    {
+      threshold: 1,
+    }
+  );
+
+  observer.observe(muncul3);
+});
+
+const checkButton = document.getElementById('Check1');
+
+// Tambahkan event listener ke tombol "Check"
+checkButton.addEventListener('click', function checkHandler() {
+  // Ambil tombol yang sedang memiliki latar belakang gelap
+  const activeButton = document.querySelector('#TesPertama1 .bg-secondary');
+
+  // Jika tombol yang memiliki latar belakang gelap adalah tombol "C1"
+  if (activeButton && activeButton.id === 'buttonC1') {
+    // Tampilkan pesan "Benar"
+    document.getElementById('benar1').classList.remove('hidden');
+    document.getElementById('benar1').classList.add('inline-block');
+    document.getElementById('buttonC1').classList.add('bg-[#7BFFD0]');
+    document.getElementById('buttonC1').classList.remove('bg-secondary');
+
+    document.getElementById('C1').classList.add('border-hijau');
+    document.getElementById('C1').classList.add('bg-white');
+    // Sembunyikan pesan "Salah"
+    document.getElementById('salah1').classList.add('hidden');
+  } else {
+    // Tampilkan pesan "Salah"
+    document.getElementById('salah1').classList.remove('hidden');
+    document.getElementById('salah1').classList.add('inline-block');
+    document.getElementById('buttonC1').classList.add('bg-[#7BFFD0]');
+    document.getElementById('C1').classList.add('border-hijau');
+    document.getElementById('C1').classList.add('bg-white');
+    // Sembunyikan pesan "Benar"
+    document.getElementById('benar1').classList.add('hidden');
+  }
+
+  // Menonaktifkan event listener untuk tombol "Check1"
+  checkButton.removeEventListener('click', checkHandler);
+
+  // Menonaktifkan event listener untuk div ABCD
+  divs.forEach((div) => {
+    div.removeEventListener('click', divClickHandler);
+  });
+});
+
+// Dapatkan referensi ke semua elemen div ABCD
+const divs = document.querySelectorAll('#TesPertama1 .flex');
+
+// Tambahkan event listener ke setiap div ABCD
+divs.forEach((div) => {
+  div.addEventListener('click', divClickHandler);
+});
+
+// Fungsi untuk menangani klik pada div ABCD
+function divClickHandler() {
+  // Menghapus kelas "bg-secondary" dari semua tombol
+  const buttons = document.querySelectorAll('#TesPertama1 button');
+  buttons.forEach((button) => {
+    button.classList.remove('bg-secondary');
+  });
+  // Menambahkan kelas "bg-secondary" ke tombol di dalam div yang diklik
+  const button = this.querySelector('button');
+  button.classList.add('bg-secondary');
+
+  // Aktifkan tombol "Check1"
+  checkButton.removeAttribute('disabled');
+}
+
 function removeIniya() {
   var iniya = document.getElementById('iniya');
   iniya.classList.remove('hidden', 'opacity-30');
@@ -63,6 +249,116 @@ function removehapusKedua() {
   kedua.classList.toggle('hidden');
 }
 
+function choiceA() {
+  const popupBenar = document.getElementById('popupBenar');
+  popupBenar.classList.remove('hidden');
+  setTimeout(() => {
+    popupBenar.classList.add('hidden');
+  }, 1500);
+  document.getElementById('choice').classList.add('hidden');
+  document.getElementById('imgbenar').classList.remove('hidden');
+}
+
+function choiceB() {
+  const popupSalah = document.getElementById('popupSalah');
+  popupSalah.classList.remove('hidden');
+  setTimeout(() => {
+    popupSalah.classList.add('hidden');
+  }, 1500);
+  document.getElementById('choice').classList.add('hidden');
+  document.getElementById('imgbenar').classList.remove('hidden');
+}
+
+function choiceC() {
+  const popupSalah2 = document.getElementById('popupSalah');
+  popupSalah2.classList.remove('hidden');
+  setTimeout(() => {
+    popupSalah2.classList.add('hidden');
+  }, 1500);
+  document.getElementById('choice').classList.add('hidden');
+  document.getElementById('imgbenar').classList.remove('hidden');
+}
+
+function sq1() {
+  document.getElementById('quest1').classList.add('hidden');
+  document.getElementById('q1').classList.remove('hidden');
+  document.getElementById('pilihan1').classList.add('hidden');
+  popupBenar.classList.remove('hidden');
+  setTimeout(() => {
+    popupBenar.classList.add('hidden');
+  }, 1500);
+}
+
+function tq1() {
+  document.getElementById('quest1').classList.add('hidden');
+  document.getElementById('q1').classList.remove('hidden');
+  document.getElementById('pilihan1').classList.add('hidden');
+  popupSalah.classList.remove('hidden');
+  setTimeout(() => {
+    popupSalah.classList.add('hidden');
+  }, 1500);
+}
+
+function sq2() {
+  document.getElementById('quest2').classList.add('hidden');
+  document.getElementById('q2').classList.remove('hidden');
+  document.getElementById('pilihan2').classList.add('hidden');
+  popupBenar.classList.remove('hidden');
+  setTimeout(() => {
+    popupBenar.classList.add('hidden');
+  }, 1500);
+}
+
+function tq2() {
+  document.getElementById('quest2').classList.add('hidden');
+  document.getElementById('q2').classList.remove('hidden');
+  document.getElementById('pilihan2').classList.add('hidden');
+  popupSalah.classList.remove('hidden');
+  setTimeout(() => {
+    popupSalah.classList.add('hidden');
+  }, 1500);
+}
+
+function sq3() {
+  document.getElementById('quest3').classList.add('hidden');
+  document.getElementById('q3').classList.remove('hidden');
+  document.getElementById('pilihan3').classList.add('hidden');
+  popupBenar.classList.remove('hidden');
+  setTimeout(() => {
+    popupBenar.classList.add('hidden');
+  }, 1500);
+}
+
+function tq3() {
+  document.getElementById('quest3').classList.add('hidden');
+  document.getElementById('q3').classList.remove('hidden');
+  document.getElementById('pilihan3').classList.add('hidden');
+  popupSalah.classList.remove('hidden');
+  setTimeout(() => {
+    popupSalah.classList.add('hidden');
+  }, 1500);
+}
+
+function byg() {
+  document.getElementById('byg').classList.add('hidden');
+  document.getElementById('chbayangan').classList.remove('hidden');
+  const popupBenar = document.getElementById('popupBenar');
+  popupBenar.classList.remove('hidden');
+  setTimeout(() => {
+    popupBenar.classList.add('hidden');
+  }, 1500);
+}
+
+function byg2() {
+  document.getElementById('byg').classList.add('hidden');
+  document.getElementById('chbayangan').classList.remove('hidden');
+  const popupSalah = document.getElementById('popupSalah');
+  popupSalah.classList.remove('hidden');
+  setTimeout(() => {
+    popupSalah.classList.add('hidden');
+  }, 1500);
+}
+
 function removehapusKetiga() {
   var hapusKetiga = document.getElementById('hapusKetiga');
   hapusKetiga.classList.remove('opacity-30');
@@ -101,75 +397,6 @@ function toggleNavbar() {
 
   judul.classList.toggle('hidden');
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-  const muncul1 = document.getElementById('muncul1');
-  const svg1 = document.getElementById('svg1');
-  const garisCermin3 = document.getElementById('garisCermin3');
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === muncul1 && entry.intersectionRatio >= 1) {
-          observer.unobserve(muncul1);
-          svg1.classList.add('animate-tes1Pemahaman1');
-          garisCermin3.classList.add('animate-garisCermin2');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
-
-  observer.observe(muncul1);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const muncul2 = document.getElementById('muncul2');
-  const svg2 = document.getElementById('svg2');
-  const garisCermin4 = document.getElementById('garisCermin4');
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === muncul2 && entry.intersectionRatio >= 1) {
-          observer.unobserve(muncul2);
-          svg2.classList.add('animate-tes1Pemahaman2');
-          garisCermin4.classList.add('animate-garisCermin2');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
-
-  observer.observe(muncul2);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const muncul3 = document.getElementById('muncul3');
-  const svg3 = document.getElementById('svg3');
-  const garisCermin5 = document.getElementById('garisCermin5');
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === muncul3 && entry.intersectionRatio >= 1) {
-          observer.unobserve(muncul3);
-          svg3.classList.add('animate-tes1Pemahaman3');
-          garisCermin5.classList.add('animate-garisCermin2');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
-
-  observer.observe(muncul3);
-});
 
 document.addEventListener('DOMContentLoaded', function () {
   const muncul4 = document.getElementById('muncul4');
@@ -254,68 +481,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   observer.observe(selectPertama);
 });
-
-const checkButton = document.getElementById('Check1');
-
-// Tambahkan event listener ke tombol "Check"
-checkButton.addEventListener('click', function checkHandler() {
-  // Ambil tombol yang sedang memiliki latar belakang gelap
-  const activeButton = document.querySelector('#TesPertama1 .bg-secondary');
-
-  // Jika tombol yang memiliki latar belakang gelap adalah tombol "C1"
-  if (activeButton && activeButton.id === 'buttonC1') {
-    // Tampilkan pesan "Benar"
-    document.getElementById('benar1').classList.remove('hidden');
-    document.getElementById('benar1').classList.add('inline-block');
-    document.getElementById('buttonC1').classList.add('bg-[#7BFFD0]');
-    document.getElementById('buttonC1').classList.remove('bg-secondary');
-
-    document.getElementById('C1').classList.add('border-hijau');
-    document.getElementById('C1').classList.add('bg-white');
-    // Sembunyikan pesan "Salah"
-    document.getElementById('salah1').classList.add('hidden');
-  } else {
-    // Tampilkan pesan "Salah"
-    document.getElementById('salah1').classList.remove('hidden');
-    document.getElementById('salah1').classList.add('inline-block');
-    document.getElementById('buttonC1').classList.add('bg-[#7BFFD0]');
-    document.getElementById('C1').classList.add('border-hijau');
-    document.getElementById('C1').classList.add('bg-white');
-    // Sembunyikan pesan "Benar"
-    document.getElementById('benar1').classList.add('hidden');
-  }
-
-  // Menonaktifkan event listener untuk tombol "Check1"
-  checkButton.removeEventListener('click', checkHandler);
-
-  // Menonaktifkan event listener untuk div ABCD
-  divs.forEach((div) => {
-    div.removeEventListener('click', divClickHandler);
-  });
-});
-
-// Dapatkan referensi ke semua elemen div ABCD
-const divs = document.querySelectorAll('#TesPertama1 .flex');
-
-// Tambahkan event listener ke setiap div ABCD
-divs.forEach((div) => {
-  div.addEventListener('click', divClickHandler);
-});
-
-// Fungsi untuk menangani klik pada div ABCD
-function divClickHandler() {
-  // Menghapus kelas "bg-secondary" dari semua tombol
-  const buttons = document.querySelectorAll('#TesPertama1 button');
-  buttons.forEach((button) => {
-    button.classList.remove('bg-secondary');
-  });
-  // Menambahkan kelas "bg-secondary" ke tombol di dalam div yang diklik
-  const button = this.querySelector('button');
-  button.classList.add('bg-secondary');
-
-  // Aktifkan tombol "Check1"
-  checkButton.removeAttribute('disabled');
-}
 
 // batas
 // Fungsi untuk menangani klik pada div ABCD
