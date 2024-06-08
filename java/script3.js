@@ -209,7 +209,11 @@ function removetes1() {
 }
 
 document.getElementById('play3').addEventListener('click', function () {
-  location.reload(); // Reload halaman
+  const TesPertama1 = document.getElementById('TesPertama1');
+  TesPertama1.classList.add('hidden');
+  setTimeout(() => {
+    TesPertama1.classList.remove('hidden');
+  }, 50);
 });
 
 function removehapusSumbu() {
@@ -235,7 +239,11 @@ function removehapusTitik() {
 }
 
 document.getElementById('play6').addEventListener('click', function () {
-  location.reload(); // Reload halaman
+  const TesPertama2 = document.getElementById('TesPertama2');
+  TesPertama2.classList.add('hidden');
+  setTimeout(() => {
+    TesPertama2.classList.remove('hidden');
+  }, 50);
 });
 
 function removehapusKedua() {
@@ -390,6 +398,8 @@ function toggleNavbar() {
 
   sidebar.classList.toggle('translate-x-full');
   sidebar.classList.toggle('translate-x-0');
+  sidebar.classList.toggle('text-primary');
+  sidebar.classList.toggle('text-white');
 
   // Menggunakan kelas 'translate' yang telah didefinisikan
   wacawbutton.classList.toggle('translate-x-4');
