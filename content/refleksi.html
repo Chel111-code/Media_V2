@@ -19,7 +19,7 @@
   <body class="bg-[#edf6f9]">
     <nav class="bg-[#07BEB8] bg-opacity-90 fixed top-0 w-full z-50">
       <div
-        class="container mx-auto flex flex-wrap px-2 py-5 items-center justify-between max-w-4xl md:px-4"
+        class="container mx-auto flex flex-wrap px-2 py-5 items-center justify-between max-w-3xl md:px-4"
       >
         <a class="flex font-semibold items-center text-nowrap" id="judul" href="../index.html">
           <span class="ml-3 text-lg relative text-white">Transformasi Geometri</span>
@@ -105,14 +105,14 @@
     </nav>
 
     <div
-      class="container max-w-4xl font-semibold md:text-[15px] md:tracking-normal font-lato pt-[70px] text-[14px] md:mx-auto text-secondary leading-6 tracking-wide w-full md:bg-gray-100"
+      class="container max-w-3xl font-semibold md:text-[15px] md:tracking-normal font-lato pt-[70px] text-[14px] md:mx-auto text-secondary leading-6 tracking-wide w-full md:bg-gray-100"
     >
       <!-- Judul -->
-      <h2 class="text-xs text-hijau font-bold pt-14 md:mx-auto max-w-4xl bg-[#FBFDFE] px-5 md:px-8">
+      <h2 class="text-xs text-hijau font-bold pt-14 md:mx-auto max-w-3xl bg-[#FBFDFE] px-5 md:px-8">
         Jenis transformasi
       </h2>
       <h1
-        class="text-[22px] font-extrabold text-primary tracking-wide pt-1 md:mx-auto max-w-4xl bg-[#FBFDFE] px-5 md:px-8"
+        class="text-[22px] font-extrabold text-primary tracking-wide pt-1 md:mx-auto max-w-3xl bg-[#FBFDFE] px-5 md:px-8"
       >
         Refleksi / Pencerminan
       </h1>
@@ -129,7 +129,11 @@
             benda yang biasa digunakan untuk melihat pantulan diri sendiri.
           </div>
         </div>
-        <div class="flex mt-10 max-w-[500px] md:ml-24">
+        <div
+          class="flex mt-10 max-w-[500px] md:ml-24"
+          data-aos="zoom-in-right"
+          data-aos-duration="800"
+        >
           <img src="../img/Grafis/hmm.png" alt="" class="w-28 md:w-36" />
           <div>
             <div
@@ -146,7 +150,11 @@
           <img src="../img/pencerminan/kosong.jpeg" alt="" class="w-full" />
         </div>
         <hr class="mt-16" />
-        <div class="flex mt-6 max-w-[500px] md:ml-24 items-center">
+        <div
+          class="flex mt-6 max-w-[500px] md:ml-24 items-center"
+          data-aos="zoom-in-right"
+          data-aos-duration="800"
+        >
           <img src="../img/Grafis/tanya3.png" alt="" class="w-32 md:w-40" />
           <div>
             <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none">
@@ -156,7 +164,6 @@
         </div>
         <div
           id="popupBenar"
-          data-aos="zoom-in"
           class="fixed inset-0 bg-gray-100 z-50 bg-opacity-50 hidden flex items-center justify-center"
         >
           <div class="">
@@ -165,7 +172,6 @@
         </div>
         <div
           id="popupSalah"
-          data-aos="zoom-in"
           class="fixed inset-0 bg-gray-100 z-50 bg-opacity-50 hidden flex items-center justify-center"
         >
           <div class="">
@@ -178,6 +184,7 @@
         >
           <div
             onclick="choiceB()"
+            id="choiceB"
             class="w-36 md:w-40 md:h-36 h-32 border-2 border-primary rounded-md flex items-center overflow-hidden cursor-pointer"
           >
             <div class="px-2 font-semibold text-primary">A</div>
@@ -189,6 +196,7 @@
           </div>
           <div
             onclick="choiceA()"
+            id="choiceA"
             class="w-36 h-32 md:w-40 md:h-36 border-2 border-primary rounded-md flex items-center overflow-hidden cursor-pointer"
           >
             <div class="px-2 font-semibold text-primary">B</div>
@@ -200,6 +208,7 @@
           </div>
           <div
             onclick="choiceC()"
+            id="choiceC"
             class="w-36 h-32 md:w-40 md:h-36 border-2 border-primary rounded-md flex items-center overflow-hidden cursor-pointer"
           >
             <div class="px-2 font-semibold text-primary">C</div>
@@ -217,7 +226,11 @@
           <img src="../img/pencerminan/utuh.jpeg" data-aos="zoom-in" alt="" class="w-full" />
         </div>
         <hr class="mt-16" />
-        <div class="flex mt-6 max-w-[500px] md:ml-24 items-center">
+        <div
+          class="flex mt-6 max-w-[500px] md:ml-24 items-center"
+          data-aos="zoom-in"
+          data-aos-duration="800"
+        >
           <img src="../img/Grafis/Tanya.png" alt="" class="w-32" />
           <div>
             <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none mt-4">
@@ -228,8 +241,8 @@
             </div>
           </div>
         </div>
-        <div class="mt-6 flex flex-wrap gap-4 max-w-[500px] md:mx-auto items-center" id="byg">
-          <div class="w-60 flex gap-4 mx-auto items-center cursor-pointer" onclick="byg()">
+        <div class="mt-8 flex flex-wrap gap-4 max-w-[500px] md:mx-auto items-center" id="byg">
+          <div class="w-60 flex gap-4 mx-auto items-center cursor-pointer" onclick="byg()" id="">
             <div
               class="h-11 w-11 rounded-full bg-[#8CEBE9] font-semibold flex items-center justify-center"
             >
@@ -241,7 +254,11 @@
               Bayangan Wahyu juga mendekat ke cermin
             </div>
           </div>
-          <div class="w-60 flex gap-4 mx-auto items-center cursor-pointer" onclick="byg2()">
+          <div
+            class="w-60 flex gap-4 mx-auto items-center cursor-pointer"
+            onclick="byg2()"
+            id="byg2"
+          >
             <div
               class="h-11 w-11 rounded-full bg-[#8CEBE9] font-semibold flex items-center justify-center"
             >
@@ -264,7 +281,11 @@
           </div>
         </div>
         <hr class="mt-16" />
-        <div class="flex mt-6 max-w-[500px] mx-auto items-center">
+        <div
+          class="flex mt-6 max-w-[500px] mx-auto items-center"
+          data-aos="zoom-in-left"
+          data-aos-duration="800"
+        >
           <div>
             <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tr-none mr-2">
               Pada ilustrasi di bawah, gerakkanlah Wahyu dan amati jarak bayangan Wahyu ke cermin
@@ -284,7 +305,11 @@
           </div>
           <div class="absolute top-10 md:top-12" id="wahyu-bayang">
             <div class="ml-2 translate-y-1">Wahyu'</div>
-            <img src="../img/pencerminan/wahyu.png" alt="" class="w-16 scale-x-[-1]" />
+            <img
+              src="../img/pencerminan/wahyu.png"
+              alt=""
+              class="w-16 scale-x-[-1] -translate-x-1"
+            />
           </div>
         </div>
 
@@ -356,7 +381,11 @@
             </button>
           </div>
         </div>
-        <div class="flex mt-16 max-w-[500px] md:ml-24 items-center">
+        <div
+          class="flex mt-16 max-w-[500px] md:ml-24 items-center"
+          data-aos="zoom-in-right"
+          data-aos-duration="800"
+        >
           <img src="../img/Grafis/Unyu.png" alt="" class="w-32 md:w-36" />
           <div>
             <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none ml-2">
@@ -656,8 +685,12 @@
         <!-- Akhir Tes Pemahaman 1 -->
 
         <!-- Eksplorasi  -->
-        <div class="md:mx-auto md:px-8 bg-[#FBFDFE] pt-12">
-          <div class="flex mt-6 max-w-[500px] md:ml-40 items-center">
+        <div class="md:mx-auto md:px-8 bg-[#FBFDFE] pt-5">
+          <div
+            class="flex mt-6 max-w-[500px] md:mx-auto items-center"
+            data-aos="zoom-in-left"
+            data-aos-duration="800"
+          >
             <div>
               <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tr-none mr-2">
                 Kamu bisa eksplorasi pencerminan bangun datar terhadap garis pada di bawah ini yaa!
@@ -687,8 +720,12 @@
         <!-- Akhir Eksplorasi  -->
 
         <!-- Sumbu Titik -->
-        <div class="md:mx-auto px-5 md:px-8 bg-[#FBFDFE] md:pt-8 pt-6">
-          <div class="flex mt-6 max-w-[500px] md:ml-24 items-center">
+        <div class="md:mx-auto md:px-8 bg-[#FBFDFE] md:pt-8 pt-6">
+          <div
+            class="flex mt-6 max-w-[500px] md:ml-24 items-center"
+            data-aos="zoom-in-right"
+            data-aos-duration="800"
+          >
             <img src="../img/Grafis/ooo.png" alt="" class="w-32 md:w-36" />
             <div>
               <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none">
@@ -946,7 +983,11 @@
 
         <!-- Refleksi Bangun Datar -->
         <div class="md:ml-24 max-w-[500px] md:px-8 bg-[#FBFDFE] md:pt-16 pt-6">
-          <div class="flex mt-6 max-w-[500px] md:ml-24 items-center">
+          <div
+            class="flex mt-6 max-w-[500px] items-center"
+            data-aos="zoom-in-right"
+            data-aos-duration="800"
+          >
             <img src="../img/Grafis/terbang.png" alt="" class="w-36 md:w-44" />
             <div>
               <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none">
@@ -954,311 +995,329 @@
               </div>
             </div>
           </div>
-          <div class="flex items-center mt-16">
-            <img src="../img/pencerminan/one_8921537.png" alt="" class="w-6 h-6 mr-2" />
-            <button class="text-base text-primary font-semibold ml-2 text-left">
-              Contoh refleksi dengan objek titik
-            </button>
-          </div>
-          <div class="w-full border-t-2 border-hijau mt-2 py-2 px-2 max-w-md" id="pusatTitik">
-            <p class="leading-7">
-              <span class="text-hijau font-semibold">Titik A ( 2 , 2 )</span> direfleksikan terhadap
-              garis <span class="text-hijau font-semibold">y = 0</span>.
-            </p>
-            <div class="w-80 h-80 mx-auto mt-4 relative flex justify-center items-center">
-              <div class="p-4 rounded-lg mt-4 w-full h-full relative opacity-30" id="hapusKedua">
-                <img src="../img/pencerminan/Grapik.jpg" alt="" />
-                <div
-                  class="w-[8px] h-[8px] bg-secondary rounded-full absolute right-[88px] top-[88px]"
-                ></div>
-                <div class="text-hijau font-semibold absolute top-[80px] right-[100px]">A</div>
-                <div id="kedua" class="hidden">
+          <div class="border-2 p-7 mt-16 border-coklat shadow-custom rounded-lg">
+            <div class="flex items-center mt-2">
+              <img src="../img/pencerminan/one_8921537.png" alt="" class="w-6 h-6 mr-2" />
+              <button class="text-base text-primary font-semibold ml-2 text-left">
+                Contoh refleksi dengan objek titik
+              </button>
+            </div>
+            <div
+              class="w-full border-t-2 border-hijau mt-2 mt-2 py-2 px-2 max-w-md"
+              id="pusatTitik"
+            >
+              <p class="leading-7">
+                <span class="text-hijau font-semibold">Titik A ( 2 , 2 )</span> direfleksikan
+                terhadap garis <span class="text-hijau font-semibold">y = 0</span>.
+              </p>
+              <div class="w-80 h-80 mx-auto mt-4 relative flex justify-center items-center">
+                <div class="p-4 rounded-lg mt-4 w-full h-full relative opacity-30" id="hapusKedua">
+                  <img src="../img/pencerminan/Grapik.jpg" alt="" />
                   <div
-                    class="w-[8px] h-[8px] bg-hijau rounded-full absolute right-[88px] top-[88px] z-10 refleksiTitik"
+                    class="w-[8px] h-[8px] bg-secondary rounded-full absolute right-[88px] top-[88px]"
                   ></div>
+                  <div class="text-hijau font-semibold absolute top-[80px] right-[100px]">A</div>
+                  <div id="kedua" class="hidden">
+                    <div
+                      class="w-[8px] h-[8px] bg-hijau rounded-full absolute right-[88px] top-[88px] z-10 refleksiTitik"
+                    ></div>
 
-                  <div
-                    class="text-hijau font-semibold absolute bottom-[80px] right-[100px] titikA1 opacity-0"
-                  >
-                    A'
+                    <div
+                      class="text-hijau font-semibold absolute bottom-[80px] right-[100px] titikA1 opacity-0"
+                    >
+                      A'
+                    </div>
+                    <div class="w-[0px] h-[2px] bg-hijau top-1/2 absolute garisTitik8"></div>
                   </div>
-                  <div class="w-[0px] h-[2px] bg-hijau top-1/2 absolute garisTitik8"></div>
                 </div>
-              </div>
-              <svg
-                width="54"
-                height="54"
-                viewBox="0 0 54 54"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute cursor-pointer"
-                onclick="removehapusKedua()"
-                id="play7"
-              >
-                <path
-                  d="M21.332 38.6643L37.331 26.665L21.332 14.6658V38.6643ZM26.665 0C11.9459 0 0 11.9459 0 26.665C0 41.3841 11.9459 53.33 26.665 53.33C41.3841 53.33 53.33 41.3841 53.33 26.665C53.33 11.9459 41.3841 0 26.665 0ZM26.665 47.997C14.9057 47.997 5.333 38.4243 5.333 26.665C5.333 14.9057 14.9057 5.333 26.665 5.333C38.4243 5.333 47.997 14.9057 47.997 26.665C47.997 38.4243 38.4243 47.997 26.665 47.997Z"
-                  fill="#079292"
-                />
-              </svg>
-            </div>
-            <div class="flex items-start mt-6 pb-4 border-b-2">
-              <p class="text-primary font-semibold">Diketahui:</p>
-              <p class="ml-4">
-                Sumbu cerminnya adalah y = 0 artinya
-                <span class="text-hijau font-semibold">garis horizontal</span> yang terletak
-                sepanjang sumbu-x
-              </p>
-            </div>
-            <div class="flex items-start mt-6 pb-4 border-b-2">
-              <p class="text-primary font-semibold">Catatan:</p>
-              <p class="ml-6">
-                Karena objek yang direfleksikan sebuah titik, dimana titik tidak memiliki bentuk
-                maka yang diperhatikan hanyalah
-                <span class="text-hijau font-semibold">jarak objek ke sumbu cermin</span>
-              </p>
-            </div>
-
-            <div class="flex items-start mt-4 mb-3">
-              <p class="text-primary font-semibold">Diperoleh:</p>
-              <p class="ml-4">
-                Titik
-                <span class="text-hijau font-semibold">A' ( 2 , -2 )</span>
-              </p>
-            </div>
-          </div>
-
-          <div class="flex items-center mt-8">
-            <img src="../img/pencerminan/two_8921602.png" alt="" class="w-6 h-6 mr-2" />
-            <button class="text-base text-primary font-semibold ml-2 text-left">
-              Contoh refleksi bangun datar
-            </button>
-          </div>
-          <div class="w-full border-t-2 border-hijau mt-2 py-2 px-2 max-w-md" id="pusatTitik">
-            <p class="leading-7">
-              Segitiga ABC dengan kordinat
-              <span class="text-hijau font-semibold">A ( 4 , 3 )</span>,
-              <span class="text-hijau font-semibold"> B ( 2 , 2 )</span>, dan
-              <span class="text-hijau font-semibold"> C ( 3 , -1 )</span> yang akan dicerminkan pada
-              garis <span class="text-hijau font-semibold">x = 1</span>
-            </p>
-            <div class="w-80 h-80 mx-auto mt-4 relative flex justify-center items-center">
-              <div class="p-4 rounded-lg mt-4 w-full h-full relative opacity-30" id="hapusKetiga">
-                <img src="../img/pencerminan/Grapik.jpg" alt="" />
                 <svg
-                  width="72"
-                  height="138"
-                  viewBox="0 0 72 138"
+                  width="54"
+                  height="54"
+                  viewBox="0 0 54 54"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="absolute top-[55px] right-[20px] opacity-70"
+                  class="absolute cursor-pointer"
+                  onclick="removehapusKedua()"
+                  id="play7"
                 >
                   <path
-                    d="M0.500018 36.9999L71.652 0.181103L37 137.5L0.500018 36.9999Z"
-                    fill="#F1F1F1"
+                    d="M21.332 38.6643L37.331 26.665L21.332 14.6658V38.6643ZM26.665 0C11.9459 0 0 11.9459 0 26.665C0 41.3841 11.9459 53.33 26.665 53.33C41.3841 53.33 53.33 41.3841 53.33 26.665C53.33 11.9459 41.3841 0 26.665 0ZM26.665 47.997C14.9057 47.997 5.333 38.4243 5.333 26.665C5.333 14.9057 14.9057 5.333 26.665 5.333C38.4243 5.333 47.997 14.9057 47.997 26.665C47.997 38.4243 38.4243 47.997 26.665 47.997Z"
+                    fill="#079292"
                   />
                 </svg>
+              </div>
+              <div class="flex items-start mt-6 pb-4 border-b-2">
+                <p class="text-primary font-semibold">Diketahui:</p>
+                <p class="ml-4">
+                  Sumbu cerminnya adalah y = 0 artinya
+                  <span class="text-hijau font-semibold">garis horizontal</span> yang terletak
+                  sepanjang sumbu-x
+                </p>
+              </div>
+              <div class="flex items-start mt-6 pb-4 border-b-2">
+                <p class="text-primary font-semibold">Catatan:</p>
+                <p class="ml-6">
+                  Karena objek yang direfleksikan sebuah titik, dimana titik tidak memiliki bentuk
+                  maka yang diperhatikan hanyalah
+                  <span class="text-hijau font-semibold">jarak objek ke sumbu cermin</span>
+                </p>
+              </div>
 
-                <div class="absolute text-sm font-semibold text-hijau top-[38px] right-[16px]">
-                  A
-                </div>
-                <div class="absolute text-sm font-semibold text-hijau top-[83px] right-[95px]">
-                  B
-                </div>
-                <div class="absolute text-sm font-semibold text-hijau bottom-[105px] right-[51px]">
-                  C
-                </div>
-                <div id="ketiga" class="hidden">
+              <div class="flex items-start mt-4 mb-3">
+                <p class="text-primary font-semibold">Diperoleh:</p>
+                <p class="ml-4">
+                  Titik
+                  <span class="text-hijau font-semibold">A' ( 2 , -2 )</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-2 p-7 mt-16 border-coklat shadow-custom rounded-lg">
+            <div class="flex items-center mt-2">
+              <img src="../img/pencerminan/two_8921602.png" alt="" class="w-6 h-6 mr-2" />
+              <button class="text-base text-primary font-semibold ml-2 text-left">
+                Contoh refleksi bangun datar
+              </button>
+            </div>
+            <div
+              class="w-full border-t-2 mt-2 border-hijau mt-2 py-2 px-2 max-w-md"
+              id="pusatTitik"
+            >
+              <p class="leading-7">
+                Segitiga ABC dengan kordinat
+                <span class="text-hijau font-semibold">A ( 4 , 3 )</span>,
+                <span class="text-hijau font-semibold"> B ( 2 , 2 )</span>, dan
+                <span class="text-hijau font-semibold"> C ( 3 , -1 )</span> yang akan dicerminkan
+                pada garis <span class="text-hijau font-semibold">x = 1</span>
+              </p>
+              <div class="w-80 h-80 mx-auto mt-4 relative flex justify-center items-center">
+                <div class="p-4 rounded-lg mt-4 w-full h-full relative opacity-30" id="hapusKetiga">
+                  <img src="../img/pencerminan/Grapik.jpg" alt="" />
                   <svg
                     width="72"
                     height="138"
                     viewBox="0 0 72 138"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    class="absolute top-[55px] right-[20px] opacity-50 z-10 animate-pencerminanBangun"
+                    class="absolute top-[55px] right-[20px] opacity-70"
                   >
                     <path
                       d="M0.500018 36.9999L71.652 0.181103L37 137.5L0.500018 36.9999Z"
-                      fill="#7BFFD0"
+                      fill="#F1F1F1"
                     />
                   </svg>
 
+                  <div class="absolute text-sm font-semibold text-hijau top-[38px] right-[16px]">
+                    A
+                  </div>
+                  <div class="absolute text-sm font-semibold text-hijau top-[83px] right-[95px]">
+                    B
+                  </div>
                   <div
-                    class="absolute opacity-0 text-sm font-semibold text-hijau top-[38px] left-[85px] titikA1"
+                    class="absolute text-sm font-semibold text-hijau bottom-[105px] right-[51px]"
                   >
-                    A'
+                    C
                   </div>
-                  <div
-                    class="absolute opacity-0 text-sm font-semibold text-hijau top-[83px] left-[162px] titikB1"
-                  >
-                    B'
-                  </div>
-                  <div
-                    class="absolute opacity-0 text-sm font-semibold text-hijau bottom-[105px] left-[120px] titikC1"
-                  >
-                    C'
-                  </div>
+                  <div id="ketiga" class="hidden">
+                    <svg
+                      width="72"
+                      height="138"
+                      viewBox="0 0 72 138"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="absolute top-[55px] right-[20px] opacity-50 z-10 animate-pencerminanBangun"
+                    >
+                      <path
+                        d="M0.500018 36.9999L71.652 0.181103L37 137.5L0.500018 36.9999Z"
+                        fill="#7BFFD0"
+                      />
+                    </svg>
 
-                  <div
-                    class="w-[2px] h-0 garisBangun2 absolute bg-hijau top-[17px] left-[192px]"
-                  ></div>
+                    <div
+                      class="absolute opacity-0 text-sm font-semibold text-hijau top-[38px] left-[85px] titikA1"
+                    >
+                      A'
+                    </div>
+                    <div
+                      class="absolute opacity-0 text-sm font-semibold text-hijau top-[83px] left-[162px] titikB1"
+                    >
+                      B'
+                    </div>
+                    <div
+                      class="absolute opacity-0 text-sm font-semibold text-hijau bottom-[105px] left-[120px] titikC1"
+                    >
+                      C'
+                    </div>
 
-                  <div class="absolute right-[93px] top-[80px] opacity-0 jarakBangun2">
                     <div
-                      class="w-[32px] h-[32px] rounded-full border-t-4 border-red inline-block"
+                      class="w-[2px] h-0 garisBangun2 absolute bg-hijau top-[17px] left-[192px]"
                     ></div>
-                  </div>
 
-                  <div class="absolute right-[21px] top-[43px] jarakBangun1 opacity-0">
-                    <div
-                      class="w-[32px] h-[32px] rounded-full border-t-4 border-red inline-block"
-                    ></div>
-                    <div
-                      class="w-[32px] h-[32px] rounded-full border-t-4 border-red inline-block"
-                    ></div>
-                    <div
-                      class="w-[32px] h-[32px] rounded-full border-t-4 border-red inline-block"
-                    ></div>
-                  </div>
+                    <div class="absolute right-[93px] top-[80px] opacity-0 jarakBangun2">
+                      <div
+                        class="w-[32px] h-[32px] rounded-full border-t-4 border-red inline-block"
+                      ></div>
+                    </div>
 
-                  <div class="absolute right-[57px] bottom-[100px] jarakBangun3 opacity-0">
-                    <div
-                      class="w-[32px] h-[32px] rounded-full border-t-4 border-red inline-block"
-                    ></div>
-                    <div
-                      class="w-[32px] h-[32px] rounded-full border-t-4 border-red inline-block"
-                    ></div>
+                    <div class="absolute right-[21px] top-[43px] jarakBangun1 opacity-0">
+                      <div
+                        class="w-[32px] h-[32px] rounded-full border-t-4 border-red inline-block"
+                      ></div>
+                      <div
+                        class="w-[32px] h-[32px] rounded-full border-t-4 border-red inline-block"
+                      ></div>
+                      <div
+                        class="w-[32px] h-[32px] rounded-full border-t-4 border-red inline-block"
+                      ></div>
+                    </div>
+
+                    <div class="absolute right-[57px] bottom-[100px] jarakBangun3 opacity-0">
+                      <div
+                        class="w-[32px] h-[32px] rounded-full border-t-4 border-red inline-block"
+                      ></div>
+                      <div
+                        class="w-[32px] h-[32px] rounded-full border-t-4 border-red inline-block"
+                      ></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <svg
-                width="54"
-                height="54"
-                viewBox="0 0 54 54"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute cursor-pointer"
-                id="play8"
-                onclick="removehapusKetiga()"
-              >
-                <path
-                  d="M21.332 38.6643L37.331 26.665L21.332 14.6658V38.6643ZM26.665 0C11.9459 0 0 11.9459 0 26.665C0 41.3841 11.9459 53.33 26.665 53.33C41.3841 53.33 53.33 41.3841 53.33 26.665C53.33 11.9459 41.3841 0 26.665 0ZM26.665 47.997C14.9057 47.997 5.333 38.4243 5.333 26.665C5.333 14.9057 14.9057 5.333 26.665 5.333C38.4243 5.333 47.997 14.9057 47.997 26.665C47.997 38.4243 38.4243 47.997 26.665 47.997Z"
-                  fill="#079292"
-                />
-              </svg>
-            </div>
-            <div class="flex items-start mt-6 pb-4 border-b-2">
-              <p class="text-primary font-semibold">Diketahui:</p>
-              <p class="ml-4">
-                Sumbu cerminnya adalah x = 1 artinya
-                <span class="text-hijau font-semibold">garis vertikal</span>. Sifat Refleksi yang
-                diperhatikan seperti biasa yakni
-                <span class="text-hijau font-semibold">jarak, bentuk, dan harus berhadapan</span>.
-              </p>
-            </div>
-
-            <div class="flex items-start mt-4 mb-3">
-              <p class="text-primary font-semibold">Diperoleh:</p>
-              <p class="ml-4">
-                Segitiga A'B'C' dengan kordinat
-                <span class="text-hijau font-semibold block"
-                  >A' ( -2 , -3 ), <span class="block">B' ( 0 , 2 ), </span>C' ( -1 , -1 )</span
-                >
-              </p>
-            </div>
-          </div>
-
-          <div class="flex items-center mt-8">
-            <img src="../img/pencerminan/three_8921657.png" alt="" class="w-6 h-6 mr-2" />
-            <button class="text-base text-primary font-semibold ml-2 text-left">
-              Contoh refleksi bangun datar dengan sumbu titik
-            </button>
-          </div>
-          <div class="w-full border-t-2 border-hijau mt-2 py-2 px-2 max-w-md" id="">
-            <p class="leading-7">
-              Segitiga ABC dengan kordinat
-              <span class="text-hijau font-semibold">A ( -2 , 4 )</span>,
-              <span class="text-hijau font-semibold"> B ( -2 , 1 )</span>, dan
-              <span class="text-hijau font-semibold"> C ( -3 , 1 )</span> yang akan dicerminkan pada
-              titik <span class="text-hijau font-semibold">( -1 , 1 )</span>
-            </p>
-            <div class="w-80 h-80 mx-auto mt-4 relative flex justify-center items-center">
-              <div class="p-4 rounded-lg mt-4 w-full h-full relative opacity-30" id="hapusKeenam">
-                <img src="../img/pencerminan/Grapik.jpg" alt="" />
                 <svg
-                  width="35"
-                  height="105"
-                  viewBox="0 0 35 105"
+                  width="54"
+                  height="54"
+                  viewBox="0 0 54 54"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg "
-                  class="absolute top-[21px] left-[57px] opacity-60"
-                  s
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute cursor-pointer"
+                  id="play8"
+                  onclick="removehapusKetiga()"
                 >
-                  <path d="M35 0.5V104.5H0L35 0.5Z" fill="#D9D9D9" />
+                  <path
+                    d="M21.332 38.6643L37.331 26.665L21.332 14.6658V38.6643ZM26.665 0C11.9459 0 0 11.9459 0 26.665C0 41.3841 11.9459 53.33 26.665 53.33C41.3841 53.33 53.33 41.3841 53.33 26.665C53.33 11.9459 41.3841 0 26.665 0ZM26.665 47.997C14.9057 47.997 5.333 38.4243 5.333 26.665C5.333 14.9057 14.9057 5.333 26.665 5.333C38.4243 5.333 47.997 14.9057 47.997 26.665C47.997 38.4243 38.4243 47.997 26.665 47.997Z"
+                    fill="#079292"
+                  />
                 </svg>
-                <div>
-                  <div class="text-hijau font-semibold absolute left-[86px] top-[5px]">A</div>
-                  <div class="text-hijau font-semibold absolute left-[86px] top-[125px]">B</div>
-                  <div class="text-hijau font-semibold absolute left-[48px] top-[125px]">C</div>
-                </div>
-                <div id="keenam" class="hidden">
+              </div>
+              <div class="flex items-start mt-6 pb-4 border-b-2">
+                <p class="text-primary font-semibold">Diketahui:</p>
+                <p class="ml-4">
+                  Sumbu cerminnya adalah x = 1 artinya
+                  <span class="text-hijau font-semibold">garis vertikal</span>. Sifat Refleksi yang
+                  diperhatikan seperti biasa yakni
+                  <span class="text-hijau font-semibold">jarak, bentuk, dan harus berhadapan</span>.
+                </p>
+              </div>
+
+              <div class="flex items-start mt-4 mb-3">
+                <p class="text-primary font-semibold">Diperoleh:</p>
+                <p class="ml-4">
+                  Segitiga A'B'C' dengan kordinat
+                  <span class="text-hijau font-semibold block"
+                    >A' ( -2 , -3 ), <span class="block">B' ( 0 , 2 ), </span>C' ( -1 , -1 )</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-2 p-7 mt-16 border-coklat shadow-custom rounded-lg">
+            <div class="flex items-center mt-">
+              <img src="../img/pencerminan/three_8921657.png" alt="" class="w-6 h-6 mr-2" />
+              <button class="text-base text-primary font-semibold ml-2 text-left">
+                Contoh refleksi bangun datar dengan sumbu titik
+              </button>
+            </div>
+            <div class="w-full border-t-2 mt-2 border-hijau mt-2 py-2 px-2 max-w-md" id="">
+              <p class="leading-7">
+                Segitiga ABC dengan kordinat
+                <span class="text-hijau font-semibold">A ( -2 , 4 )</span>,
+                <span class="text-hijau font-semibold"> B ( -2 , 1 )</span>, dan
+                <span class="text-hijau font-semibold"> C ( -3 , 1 )</span> yang akan dicerminkan
+                pada titik <span class="text-hijau font-semibold">( -1 , 1 )</span>
+              </p>
+              <div class="w-80 h-80 mx-auto mt-4 relative flex justify-center items-center">
+                <div class="p-4 rounded-lg mt-4 w-full h-full relative opacity-30" id="hapusKeenam">
+                  <img src="../img/pencerminan/Grapik.jpg" alt="" />
                   <svg
                     width="35"
                     height="105"
                     viewBox="0 0 35 105"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="absolute top-[21px] left-[57px] z-20 opacity-60 refleksiAneh"
+                    xmlns="http://www.w3.org/2000/svg "
+                    class="absolute top-[21px] left-[57px] opacity-60"
                     s
                   >
-                    <path d="M35 0.5V104.5H0L35 0.5Z" fill="#7BFFD0" />
+                    <path d="M35 0.5V104.5H0L35 0.5Z" fill="#D9D9D9" />
                   </svg>
-
-                  <div class="opacity-0 titikoi">
-                    <div class="text-hijau font-semibold absolute left-[191px] bottom-[72px]">
-                      A'
-                    </div>
-                    <div class="text-hijau font-semibold absolute left-[156px] top-[104px]">B'</div>
-                    <div class="text-hijau font-semibold absolute left-[191px] top-[104px]">C'</div>
+                  <div>
+                    <div class="text-hijau font-semibold absolute left-[86px] top-[5px]">A</div>
+                    <div class="text-hijau font-semibold absolute left-[86px] top-[125px]">B</div>
+                    <div class="text-hijau font-semibold absolute left-[48px] top-[125px]">C</div>
                   </div>
+                  <div id="keenam" class="hidden">
+                    <svg
+                      width="35"
+                      height="105"
+                      viewBox="0 0 35 105"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="absolute top-[21px] left-[57px] z-20 opacity-60 refleksiAneh"
+                      s
+                    >
+                      <path d="M35 0.5V104.5H0L35 0.5Z" fill="#7BFFD0" />
+                    </svg>
 
-                  <div
-                    class="w-[8px] h-[8px] bg-hijau rounded-full absolute left-[122px] top-[122px] z-10"
-                  ></div>
+                    <div class="opacity-0 titikoi">
+                      <div class="text-hijau font-semibold absolute left-[191px] bottom-[72px]">
+                        A'
+                      </div>
+                      <div class="text-hijau font-semibold absolute left-[156px] top-[104px]">
+                        B'
+                      </div>
+                      <div class="text-hijau font-semibold absolute left-[191px] top-[104px]">
+                        C'
+                      </div>
+                    </div>
+
+                    <div
+                      class="w-[8px] h-[8px] bg-hijau rounded-full absolute left-[122px] top-[122px] z-10"
+                    ></div>
+                  </div>
                 </div>
-              </div>
-              <svg
-                width="54"
-                height="54"
-                viewBox="0 0 54 54"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute cursor-pointer"
-                id="play9"
-                onclick="removehapusKeenam()"
-              >
-                <path
-                  d="M21.332 38.6643L37.331 26.665L21.332 14.6658V38.6643ZM26.665 0C11.9459 0 0 11.9459 0 26.665C0 41.3841 11.9459 53.33 26.665 53.33C41.3841 53.33 53.33 41.3841 53.33 26.665C53.33 11.9459 41.3841 0 26.665 0ZM26.665 47.997C14.9057 47.997 5.333 38.4243 5.333 26.665C5.333 14.9057 14.9057 5.333 26.665 5.333C38.4243 5.333 47.997 14.9057 47.997 26.665C47.997 38.4243 38.4243 47.997 26.665 47.997Z"
-                  fill="#079292"
-                />
-              </svg>
-            </div>
-            <div class="flex items-start mt-6 pb-4 border-b-2">
-              <p class="text-primary font-semibold">Diketahui:</p>
-              <p class="ml-4">
-                Sumbu cerminnya adalah
-                <span class="text-hijau font-semibold"> titik ( -1 , 1 )</span> artinya sifat
-                refleksi tetap berlaku namun bangun datar seperti terbalik
-              </p>
-            </div>
-
-            <div class="flex items-start mt-4 mb-3">
-              <p class="text-primary font-semibold">Diperoleh:</p>
-              <p class="ml-4">
-                Segitiga A'B'C' dengan kordinat
-                <span class="text-hijau font-semibold block"
-                  >A' ( 1 , -2 ), <span class="block">B' ( 0 , 1 ), </span>C' ( 1 , 1 )</span
+                <svg
+                  width="54"
+                  height="54"
+                  viewBox="0 0 54 54"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute cursor-pointer"
+                  id="play9"
+                  onclick="removehapusKeenam()"
                 >
-              </p>
+                  <path
+                    d="M21.332 38.6643L37.331 26.665L21.332 14.6658V38.6643ZM26.665 0C11.9459 0 0 11.9459 0 26.665C0 41.3841 11.9459 53.33 26.665 53.33C41.3841 53.33 53.33 41.3841 53.33 26.665C53.33 11.9459 41.3841 0 26.665 0ZM26.665 47.997C14.9057 47.997 5.333 38.4243 5.333 26.665C5.333 14.9057 14.9057 5.333 26.665 5.333C38.4243 5.333 47.997 14.9057 47.997 26.665C47.997 38.4243 38.4243 47.997 26.665 47.997Z"
+                    fill="#079292"
+                  />
+                </svg>
+              </div>
+              <div class="flex items-start mt-6 pb-4 border-b-2">
+                <p class="text-primary font-semibold">Diketahui:</p>
+                <p class="ml-4">
+                  Sumbu cerminnya adalah
+                  <span class="text-hijau font-semibold"> titik ( -1 , 1 )</span> artinya sifat
+                  refleksi tetap berlaku namun bangun datar seperti terbalik
+                </p>
+              </div>
+
+              <div class="flex items-start mt-4 mb-3">
+                <p class="text-primary font-semibold">Diperoleh:</p>
+                <p class="ml-4">
+                  Segitiga A'B'C' dengan kordinat
+                  <span class="text-hijau font-semibold block"
+                    >A' ( 1 , -2 ), <span class="block">B' ( 0 , 1 ), </span>C' ( 1 , 1 )</span
+                  >
+                </p>
+              </div>
             </div>
           </div>
         </div>

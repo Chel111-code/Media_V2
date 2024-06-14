@@ -1,22 +1,318 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const sumbuCermin = document.getElementById('sumbuCermin');
-  const animasisumbuCermin = document.getElementById('animasisumbuCermin');
+const canvas9 = document.getElementById('canvas9');
+const ctx = canvas9.getContext('2d');
+const degreesInput = document.getElementById('degrees');
+const directionSelect = document.getElementById('direction');
+const rotateBtn = document.getElementById('rotate-btn');
+const resetBtn = document.getElementById('reset-btn');
+const gridSize = 25;
 
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === sumbuCermin && entry.intersectionRatio >= 1) {
-          observer.unobserve(sumbuCermin);
-          animasisumbuCermin.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
+let canRotate = true;
+
+// Initial positions for the square and point P
+let square = [
+  { x: 50, y: 50, label: 'A' },
+  { x: 100, y: 50, label: 'B' },
+  { x: 100, y: 100, label: 'C' },
+  { x: 50, y: 100, label: 'D' },
+];
+let pointP = { x: 125, y: 125, label: 'P' };
+
+let rotatedSquare = [];
+
+// Draw the grid
+function drawGrid() {
+  ctx.strokeStyle = '#ddd';
+  for (let x = 0; x <= canvas9.width; x += gridSize) {
+    ctx.beginPath();
+    ctx.moveTo(x, 0);
+    ctx.lineTo(x, canvas9.height);
+    ctx.stroke();
+  }
+  for (let y = 0; y <= canvas9.height; y += gridSize) {
+    ctx.beginPath();
+    ctx.moveTo(0, y);
+    ctx.lineTo(canvas9.width, y);
+    ctx.stroke();
+  }
+}
+
+// Draw the square
+function drawSquare(sq, color, labelColor = '#8FBFFF') {
+  ctx.strokeStyle = color;
+  ctx.fillStyle = color;
+  ctx.beginPath();
+  ctx.moveTo(sq[0].x, sq[0].y);
+  sq.forEach((point) => ctx.lineTo(point.x, point.y));
+  ctx.closePath();
+  ctx.stroke();
+
+  // Draw corner points and labels
+  ctx.fillStyle = labelColor;
+  sq.forEach((point) => {
+    ctx.beginPath();
+    ctx.arc(point.x, point.y, 5, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.stroke();
+    ctx.fillText(point.label, point.x + 5, point.y - 5);
+  });
+}
+
+// Draw point P
+function drawPointP(point, color) {
+  ctx.strokeStyle = color;
+  ctx.fillStyle = color;
+  ctx.beginPath();
+  ctx.arc(point.x, point.y, 5, 0, 2 * Math.PI);
+  ctx.fill();
+  ctx.stroke();
+  ctx.fillStyle = 'black';
+  ctx.fillText(point.label, point.x + 5, point.y - 5);
+}
+
+// Draw everything on the canvas9
+function draw() {
+  ctx.clearRect(0, 0, canvas9.width, canvas9.height);
+  drawGrid();
+  drawSquare(square, '#8FBFFF');
+  if (rotatedSquare.length > 0) {
+    drawSquare(rotatedSquare, '#079292', '#079292');
+  }
+  drawPointP(pointP, 'red');
+}
+
+draw();
+
+// Utility function to rotate a point around another point
+function rotatePoint(point, center, angle, direction) {
+  const rad = (Math.PI / 180) * angle * (direction === 'cw' ? -1 : 1);
+  const cos = Math.cos(rad);
+  const sin = Math.sin(rad);
+  const nx = cos * (point.x - center.x) + sin * (point.y - center.y) + center.x;
+  const ny = cos * (point.y - center.y) - sin * (point.x - center.x) + center.y;
+  return { x: nx, y: ny, label: point.label };
+}
+
+// Rotate the square
+function rotateSquare() {
+  const angle = parseFloat(degreesInput.value);
+  const direction = directionSelect.value;
+  return square.map((point) => rotatePoint(point, pointP, angle, direction));
+}
+
+// Animate rotation
+function animateRotation(startAngle, endAngle, direction, duration = 1000) {
+  const startTime = performance.now();
+
+  function animate(time) {
+    const elapsedTime = time - startTime;
+    const progress = Math.min(elapsedTime / duration, 1);
+    const currentAngle = startAngle + (endAngle - startAngle) * progress;
+    rotatedSquare = square.map((point) => rotatePoint(point, pointP, currentAngle, direction));
+    // Update labels to M, N, O, P
+    const labels = ["A'", "B'", "C'", "D'"];
+    rotatedSquare.forEach((point, index) => (point.label = labels[index]));
+    draw();
+
+    if (progress < 1) {
+      requestAnimationFrame(animate);
     }
-  );
+  }
 
-  observer.observe(sumbuCermin);
+  requestAnimationFrame(animate);
+}
+
+// Rotate button click handler
+rotateBtn.addEventListener('click', () => {
+  if (canRotate) {
+    const startAngle = 0;
+    const endAngle = parseFloat(degreesInput.value);
+    const direction = directionSelect.value;
+    animateRotation(startAngle, endAngle, direction);
+    canRotate = false;
+    rotateBtn.classList.add('disabled');
+    rotateBtn.classList.add('opacity-30', 'cursor-not-allowed');
+  }
+});
+
+// Reset button click handler
+resetBtn.addEventListener('click', () => {
+  square = [
+    { x: 50, y: 50, label: 'A' },
+    { x: 100, y: 50, label: 'B' },
+    { x: 100, y: 100, label: 'C' },
+    { x: 50, y: 100, label: 'D' },
+  ];
+  pointP = { x: 125, y: 125, label: 'P' };
+  rotatedSquare = [];
+  draw();
+  canRotate = true;
+  rotateBtn.classList.remove('disabled');
+});
+
+// Drag and drop functionality for square points and point P
+let draggingPoint = null;
+
+function getMousePos(canvas9, evt) {
+  const rect = canvas9.getBoundingClientRect();
+  return {
+    x: evt.clientX - rect.left,
+    y: evt.clientY - rect.top,
+  };
+}
+
+function getDragPoint(mousePos) {
+  const allPoints = [...square, pointP];
+  return allPoints.find(
+    (point) => Math.sqrt((point.x - mousePos.x) ** 2 + (point.y - mousePos.y) ** 2) < 10
+  );
+}
+
+function handleMouseDown(e) {
+  const mousePos = getMousePos(canvas9, e);
+  draggingPoint = getDragPoint(mousePos);
+}
+
+function handleMouseMove(e) {
+  if (!draggingPoint) return;
+  const mousePos = getMousePos(canvas9, e);
+  draggingPoint.x = mousePos.x;
+  draggingPoint.y = mousePos.y;
+  draw();
+  if (rotatedSquare.length > 0) {
+    rotatedSquare = rotateSquare();
+  }
+}
+
+function handleMouseUp() {
+  if (draggingPoint) {
+    const snappedPos = snapToGrid(draggingPoint);
+    draggingPoint.x = snappedPos.x;
+    draggingPoint.y = snappedPos.y;
+    draggingPoint = null;
+    draw();
+    if (rotatedSquare.length > 0) {
+      rotatedSquare = rotateSquare();
+    }
+  }
+}
+
+canvas9.addEventListener('mousedown', handleMouseDown);
+canvas9.addEventListener('mousemove', handleMouseMove);
+canvas9.addEventListener('mouseup', handleMouseUp);
+
+canvas9.addEventListener(
+  'touchstart',
+  (e) => {
+    e.preventDefault();
+    const touch = e.touches[0];
+    const mouseEvent = new MouseEvent('mousedown', {
+      clientX: touch.clientX,
+      clientY: touch.clientY,
+    });
+    canvas9.dispatchEvent(mouseEvent);
+  },
+  false
+);
+
+canvas9.addEventListener(
+  'touchmove',
+  (e) => {
+    e.preventDefault();
+    const touch = e.touches[0];
+    const mouseEvent = new MouseEvent('mousemove', {
+      clientX: touch.clientX,
+      clientY: touch.clientY,
+    });
+    canvas9.dispatchEvent(mouseEvent);
+  },
+  false
+);
+
+canvas9.addEventListener(
+  'touchend',
+  (e) => {
+    const mouseEvent = new MouseEvent('mouseup', {});
+    canvas.dispatchEvent(mouseEvent);
+  },
+  false
+);
+
+function snapToGrid(point) {
+  return {
+    x: Math.round(point.x / gridSize) * gridSize,
+    y: Math.round(point.y / gridSize) * gridSize,
+  };
+}
+
+function byg() {
+  document.getElementById('byg').classList.add('hidden');
+  document.getElementById('chbayangan').classList.remove('hidden');
+  const popupBenar = document.getElementById('popupBenar');
+  popupBenar.classList.remove('hidden');
+  setTimeout(() => {
+    popupBenar.classList.add('hidden');
+  }, 1500);
+  popupBenar.classList.add('zoomIn');
+}
+
+function byg2() {
+  document.getElementById('byg2').classList.add('hidden');
+
+  const popupSalah = document.getElementById('popupSalah');
+  popupSalah.classList.remove('hidden');
+  setTimeout(() => {
+    popupSalah.classList.add('hidden');
+  }, 1500);
+  popupSalah.classList.add('zoomIn');
+}
+
+function byg3() {
+  const popupBingung = document.getElementById('popupBingung');
+  document.getElementById('hapus').classList.add('hidden');
+
+  popupBingung.classList.remove('hidden');
+  setTimeout(() => {
+    popupBingung.classList.add('hidden');
+  }, 3000);
+  popupBingung.classList.add('zoomIn');
+}
+
+function byg4() {
+  const popupBingung = document.getElementById('popupBingung');
+  document.getElementById('byg34').classList.add('hidden');
+
+  popupBingung.classList.remove('hidden');
+  setTimeout(() => {
+    popupBingung.classList.add('hidden');
+  }, 3000);
+  popupBingung.classList.add('zoomIn');
+}
+
+document.getElementById('lihat').addEventListener('click', function () {
+  const sumbuCermin = document.getElementById('sumbuCermin');
+  const lihatButton = document.getElementById('lihat');
+
+  sumbuCermin.classList.remove('hidden');
+  sumbuCermin.classList.add('pop');
+  lihatButton.classList.add('hidden');
+});
+
+document.getElementById('lihat90').addEventListener('click', function () {
+  const semibilanPuluh = document.getElementById('90derajat');
+  const lihat90 = document.getElementById('lihat90');
+
+  semibilanPuluh.classList.remove('hidden');
+  semibilanPuluh.classList.add('pop');
+  lihat90.classList.add('hidden');
+});
+
+document.getElementById('lihat270').addEventListener('click', function () {
+  const duatujuhpuluuh = document.getElementById('270derajat');
+  const lihat270 = document.getElementById('lihat270');
+
+  duatujuhpuluuh.classList.remove('hidden');
+  duatujuhpuluuh.classList.add('pop');
+  lihat270.classList.add('hidden');
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -47,14 +343,14 @@ document.addEventListener('DOMContentLoaded', function () {
   const observer = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
-        if (entry.target === rotasiBerlawanan && entry.intersectionRatio >= 0.7) {
+        if (entry.target === rotasiBerlawanan && entry.intersectionRatio >= 1) {
           observer.unobserve(rotasiBerlawanan);
           animasirotasiBerlawanan.classList.remove('hidden');
         }
       });
     },
     {
-      threshold: 0.7,
+      threshold: 1,
     }
   );
 
@@ -511,6 +807,8 @@ function toggleNavbar() {
 
   sidebar.classList.toggle('translate-x-full');
   sidebar.classList.toggle('translate-x-0');
+  sidebar.classList.toggle('text-primary');
+  sidebar.classList.toggle('text-white');
 
   // Menggunakan kelas 'translate' yang telah didefinisikan
   wacawbutton.classList.toggle('translate-x-4');
@@ -564,7 +862,11 @@ function removeanimasipusatTitik() {
 }
 
 document.getElementById('playback').addEventListener('click', function () {
-  location.reload(); // Reload halaman
+  const playback = document.getElementById('animasirotasiBerlawanan');
+  playback.classList.add('hidden');
+  setTimeout(() => {
+    playback.classList.remove('hidden');
+  }, 50);
 });
 
 document.addEventListener('DOMContentLoaded', function () {

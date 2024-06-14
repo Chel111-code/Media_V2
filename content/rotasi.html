@@ -6,375 +6,54 @@
     <title>Rotasi</title>
     <link rel="stylesheet" href="../src/output.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../keyframes/rotasi.css" />
   </head>
   <style>
     @font-face {
       font-family: 'Lato';
       src: url('../font/Lato-Regular.ttf') format('truetype');
     }
-
-    @keyframes orbitEarth {
-      0% {
-        transform: translateX(20px) translateY(0px);
-        z-index: 999;
-      }
-      50% {
-        transform: translateX(150px) translateY(-50px);
-        z-index: 999;
-      }
-      55% {
-        transform: translateX(155px) translateY(-55px);
-        z-index: 0;
-      }
-      57% {
-        transform: translateX(153px) translateY(-58px);
-        z-index: 0;
-      }
-
-      99% {
-        transform: translateX(20px) translateY(0px);
-        z-index: 0;
-      }
-      100% {
-        transform: translateX(20px) translateY(0px);
-        z-index: 0;
-      }
-    }
-
-    .earth {
-      animation: orbitEarth 7s linear infinite; /* Ubah nilai durasi atau jenis animasi sesuai kebutuhan */
-      transform-origin: bottom left;
-    }
-
-    @keyframes roda {
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    .roda {
-      animation: roda 4s linear infinite;
-    }
-
-    @keyframes RotasiSumbu {
-      0% {
-        transform: translate(0);
-        transform-origin: left;
-      }
-      100% {
-        transform: translate(0) rotate(-45deg);
-        transform-origin: left;
-      }
-    }
-
-    .RotasiSumbu {
-      animation: RotasiSumbu 3s forwards;
-      animation-delay: 5s;
-    }
-
-    @keyframes Derajatmuncul {
-      0% {
-        scale: 0;
-      }
-      100% {
-        opacity: 1;
-        scale: 1;
-      }
-    }
-
-    .munculNih {
-      animation: Derajatmuncul 1s forwards;
-      animation-delay: 9s;
-    }
-
-    @keyframes sangatMuncul {
-      0% {
-        scale: 0;
-      }
-      70% {
-        opacity: 1;
-        scale: 1;
-      }
-      100% {
-        opacity: 0;
-        scale: 0;
-      }
-    }
-
-    .sangatA {
-      animation: sangatMuncul 3s forwards;
-      animation-delay: 14s;
-    }
-    .sangatB {
-      animation: sangatMuncul 3s forwards;
-      animation-delay: 18s;
-    }
-    .sangatC {
-      animation: sangatMuncul 3s forwards;
-      animation-delay: 22s;
-    }
-
-    .titikSumbu {
-      animation: Derajatmuncul 1s forwards;
-      animation-delay: 6s;
-    }
-
-    .titikContoh {
-      animation: Derajatmuncul 1s forwards;
-      animation-delay: 7s;
-    }
-
-    .EmpatLima {
-      animation: Derajatmuncul 1s forwards;
-      animation-delay: 9s;
-    }
-
-    @keyframes searahJam {
-      0% {
-        transform-origin: left;
-      }
-      100% {
-        transform: translate(0) rotate(360deg);
-        transform-origin: left;
-      }
-    }
-
-    @keyframes taksearahJam {
-      0% {
-        transform-origin: left;
-      }
-      100% {
-        transform: translate(0) rotate(-360deg);
-        transform-origin: left;
-      }
-    }
-
-    .searahJam {
-      animation: searahJam 6s linear infinite;
-    }
-
-    .taksearahJam {
-      animation: taksearahJam 6s linear infinite;
-    }
-
-    @keyframes rotasiSearah {
-      0% {
-        transform-origin: left;
-      }
-      100% {
-        transform: rotate(30deg);
-        transform-origin: left;
-      }
-    }
-
-    .rotasiSearah {
-      animation: rotasiSearah 3s forwards;
-      animation-delay: 5s;
-    }
-
-    @keyframes rotasiBerlawanan {
-      0% {
-        transform-origin: left;
-      }
-      100% {
-        transform: rotate(-30deg);
-        transform-origin: left;
-      }
-    }
-
-    .rotasiBerlawanan {
-      animation: rotasiBerlawanan 3s forwards;
-      animation-delay: 5s;
-    }
-
-    @keyframes rotateSatuduapuluh {
-      0% {
-        transform-origin: bottom;
-      }
-      100% {
-        transform: rotate(120deg);
-        transform-origin: bottom;
-      }
-    }
-
-    .rotateSatuduapuluh {
-      animation: rotateSatuduapuluh 5s forwards;
-      animation-delay: 0s;
-    }
-
-    .rotasiFull {
-      transition: transform 1s ease-in-out;
-    }
-
-    @keyframes rotateSembilanpuluh {
-      0% {
-        transform-origin: bottom;
-        transform: rotate(45deg);
-      }
-      100% {
-        transform: rotate(-45deg);
-        transform-origin: bottom;
-      }
-    }
-    .rotateSembilanpuluh {
-      animation: rotateSembilanpuluh 3s forwards;
-    }
-
-    @keyframes negatifSembilanpuluh {
-      0% {
-        transform-origin: right;
-      }
-      100% {
-        transform: rotate(90deg);
-        transform-origin: right;
-      }
-    }
-
-    .negatifSembilanpuluh {
-      animation: negatifSembilanpuluh 5s forwards;
-      animation-delay: 3s;
-    }
-
-    @keyframes horizontalGaris {
-      to {
-        width: 90px;
-      }
-    }
-
-    .horizontalGaris {
-      animation: horizontalGaris 2s forwards;
-      animation-delay: 0s;
-    }
-
-    .sembilanPuluh {
-      animation: Derajatmuncul 1s forwards;
-      animation-delay: 8s;
-    }
-
-    @keyframes seratusDelapanpuluh {
-      0% {
-        transform-origin: top left;
-      }
-      100% {
-        transform: rotate(-180deg);
-        transform-origin: top left;
-      }
-    }
-
-    .seratusDelapanpuluh {
-      animation: seratusDelapanpuluh 5s forwards;
-      animation-delay: 5s;
-    }
-
-    @keyframes garisA {
-      20% {
-        height: 100%;
-      }
-      80% {
-        height: 100%;
-      }
-      100% {
-        height: 0%;
-      }
-    }
-    @keyframes garisB {
-      20% {
-        height: 130px;
-      }
-      80% {
-        height: 130px;
-      }
-      100% {
-        height: 0px;
-      }
-    }
-    @keyframes garisC {
-      20% {
-        height: 70px;
-      }
-      80% {
-        height: 70px;
-      }
-      100% {
-        height: 0px;
-      }
-    }
-
-    .garisA {
-      animation: garisA 12s forwards;
-      animation-delay: 2s;
-    }
-    .garisB {
-      animation: garisB 12s forwards;
-      animation-delay: 2s;
-    }
-    .garisC {
-      animation: garisC 12s forwards;
-      animation-delay: 2s;
-    }
-
-    @keyframes lurusLagi {
-      0% {
-        transform-origin: bottom left;
-      }
-      100% {
-        transform: rotate(-180deg);
-        transform-origin: bottom left;
-      }
-    }
-
-    .lurusLagi {
-      animation: lurusLagi 5s forwards;
-      animation-delay: 1s;
-    }
   </style>
-  <body class="md:bg-gray-100">
-    <nav class="w-full flex justify-center">
+
+  <body class="md:bg-[#edf6f9]">
+    <nav class="bg-[#07BEB8] bg-opacity-90 fixed top-0 w-full z-50">
       <div
-        class="container max-w-4xl flex flex-wrap px-2 top-0 py-5 flex-row items-center justify-between md:px-4 z-50 bg-white bg-opacity-90 fixed"
+        class="container mx-auto flex flex-wrap px-2 py-5 items-center justify-between max-w-4xl md:px-4"
       >
-        <a class="flex font-bold items-center text-primary tras" id="judul" href="../index.html">
-          <span class="ml-3 text-lg relative">Transformasi Geometri</span>
+        <a class="flex font-semibold items-center text-nowrap" id="judul" href="../index.html">
+          <span class="ml-3 text-lg relative text-white">Transformasi Geometri</span>
         </a>
 
-        <div class="flex">
+        <div class="flex items-center">
           <div class="md:hidden mr-3">
-            <a
-              class="p-[10px] rounded-full bg-[#FFF5F5] shadow-custom inline-block"
-              id="home"
-              href="../index.html"
-            >
+            <a class="inline-block" id="home" href="../index.html">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
                 width="25"
                 height="20"
-                viewBox="0 0 30 25"
+                viewBox="0 0 25 20"
                 fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M15 3.95588L22.5 10.5735V22.0588H19.5V13.2353H10.5V22.0588H7.5V10.5735L15 3.95588ZM15 0L0 13.2353H4.5V25H13.5V16.1765H16.5V25H25.5V13.2353H30L15 0Z"
-                  fill="#094067"
+                  d="M10 20V12.9412H15V20H21.25V10.5882H25L12.5 0L0 10.5882H3.75V20H10Z"
+                  fill="white"
                 />
               </svg>
             </a>
           </div>
 
           <div class="md:hidden">
-            <button
-              class="p-[13px] rounded-full bg-[#FFF5F5] shadow-custom"
-              id="sidebarToggle"
-              onclick="toggleNavbar()"
-            >
+            <button class="mt-1 mr-2" id="sidebarToggle" onclick="toggleNavbar()">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="19"
-                height="15"
-                viewBox="0 0 20 17"
+                width="30"
+                height="35"
+                viewBox="0 0 30 35"
                 fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M0 10.2H2.22222V6.8H0V10.2ZM0 17H2.22222V13.6H0V17ZM0 3.4H2.22222V0H0V3.4ZM4.44444 10.2H20V6.8H4.44444V10.2ZM4.44444 17H20V13.6H4.44444V17ZM4.44444 0V3.4H20V0H4.44444Z"
-                  fill="#094067"
+                  d="M3.75 18.9583H6.25V16.0416H3.75V18.9583ZM3.75 24.7916H6.25V21.875H3.75V24.7916ZM3.75 13.125H6.25V10.2083H3.75V13.125ZM8.75 18.9583H26.25V16.0416H8.75V18.9583ZM8.75 24.7916H26.25V21.875H8.75V24.7916ZM8.75 10.2083V13.125H26.25V10.2083H8.75Z"
+                  fill="white"
                 />
               </svg>
             </button>
@@ -382,7 +61,7 @@
         </div>
 
         <div
-          class="fixed top-4 text-right right-0 shadow-custom font-medium text-sm translate-x-full rounded-lg transition duration-300 ease-in-out w-48 bg-[#F3F4F6] text-primary p-5 md:relative md:rounded-none md:transform-none md:w-auto md:bg-transparent md:text-primary md:p-0 md:h-11 md:top-0 md:shadow-none"
+          class="fixed top-4 text-right text-white right-0 shadow-custom font-medium text-sm translate-x-full rounded-lg transition duration-300 ease-in-out w-48 bg-[#F3F4F6] p-5 md:relative md:rounded-none md:transform-none md:w-auto md:bg-transparent md:p-0 md:h-11 md:top-0 md:shadow-none"
           id="sidebar"
         >
           <ul class="flex flex-col md:flex-row md:space-x-5">
@@ -425,10 +104,12 @@
     </nav>
 
     <div
-      class="container max-w-4xl font-lato pt-[70px] text-[14px] md:mx-auto font-medium text-secondary leading-6 tracking-wide w-full"
+      class="container max-w-4xl font-semibold md:text-[15px] md:tracking-normal font-lato pt-[70px] text-[14px] md:mx-auto text-secondary leading-6 tracking-wide w-full md:bg-gray-100"
     >
       <!-- Judul -->
-      <h2 class="text-hijau font-bold pt-8 md:mx-auto md:px-8 px-5 bg-white">Jenis transformasi</h2>
+      <h2 class="text-hijau font-bold pt-14 md:mx-auto md:px-8 px-5 bg-white">
+        Jenis transformasi
+      </h2>
       <h1
         class="text-[22px] pt-1 font-extrabold text-primary tracking-wider md:mx-auto md:px-8 px-5 bg-white"
       >
@@ -436,151 +117,217 @@
       </h1>
       <!-- Akhir Judul -->
 
-      <!-- Hero Section -->
-      <div class="md:mx-auto bg-white md:px-8 px-5 md:pt-7 md:pb-16">
-        <p class="mt-7 md:mt-0">
-          Jenis Tranformasi yang akan dibahas selanjutnya adalah Perputaran atau Rotasi. Perputaran
-          sendiri berkaitan tentang bagaimana suatu objek berputar pada sumbu atau poros tertentu
-        </p>
-        <p class="mt-4">
-          Contohnya saat bumi mengeliligi matahari dimana matahari sebagai sumbu atau pusatnya.
-        </p>
-        <div class="w-72 h-36 ml-4 mt-8 relative">
-          <img
-            src="../img/Rotasi/bumi.png"
-            alt=""
-            class="w-[25px] absolute left-[20px] bottom-[40px] earth"
-          />
-          <img
-            src="../img/Rotasi/matahari.png"
-            alt=""
-            class="w-[120px] absolute left-[60px] z-10"
-          />
+      <div
+        id="popupBenar"
+        class="fixed inset-0 bg-gray-100 z-50 bg-opacity-50 hidden flex items-center justify-center"
+      >
+        <div class="">
+          <img src="../img/pencerminan/Benar.png" class="w-40" alt="" />
         </div>
-        <p class="mt-4">
-          Contoh lain adalah roda yang berputar dimana pusatnya adalah poros roda itu sendiri
-        </p>
-        <div class="w-72 h-36 ml-14 mt-6 relative">
-          <img src="../img/Rotasi/roda.png" alt="" class="w-[100px] absolute left-[20px] roda" />
+      </div>
+      <div
+        id="popupSalah"
+        class="fixed inset-0 bg-gray-100 z-50 bg-opacity-50 hidden flex items-center justify-center"
+      >
+        <div class="">
+          <img src="../img/pencerminan/ihi.png" class="w-40" alt="" />
         </div>
-
-        <p class="mt-6">Pengertian Rotasi sendiri pada transformasi geometri adalah :</p>
-
-        <div class="mt-6" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="50">
-          <p class="border-l-8 border-hijau font-semibold pl-2 leading-relaxed text-primary">
-            <span class="font-bold text-hijau">Rotasi</span> adalah bentuk transformasi yang memutar
-            setiap titik pada objek sampai sudut dan arah tertentu terhadap titik yang tetap.
-          </p>
-        </div>
-
-        <div class="w-full flex flex-wrap">
-          <div class="w-full md:w-1/2 mt-12">
-            <p class="text-base font-semibold text-primary ml-1">
-              Rotasi dengan titik pusatnya diluar objek
-            </p>
-            <div class="h-[300px] w-[330px] mt-3 flex justify-center items-center relative">
-              <img src="../img/blackboard_11246638.png" alt="" class="absolute w-full h-full" />
-              <div
-                class="w-[180px] h-[180px] relative mx-auto flex justify-center items-center animate-spin"
-                style="animation-duration: 7s"
-              >
-                <svg
-                  width="97"
-                  height="97"
-                  viewBox="0 0 97 97"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="absolute -top-9"
-                >
-                  <rect
-                    x="-1"
-                    y="48.4976"
-                    width="50"
-                    height="50"
-                    rx="3"
-                    transform="rotate(-45 -1 48.4976)"
-                    fill="white"
-                  />
-                </svg>
-
-                <div class="w-[8px] h-[8px] bg-red rounded-full relative"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-full md:w-1/2 mt-16 md:mt-12">
-            <p class="text-base font-semibold text-primary ml-1">
-              Rotasi dengan titik pusatnya di dalam objek
-            </p>
-            <div
-              class="h-[300px] w-[330px] border-2 rounded-2xl mt-3 flex justify-center items-center relative"
-            >
-              <img src="../img/blackboard_11246638.png" alt="" class="absolute w-full h-full" />
-              <div class="flex justify-center items-center relative w-1/2">
-                <svg
-                  width="120"
-                  height="90"
-                  viewBox="0 0 120 90"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="animate-spin absolute"
-                  style="animation-duration: 7s"
-                >
-                  <path
-                    d="M5.3137 70.3093L32.8397 18.9786L59.336 70.9921L5.3137 70.3093Z"
-                    fill="white"
-                    stroke="white"
-                  />
-                  <path
-                    d="M60.146 71.0017L87.672 19.671L114.168 71.6845L60.146 71.0017Z"
-                    fill="white"
-                    stroke="white"
-                  />
-                  <path
-                    d="M87.2702 19.3445L59.7442 70.6752L33.2479 18.6617L87.2702 19.3445Z"
-                    fill="white"
-                    stroke="white"
-                  />
-                </svg>
-
-                <div class="w-[8px] h-[8px] bg-red rounded-full relative"></div>
-              </div>
+      </div>
+      <div
+        id="popupBingung"
+        class="fixed inset-0 bg-gray-100 hidden md:scale-150 z-50 bg-opacity-90 flex items-center justify-center"
+      >
+        <div class="flex mt-8 items-center">
+          <img src="../img/Grafis/tanya2.png" alt="" class="w-32 -translate-x-4" />
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none -translate-x-4">
+              BISA JADII
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Pusat Rotasi -->
+      <div class="md:mx-auto px-5 md:px-8 bg-[#FBFDFE] pt-10">
+        <div
+          class="max-w-[480px] rounded-2xl border-2 border-hijau px-5 md:px-8 py-7 shadow-xl flex items-center md:mx-auto"
+        >
+          <img src="../img/Rotasi/roda (2).png" alt="" class="w-32 roda" />
+          <div class="ml-7 text-hijau text-[15px]]">
+            <span class="text-xl font-bold inline-block mb-1">Putar</span>, <br />
+            kata yang berarti membuat sesuatu bergerak dalam lingkaran.
+          </div>
+        </div>
+        <div
+          class="flex mt-10 max-w-[500px] md:ml-24 items-center"
+          dat-aos="zoom-in-right"
+          dat-aos-duration="800"
+        >
+          <img src="../img/Grafis/hmm.png" alt="" class="w-28 md:w-36" />
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 rounded-lg rounded-tl-none">
+              Seorang anak sedang bermain fidget spinner bersama temannya di taman.
+            </div>
+            <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 mt-1 rounded-lg rounded-tl-none">
+              Mereka bermain sambil berlari memutari air mancur
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-52 md:w-64 md:mt-0 mx-auto mt-6 transition-transform overflow-hidden cursor-pointer border-2 border-primary rounded-lg duration-300 ease-in-out hover:scale-125"
+        >
+          <img src="../img/Rotasi/larii.jpeg" alt="" class="w-full" />
+        </div>
+        <div
+          class="flex mt-16 ml-1 max-w-[500px] md:ml-24 items-center"
+          dat-aos="zoom-in-right"
+          dat-aos-duration="800"
+        >
+          <img src="../img/Grafis/Unyu.png" alt="" class="w-32 md:w-40" />
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none ml-1 md:ml-4">
+              Terdapat dua peristiwa perputaran yang mereka lakukan.
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-around mx-auto md:-mt-10 -mt-6 max-w-[500px] items-center">
+          <div class="border-b-2 mt-5 w-28 h-[210px] text-center text-primary relative">
+            <img src="../img/Rotasi/fidget.png" alt="" class="w-24 mx-auto spinner mt-10" />
+            <p class="mt-4">Memutar Fidget Spinner</p>
+          </div>
+          <div class="border-b-2 w-36 h-[230px] text-center text-primary relative">
+            <img src="../img/Rotasi/airmancur.png" alt="" class="w-36 h-[180px]" />
+            <div>
+              <img
+                src="../img/Rotasi/ice-skating_14425529.png"
+                class="absolute w-6 top-[90px] left-16 orbit scale-x-[-1]"
+                alt=""
+              />
+            </div>
+            <p class="mt-2">Memutari air mancur</p>
+          </div>
+        </div>
+
+        <div
+          class="flex mt-16 max-w-[500px] md:ml-24 items-center"
+          dat-aos="zoom-in"
+          dat-aos-duration="800"
+        >
+          <img src="../img/Grafis/Tanya.png" alt="" class="w-28 md:w-32" />
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none">
+              Coba kamu amati perputaran di atas, ada bagian atau objek yang tidak bergerak. Yang
+              manakah itu?
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-8 flex flex-col gap-4 max-w-[500px] md:ml-24 md:-mt-16 items-center"
+          id="byg"
+        >
+          <div class="w-60 flex gap-4 mx-auto items-center cursor-pointer" onclick="byg()" id="">
+            <div
+              class="h-11 w-11 rounded-full bg-[#8CEBE9] font-semibold flex items-center justify-center"
+            >
+              A
+            </div>
+            <div
+              class="w-48 bg-coklat text-white rounded-md px-4 py-2 md:py-3 font-medium leading-5"
+            >
+              Bagian tengah spinner dan air mancur
+            </div>
+          </div>
+          <div
+            class="w-60 flex gap-4 mx-auto items-center cursor-pointer"
+            onclick="byg2()"
+            id="byg2"
+          >
+            <div
+              class="h-11 w-11 rounded-full bg-[#8CEBE9] font-semibold flex items-center justify-center"
+            >
+              B
+            </div>
+            <div
+              class="w-48 bg-coklat text-white rounded-md px-4 py-2 md:py-3 font-medium leading-5"
+            >
+              Ujung spinner dan anak yang berlari
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-4 hidden md:-mt-20" id="chbayangan" data-aos="zoom-in">
+          <div class="w-60 md:w-72 flex gap-4 mx-auto md:ml-56 items-center cursor-pointer">
+            <div
+              class="bg-[#3DCCC7] text-white font-medium border-2 shadow-md md:py-4 rounded-md px-4 py-2 leading-5"
+            >
+              Bagian tengah cermin dan air mancur
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex mt-16 max-w-[500px] md:mx-auto items-center"
+          dat-aos="zoom-in-right"
+          dat-aos-duration="800"
+        >
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 rounded-lg mr-1 rounded-tr-none">
+              Objek atau bagian yang tidak bergerak tersebut disebut
+              <span class="font-bold">PUSAT ROTASI</span>
+            </div>
+          </div>
+          <img src="../img/Grafis/Nih.png" alt="" class="w-28 md:w-36" />
+        </div>
+        <hr class="bg-hijau h-1 mt-16" />
+      </div>
       <!-- Akhir Hero Section -->
 
       <!-- Sudut rotasi -->
-      <div class="md:mx-auto bg-white md:px-8 px-5 md:pt-8 border-b-2 pb-12 md:mt-8 md:pb-8">
-        <h2
-          class="mt-20 md:mt-0 h-14 w-44 shadow-custom flex items-center pl-3 font-bold text-primary text-base rounded-md border-l-2 border-b-2 border-hijau -ml-1"
-        >
-          Sudut Rotasi
-        </h2>
-        <p class="mt-6">
-          <span class="text-hijau font-semibold">Sudut</span> adalah istilah matematika untuk
-          membicarakan tentang seberapa jauh dua garis atau dua sisi suatu bentuk berjauhan satu
-          sama lain.
-        </p>
-        <p class="mt-4">
-          Pada rotasi, sudut menunjukkan sejauh mana kita memutar objek terhadap pusatnya.
-        </p>
+      <div class="md:mx-auto bg-[#FBFDFE] md:px-8 px-5 pb-12 md:pb-8">
         <div
-          class="h-[180px] w-[230px] border-2 rounded-2xl mt-6 py-10 px-12"
-          id="sumbuCermin"
-          data-aos="zoom-in"
-          data-aos-offset="400"
+          class="flex max-w-[500px] pt-8 md:ml-24 items-center"
+          dat-aos="zoom-in"
+          dat-aos-duration="800"
         >
-          <div class="w-full h-full relative hidden" id="animasisumbuCermin">
+          <img src="../img/Grafis/ooo.png" alt="" class="w-32 md:w-40 -translate-x-4" />
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none -translate-x-4">
+              Contoh lain saat jarum jam berputar, pusat rotasinya berada dibagian tengah jam
+            </div>
+          </div>
+        </div>
+        <div class="w-[125px] h-[125px] relative mx-auto md:-mt-8 hover:scale-150 md:scale-150">
+          <img src="../img/Rotasi/clock-without-hands.png" alt="" class="absolute md: w-32" />
+          <div class="bg-black w-[3px] h-10 absolute top-6 left-[63px] searahJam"></div>
+        </div>
+        <div
+          class="flex mt-16 md:mt-10 max-w-[500px] md:ml-24 items-center"
+          dat-aos="zoom-in"
+          dat-aos-duration="800"
+        >
+          <img
+            src="../img/Grafis/Nih.png"
+            alt=""
+            class="w-32 md:w-36 -scale-x-[1] -translate-x-2"
+          />
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none mt-4">
+              Kita menggunakan SUDUT untuk mengetahui seberapa jauh kita memutar objek
+            </div>
+          </div>
+        </div>
+        <div
+          class="h-[140px] w-[230px] md:border-2 rounded-2xl mt-4 py-8 px-12 ml-10 md:mx-auto"
+          id="rotasiBerlawanan"
+          data-aos="zoom-in"
+          data-aos-offset="200"
+        >
+          <div class="w-full h-full relative hidden" id="animasirotasiBerlawanan">
             <div id="playback">
               <img
                 src="../img/again_9365052.png"
                 alt=""
-                class="w-8 h-8 absolute -right-[95px] top-10 cursor-pointer"
+                class="w-8 h-8 absolute -right-[70px] md:-right-[90px] md:top-6 bottom-0 cursor-pointer"
               />
             </div>
-
             <div
               class="w-[8px] h-[8px] bg-red rounded-full absolute bottom-[2px] -left-1 z-20"
             ></div>
@@ -589,538 +336,599 @@
               class="w-[8px] h-[8px] bg-[#8D8383] rounded-full absolute bottom-[2px] -right-1"
             ></div>
 
-            <div class="w-full z-10 bottom-1 right-0 absolute RotasiSumbu">
+            <div class="w-full z-10 bottom-[5px] right-0 absolute rotasiBerlawanan">
               <div class="h-[3px] w-full bg-hijau"></div>
               <div
-                class="h-[8px] w-[8px] bg-hijau rounded-full absolute -bottom-[2px] -right-[3px]"
+                class="h-[8px] w-[8px] bg-hijau rounded-full absolute -bottom-[2px] -right-[4px]"
               ></div>
             </div>
 
-            <div class="h-[3px] bg-[#8D8383] w-full bottom-1 absolute"></div>
-            <div class="absolute left-7 bottom-2 opacity-0 EmpatLima">45°</div>
-            <div class="absolute -right-5 -bottom-[6px]">A</div>
+            <div class="h-[3px] bg-[#8D8383] w-full bottom-[5px] absolute"></div>
+            <div class="absolute left-9 bottom-[9px] opacity-0 EmpatLima text-xs">30°</div>
+            <div class="absolute -right-5 -bottom-[5px]">A</div>
             <div
-              class="absolute -top-[26px] right-[19px] text-hijau font-semibold opacity-0 titikSumbu"
+              class="absolute -top-[15px] -right-[2px] text-hijau font-semibold titikSumbu opacity-0"
             >
               A'
             </div>
           </div>
         </div>
-
-        <p class="mt-6">Pada animasi di atas, kita bisa mengatakan bahwa</p>
-        <div class="mt-6" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="50">
-          <p class="border-l-8 border-hijau font-semibold pl-2 leading-relaxed">
-            <span class="text-hijau">A’</span> merupakan hasil dari rotasi titik A sejauh 45 derajat
-            pada pusat <span class="text-red">titik P</span>
-          </p>
+        <div
+          class="flex mt-16 max-w-[500px] md:mx-auto items-center"
+          dat-aos="zoom-in"
+          dat-aos-duration="800"
+        >
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tr-none mt-4">
+              Lihatlah Ketika jarum jam bergerak dari 12 ke 3 yang berpindah 90 derajat
+            </div>
+          </div>
+          <img src="../img/Grafis/Unyu.png" alt="" class="w-32 translate-x-2 scale-x-[-1]" />
         </div>
+        <div class="w-36 h-36 mt-6 md:-mt-6 relative mx-auto hidden" id="sumbuCermin">
+          <img src="../img/Rotasi/clock-without-hands.png" alt="" class="absolute w-36 h-36" />
+          <div
+            class="absolute w-11 h-[3px] bg-black top-1/2 left-[74px] ke-tiga z-10 origin-bottom-left -rotate-90"
+          ></div>
+          <div
+            class="absolute w-11 h-[3px] bg-secondary opacity-40 top-1/2 left-[74px] origin-bottom-left -rotate-90"
+          ></div>
+          <div class="absolute text-xs top-[55px] left-[78px] text-red opacity-0 muncul">90°</div>
+        </div>
+        <div class="flex w-40 flex-col mt-8 gap-2 items-center mx-auto cursor-pointer" id="lihat">
+          <svg
+            width="25px"
+            height="25px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="mx-auto"
+          >
+            <path
+              d="M21.4086 9.35258C23.5305 10.5065 23.5305 13.4935 21.4086 14.6474L8.59662 21.6145C6.53435 22.736 4 21.2763 4 18.9671L4 5.0329C4 2.72368 6.53435 1.26402 8.59661 2.38548L21.4086 9.35258Z"
+              fill="#C8A5A5"
+            />
+          </svg>
+          <div class="">Klik untuk melihat</div>
+        </div>
+        <hr class="bg-hijau h-1 mt-16" />
       </div>
       <!-- Akhir Sudut ritasi -->
 
       <!-- Arah Rotasi -->
-      <div class="md:mx-auto bg-white md:px-8 px-5 border-b-2 pb-12 md:pt-8 md:pb-8 md:mt-8">
-        <h2
-          class="mt-10 md:mt-0 h-14 w-44 shadow-custom flex items-center pl-3 font-bold text-primary text-base rounded-md border-l-2 border-b-2 border-hijau -ml-1"
+      <div class="md:mx-auto bg-[#FBFDFE] md:px-8 px-5 pb-12 md:pb-8 md:scale-[]">
+        <div
+          class="flex max-w-[500px] md:ml-24 items-center"
+          dat-aos="zoom-in"
+          dat-aos-duration="800"
         >
-          Arah Rotasi
-        </h2>
-        <p class="mt-6">
-          Terdapat dua arah rotasi, searah jarum jam dan berlawanan arah jarum jam.
-        </p>
-        <div class="mt-4 flex justify-between items-center">
-          <div class="w-28 mx-auto pb-[5px] border-b-2">
-            <div class="w-full h-28 relative">
-              <img src="../img/Rotasi/clock-without-hands.jpg" alt="" class="absolute" />
-              <div class="absolute w-9 h-[3px] bg-black top-1/2 left-1/2 searahJam"></div>
+          <img src="../img/Grafis/tanya3.png" alt="" class="w-28 md:w-36" />
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none">
+              Bagaimana ketika jarum jam bergerak dari ke 12 ke 9. Berapakah sudutnya?
             </div>
-            <p class="text-center mt-2 font-semibold text-hijau text-xs">Rotasi Searah Jarum Jam</p>
-          </div>
-
-          <div class="w-28 mx-auto pb-2 border-b-2">
-            <div class="w-full h-28 relative">
-              <img src="../img/Rotasi/clock-without-hands.jpg" alt="" class="absolute" />
-              <div class="absolute w-9 h-[3px] bg-black top-1/2 left-1/2 taksearahJam"></div>
-            </div>
-            <p class="text-center mt-2 text-xs font-semibold text-hijau">
-              Rotasi Berlawanan Arah Jarum Jam
-            </p>
           </div>
         </div>
-        <p class="mt-10">Arah Rotasi objek akan berpengaruh pada nilai derajat rotasinya.</p>
-        <div class="mt-4 leading-5">
+        <div
+          class="mt-4 md:-mt-0 flex flex-wrap h-32 gap-4 md:gap-10 justify-center max-w-[500px] md:mx-auto items-center"
+          id="hapus"
+        >
+          <div class="w-32 relative hover:scale-150 md:scale-150">
+            <img src="../img/Rotasi/clock-without-hands.png" class="w-32" alt="" />
+            <div
+              class="absolute w-10 h-[3px] bg-black top-[61px] left-[65px] -rotate-180 origin-bottom-left"
+            ></div>
+            <div
+              class="absolute w-10 h-[3px] bg-secondary opacity-55 top-1/2 left-[65px] -rotate-90 origin-bottom-left"
+            ></div>
+          </div>
+          <div id="byg34">
+            <div class="flex gap-4 mx-auto items-center cursor-pointer" onclick="byg3()" id="byg3">
+              <div
+                class="h-11 w-11 rounded-full bg-[#8CEBE9] font-semibold flex items-center justify-center"
+              >
+                A
+              </div>
+              <div
+                class="w-28 bg-coklat text-white rounded-md px-4 py-2 md:py-3 font-medium leading-5"
+              >
+                90 derajat
+              </div>
+            </div>
+            <div
+              class="flex gap-4 mx-auto mt-2 items-center cursor-pointer"
+              onclick="byg4()"
+              id="byg4"
+            >
+              <div
+                class="h-11 w-11 rounded-full bg-[#8CEBE9] font-semibold flex items-center justify-center"
+              >
+                B
+              </div>
+              <div
+                class="w-28 bg-coklat text-white rounded-md px-4 py-2 md:py-3 font-medium leading-5"
+              >
+                270 derajat
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex mt-8 max-w-[500px] md:ml-24 items-center"
+          dat-aos="zoom-in"
+          dat-aos-duration="800"
+        >
+          <img src="../img/Grafis/supermen.png" alt="" class="w-28 md:w-36" />
           <div>
-            <div class="flex items-center">
-              <img src="../img/Point.png" alt="" class="w-8 h-8" />
-              <div class="ml-2">
-                Jika berotasi <span class="font-semibold text-hijau">searah jarum jam</span>, maka
-                sudutnya bernilai <span class="font-semibold text-hijau">negatif</span>
-              </div>
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none">
+              Jawaban yang benar bergantung pada ARAH ROTASINYA hehe.
+            </div>
+          </div>
+        </div>
+        <div class="flex max-w-[500px] md:-mt-6 mt-6 mx-auto justify-center gap-6 md:gap-8">
+          <div class="text-center w-32 h-32 relative">
+            <div class="hidden" id="90derajat">
+              <img src="../img/Rotasi/clock-without-hands.png" class="w-32" alt="" />
+              <div class="bg-secondary w-[3px] h-10 absolute top-7 left-[63px]"></div>
+              <div class="bg-black w-[3px] h-10 absolute ke-empat top-7 left-[63px]"></div>
+              <div class="text-primary">90 derajat</div>
             </div>
             <div
-              class="h-[140px] w-[230px] border-2 rounded-2xl mt-4 py-8 px-12 ml-10"
-              id="rotasiSearah"
-              data-aos="zoom-in"
-              data-aos-offset="400"
+              id="lihat90"
+              class="w-full cursor-pointer leading-5 h-full mb-4 flex flex-col justify-center items-center gap-3 border-2 p-2 rounded-lg"
             >
-              <div class="w-full h-full relative hidden" id="animasirotasiSearah">
-                <div id="playback">
-                  <img
-                    src="../img/again_9365052.png"
-                    alt=""
-                    class="w-8 h-8 absolute -right-[95px] top-7 cursor-pointer"
-                  />
-                </div>
-                <div
-                  class="w-[8px] h-[8px] bg-red rounded-full absolute top-[2px] -left-1 z-20"
-                ></div>
-                <div class="text-red font-semibold absolute -left-5 -top-[6px]">P</div>
-                <div
-                  class="w-[8px] h-[8px] bg-[#8D8383] rounded-full absolute top-[2px] -right-1"
-                ></div>
-
-                <div class="w-full z-10 top-[5px] right-0 absolute rotasiSearah">
-                  <div class="h-[3px] w-full bg-hijau"></div>
-                  <div
-                    class="h-[8px] w-[8px] bg-hijau rounded-full absolute -bottom-[2px] -right-[4px]"
-                  ></div>
-                </div>
-
-                <div class="h-[3px] bg-[#8D8383] w-full top-[5px] absolute"></div>
-                <div class="absolute left-9 top-[12px] opacity-0 EmpatLima text-xs">-30°</div>
-                <div class="absolute -right-5 -top-[5px]">A</div>
-                <div
-                  class="absolute -bottom-[10px] -right-[1px] text-hijau font-semibold titikSumbu opacity-0"
-                >
-                  A'
-                </div>
-              </div>
+              <svg
+                width="25px"
+                height="25px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.4086 9.35258C23.5305 10.5065 23.5305 13.4935 21.4086 14.6474L8.59662 21.6145C6.53435 22.736 4 21.2763 4 18.9671L4 5.0329C4 2.72368 6.53435 1.26402 8.59661 2.38548L21.4086 9.35258Z"
+                  fill="#C8A5A5"
+                />
+              </svg>
+              <div>Klik untuk melihat</div>
             </div>
-
-            <div class="flex items-center mt-8">
-              <img src="../img/Point.png" alt="" class="w-8 h-8" />
-              <div class="ml-2">
-                Jika berotasi
-                <span class="font-semibold text-hijau">berlawanan arah jarum jam</span>, maka
-                sudutnya bernilai <span class="font-semibold text-hijau">positif</span>
-              </div>
+          </div>
+          <div class="text-center w-32 h-32 relative">
+            <div id="270derajat" class="hidden">
+              <img src="../img/Rotasi/clock-without-hands.png" class="w-32" alt="" />
+              <div class="bg-secondary w-[3px] h-10 absolute top-7 left-[63px]"></div>
+              <div class="bg-black w-[3px] h-10 absolute top-[27px] ke-lima left-[64px]"></div>
+              <div class="text-primary">270 derajat</div>
             </div>
             <div
-              class="h-[140px] w-[230px] border-2 rounded-2xl mt-4 py-8 px-12 ml-10"
-              id="rotasiBerlawanan"
-              data-aos="zoom-in"
-              data-aos-offset="200"
+              id="lihat270"
+              class="w-full cursor-pointer leading-5 h-full mb-4 flex flex-col justify-center items-center gap-3 border-2 p-2 rounded-lg"
             >
-              <div class="w-full h-full relative hidden" id="animasirotasiBerlawanan">
-                <div id="playback">
-                  <img
-                    src="../img/again_9365052.png"
-                    alt=""
-                    class="w-8 h-8 absolute -right-[95px] top-7 cursor-pointer"
-                  />
-                </div>
+              <svg
+                width="25px"
+                height="25px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.4086 9.35258C23.5305 10.5065 23.5305 13.4935 21.4086 14.6474L8.59662 21.6145C6.53435 22.736 4 21.2763 4 18.9671L4 5.0329C4 2.72368 6.53435 1.26402 8.59661 2.38548L21.4086 9.35258Z"
+                  fill="#C8A5A5"
+                />
+              </svg>
+              <div>Klik untuk melihat</div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex mt-20 max-w-[500px] md:mx-auto items-center"
+          dat-aos="zoom-in"
+          dat-aos-duration="800"
+        >
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tr-none">
+              ARAH ROTASI ada dua yaitu searah jarum jam dan berlawanan arah jarum jam.
+            </div>
+          </div>
+          <img src="../img/Grafis/ide.png" alt="" class="w-32 md:w-40 scale-x-[-1]" />
+        </div>
+        <div class="flex max-w-[500px] mt-6 md:mt-0 justify-center mx-auto md:gap-16 gap-6">
+          <div class="text-center w-32 h-32 relative md:scale-110">
+            <img src="../img/Rotasi/clock-without-hands.png" class="w-32" alt="" />
+            <div class="bg-secondary w-[3px] h-10 absolute top-6 left-[63px]"></div>
+            <div class="bg-black w-[3px] h-10 absolute top-6 left-[63px] searahJam"></div>
+            <div class="text-primary md:scale-100">Searah jarum jam</div>
+          </div>
+          <div class="text-center w-32 h-32 relative md:scale-110">
+            <img src="../img/Rotasi/clock-without-hands.png" class="w-32" alt="" />
+            <div class="bg-secondary w-[3px] h-10 absolute top-6 left-[62px]"></div>
+            <div class="bg-black w-[3px] h-10 absolute top-6 left-[62px] taksearahJam"></div>
+            <div class="text-primary md:scale-100">Berlawanan arah jarum jam</div>
+          </div>
+        </div>
+        <hr class="bg-hijau h-1 mt-24" />
+        <div
+          class="flex mt-8 max-w-[500px] md:ml-24 items-center"
+          dat-aos="zoom-in"
+          dat-aos-duration="800"
+        >
+          <img src="../img/Grafis/terbang.png" alt="" class="w-36 md:w-44" />
+          <div>
+            <div class="bg-[#8CEBE9] pl-3 pr-2 py-3 rounded-lg rounded-tl-none">
+              Sekarang kamu telah mengetahui PUSAT , SUDUT, dan ARAH ROTASI.
+            </div>
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg mt-1 rounded-tl-none">
+              Saatnya kita tau pengertian Rotasi.
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-16 md:text-base max-w-[650px] md:ml-24 text-"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+        >
+          <p
+            class="border-l-8 border-hijau font-semibold pl-2 leading-relaxed font-lato text-primary"
+          >
+            <span class="font-bold text-hijau">Rotasi</span> adalah jenis transformasi yang memutar
+            setiap titik pada gambar sampai sudut dan arah tertentu terhadap pusat rotasi.
+          </p>
+        </div>
+
+        <div class="md:ml-24 max-w-[500px] md:mt-10 px-5 md:px-8 bg-[#FBFDFE] pt-16">
+          <div class="flex items-center md:mt-0">
+            <img src="../img/tespemahaman.png" alt="" class="w-16 h-16" />
+            <div class="text-xl font-semibold tracking-wides text-hijau ml-2">Tes Pemahaman</div>
+          </div>
+          <div
+            class="mt-3 pb-4 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative max-w-md"
+            id="TesPertama1"
+          >
+            <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40">TES PERTAMA</p>
+            <p class="mt-1">Titik B dirotasikan searah jarum jam dengan pusat titik P</p>
+
+            <div class="h-[120px] w-[110px] mt-6 absolute left-1/2">
+              <div class="opacity-30" id="animasiTesPertama1o">
                 <div
-                  class="w-[8px] h-[8px] bg-red rounded-full absolute bottom-[2px] -left-1 z-20"
+                  class="w-[3px] bg-[#8D8383] opacity-20 h-[110px] top-[5px] -left-[1px] absolute"
+                ></div>
+
+                <div class="absolute -left-5 -top-[5px]">B</div>
+                <div
+                  class="w-[8px] h-[8px] bg-red rounded-full absolute bottom-0 -left-[3px] z-20"
                 ></div>
                 <div class="text-red font-semibold absolute -left-5 -bottom-[6px]">P</div>
                 <div
-                  class="w-[8px] h-[8px] bg-[#8D8383] rounded-full absolute bottom-[2px] -right-1"
+                  class="w-[8px] h-[8px] bg-[#8D8383] rounded-full absolute top-[1px] -left-[3px]"
+                ></div>
+              </div>
+
+              <div class="w-full h-full relative hidden" id="animasiTesPertama1">
+                <div class="h-[110px] z-10 top-[4px] -left-[1px] absolute rotateSatuduapuluh">
+                  <div class="w-[3px] h-full opacity-20 bg-hijau"></div>
+                  <div
+                    class="h-[8px] w-[8px] bg-hijau rounded-full absolute -top-[2px] -right-[3px]"
+                  ></div>
+                </div>
+                <div class="absolute -left-5 -top-[5px]">B</div>
+                <div
+                  class="absolute -bottom-[63px] -right-[3px] text-hijau font-semibold titikSumbu opacity-0"
+                >
+                  B'
+                </div>
+              </div>
+              <svg
+                width="54"
+                height="54"
+                viewBox="0 0 54 54"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="absolute cursor-pointer -left-6 top-20"
+                id="play1"
+                onclick="removeanimasiTesPertama1()"
+              >
+                <path
+                  d="M21.3333 38.6667L37.3333 26.6667L21.3333 14.6667V38.6667ZM26.6667 0C11.9467 0 0 11.9467 0 26.6667C0 41.3867 11.9467 53.3333 26.6667 53.3333C41.3867 53.3333 53.3333 41.3867 53.3333 26.6667C53.3333 11.9467 41.3867 0 26.6667 0ZM26.6667 48C14.9067 48 5.33333 38.4267 5.33333 26.6667C5.33333 14.9067 14.9067 5.33333 26.6667 5.33333C38.4267 5.33333 48 14.9067 48 26.6667C48 38.4267 38.4267 48 26.6667 48Z"
+                  fill="#079292"
+                />
+              </svg>
+            </div>
+            <p class="mt-64">Seberapa jauh titik B dirotasikan terhadap titik P ?</p>
+            <div
+              class="flex items-center border-t-2 border-b-2 py-[6px] cursor-pointer mt-3"
+              id="A1"
+            >
+              <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="buttonA1">
+                A
+              </button>
+              <div class="ml-4">90°</div>
+            </div>
+
+            <div class="flex items-center border-b-2 py-[6px] cursor-pointer" id="B1">
+              <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="buttonB1">
+                B
+              </button>
+              <div class="ml-4">120°</div>
+            </div>
+
+            <div class="flex items-center border-b-2 py-[6px] cursor-pointer" id="C1">
+              <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="buttonC1">
+                C
+              </button>
+              <div class="ml-4">30°</div>
+            </div>
+
+            <div class="flex items-center border-b-2 py-[6px] cursor-pointer" id="D1">
+              <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="buttonD1">
+                D
+              </button>
+              <div class="ml-4">150°</div>
+            </div>
+
+            <button
+              class="py-1 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]"
+              disabled
+              id="Check1"
+            >
+              Check
+            </button>
+
+            <p class="ml-3 font-semibold text-hijau hidden" id="benar1">Benar 🗸</p>
+            <p class="ml-3 font-semibold text-red hidden" id="salah1">Salah X</p>
+          </div>
+
+          <div
+            class="mt-8 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative max-w-md pb-4"
+            id="TesKedua1"
+          >
+            <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40">TES KEDUA</p>
+            <p class="mt-1">
+              Titik B dirotasikan berlawanan arah jarum jam dengan pusat titik P sejauh 90°
+            </p>
+
+            <div class="h-[120px] w-[110px] mt-6 absolute left-1/2">
+              <div class="w-full h-full relative" id="animasiTesKedua1">
+                <div
+                  class="w-[8px] h-[8px] bg-red rounded-full absolute bottom-1 -left-[3px] z-20"
+                ></div>
+                <div class="text-red font-semibold absolute -left-5 -bottom-[6px]">P</div>
+                <div
+                  class="w-[8px] h-[8px] bg-hijau rounded-full absolute top-[33px] right-[28px]"
                 ></div>
 
-                <div class="w-full z-10 bottom-[5px] right-0 absolute rotasiBerlawanan">
-                  <div class="h-[3px] w-full bg-hijau"></div>
+                <button
+                  id="C2"
+                  class="w-[8px] h-[8px] bg-[#8D8383] rounded-full cursor-pointer hover:border-2 absolute top-[33px] -left-[80px]"
+                ></button>
+                <button
+                  id=""
+                  class="w-[8px] h-[8px] bg-[#8D8383] rounded-full cursor-pointer hover:border-2 border-[] absolute -bottom-[73px] right-[28px]"
+                ></button>
+                <button
+                  id=""
+                  class="w-[8px] h-[8px] bg-[#8D8383] rounded-full cursor-pointer hover:border-2 border-[] absolute top-[0px] left-0"
+                ></button>
+                <button
+                  id=""
+                  class="w-[8px] h-[8px] bg-[#8D8383] rounded-full cursor-pointer hover:border-2 border-[] absolute bottom-1 right-0"
+                ></button>
+
+                <div
+                  class="h-[110px] z-10 top-[4px] -left-[1px] -rotate-45 origin-bottom absolute hidden"
+                  id="animasiTes1"
+                >
+                  <div class="w-[3px] h-full bg-hijau"></div>
                   <div
-                    class="h-[8px] w-[8px] bg-hijau rounded-full absolute -bottom-[2px] -right-[4px]"
+                    class="h-[8px] w-[8px] bg-hijau rounded-full absolute -top-[2px] -right-[3px]"
                   ></div>
                 </div>
 
-                <div class="h-[3px] bg-[#8D8383] w-full bottom-[5px] absolute"></div>
-                <div class="absolute left-9 bottom-[9px] opacity-0 EmpatLima text-xs">30°</div>
-                <div class="absolute -right-5 -bottom-[5px]">A</div>
+                <div class="absolute right-[17px] top-[15px] text-hijau">B</div>
                 <div
-                  class="absolute -top-[15px] -right-[2px] text-hijau font-semibold titikSumbu opacity-0"
+                  class="absolute top-[15px] -left-[90px] text-hijau font-semibold titikSumbu hidden opacity-1"
+                  id="Bhasil"
                 >
-                  A'
+                  B'
                 </div>
+                <div
+                  class="w-[3px] bg-[#8D8383] h-[110px] top-[5px] -left-[1px] rotate-45 origin-bottom absolute hidden"
+                  id="abuabuB2"
+                ></div>
+                <div class="text-xs absolute bottom-6 -left-2 hidden" id="90derajat">90°</div>
               </div>
             </div>
+            <p class="mt-64">
+              Pilih salah satu titik abu-abu yang merupakan hasil dari rotasi titik B / B'
+            </p>
+
+            <button class="py-1 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]" id="Check2">
+              Check
+            </button>
+
+            <p class="ml-3 font-semibold text-hijau hidden" id="benar2">Benar 🗸</p>
+            <p class="ml-3 font-semibold text-red hidden" id="salah2">Salah X</p>
+          </div>
+        </div>
+        <div
+          class="flex max-w-[500px] md:ml-24 mt-12 items-center"
+          dat-aos="zoom-in"
+          dat-aos-duration="800"
+        >
+          <img src="../img/Grafis/boss.png" alt="" class="w-24 md:w-32" />
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none">
+              Silakan kamu eksplorasi tentang rotasi pada bangun datar di bawah ini yaa!
+            </div>
+          </div>
+        </div>
+        <div class="max-w-[500px] mx-auto">
+          <div class="mt-8 md:-mt-8 w-72 justify-center gap-4 flex mx-auto">
+            <div>
+              <label for="degrees" class="block cursor- text-sm text-primary font-bold"
+                >Derajat Rotasi</label
+              >
+              <input
+                type="number"
+                id="degrees"
+                class="mt-1 block w-20 py-[7px] pl-5 rounded-md border-hijau border-2 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              />
+            </div>
+            <div class="">
+              <label for="direction" class="block text-sm text-primary font-bold"
+                >Arah Rotasi</label
+              >
+              <select
+                id="direction"
+                class="mt-1 block w-40 rounded-md py-2 pl-2 border-hijau text-hijau border-2 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm"
+              >
+                <option value="cw">Searah Jarum Jam</option>
+                <option value="ccw">Berlawanan Arah Jarum Jam</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="p-4 w-[280px] md:scale-110 mt-6 rounded-lg border-2 mx-auto bg-white">
+            <div class="border-1.5 w-[250px] h-[250px]">
+              <canvas id="canvas9" width="250" height="250"></canvas>
+            </div>
+          </div>
+          <div class="w-40 mx-auto mt-3 md:mt-6">
+            <button id="rotate-btn" class="px-4 py-2 mb-4 text-white bg-blue rounded">
+              Rotasi
+            </button>
+            <button id="reset-btn" class="px-4 py-2 mb-4 bg-red text-white rounded">Reset</button>
           </div>
         </div>
       </div>
       <!-- Akhir Arah Rotasi -->
 
       <!-- Sudut istimewa -->
-      <div class="md:mx-auto bg-white md:px-8 px-5 md:pt-8 md:pb-12 md:mt-8">
-        <p class="mt-8 md:mt-0">
-          Agar lebih familiar lagi dengan sudut, di bawah ini kamu bisa mencoba melihat perbedaan
-          pada setiap sudut istimewa
-        </p>
 
-        <div class="w-64 h-64 mx-auto mt-6 relative">
-          <div class="flex justify-center lg:mr-20">
-            <div class="flex w-14 justify-around mx-auto">
-              <button
-                onclick="adjustRotation(-1)"
-                class="text-hijau font-bold text-lg"
-                id="rotateButton1"
-              >
-                &lt;
-              </button>
-              <input
-                type="number"
-                id="degreeInput"
-                value="0"
-                readonly
-                class="text-center ml-2 w-12"
-              />
-
-              <button
-                onclick="adjustRotation(1)"
-                id="rotateButton"
-                class="text-hijau font-bold text-lg"
-              >
-                &gt;
-              </button>
-            </div>
-          </div>
-
-          <div class="w-48 h-48 relative mx-auto">
-            <div
-              class="w-[10px] h-[10px] bg-red absolute rounded-full left-1/2 top-1/2 z-30"
-              id="pusat"
-            ></div>
-
-            <div class="w-full z-20 left-1/2 mt-1 top-1/2 absolute rotasiFull" id="kotak1">
-              <div class="h-[3px] w-1/2 bg-[#eee9e9]"></div>
-              <div
-                class="h-[10px] w-[10px] bg-hijau rounded-full absolute -bottom-[3px] right-1/2"
-              ></div>
-            </div>
-
-            <div
-              class="w-[10px] h-[10px] bg-[#8D8383] absolute rounded-full top-1/2 right-0 z-10"
-              id="kotak2"
-            ></div>
-            <div class="h-[3px] w-1/2 bg-[#eee9e9] absolute left-1/2 top-1/2 mt-1"></div>
-          </div>
-        </div>
-      </div>
       <!--  Akhir Sudut istimewa -->
 
       <!-- Tes Pemahaman 1 -->
-      <div class="md:mx-auto bg-white md:px-8 px-5 md:pt-8 md:pb-8 md:mt-8">
-        <div class="flex items-center mt-8 md:mt-0">
-          <img src="../img/tespemahaman.png" alt="" class="w-16 h-16" />
-          <div class="text-xl font-semibold tracking-wides text-hijau ml-2">Tes Pemahaman</div>
-        </div>
-        <div
-          class="h-[605px] mt-3 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative max-w-md"
-          id="TesPertama1"
-        >
-          <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40">TES PERTAMA</p>
-          <p class="mt-1">Titik B dirotasikan dengan pusat titik P</p>
 
-          <div class="h-[120px] w-[110px] mt-6 absolute left-1/2">
-            <div class="opacity-30" id="animasiTesPertama1o">
-              <div class="w-[3px] bg-[#8D8383] h-[110px] top-[5px] -left-[1px] absolute"></div>
-
-              <div class="absolute -left-5 -top-[5px]">B</div>
-              <div
-                class="w-[8px] h-[8px] bg-red rounded-full absolute bottom-0 -left-[3px] z-20"
-              ></div>
-              <div class="text-red font-semibold absolute -left-5 -bottom-[6px]">P</div>
-              <div
-                class="w-[8px] h-[8px] bg-[#8D8383] rounded-full absolute top-[1px] -left-[3px]"
-              ></div>
-              <div class="w-[3px] bg-[#8D8383] h-[110px] top-[5px] -left-[1px] absolute"></div>
-            </div>
-
-            <div class="w-full h-full relative hidden" id="animasiTesPertama1">
-              <div class="h-[110px] z-10 top-[4px] -left-[1px] absolute rotateSatuduapuluh">
-                <div class="w-[3px] h-full bg-hijau"></div>
-                <div
-                  class="h-[8px] w-[8px] bg-hijau rounded-full absolute -top-[2px] -right-[3px]"
-                ></div>
-              </div>
-              <div class="absolute -left-5 -top-[5px]">B</div>
-              <div
-                class="absolute -bottom-[63px] -right-[3px] text-hijau font-semibold titikSumbu opacity-0"
-              >
-                B'
-              </div>
-            </div>
-            <svg
-              width="54"
-              height="54"
-              viewBox="0 0 54 54"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="absolute cursor-pointer -left-6 top-20"
-              id="play1"
-              onclick="removeanimasiTesPertama1()"
-            >
-              <path
-                d="M21.3333 38.6667L37.3333 26.6667L21.3333 14.6667V38.6667ZM26.6667 0C11.9467 0 0 11.9467 0 26.6667C0 41.3867 11.9467 53.3333 26.6667 53.3333C41.3867 53.3333 53.3333 41.3867 53.3333 26.6667C53.3333 11.9467 41.3867 0 26.6667 0ZM26.6667 48C14.9067 48 5.33333 38.4267 5.33333 26.6667C5.33333 14.9067 14.9067 5.33333 26.6667 5.33333C38.4267 5.33333 48 14.9067 48 26.6667C48 38.4267 38.4267 48 26.6667 48Z"
-                fill="#079292"
-              />
-            </svg>
-          </div>
-          <p class="mt-64">Seberapa jauh titik B dirotasikan terhadap titik P ?</p>
-          <div class="flex items-center border-t-2 border-b-2 py-[6px] cursor-pointer mt-3" id="A1">
-            <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="buttonA1">
-              A
-            </button>
-            <div class="ml-4">90°</div>
-          </div>
-
-          <div class="flex items-center border-b-2 py-[6px] cursor-pointer" id="B1">
-            <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="buttonB1">
-              B
-            </button>
-            <div class="ml-4">120°</div>
-          </div>
-
-          <div class="flex items-center border-b-2 py-[6px] cursor-pointer" id="C1">
-            <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="buttonC1">
-              C
-            </button>
-            <div class="ml-4">-120°</div>
-          </div>
-
-          <div class="flex items-center border-b-2 py-[6px] cursor-pointer" id="D1">
-            <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="buttonD1">
-              D
-            </button>
-            <div class="ml-4">-180°</div>
-          </div>
-
-          <button
-            class="py-1 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]"
-            disabled
-            id="Check1"
-          >
-            Check
-          </button>
-
-          <p class="ml-3 font-semibold text-hijau hidden" id="benar1">Benar 🗸</p>
-          <p class="ml-3 font-semibold text-red hidden" id="salah1">Salah X</p>
-        </div>
-
-        <div
-          class="mt-8 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative max-w-md pb-4"
-          id="TesKedua1"
-        >
-          <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40">TES KEDUA</p>
-          <p class="mt-1">
-            Titik B dirotasikan berlawanan arah jarum jam dengan pusat titik P sejauh 90°
-          </p>
-
-          <div class="h-[120px] w-[110px] mt-6 absolute left-1/2">
-            <div class="w-full h-full relative" id="animasiTesKedua1">
-              <div
-                class="w-[8px] h-[8px] bg-red rounded-full absolute bottom-1 -left-[3px] z-20"
-              ></div>
-              <div class="text-red font-semibold absolute -left-5 -bottom-[6px]">P</div>
-              <div
-                class="w-[8px] h-[8px] bg-hijau rounded-full absolute top-[33px] right-[28px]"
-              ></div>
-
-              <button
-                id="C2"
-                class="w-[8px] h-[8px] bg-[#8D8383] rounded-full cursor-pointer hover:border-2 absolute top-[33px] -left-[80px]"
-              ></button>
-              <button
-                id=""
-                class="w-[8px] h-[8px] bg-[#8D8383] rounded-full cursor-pointer hover:border-2 border-[] absolute -bottom-[73px] right-[28px]"
-              ></button>
-              <button
-                id=""
-                class="w-[8px] h-[8px] bg-[#8D8383] rounded-full cursor-pointer hover:border-2 border-[] absolute top-[0px] left-0"
-              ></button>
-              <button
-                id=""
-                class="w-[8px] h-[8px] bg-[#8D8383] rounded-full cursor-pointer hover:border-2 border-[] absolute bottom-1 right-0"
-              ></button>
-
-              <div
-                class="h-[110px] z-10 top-[4px] -left-[1px] -rotate-45 origin-bottom absolute hidden"
-                id="animasiTes1"
-              >
-                <div class="w-[3px] h-full bg-hijau"></div>
-                <div
-                  class="h-[8px] w-[8px] bg-hijau rounded-full absolute -top-[2px] -right-[3px]"
-                ></div>
-              </div>
-
-              <div class="absolute right-[17px] top-[15px] text-hijau">B</div>
-              <div
-                class="absolute top-[15px] -left-[90px] text-hijau font-semibold titikSumbu hidden opacity-1"
-                id="Bhasil"
-              >
-                B'
-              </div>
-              <div
-                class="w-[3px] bg-[#8D8383] h-[110px] top-[5px] -left-[1px] rotate-45 origin-bottom absolute hidden"
-                id="abuabuB2"
-              ></div>
-              <div class="text-xs absolute bottom-6 -left-2 hidden" id="90derajat">90°</div>
-            </div>
-          </div>
-          <p class="mt-64">Pilih titik abu abu yang merupakan hasil dari rotasi titik B atau B'</p>
-
-          <button class="py-1 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]" id="Check2">
-            Check
-          </button>
-
-          <p class="ml-3 font-semibold text-hijau hidden" id="benar2">Benar 🗸</p>
-          <p class="ml-3 font-semibold text-red hidden" id="salah2">Salah X</p>
-        </div>
-      </div>
       <!-- Akhir Tes Pemahaman 1 -->
 
       <!-- Kordinat Rotasi -->
-      <div class="md:mx-auto bg-white md:px-8 px-5 md:pt-8 md:pb-8 md:mt-8">
-        <h2
-          class="mt-16 md:mt-0 h-14 w-44 shadow-custom flex items-center pl-3 font-bold text-primary text-base rounded-md border-l-2 border-b-2 border-hijau -ml-1"
-        >
-          Kordinat Rotasi
-        </h2>
-        <p class="mt-5">
-          Untuk menentukan kordinat dari hasil rotasi cukup memperhatikan 3 aspek yang telah
-          dibahas.
-        </p>
-        <p class="mt-4">
-          <span class="font-semibold text-hijau">Pusat rotasi</span>,
-          <span class="font-semibold text-hijau">sudut rotasi</span>, dan
-          <span class="font-semibold text-hijau">arah rotasi</span>
-        </p>
-        <p class="mt-4">
-          Rotasi sama seperti jenis transformasi lainnya dimana memindahkan setiap titik pada objek
-          untuk dirotasikan sejauh sudut tertentu.
-        </p>
-
-        <div class="flex items-center mt-8">
-          <img src="../img/pencerminan/one_8921537.png" alt="" class="w-6 h-6 mr-2" />
-          <button class="text-base text-primary font-semibold ml-2">
-            Contoh titik yang berotasi
-          </button>
-        </div>
+      <div class="md:mx-auto bg-[#FBFDFE] md:px-8 px-5 md:pb-8">
         <div
-          class="w-full relative border-t-2 border-hijau mt-2 py-2 px-2 max-w-md"
-          id="contohPertama"
+          class="flex mt-6 md:mt-0 md:ml-24 max-w-[500px] items-center"
+          data-aos="zoom-in-right"
+          data-aos-duration="800"
         >
-          <p class="leading-7">
-            Titik <span class="text-hijau font-semibold">A ( 0 , -2 ) </span> dirotasikan dengan
-            pusat titik <span class="text-red">P ( 0 , 1 )</span> sejauh -90°.
-          </p>
-          <div class="w-64 h-64 mx-auto mt-4 flex justify-center items-center">
-            <div class="w-64 h-64 relative opacity-30" id="animasicontohPertama">
-              <img src="../img/Rotasi/sebuahtitik.jpg" alt="" class="w-full h-full opacity-80" />
-              <div class="hidden" id="animasicontohPertamao">
-                <div
-                  class="w-[8px] h-[8px] bg-red rounded-full absolute top-[124px] right-[93px] z-20 opacity-60"
-                ></div>
-                <div class="text-red font-semibold absolute top-[128px] right-[85px] opacity-60">
-                  P
-                </div>
-                <div
-                  class="w-[8px] h-[8px] bg-[#8D8383] rounded-full absolute top-[124px] left-[64px]"
-                ></div>
-
-                <div
-                  class="w-[90px] z-10 top-[127px] left-[69px] absolute opacity-60 negatifSembilanpuluh"
-                >
-                  <div class="h-[2px] w-0 bg-hijau horizontalGaris"></div>
-                  <div
-                    class="h-[8px] w-[8px] bg-hijau rounded-full absolute -bottom-[3px] -left-[5px]"
-                  ></div>
-                </div>
-
-                <div
-                  class="h-[2px] w-0 horizontalGaris bg-[#8D8383] w-90px left-[68px] top-[128px] absolute"
-                ></div>
-                <div class="absolute right-[105px] top-[105px] opacity-0 sembilanPuluh text-xs">
-                  -90°
-                </div>
-                <div
-                  class="absolute -right-5 -bottom-[5px] text-xs left-[50px] top-[121px] font-semibold"
-                >
-                  A
-                </div>
-                <div
-                  class="absolute top-[12px] right-[90px] text-hijau font-semibold opacity-0 text-xs titikContoh"
-                >
-                  A'
-                </div>
-              </div>
+          <img src="../img/Grafis/Halooo.png" alt="" class="w-36 md:w-44 scale-x-[-1]" />
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none">
+              Terakhir lihatlah beberapa contoh rotasi di kordinat kartesius!
             </div>
-            <svg
-              width="54"
-              height="54"
-              viewBox="0 0 54 54"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="absolute cursor-pointer"
-              id="play2"
-              onclick="removeanimasicontohPertama()"
-            >
-              <path
-                d="M21.332 38.6643L37.331 26.665L21.332 14.6658V38.6643ZM26.665 0C11.9459 0 0 11.9459 0 26.665C0 41.3841 11.9459 53.33 26.665 53.33C41.3841 53.33 53.33 41.3841 53.33 26.665C53.33 11.9459 41.3841 0 26.665 0ZM26.665 47.997C14.9057 47.997 5.333 38.4243 5.333 26.665C5.333 14.9057 14.9057 5.333 26.665 5.333C38.4243 5.333 47.997 14.9057 47.997 26.665C47.997 38.4243 38.4243 47.997 26.665 47.997Z"
-                fill="#079292"
-              />
-            </svg>
-          </div>
-          <div class="flex items-start mt-6 pb-4 border-b-2">
-            <p class="text-primary font-semibold">Diketahui:</p>
-            <p class="ml-4">
-              Pusat rotasi adalah titik <span class="text-red">P ( 0 , 1 )</span> dengan
-              <span class="text-hijau">sudut rotasi -90°</span>
-              dan <span class="text-hijau">arah rotasi searah jarum jam</span>
-            </p>
-          </div>
-          <div class="flex items-start mt-4 mb-3">
-            <p class="text-primary font-semibold">Diperoleh:</p>
-            <p class="ml-4">
-              Titik A ( 0 , -2 ) dirotasikan pada titk P sejauh -90° menghasilkan titik
-              <span class="text-hijau font-semibold">A’ ( 1 , 3 ) </span>
-            </p>
           </div>
         </div>
+        <div class="border-2 mx-auto max-w-[500px] p-7 mt-8 border-coklat shadow-custom rounded-lg">
+          <div class="flex items-center mt-1">
+            <img src="../img/pencerminan/one_8921537.png" alt="" class="w-6 h-6 mr-2" />
+            <button class="text-base text-primary font-semibold ml-2">
+              Contoh titik yang berotasi
+            </button>
+          </div>
+          <div class="relative border-t-2 border-hijau mt-2 py-2 px-2 max-w-md" id="contohPertama">
+            <p class="leading-7">
+              Titik <span class="text-hijau font-semibold">A ( 0 , -2 ) </span> dirotasikan dengan
+              pusat titik <span class="text-red">P ( 0 , 1 )</span> sejauh -90°.
+            </p>
+            <div class="w-64 h-64 mx-auto mt-4 flex justify-center items-center">
+              <div class="w-64 h-64 relative opacity-30" id="animasicontohPertama">
+                <img src="../img/Rotasi/sebuahtitik.jpg" alt="" class="w-full h-full opacity-80" />
+                <div class="hidden" id="animasicontohPertamao">
+                  <div
+                    class="w-[8px] h-[8px] bg-red rounded-full absolute top-[124px] right-[93px] z-20 opacity-60"
+                  ></div>
+                  <div class="text-red font-semibold absolute top-[128px] right-[85px] opacity-60">
+                    P
+                  </div>
+                  <div
+                    class="w-[8px] h-[8px] bg-[#8D8383] rounded-full absolute top-[124px] left-[64px]"
+                  ></div>
 
-        <div class="flex items-center mt-8">
-          <img src="../img/pencerminan/two_8921602.png" alt="" class="w-6 h-6 mr-2" />
-          <button class="text-base text-primary font-semibold ml-2">
-            Contoh bangun datar yang berotasi
-          </button>
-        </div>
-        <div class="w-full border-t-2 border-hijau mt-2 py-2 px-2 max-w-md" id="bangunDatar">
-          <p class="leading-7">
-            Segitiga ABC dengan kordinat
-            <span class="font-semibold text-hijau">A ( -1 , -2 ), B ( 2 , -2 ), C ( 2 , 0)</span>
-            dirotasikan terhadap titik P sejauh 180°
-          </p>
-          <div class="w-64 h-64 mx-auto mt-4 flex justify-center items-center">
-            <div class="w-full h-full relative opacity-30" id="rotasibangunDatar">
-              <img src="../img/Rotasi/sebuahtitik.jpg" alt="" class="w-full h-full opacity-80" />
-              <div class="w-[92px] h-[91px] absolute top-[98px] right-[66px]">
-                <svg
-                  width="92"
-                  height="61"
-                  viewBox="0 0 92 61"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="absolute -bottom-[1px] right-0 opacity-60"
-                >
-                  <path d="M61.5 0.5L92 61H0L61.5 0.5Z" fill="#D9D9D9" />
-                </svg>
+                  <div
+                    class="w-[90px] z-10 top-[127px] left-[69px] absolute opacity-60 negatifSembilanpuluh"
+                  >
+                    <div class="h-[2px] w-0 bg-hijau horizontalGaris"></div>
+                    <div
+                      class="h-[8px] w-[8px] bg-hijau rounded-full absolute -bottom-[3px] -left-[5px]"
+                    ></div>
+                  </div>
 
-                <div
-                  class="w-[8px] h-[8px] bg-red rounded-full absolute -top-[4px] -left-[4px] z-20 opacity-60"
-                ></div>
+                  <div
+                    class="h-[2px] w-0 horizontalGaris bg-[#8D8383] w-90px left-[68px] top-[128px] absolute"
+                  ></div>
+                  <div class="absolute right-[105px] top-[105px] opacity-0 sembilanPuluh text-xs">
+                    -90°
+                  </div>
+                  <div
+                    class="absolute -right-5 -bottom-[5px] text-xs left-[50px] top-[121px] font-semibold"
+                  >
+                    A
+                  </div>
+                  <div
+                    class="absolute top-[12px] right-[90px] text-hijau font-semibold opacity-0 text-xs titikContoh"
+                  >
+                    A'
+                  </div>
+                </div>
               </div>
-              <div class="hidden" id="rotasibangunDataro">
-                <div
-                  class="w-[92px] h-[91px] absolute top-[98px] right-[66px] z-30 seratusDelapanpuluh"
-                >
+              <svg
+                width="54"
+                height="54"
+                viewBox="0 0 54 54"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="absolute cursor-pointer"
+                id="play2"
+                onclick="removeanimasicontohPertama()"
+              >
+                <path
+                  d="M21.332 38.6643L37.331 26.665L21.332 14.6658V38.6643ZM26.665 0C11.9459 0 0 11.9459 0 26.665C0 41.3841 11.9459 53.33 26.665 53.33C41.3841 53.33 53.33 41.3841 53.33 26.665C53.33 11.9459 41.3841 0 26.665 0ZM26.665 47.997C14.9057 47.997 5.333 38.4243 5.333 26.665C5.333 14.9057 14.9057 5.333 26.665 5.333C38.4243 5.333 47.997 14.9057 47.997 26.665C47.997 38.4243 38.4243 47.997 26.665 47.997Z"
+                  fill="#079292"
+                />
+              </svg>
+            </div>
+            <div class="flex items-start mt-6 pb-4 border-b-2">
+              <p class="text-primary font-semibold">Diketahui:</p>
+              <p class="ml-4">
+                Pusat rotasi adalah titik <span class="text-red">P ( 0 , 1 )</span> dengan
+                <span class="text-hijau">sudut rotasi -90°</span>
+                dan <span class="text-hijau">arah rotasi searah jarum jam</span>
+              </p>
+            </div>
+            <div class="flex items-start mt-4 mb-3">
+              <p class="text-primary font-semibold">Diperoleh:</p>
+              <p class="ml-4">
+                Titik A ( 0 , -2 ) dirotasikan pada titk P sejauh -90° menghasilkan titik
+                <span class="text-hijau font-semibold">A’ ( 1 , 3 ) </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-2 mx-auto p-7 max-w-[500px] mt-16 border-coklat shadow-custom rounded-lg"
+        >
+          <div class="flex items-center mt-1">
+            <img src="../img/pencerminan/two_8921602.png" alt="" class="w-6 h-6 mr-2" />
+            <button class="text-base text-primary font-semibold ml-2">
+              Contoh bangun datar yang berotasi
+            </button>
+          </div>
+          <div class="border-t-2 border-hijau mt-2 py-2 px-2 max-w-md" id="bangunDatar">
+            <p class="leading-7">
+              Segitiga ABC dengan kordinat
+              <span class="font-semibold text-hijau">A ( -1 , -2 ), B ( 2 , -2 ), C ( 2 , 0)</span>
+              dirotasikan terhadap titik P sejauh 180°
+            </p>
+            <div class="w-64 h-64 mx-auto mt-4 flex justify-center items-center">
+              <div class="w-full h-full relative opacity-30" id="rotasibangunDatar">
+                <img src="../img/Rotasi/sebuahtitik.jpg" alt="" class="w-full h-full opacity-80" />
+                <div class="w-[92px] h-[91px] absolute top-[98px] right-[66px]">
                   <svg
                     width="92"
                     height="61"
@@ -1129,329 +937,366 @@
                     xmlns="http://www.w3.org/2000/svg"
                     class="absolute -bottom-[1px] right-0 opacity-60"
                   >
-                    <path d="M61.5 0.5L92 61H0L61.5 0.5Z" fill="#7BFFD0" />
+                    <path d="M61.5 0.5L92 61H0L61.5 0.5Z" fill="#D9D9D9" />
                   </svg>
+
                   <div
                     class="w-[8px] h-[8px] bg-red rounded-full absolute -top-[4px] -left-[4px] z-20 opacity-60"
                   ></div>
                 </div>
-
-                <div class="w-[92px] h-[91px] absolute top-[98px] right-[66px] seratusDelapanpuluh">
-                  <div class="garisA h-0 w-[2px] bg-hijau opacity-30 absolute -left-[1px]"></div>
+                <div class="hidden" id="rotasibangunDataro">
                   <div
-                    class="garisB h-0 w-[2px] bg-hijau opacity-30 absolute -left-[1px] origin-top-left -rotate-45"
-                  ></div>
-                  <div
-                    class="garisC h-0 w-[2px] bg-hijau opacity-30 absolute -left-[1px] origin-top-right -rotate-[63deg]"
-                  ></div>
-                </div>
-                <div class="w-[184px] h-[184px] absolute top-[6px] right-[66px]">
-                  <div
-                    class="h-[140px] w-[2px] bg-[#7BFFD0] opacity-0 absolute left-[29px] top-[60px] origin-top-left -rotate-[63deg] sangatC"
-                  ></div>
-                  <div class="absolute rotate-90 left-1/2 text-xs top-[83px] opacity-0 sangatA">
-                    180°
-                  </div>
-                  <div
-                    class="h-[260px] w-[2px] bg-[#7BFFD0] opacity-0 absolute -left-[1px] origin-top-left -rotate-45 sangatB"
-                  ></div>
-                  <div class="absolute text-xs rotate-45 left-[90px] top-[80px] opacity-0 sangatB">
-                    180°
-                  </div>
-                  <div
-                    class="h-full w-[2px] bg-[#7BFFD0] opacity-0 absolute left-[90px] sangatA"
-                  ></div>
-                  <div
-                    class="absolute text-xs rotate-[33deg] left-[85px] top-[77px] opacity-0 sangatC"
+                    class="w-[92px] h-[91px] absolute top-[98px] right-[66px] z-30 seratusDelapanpuluh"
                   >
-                    180°
+                    <svg
+                      width="92"
+                      height="61"
+                      viewBox="0 0 92 61"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="absolute -bottom-[1px] right-0 opacity-60"
+                    >
+                      <path d="M61.5 0.5L92 61H0L61.5 0.5Z" fill="#7BFFD0" />
+                    </svg>
+                    <div
+                      class="w-[8px] h-[8px] bg-red rounded-full absolute -top-[4px] -left-[4px] z-20 opacity-60"
+                    ></div>
                   </div>
-                </div>
 
-                <div class="text-red font-semibold absolute top-[85px] left-[80px] opacity-60">
-                  P
-                </div>
-                <div
-                  class="text-hijau font-semibold absolute bottom-[59px] left-[85px] opacity-60 text-xs"
-                >
-                  A
-                </div>
-                <div
-                  class="text-hijau font-semibold absolute bottom-[59px] right-[55px] opacity-60 text-xs"
-                >
-                  B
-                </div>
-                <div
-                  class="text-hijau font-semibold absolute top-[112px] right-[93px] opacity-60 text-xs"
-                >
-                  C
-                </div>
-                <div
-                  class="text-hijau absolute -top-[1px] left-[102px] opacity-0 text-xs munculNih"
-                >
-                  A'
-                </div>
-                <div class="text-hijau absolute top-[68px] left-[33px] opacity-0 text-xs munculNih">
-                  C'
-                </div>
-                <div class="text-hijau absolute -top-[1px] -left-[6px] opacity-0 text-xs munculNih">
-                  B'
+                  <div
+                    class="w-[92px] h-[91px] absolute top-[98px] right-[66px] seratusDelapanpuluh"
+                  >
+                    <div class="garisA h-0 w-[2px] bg-hijau opacity-30 absolute -left-[1px]"></div>
+                    <div
+                      class="garisB h-0 w-[2px] bg-hijau opacity-30 absolute -left-[1px] origin-top-left -rotate-45"
+                    ></div>
+                    <div
+                      class="garisC h-0 w-[2px] bg-hijau opacity-30 absolute -left-[1px] origin-top-right -rotate-[63deg]"
+                    ></div>
+                  </div>
+                  <div class="w-[184px] h-[184px] absolute top-[6px] right-[66px]">
+                    <div
+                      class="h-[140px] w-[2px] bg-[#7BFFD0] opacity-0 absolute left-[29px] top-[60px] origin-top-left -rotate-[63deg] sangatC"
+                    ></div>
+                    <div class="absolute rotate-90 left-1/2 text-xs top-[83px] opacity-0 sangatA">
+                      180°
+                    </div>
+                    <div
+                      class="h-[260px] w-[2px] bg-[#7BFFD0] opacity-0 absolute -left-[1px] origin-top-left -rotate-45 sangatB"
+                    ></div>
+                    <div
+                      class="absolute text-xs rotate-45 left-[90px] top-[80px] opacity-0 sangatB"
+                    >
+                      180°
+                    </div>
+                    <div
+                      class="h-full w-[2px] bg-[#7BFFD0] opacity-0 absolute left-[90px] sangatA"
+                    ></div>
+                    <div
+                      class="absolute text-xs rotate-[33deg] left-[85px] top-[77px] opacity-0 sangatC"
+                    >
+                      180°
+                    </div>
+                  </div>
+
+                  <div class="text-red font-semibold absolute top-[85px] left-[80px] opacity-60">
+                    P
+                  </div>
+                  <div
+                    class="text-hijau font-semibold absolute bottom-[59px] left-[85px] opacity-60 text-xs"
+                  >
+                    A
+                  </div>
+                  <div
+                    class="text-hijau font-semibold absolute bottom-[59px] right-[55px] opacity-60 text-xs"
+                  >
+                    B
+                  </div>
+                  <div
+                    class="text-hijau font-semibold absolute top-[112px] right-[93px] opacity-60 text-xs"
+                  >
+                    C
+                  </div>
+                  <div
+                    class="text-hijau absolute -top-[1px] left-[102px] opacity-0 text-xs munculNih"
+                  >
+                    A'
+                  </div>
+                  <div
+                    class="text-hijau absolute top-[68px] left-[33px] opacity-0 text-xs munculNih"
+                  >
+                    C'
+                  </div>
+                  <div
+                    class="text-hijau absolute -top-[1px] -left-[6px] opacity-0 text-xs munculNih"
+                  >
+                    B'
+                  </div>
                 </div>
               </div>
-            </div>
-            <svg
-              width="54"
-              height="54"
-              viewBox="0 0 54 54"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="absolute cursor-pointer"
-              id="play3"
-              onclick="removerotasibangunDatar()"
-            >
-              <path
-                d="M21.332 38.6643L37.331 26.665L21.332 14.6658V38.6643ZM26.665 0C11.9459 0 0 11.9459 0 26.665C0 41.3841 11.9459 53.33 26.665 53.33C41.3841 53.33 53.33 41.3841 53.33 26.665C53.33 11.9459 41.3841 0 26.665 0ZM26.665 47.997C14.9057 47.997 5.333 38.4243 5.333 26.665C5.333 14.9057 14.9057 5.333 26.665 5.333C38.4243 5.333 47.997 14.9057 47.997 26.665C47.997 38.4243 38.4243 47.997 26.665 47.997Z"
-                fill="#079292"
-              />
-            </svg>
-          </div>
-          <div class="flex items-start mt-6 pb-4 border-b-2">
-            <p class="text-primary font-semibold">Diketahui:</p>
-            <p class="ml-4">
-              Pusat rotasi adalah titik <span class="text-red">P ( -1 , 1 )</span> dengan
-              <span class="text-hijau">sudut rotasi 180°</span>
-              dan <span class="text-hijau">arah rotasi berlawanan arah jarum jam</span>
-            </p>
-          </div>
-          <div class="flex items-start mt-4 pb-4 border-b-2">
-            <p class="text-primary font-semibold">Catatan:</p>
-            <p class="ml-7">
-              Setiap Titik yakni titik A, B, dan C dirotasikan 180° berlawanan arah jarum jam
-            </p>
-          </div>
-          <div class="flex items-start mt-4 mb-3">
-            <p class="text-primary font-semibold">Diperoleh:</p>
-            <p class="ml-4">
-              Segitiga A'B'C' dengan kordinat
-              <span class="text-hijau block"
-                >A' ( -1 , 4 ), <span class="block">B' ( -4 , 5 ), </span>C' ( -3 , 2)</span
-              >
-            </p>
-          </div>
-        </div>
-
-        <div class="flex items-center mt-8">
-          <img src="../img/pencerminan/three_8921657.png" alt="" class="w-6 h-6 mr-2" />
-          <button class="text-base text-primary font-semibold ml-2 text-left">
-            Contoh pusat rotasi pada titik sudut bangun datar
-          </button>
-        </div>
-        <div class="w-full border-t-2 border-hijau mt-2 py-2 px-2 max-w-md" id="pusatTitik">
-          <p class="leading-7">
-            Trapesium ABCD dengan kordinat
-            <span class="font-semibold text-hijau"
-              >A ( 0 , 0 ), B ( 0 , 2 ), C ( 2 , 2) , C ( 3 , 0)</span
-            >
-            dirotasikan terhadap <span class="text-red font-semibold">titik A</span> sejauh 180°
-          </p>
-          <div class="w-64 h-64 mx-auto mt-4 flex justify-center items-center">
-            <div class="w-full h-full relative opacity-30" id="animasipusatTitik">
-              <img src="../img/Rotasi/sebuahtitik.jpg" alt="" class="w-full h-full opacity-80" />
               <svg
-                width="92"
-                height="61"
-                viewBox="0 0 92 61"
+                width="54"
+                height="54"
+                viewBox="0 0 54 54"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                class="opacity-70 absolute left-[128px] top-[67px]"
+                class="absolute cursor-pointer"
+                id="play3"
+                onclick="removerotasibangunDatar()"
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M64.0506 0H0V61H64.0506H92L64.0506 0Z"
-                  fill="#F1F1F1"
+                  d="M21.332 38.6643L37.331 26.665L21.332 14.6658V38.6643ZM26.665 0C11.9459 0 0 11.9459 0 26.665C0 41.3841 11.9459 53.33 26.665 53.33C41.3841 53.33 53.33 41.3841 53.33 26.665C53.33 11.9459 41.3841 0 26.665 0ZM26.665 47.997C14.9057 47.997 5.333 38.4243 5.333 26.665C5.333 14.9057 14.9057 5.333 26.665 5.333C38.4243 5.333 47.997 14.9057 47.997 26.665C47.997 38.4243 38.4243 47.997 26.665 47.997Z"
+                  fill="#079292"
                 />
               </svg>
-              <div
-                class="w-[8px] h-[8px] bg-red rounded-full absolute left-[124px] top-[124px] z-20 opacity-60"
-              ></div>
+            </div>
+            <div class="flex items-start mt-6 pb-4 border-b-2">
+              <p class="text-primary font-semibold">Diketahui:</p>
+              <p class="ml-4">
+                Pusat rotasi adalah titik <span class="text-red">P ( -1 , 1 )</span> dengan
+                <span class="text-hijau">sudut rotasi 180°</span>
+                dan <span class="text-hijau">arah rotasi berlawanan arah jarum jam</span>
+              </p>
+            </div>
+            <div class="flex items-start mt-4 pb-4 border-b-2">
+              <p class="text-primary font-semibold">Catatan:</p>
+              <p class="ml-7">
+                Setiap Titik yakni titik A, B, dan C dirotasikan 180° berlawanan arah jarum jam
+              </p>
+            </div>
+            <div class="flex items-start mt-4 mb-3">
+              <p class="text-primary font-semibold">Diperoleh:</p>
+              <p class="ml-4">
+                Segitiga A'B'C' dengan kordinat
+                <span class="text-hijau block"
+                  >A' ( -1 , 4 ), <span class="block">B' ( -4 , 5 ), </span>C' ( -3 , 2)</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
 
-              <div class="text-red font-semibold absolute top-[128px] left-[133px]">A</div>
-              <div class="text-hijau font-semibold absolute top-[48px] left-[113px] text-xs">B</div>
-              <div class="text-hijau font-semibold absolute top-[48px] right-[53px] text-xs">C</div>
-              <div class="text-hijau font-semibold absolute top-[128px] right-[25px] text-xs">
-                D
-              </div>
-
-              <div class="hidden" id="animasipusatTitiko">
+        <div
+          class="border-2 mx-auto p-7 max-w-[500px] mt-16 border-coklat shadow-custom rounded-lg"
+        >
+          <div class="flex items-center mt-1">
+            <img src="../img/pencerminan/three_8921657.png" alt="" class="w-6 h-6 mr-2" />
+            <button class="text-base text-primary font-semibold ml-2 text-left">
+              Contoh pusat rotasi pada titik sudut bangun datar
+            </button>
+          </div>
+          <div class="border-t-2 border-hijau mt-2 py-2 px-2 max-w-md" id="pusatTitik">
+            <p class="leading-7">
+              Trapesium ABCD dengan kordinat
+              <span class="font-semibold text-hijau"
+                >A ( 0 , 0 ), B ( 0 , 2 ), C ( 2 , 2) , C ( 3 , 0)</span
+              >
+              dirotasikan terhadap <span class="text-red font-semibold">titik A</span> sejauh 180°
+            </p>
+            <div class="w-64 h-64 mx-auto mt-4 flex justify-center items-center">
+              <div class="w-full h-full relative opacity-30" id="animasipusatTitik">
+                <img src="../img/Rotasi/sebuahtitik.jpg" alt="" class="w-full h-full opacity-80" />
                 <svg
                   width="92"
                   height="61"
                   viewBox="0 0 92 61"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="opacity-60 absolute left-[128px] top-[67px] z-30 lurusLagi"
+                  class="opacity-70 absolute left-[128px] top-[67px]"
                 >
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
                     d="M64.0506 0H0V61H64.0506H92L64.0506 0Z"
-                    fill="#7BFFD0"
+                    fill="#F1F1F1"
                   />
                 </svg>
+                <div
+                  class="w-[8px] h-[8px] bg-red rounded-full absolute left-[124px] top-[124px] z-20 opacity-60"
+                ></div>
 
-                <div
-                  class="text-hijau font-semibold absolute bottom-[48px] right-[113px] opacity-0 titikContoh text-xs"
-                >
-                  B'
+                <div class="text-red font-semibold absolute top-[128px] left-[133px]">A</div>
+                <div class="text-hijau font-semibold absolute top-[48px] left-[113px] text-xs">
+                  B
                 </div>
-                <div
-                  class="text-hijau font-semibold absolute bottom-[48px] left-[53px] opacity-0 titikContoh text-xs"
-                >
-                  C'
+                <div class="text-hijau font-semibold absolute top-[48px] right-[53px] text-xs">
+                  C
                 </div>
-                <div
-                  class="text-hijau font-semibold absolute bottom-[128px] left-[25px] opacity-0 titikContoh text-xs"
-                >
-                  D'
+                <div class="text-hijau font-semibold absolute top-[128px] right-[25px] text-xs">
+                  D
                 </div>
-                <div
-                  class="text-primary font-semibold absolute bottom-[100px] left-[108px] opacity-0 munculNih text-xs w-[48px] h-[55px] border-t-2 bo border-primary rounded-full flex justify-center pt-2"
-                >
-                  180°
+
+                <div class="hidden" id="animasipusatTitiko">
+                  <svg
+                    width="92"
+                    height="61"
+                    viewBox="0 0 92 61"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="opacity-60 absolute left-[128px] top-[67px] z-30 lurusLagi"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M64.0506 0H0V61H64.0506H92L64.0506 0Z"
+                      fill="#7BFFD0"
+                    />
+                  </svg>
+
+                  <div
+                    class="text-hijau font-semibold absolute bottom-[48px] right-[113px] opacity-0 titikContoh text-xs"
+                  >
+                    B'
+                  </div>
+                  <div
+                    class="text-hijau font-semibold absolute bottom-[48px] left-[53px] opacity-0 titikContoh text-xs"
+                  >
+                    C'
+                  </div>
+                  <div
+                    class="text-hijau font-semibold absolute bottom-[128px] left-[25px] opacity-0 titikContoh text-xs"
+                  >
+                    D'
+                  </div>
+                  <div
+                    class="text-primary font-semibold absolute bottom-[100px] left-[108px] opacity-0 munculNih text-xs w-[48px] h-[55px] border-t-2 bo border-primary rounded-full flex justify-center pt-2"
+                  >
+                    180°
+                  </div>
                 </div>
               </div>
-            </div>
-            <svg
-              width="54"
-              height="54"
-              viewBox="0 0 54 54"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="absolute cursor-pointer"
-              id="play4"
-              onclick="removeanimasipusatTitik()"
-            >
-              <path
-                d="M21.332 38.6643L37.331 26.665L21.332 14.6658V38.6643ZM26.665 0C11.9459 0 0 11.9459 0 26.665C0 41.3841 11.9459 53.33 26.665 53.33C41.3841 53.33 53.33 41.3841 53.33 26.665C53.33 11.9459 41.3841 0 26.665 0ZM26.665 47.997C14.9057 47.997 5.333 38.4243 5.333 26.665C5.333 14.9057 14.9057 5.333 26.665 5.333C38.4243 5.333 47.997 14.9057 47.997 26.665C47.997 38.4243 38.4243 47.997 26.665 47.997Z"
-                fill="#079292"
-              />
-            </svg>
-          </div>
-          <div class="flex items-start mt-6 pb-4 border-b-2">
-            <p class="text-primary font-semibold">Diketahui:</p>
-            <p class="ml-4">
-              Pusat rotasi adalah titik <span class="text-red">A ( 0 , 0 )</span> dengan
-              <span class="text-hijau">sudut rotasi 180°</span>
-              dan <span class="text-hijau">arah rotasi berlawanan arah jarum jam</span>
-            </p>
-          </div>
-          <div class="flex items-start mt-4 pb-4 border-b-2">
-            <p class="text-primary font-semibold">Catatan:</p>
-            <p class="ml-7">
-              Setiap Titik sudut Trapesium yakni titik B, C, dan D dirotasikan 180° berlawanan arah
-              jarum jam kecuali titik A karena merupakan pusat rotasi
-            </p>
-          </div>
-          <div class="flex items-start mt-4 mb-3">
-            <p class="text-primary font-semibold">Diperoleh:</p>
-            <p class="ml-4">
-              Segitiga A'B'C' dengan kordinat
-              <span class="text-hijau block"
-                >A' ( 0 , 0 ), <span class="block">B' ( 0 , -2 ), </span>C' ( -2 , 2)</span
+              <svg
+                width="54"
+                height="54"
+                viewBox="0 0 54 54"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="absolute cursor-pointer"
+                id="play4"
+                onclick="removeanimasipusatTitik()"
               >
-              <span class="text-hijau">D' ( 0 , -3 )</span>
+                <path
+                  d="M21.332 38.6643L37.331 26.665L21.332 14.6658V38.6643ZM26.665 0C11.9459 0 0 11.9459 0 26.665C0 41.3841 11.9459 53.33 26.665 53.33C41.3841 53.33 53.33 41.3841 53.33 26.665C53.33 11.9459 41.3841 0 26.665 0ZM26.665 47.997C14.9057 47.997 5.333 38.4243 5.333 26.665C5.333 14.9057 14.9057 5.333 26.665 5.333C38.4243 5.333 47.997 14.9057 47.997 26.665C47.997 38.4243 38.4243 47.997 26.665 47.997Z"
+                  fill="#079292"
+                />
+              </svg>
+            </div>
+            <div class="flex items-start mt-6 pb-4 border-b-2">
+              <p class="text-primary font-semibold">Diketahui:</p>
+              <p class="ml-4">
+                Pusat rotasi adalah titik <span class="text-red">A ( 0 , 0 )</span> dengan
+                <span class="text-hijau">sudut rotasi 180°</span>
+                dan <span class="text-hijau">arah rotasi berlawanan arah jarum jam</span>
+              </p>
+            </div>
+            <div class="flex items-start mt-4 pb-4 border-b-2">
+              <p class="text-primary font-semibold">Catatan:</p>
+              <p class="ml-7">
+                Setiap Titik sudut Trapesium yakni titik B, C, dan D dirotasikan 180° berlawanan
+                arah jarum jam kecuali titik A karena merupakan pusat rotasi
+              </p>
+            </div>
+            <div class="flex items-start mt-4 mb-3">
+              <p class="text-primary font-semibold">Diperoleh:</p>
+              <p class="ml-4">
+                Segitiga A'B'C' dengan kordinat
+                <span class="text-hijau block"
+                  >A' ( 0 , 0 ), <span class="block">B' ( 0 , -2 ), </span>C' ( -2 , 2)</span
+                >
+                <span class="text-hijau">D' ( 0 , -3 )</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:mx-auto max-w-[500px] md:px-8 bg-white pt-8">
+          <div class="flex items-center mt-8 md:mt-10">
+            <img src="../img/tespemahaman.png" alt="" class="w-16 h-16" />
+            <div class="text-xl font-semibold tracking-wides text-hijau ml-2">Tes Pemahaman</div>
+          </div>
+          <div
+            class="bg-[#F5F5F5] border-t-[2px] mt-3 border-b-[2px] px-4 relative pb-4 max-w-md"
+            id=""
+          >
+            <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40 mb-1">TES KETIGA</p>
+            <p class="mt-2 inline">
+              Terdapat titik A ( 4 , -2 ). Jika titik A dirotasikan terhadap titik ( 0 , -2 ) sejauh
+              90°, tentukan kordinat titik A'
             </p>
+
+            <div
+              id="content"
+              class="w-[240px] h-[240px] relative bg-[url('../img/Rotasi/Grapik.jpg')] bg-cover mx-auto mt-4"
+            >
+              <canvas id="canvas" width="240" height="240"></canvas>
+              <div
+                class="bg-gray-500 w-[8px] h-[8px] rounded-full absolute bottom-[68px] right-[19px]"
+              ></div>
+              <div class="text-[12px] absolute bottom-[71px] right-[19px]">A</div>
+              <div
+                class="text-[12px] absolute top-[47px] left-[116px] font-semibold text-hijau hidden"
+                id="benarA"
+              >
+                A'
+              </div>
+              <div
+                class="bg-red rounded-full w-[8px] h-[8px] absolute bottom-[68px] left-[116px]"
+              ></div>
+            </div>
+            <p class="mt-4">
+              Klik pada kordinat untuk memunculkan titik lalu cek jawabanmu pada tombol "Check"
+            </p>
+
+            <button class="py-1 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]" id="Check4">
+              Check
+            </button>
+
+            <p class="ml-3 font-semibold text-hijau hidden" id="benar4">Benar 🗸</p>
+            <p class="ml-3 font-semibold text-red hidden" id="salah4">Salah X</p>
+          </div>
+        </div>
+        <div class="md:mx-auto bg-white md:px-8 max-w-[500px] pb-40">
+          <div
+            class="mt-6 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative pb-4 max-w-md"
+            id="TesPertama1"
+          >
+            <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40">TES KETIGA</p>
+            <p class="mt-1">
+              Terdapat segitiga ABC. Segitiga ABC dirotasikan terhadap titik ( 0 , 0 ) sejauh -90°,
+              tentukan kordinat segitiga A'B'C'
+            </p>
+
+            <div
+              id="content"
+              class="w-[240px] h-[240px] relative bg-[url('../img/Rotasi/Grapik.jpg')] bg-cover mx-auto mt-4"
+            >
+              <canvas id="geometryCanvas"></canvas>
+              <div id="notification"></div>
+              <div
+                class="w-2 h-2 bg-red absolute rounded-full left-[116px] top-[116px]"
+                id="pusatRotasisoal"
+              ></div>
+              <div class="absolute text-[12px] top-[4px] left-[44px]">A</div>
+              <div class="absolute text-[12px] top-[84px] left-[12px]">B</div>
+              <div class="absolute text-[12px] top-[84px] left-[100px]">C</div>
+            </div>
+            <p class="mt-4">
+              Pindahkan titik-titik sudut segitiga hijau hingga membentuk kordinat segitiga A'B'C'
+            </p>
+
+            <button class="py-1 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]" id="Check3">
+              Check
+            </button>
+
+            <p class="ml-3 font-semibold text-hijau hidden" id="benar3">Benar 🗸</p>
+            <p class="ml-3 font-semibold text-red hidden" id="salah3">Salah X</p>
           </div>
         </div>
       </div>
       <!-- Akhir Kordinat Rotasi -->
 
       <!-- Tes Pemahaman 2 -->
-      <div class="md:mx-auto px-5 md:px-8 bg-white pt-8">
-        <div class="flex items-center mt-8 md:mt-0">
-          <img src="../img/tespemahaman.png" alt="" class="w-16 h-16" />
-          <div class="text-xl font-semibold tracking-wides text-hijau ml-2">Tes Pemahaman</div>
-        </div>
-        <div
-          class="bg-[#F5F5F5] border-t-[2px] mt-6 border-b-[2px] px-4 relative pb-4 max-w-md"
-          id=""
-        >
-          <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40 mb-1">TES KETIGA</p>
-          <p class="mt-2 inline">
-            Terdapat titik A ( 4 , -2 ). Jika titik A dirotasikan terhadap titik ( 0 , -2 ) sejauh
-            90°, tentukan kordinat titik A'
-          </p>
 
-          <div
-            id="content"
-            class="w-[240px] h-[240px] relative bg-[url('../img/Rotasi/Grapik.jpg')] bg-cover mx-auto mt-4"
-          >
-            <canvas id="canvas" width="240" height="240"></canvas>
-            <div
-              class="bg-gray-500 w-[8px] h-[8px] rounded-full absolute bottom-[68px] right-[19px]"
-            ></div>
-            <div class="text-[12px] absolute bottom-[71px] right-[19px]">A</div>
-            <div
-              class="text-[12px] absolute top-[47px] left-[116px] font-semibold text-hijau hidden"
-              id="benarA"
-            >
-              A'
-            </div>
-            <div
-              class="bg-red rounded-full w-[8px] h-[8px] absolute bottom-[68px] left-[116px]"
-            ></div>
-          </div>
-          <p class="mt-4">
-            Klik pada kordinat untuk memunculkan titik lalu cek jawabanmu pada tombol "Check"
-          </p>
-
-          <button class="py-1 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]" id="Check4">
-            Check
-          </button>
-
-          <p class="ml-3 font-semibold text-hijau hidden" id="benar4">Benar 🗸</p>
-          <p class="ml-3 font-semibold text-red hidden" id="salah4">Salah X</p>
-        </div>
-      </div>
-
-      <div class="md:mx-auto bg-white md:px-8 px-5 pb-40 md:pt-8 md:mt-8">
-        <div
-          class="mt-6 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative pb-4 max-w-md"
-          id="TesPertama1"
-        >
-          <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40">TES KETIGA</p>
-          <p class="mt-1">
-            Terdapat segitiga ABC. Segitiga ABC dirotasikan terhadap titik ( 0 , 0 ) sejauh -90°,
-            tentukan kordinat segitiga A'B'C'
-          </p>
-
-          <div
-            id="content"
-            class="w-[240px] h-[240px] relative bg-[url('../img/Rotasi/Grapik.jpg')] bg-cover mx-auto mt-4"
-          >
-            <canvas id="geometryCanvas"></canvas>
-            <div id="notification"></div>
-            <div
-              class="w-2 h-2 bg-red absolute rounded-full left-[116px] top-[116px]"
-              id="pusatRotasisoal"
-            ></div>
-            <div class="absolute text-[12px] top-[4px] left-[44px]">A</div>
-            <div class="absolute text-[12px] top-[84px] left-[12px]">B</div>
-            <div class="absolute text-[12px] top-[84px] left-[100px]">C</div>
-          </div>
-          <p class="mt-4">
-            Pindahkan titik-titik sudut segitiga hijau hingga membentuk kordinat segitiga A'B'C'
-          </p>
-
-          <button class="py-1 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]" id="Check3">
-            Check
-          </button>
-
-          <p class="ml-3 font-semibold text-hijau hidden" id="benar3">Benar 🗸</p>
-          <p class="ml-3 font-semibold text-red hidden" id="salah3">Salah X</p>
-        </div>
-      </div>
       <!-- Akhir Tes Pemahaman 2 -->
     </div>
 

@@ -1,0 +1,397 @@
+.orbit {
+  animation: orbit 5s linear infinite;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(48px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(48px) rotate(-360deg);
+  }
+}
+
+.ke-tiga {
+  animation: ke-tiga 5s linear forwards;
+  animation-delay: 0s;
+}
+
+@keyframes ke-tiga {
+  0% {
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: bottom left;
+  }
+}
+
+.ke-empat {
+  animation: ke-empat 5s linear forwards;
+  animation-delay: 1s;
+}
+
+@keyframes ke-empat {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: bottom left;
+  }
+  100% {
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+  }
+}
+
+.ke-lima {
+  animation: ke-lima 5s linear forwards;
+  animation-delay: 1s;
+}
+
+@keyframes ke-lima {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: bottom left;
+  }
+  100% {
+    transform: rotate(270deg);
+    transform-origin: bottom left;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  animation: zoomIn 1s linear;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  10% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+  90% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pop {
+  animation: pop 8s ease-in-out;
+  animation-delay: 0s;
+}
+
+@keyframes roda {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.roda {
+  animation: roda 4s linear infinite;
+}
+
+.spinner {
+  animation: roda 3s linear infinite;
+}
+
+@keyframes RotasiSumbu {
+  0% {
+    transform: translate(0);
+    transform-origin: left;
+  }
+  100% {
+    transform: translate(0) rotate(-45deg);
+    transform-origin: left;
+  }
+}
+
+.RotasiSumbu {
+  animation: RotasiSumbu 3s forwards;
+  animation-delay: 5s;
+}
+
+@keyframes Derajatmuncul {
+  0% {
+    scale: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.muncul {
+  animation: Derajatmuncul 1s forwards;
+  animation-delay: 5.5s;
+}
+
+.munculNih {
+  animation: Derajatmuncul 1s forwards;
+  animation-delay: 9s;
+}
+
+@keyframes sangatMuncul {
+  0% {
+    scale: 0;
+  }
+  70% {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    opacity: 0;
+    scale: 0;
+  }
+}
+
+.sangatA {
+  animation: sangatMuncul 3s forwards;
+  animation-delay: 14s;
+}
+.sangatB {
+  animation: sangatMuncul 3s forwards;
+  animation-delay: 18s;
+}
+.sangatC {
+  animation: sangatMuncul 3s forwards;
+  animation-delay: 22s;
+}
+
+.titikSumbu {
+  animation: Derajatmuncul 1s forwards;
+  animation-delay: 6s;
+}
+
+.titikContoh {
+  animation: Derajatmuncul 1s forwards;
+  animation-delay: 7s;
+}
+
+.EmpatLima {
+  animation: Derajatmuncul 1s forwards;
+  animation-delay: 9s;
+}
+
+@keyframes searahJam {
+  0% {
+    transform-origin: bottom;
+  }
+  100% {
+    transform: translate(0) rotate(360deg);
+    transform-origin: bottom left;
+  }
+}
+
+@keyframes taksearahJam {
+  0% {
+    transform-origin: bottom;
+  }
+  100% {
+    transform: translate(0) rotate(-360deg);
+    transform-origin: bottom left;
+  }
+}
+
+.searahJam {
+  animation: searahJam 6s linear infinite;
+}
+
+.taksearahJam {
+  animation: taksearahJam 6s linear infinite;
+}
+
+@keyframes rotasiSearah {
+  0% {
+    transform-origin: left;
+  }
+  100% {
+    transform: rotate(30deg);
+    transform-origin: left;
+  }
+}
+
+.rotasiSearah {
+  animation: rotasiSearah 3s forwards;
+  animation-delay: 5s;
+}
+
+@keyframes rotasiBerlawanan {
+  0% {
+    transform-origin: left;
+  }
+  100% {
+    transform: rotate(-30deg);
+    transform-origin: left;
+  }
+}
+
+.rotasiBerlawanan {
+  animation: rotasiBerlawanan 3s forwards;
+  animation-delay: 5s;
+}
+
+@keyframes rotateSatuduapuluh {
+  0% {
+    transform-origin: bottom;
+  }
+  100% {
+    transform: rotate(120deg);
+    transform-origin: bottom;
+  }
+}
+
+.rotateSatuduapuluh {
+  animation: rotateSatuduapuluh 5s forwards;
+  animation-delay: 0s;
+}
+
+.rotasiFull {
+  transition: transform 1s ease-in-out;
+}
+
+@keyframes rotateSembilanpuluh {
+  0% {
+    transform-origin: bottom;
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+    transform-origin: bottom;
+  }
+}
+.rotateSembilanpuluh {
+  animation: rotateSembilanpuluh 3s forwards;
+}
+
+@keyframes negatifSembilanpuluh {
+  0% {
+    transform-origin: right;
+  }
+  100% {
+    transform: rotate(90deg);
+    transform-origin: right;
+  }
+}
+
+.negatifSembilanpuluh {
+  animation: negatifSembilanpuluh 5s forwards;
+  animation-delay: 3s;
+}
+
+@keyframes horizontalGaris {
+  to {
+    width: 90px;
+  }
+}
+
+.horizontalGaris {
+  animation: horizontalGaris 2s forwards;
+  animation-delay: 0s;
+}
+
+.sembilanPuluh {
+  animation: Derajatmuncul 1s forwards;
+  animation-delay: 8s;
+}
+
+@keyframes seratusDelapanpuluh {
+  0% {
+    transform-origin: top left;
+  }
+  100% {
+    transform: rotate(-180deg);
+    transform-origin: top left;
+  }
+}
+
+.seratusDelapanpuluh {
+  animation: seratusDelapanpuluh 5s forwards;
+  animation-delay: 5s;
+}
+
+@keyframes garisA {
+  20% {
+    height: 100%;
+  }
+  80% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+@keyframes garisB {
+  20% {
+    height: 130px;
+  }
+  80% {
+    height: 130px;
+  }
+  100% {
+    height: 0px;
+  }
+}
+@keyframes garisC {
+  20% {
+    height: 70px;
+  }
+  80% {
+    height: 70px;
+  }
+  100% {
+    height: 0px;
+  }
+}
+
+.garisA {
+  animation: garisA 12s forwards;
+  animation-delay: 2s;
+}
+.garisB {
+  animation: garisB 12s forwards;
+  animation-delay: 2s;
+}
+.garisC {
+  animation: garisC 12s forwards;
+  animation-delay: 2s;
+}
+
+@keyframes lurusLagi {
+  0% {
+    transform-origin: bottom left;
+  }
+  100% {
+    transform: rotate(-180deg);
+    transform-origin: bottom left;
+  }
+}
+
+.lurusLagi {
+  animation: lurusLagi 5s forwards;
+  animation-delay: 1s;
+}

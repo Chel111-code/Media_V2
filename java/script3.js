@@ -2,6 +2,7 @@ const wahyu = document.getElementById('wahyu');
 const wahyuBayang = document.getElementById('wahyu-bayang');
 const containerWahyu = document.getElementById('containerWahyu');
 const mirrorLineX = containerWahyu.offsetWidth / 2;
+const margin = 20; // Mengurangi batas pergeseran dengan margin 20px
 
 // Initial positions
 const wahyuInitialX = 50; // Initial X position of wahyu
@@ -18,10 +19,10 @@ function startDrag(event) {
     let newLeft = wahyu.offsetLeft + deltaX;
 
     // Ensure the element stays within the horizontal bounds of the container
-    if (newLeft < 0) newLeft = 0;
-    if (newLeft > mirrorLineX - wahyu.offsetWidth / 2)
-      newLeft = mirrorLineX - wahyu.offsetWidth / 2;
-
+    if (newLeft < margin) newLeft = margin;
+    if (newLeft > mirrorLineX - wahyu.offsetWidth / 2 - margin)
+      newLeft = mirrorLineX - wahyu.offsetWidth / 2 - margin;
+    byg;
     wahyu.style.left = newLeft + 'px';
     // Update the mirrored element's position
     let wahyuCenterX = newLeft + wahyu.offsetWidth / 2;
@@ -260,31 +261,34 @@ function removehapusKedua() {
 function choiceA() {
   const popupBenar = document.getElementById('popupBenar');
   popupBenar.classList.remove('hidden');
+  popupBenar.classList.add('zoomIn');
   setTimeout(() => {
     popupBenar.classList.add('hidden');
   }, 1500);
+
   document.getElementById('choice').classList.add('hidden');
   document.getElementById('imgbenar').classList.remove('hidden');
+  document.getElementById('imgbenar').classList.add('zoomIn');
 }
 
 function choiceB() {
   const popupSalah = document.getElementById('popupSalah');
   popupSalah.classList.remove('hidden');
+  popupSalah.classList.add('zoomIn');
   setTimeout(() => {
     popupSalah.classList.add('hidden');
   }, 1500);
-  document.getElementById('choice').classList.add('hidden');
-  document.getElementById('imgbenar').classList.remove('hidden');
+  document.getElementById('choiceB').classList.add('hidden');
 }
 
 function choiceC() {
   const popupSalah2 = document.getElementById('popupSalah');
   popupSalah2.classList.remove('hidden');
+  popupSalah.classList.add('zoomIn');
   setTimeout(() => {
     popupSalah2.classList.add('hidden');
   }, 1500);
-  document.getElementById('choice').classList.add('hidden');
-  document.getElementById('imgbenar').classList.remove('hidden');
+  document.getElementById('choiceC').classList.add('hidden');
 }
 
 function sq1() {
@@ -295,6 +299,7 @@ function sq1() {
   setTimeout(() => {
     popupBenar.classList.add('hidden');
   }, 1500);
+  popupBenar.classList.add('zoomIn');
 }
 
 function tq1() {
@@ -305,6 +310,7 @@ function tq1() {
   setTimeout(() => {
     popupSalah.classList.add('hidden');
   }, 1500);
+  popupSalah.classList.add('zoomIn');
 }
 
 function sq2() {
@@ -315,6 +321,7 @@ function sq2() {
   setTimeout(() => {
     popupBenar.classList.add('hidden');
   }, 1500);
+  popupBenar.classList.add('zoomIn');
 }
 
 function tq2() {
@@ -325,6 +332,7 @@ function tq2() {
   setTimeout(() => {
     popupSalah.classList.add('hidden');
   }, 1500);
+  popupBenar.classList.add('zoomIn');
 }
 
 function sq3() {
@@ -335,6 +343,7 @@ function sq3() {
   setTimeout(() => {
     popupBenar.classList.add('hidden');
   }, 1500);
+  popupBenar.classList.add('zoomIn');
 }
 
 function tq3() {
@@ -345,6 +354,7 @@ function tq3() {
   setTimeout(() => {
     popupSalah.classList.add('hidden');
   }, 1500);
+  popupSalah.classList.add('zoomIn');
 }
 
 function byg() {
@@ -355,16 +365,18 @@ function byg() {
   setTimeout(() => {
     popupBenar.classList.add('hidden');
   }, 1500);
+  popupBenar.classList.add('zoomIn');
 }
 
 function byg2() {
-  document.getElementById('byg').classList.add('hidden');
-  document.getElementById('chbayangan').classList.remove('hidden');
+  document.getElementById('byg2').classList.add('hidden');
+
   const popupSalah = document.getElementById('popupSalah');
   popupSalah.classList.remove('hidden');
   setTimeout(() => {
     popupSalah.classList.add('hidden');
   }, 1500);
+  popupSalah.classList.add('zoomIn');
 }
 
 function removehapusKetiga() {
