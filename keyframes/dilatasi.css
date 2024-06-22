@@ -1,0 +1,482 @@
+@keyframes wuss {
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes ssuw {
+  100% {
+    opacity: 0;
+  }
+}
+
+.wuss {
+  animation: wuss 1s forwards;
+  animation-delay: 1s;
+}
+
+.ssuw {
+  animation: ssuw 1s forwards;
+  animation-delay: 1s;
+}
+
+.ssuw2 {
+  animation: ssuw 1s forwards;
+  animation-delay: 2s;
+}
+
+.wuss2 {
+  animation: wuss 1s forwards;
+  animation-delay: 2s;
+}
+
+.wuss3 {
+  animation: wuss 2s linear;
+  animation-delay: 3s;
+}
+
+.wuss4 {
+  animation: wuss 1s forwards;
+  animation-delay: 5s;
+}
+
+@keyframes macan {
+  100% {
+    transform: translateX(70px) translateY(-5px) scale(1.5);
+  }
+}
+
+@keyframes pusatDilatasi {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 95px;
+  }
+}
+
+.pusatDilatasi {
+  animation: pusatDilatasi 1.8s linear forwards;
+  animation-delay: s;
+}
+
+@keyframes garisPusat1 {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 130px;
+  }
+}
+
+.garisPusat1 {
+  animation: garisPusat1 2s linear forwards;
+  animation-delay: 0s;
+}
+
+@keyframes garisPusat2 {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 248px;
+  }
+}
+
+.garisPusat2 {
+  animation: garisPusat2 2s linear forwards;
+  animation-delay: 0s;
+}
+
+.macan {
+  animation: macan 3s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes pusatTengah {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(3);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes ubahFoto {
+  0% {
+    transform: translate(0px) scale(1);
+  }
+
+  100% {
+    transform: translate(0px) scale(1.5);
+  }
+}
+
+.ubahFoto {
+  animation: ubahFoto 1s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes kecilFoto {
+  0% {
+    transform: translate(0px) scale(1.5);
+  }
+
+  100% {
+    transform: translate(0px) scale(1);
+  }
+}
+
+.centered-notification {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(243, 244, 246, 0.5); /* Warna abu-abu dengan opasitas */
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kecilFoto {
+  animation: kecilFoto 1s forwards;
+  animation-delay: 3s;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  animation: zoomIn 1s linear;
+}
+
+@keyframes pusatLuar {
+  0% {
+    transform: translateX(0px) scale(1);
+  }
+  100% {
+    transform: translateX(55px) scale(1.5);
+  }
+}
+
+@keyframes size {
+  0% {
+    transform: translateY(0px) scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: translateY(0px) scale(0.5);
+  }
+}
+
+.size {
+  animation: size 3s linear infinite;
+}
+
+.pusatTengah {
+  animation: pusatTengah 3s linear infinite;
+}
+
+.pusatLuar {
+  animation: pusatLuar 1.2s forwards;
+  animation-delay: 1.3s;
+}
+
+@keyframes garisLuar1 {
+  0% {
+    width: 72px;
+  }
+  30% {
+    width: 144px;
+  }
+  60% {
+    width: 72px;
+  }
+  100% {
+    width: 72px;
+  }
+}
+
+.garisLuar1 {
+  animation: garisLuar1 6s linear infinite;
+}
+
+@keyframes garisLuar2 {
+  0% {
+    width: 120px;
+  }
+  30% {
+    width: 263px;
+  }
+  60% {
+    width: 120px;
+  }
+  100% {
+    width: 120px;
+  }
+}
+
+.garisLuar2 {
+  animation: garisLuar2 6s linear infinite;
+}
+
+@keyframes garisLuar3 {
+  0% {
+    width: 107px;
+  }
+  30% {
+    width: 229px;
+  }
+  60% {
+    width: 107px;
+  }
+  100% {
+    width: 107px;
+  }
+}
+
+.garisLuar3 {
+  animation: garisLuar3 6s linear infinite;
+}
+
+@keyframes pembesaran {
+  0% {
+    transform: translateX(0px) scale(1);
+  }
+  100% {
+    transform: translateX(60px) translateY(-2px) scale(1.7);
+  }
+}
+
+.pembesaran {
+  animation: pembesaran 3s linear forwards;
+  animation-delay: 3s;
+}
+
+@keyframes pengecilan {
+  0% {
+    transform: translateX(0px) scale(1);
+  }
+  100% {
+    transform: translateX(-50px) translateY(5px) scale(0.5);
+  }
+}
+
+.pengecilan {
+  animation: pengecilan 3s linear forwards;
+  animation-delay: 3s;
+}
+
+@keyframes garisBesar1 {
+  0% {
+    width: 67px;
+  }
+  100% {
+    width: 99px;
+  }
+}
+
+.garisBesar1 {
+  animation: garisBesar1 3s linear forwards;
+  animation-delay: 3s;
+}
+
+@keyframes garisBesar2 {
+  0% {
+    width: 120px;
+  }
+  100% {
+    width: 191px;
+  }
+}
+
+.garisBesar2 {
+  animation: garisBesar2 3s linear forwards;
+  animation-delay: 3s;
+}
+
+@keyframes garisBesar3 {
+  0% {
+    width: 135px;
+  }
+  100% {
+    width: 225px;
+  }
+}
+
+.garisBesar3 {
+  animation: garisBesar3 3s linear forwards;
+  animation-delay: 3s;
+}
+
+@keyframes animasiTes1 {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-50px) scale(1.6);
+  }
+}
+
+.animasiTes1 {
+  animation: animasiTes1 1.2s linear forwards;
+  animation-delay: 1.8s;
+}
+
+@keyframes garistes1 {
+  to {
+    height: 174px;
+  }
+}
+
+.garistes1 {
+  animation: garistes1 3s linear forwards;
+}
+
+@keyframes garistes2 {
+  to {
+    height: 212px;
+  }
+}
+
+.garistes2 {
+  animation: garistes2 3s linear forwards;
+}
+
+@keyframes garistes3 {
+  to {
+    height: 125px;
+  }
+}
+
+.garistes3 {
+  animation: garistes3 3s linear forwards;
+}
+
+@keyframes garistes4 {
+  to {
+    height: 152px;
+  }
+}
+
+.garistes4 {
+  animation: garistes4 3s linear forwards;
+}
+
+@keyframes Derajatmuncul {
+  100% {
+    opacity: 1;
+  }
+}
+
+.Derajatmuncul {
+  animation: Derajatmuncul 1s linear forwards;
+  animation-delay: 3s;
+}
+
+@keyframes skalaSeperempat {
+  to {
+    transform: translateX(91px);
+  }
+}
+
+.skalaSeperempat {
+  animation: skalaSeperempat 3s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes skalaDua {
+  0% {
+    transform: translate(0) scale(1);
+  }
+  100% {
+    transform: translateX(-60px) translateY(-60px) scale(2);
+  }
+}
+
+.skalaDua {
+  animation: skalaDua 3s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes garisSkaladua1 {
+  to {
+    height: 85px;
+  }
+}
+
+@keyframes garisSkaladua2 {
+  to {
+    height: 190px;
+  }
+}
+
+.garisSkaladua1 {
+  animation: garisSkaladua1 3.9s forwards;
+}
+
+.garisSkaladua2 {
+  animation: garisSkaladua2 3.9s forwards;
+}
+
+@keyframes pilihanA {
+  0% {
+    transform: translate(0) scale(1);
+  }
+  100% {
+    transform: translateX(86px) translateY(30px) scale(0.5);
+  }
+}
+
+@keyframes pilihanB {
+  0% {
+    transform: translate(0) scale(1);
+  }
+  100% {
+    transform: translateX(86px) translateY(30px) scale(0.5) rotate(-30deg);
+  }
+}
+
+@keyframes pilihanC {
+  0% {
+    transform: translate(0) scale(1);
+  }
+  100% {
+    transform: translateX(86px) translateY(0px) scale(1);
+  }
+}
+
+.pilihanA {
+  animation: pilihanA 3s forwards;
+  animation-delay: 5s;
+}
+
+.pilihanB {
+  animation: pilihanB 3s forwards;
+  animation-delay: 5s;
+}
+
+.pilihanC {
+  animation: pilihanC 3s forwards;
+  animation-delay: 5s;
+}

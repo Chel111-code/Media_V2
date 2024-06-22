@@ -6,359 +6,19 @@
     <link rel="stylesheet" href="../src/output.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../keyframes/dilatasi.css" />
     <title>Dilatasi</title>
     <style>
       @font-face {
         font-family: 'Lato';
         src: url('../font/Lato-Regular.ttf') format('truetype');
       }
-
-      @keyframes wuss {
-        100% {
-          opacity: 1;
-          scale: 1;
-        }
-      }
-
-      .wuss {
-        animation: wuss 1s forwards;
-        animation-delay: 1s;
-      }
-
-      @keyframes macan {
-        100% {
-          transform: translateX(70px) translateY(-5px) scale(1.5);
-        }
-      }
-
-      .macan {
-        animation: macan 3s forwards;
-        animation-delay: 1s;
-      }
-
-      @keyframes pusatTengah {
-        0% {
-          transform: translateY(0px) scale(1);
-        }
-        50% {
-          transform: translateY(-10px) scale(3);
-        }
-        100% {
-          transform: translateY(0px) scale(1);
-        }
-      }
-
-      @keyframes pusatLuar {
-        0% {
-          transform: translateX(0px) scale(1);
-        }
-        30% {
-          transform: translateX(100px) translateY(-51px) scale(2.2);
-        }
-        60% {
-          transform: translateX(0px) translateY(0px) scale(1);
-        }
-        80% {
-          transform: translateX(-50px) translateY(28px) scale(0.4);
-        }
-        100% {
-          transform: translateX(0px) scale(1);
-        }
-      }
-
-      .pusatTengah {
-        animation: pusatTengah 3s linear infinite;
-      }
-
-      .pusatLuar {
-        animation: pusatLuar 6s linear infinite;
-        animation-delay: 0s;
-      }
-
-      @keyframes garisLuar1 {
-        0% {
-          width: 72px;
-        }
-        30% {
-          width: 144px;
-        }
-        60% {
-          width: 72px;
-        }
-        100% {
-          width: 72px;
-        }
-      }
-
-      .garisLuar1 {
-        animation: garisLuar1 6s linear infinite;
-      }
-
-      @keyframes garisLuar2 {
-        0% {
-          width: 120px;
-        }
-        30% {
-          width: 263px;
-        }
-        60% {
-          width: 120px;
-        }
-        100% {
-          width: 120px;
-        }
-      }
-
-      .garisLuar2 {
-        animation: garisLuar2 6s linear infinite;
-      }
-
-      @keyframes garisLuar3 {
-        0% {
-          width: 107px;
-        }
-        30% {
-          width: 229px;
-        }
-        60% {
-          width: 107px;
-        }
-        100% {
-          width: 107px;
-        }
-      }
-
-      .garisLuar3 {
-        animation: garisLuar3 6s linear infinite;
-      }
-
-      @keyframes pembesaran {
-        0% {
-          transform: translateX(0px) scale(1);
-        }
-        100% {
-          transform: translateX(60px) translateY(-2px) scale(1.7);
-        }
-      }
-
-      .pembesaran {
-        animation: pembesaran 3s linear forwards;
-        animation-delay: 3s;
-      }
-
-      @keyframes pengecilan {
-        0% {
-          transform: translateX(0px) scale(1);
-        }
-        100% {
-          transform: translateX(-50px) translateY(5px) scale(0.5);
-        }
-      }
-
-      .pengecilan {
-        animation: pengecilan 3s linear forwards;
-        animation-delay: 3s;
-      }
-
-      @keyframes garisBesar1 {
-        0% {
-          width: 67px;
-        }
-        100% {
-          width: 99px;
-        }
-      }
-
-      .garisBesar1 {
-        animation: garisBesar1 3s linear forwards;
-        animation-delay: 3s;
-      }
-
-      @keyframes garisBesar2 {
-        0% {
-          width: 120px;
-        }
-        100% {
-          width: 191px;
-        }
-      }
-
-      .garisBesar2 {
-        animation: garisBesar2 3s linear forwards;
-        animation-delay: 3s;
-      }
-
-      @keyframes garisBesar3 {
-        0% {
-          width: 135px;
-        }
-        100% {
-          width: 225px;
-        }
-      }
-
-      .garisBesar3 {
-        animation: garisBesar3 3s linear forwards;
-        animation-delay: 3s;
-      }
-
-      @keyframes animasiTes1 {
-        0% {
-          transform: translateY(0px) scale(1);
-        }
-        100% {
-          transform: translateY(-50px) scale(1.6);
-        }
-      }
-
-      .animasiTes1 {
-        animation: animasiTes1 1.2s linear forwards;
-        animation-delay: 1.8s;
-      }
-
-      @keyframes garistes1 {
-        to {
-          height: 174px;
-        }
-      }
-
-      .garistes1 {
-        animation: garistes1 3s linear forwards;
-      }
-
-      @keyframes garistes2 {
-        to {
-          height: 212px;
-        }
-      }
-
-      .garistes2 {
-        animation: garistes2 3s linear forwards;
-      }
-
-      @keyframes garistes3 {
-        to {
-          height: 125px;
-        }
-      }
-
-      .garistes3 {
-        animation: garistes3 3s linear forwards;
-      }
-
-      @keyframes garistes4 {
-        to {
-          height: 152px;
-        }
-      }
-
-      .garistes4 {
-        animation: garistes4 3s linear forwards;
-      }
-
-      @keyframes Derajatmuncul {
-        100% {
-          opacity: 1;
-        }
-      }
-
-      .Derajatmuncul {
-        animation: Derajatmuncul 1s linear forwards;
-        animation-delay: 3s;
-      }
-
-      @keyframes skalaSeperempat {
-        to {
-          transform: translateX(91px);
-        }
-      }
-
-      .skalaSeperempat {
-        animation: skalaSeperempat 3s forwards;
-        animation-delay: 1s;
-      }
-
-      @keyframes skalaDua {
-        0% {
-          transform: translate(0) scale(1);
-        }
-        100% {
-          transform: translateX(-60px) translateY(-60px) scale(2);
-        }
-      }
-
-      .skalaDua {
-        animation: skalaDua 3s forwards;
-        animation-delay: 1s;
-      }
-
-      @keyframes garisSkaladua1 {
-        to {
-          height: 85px;
-        }
-      }
-
-      @keyframes garisSkaladua2 {
-        to {
-          height: 190px;
-        }
-      }
-
-      .garisSkaladua1 {
-        animation: garisSkaladua1 3.9s forwards;
-      }
-
-      .garisSkaladua2 {
-        animation: garisSkaladua2 3.9s forwards;
-      }
-
-      @keyframes pilihanA {
-        0% {
-          transform: translate(0) scale(1);
-        }
-        100% {
-          transform: translateX(86px) translateY(30px) scale(0.5);
-        }
-      }
-
-      @keyframes pilihanB {
-        0% {
-          transform: translate(0) scale(1);
-        }
-        100% {
-          transform: translateX(86px) translateY(30px) scale(0.5) rotate(-30deg);
-        }
-      }
-
-      @keyframes pilihanC {
-        0% {
-          transform: translate(0) scale(1);
-        }
-        100% {
-          transform: translateX(86px) translateY(0px) scale(1);
-        }
-      }
-
-      .pilihanA {
-        animation: pilihanA 3s forwards;
-        animation-delay: 5s;
-      }
-
-      .pilihanB {
-        animation: pilihanB 3s forwards;
-        animation-delay: 5s;
-      }
-
-      .pilihanC {
-        animation: pilihanC 3s forwards;
-        animation-delay: 5s;
-      }
     </style>
   </head>
-  <body class="md:bg-gray-100">
+  <body class="md:bg-[#edf6f9]">
     <nav class="w-full flex justify-center">
       <div
-        class="container flex flex-wrap px-2 top-0 py-5 flex-row items-center justify-between max-w-4xl md:px-4 z-50 bg-white bg-opacity-90 fixed"
+        class="container flex flex-wrap px-2 top-0 py-5 flex-row items-center justify-between max-w-4xl md:px-4 z-50 bg-[#FBFDFE] bg-opacity-90 fixed"
       >
         <a class="flex font-bold items-center text-primary tras" id="judul" href="../index.html">
           <span class="ml-3 text-lg relative">Transformasi Geometri</span>
@@ -452,30 +112,90 @@
     </nav>
 
     <div
-      class="container max-w-4xl font-lato pt-[70px] text-[14px] md:mx-auto font-medium text-secondary leading-6 tracking-wide w-full"
+      class="container max-w-4xl font-semibold md:text-[15px] md:tracking-normal font-lato pt-[70px] text-[14px] md:mx-auto text-secondary leading-6 tracking-wide w-full md:bg-gray-100"
     >
       <!-- Judul -->
-      <h2 class="text-hijau font-bold pt-8 md:mx-auto px-5 max-w-4xl md:px-8 bg-white">
+      <h2 class="text-hijau font-bold pt-8 md:mx-auto px-5 max-w-4xl md:px-8 bg-[#FBFDFE]">
         Jenis transformasi
       </h2>
       <h1
-        class="text-[22px] pt-1 font-extrabold text-primary tracking-wider md:mx-auto px-5 max-w-4xl md:px-8 bg-white"
+        class="text-[22px] pt-1 font-extrabold text-primary tracking-wider md:mx-auto px-5 max-w-4xl md:px-8 bg-[#FBFDFE]"
       >
         Dilatasi
       </h1>
       <!-- Akhir Judul -->
 
+      <div
+        id="popupBenar"
+        class="fixed inset-0 bg-gray-100 z-50 bg-opacity-50 hidden flex items-center justify-center"
+      >
+        <div class="">
+          <img src="../img/pencerminan/Benar.png" class="w-40" alt="" />
+        </div>
+      </div>
+      <div
+        id="popupSalah"
+        class="fixed inset-0 bg-gray-100 z-50 bg-opacity-50 hidden flex items-center justify-center"
+      >
+        <div class="">
+          <img src="../img/pencerminan/ihi.png" class="w-40" alt="" />
+        </div>
+      </div>
+
       <!-- Hero Section -->
-      <div class="md:mx-auto px-5 max-w-4xl md:px-8 md:pb-10 md:pt-4 bg-white">
-        <p class="mt-4 md:mt-0">
-          Bayangkan kamu diminta untuk mencetak foto berukuran
-          <span class="text-hijau">2 x 3</span>. Namun tiba tiba saat kamu telah mencetaknya, kamu
-          malah diminta memperbesar ukurannya menjadi <span class="text-hijau">4 x 6</span>.
-        </p>
+      <div class="md:mx-auto px-5 max-w-4xl md:px-8 md:pb-10 md:pt-4 bg-[#FBFDFE]">
+        <div
+          class="max-w-[480px] h-44 rounded-2xl mt-8 border-2 border-hijau px-5 md:px-8 py-7 shadow-xl flex justify-center items-center md:mx-auto"
+        >
+          <img src="../img/Dilatasi/parcel-size_11947562.png" alt="" class="w-28 ml-4 size" />
+          <div class="ml-7 text-hijau text-[15px]]">
+            <span class="text-xl font-bold inline-block mb-1">Ukuran</span>, <br />
+            menggambarkan panjang, lebar, luas sesuatu.
+          </div>
+        </div>
 
-        <p class="mt-4">Klik tombol berikut untuk mengubah ukuran fotonya!</p>
+        <div
+          class="flex mt-10 max-w-[500px] md:ml-24 items-center"
+          dat-aos="zoom-in-right"
+          dat-aos-duration="800"
+        >
+          <img src="../img/Grafis/camme.png" alt="" class="w-28 md:w-32" />
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 rounded-lg rounded-tl-none">
+              Terdapat seorang anak yang ingin mengurus berkas untuk mendaftar sekolah.
+            </div>
+            <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 mt-1 rounded-lg rounded-tl-none">
+              Namun dia salah membawa berkas persyaratan
+            </div>
+          </div>
+        </div>
 
-        <button id="tombolFoto" class="py-1 px-3 bg-green-600 text-white rounded-md mt-4">
+        <div
+          class="w-52 md:w-64 md:mt-0 mx-auto mt-6 transition-transform overflow-hidden cursor-pointer border-2 border-primary rounded-lg duration-300 ease-in-out hover:scale-125"
+        >
+          <img src="../img/Dilatasi/bocilnangis.jpeg" alt="" class="w-full" />
+        </div>
+
+        <div
+          class="flex mt-20 ml-1 max-w-[500px] md:ml-24 items-center"
+          dat-aos="zoom-in-right"
+          dat-aos-duration="800"
+        >
+          <img src="../img/Grafis/supermen.png" alt="" class="w-32 md:w-40" />
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none ml-1 md:ml-4">
+              Dia membawa foto berukuran 2x3, sedangkan foto yang diminta berukuran 4x6.
+            </div>
+            <div class="bg-[#8CEBE9] px-3 py-3 mt-1 rounded-lg rounded-tl-none ml-1 md:ml-4">
+              Ayo kita bantu dia dengan mengklik tombol "Ubah"!
+            </div>
+          </div>
+        </div>
+
+        <button
+          id="tombolFoto"
+          class="py-1 md:ml-64 px-3 ml-[50px] bg-green-600 text-white rounded-md mt-8"
+        >
           Ubah
         </button>
 
@@ -503,320 +223,376 @@
           </div>
         </div>
 
-        <p class="mt-6">
-          Kejadian di atas adalah contoh dilatasi, dimana ukuran foto diubah secara proporsional.
-        </p>
-
-        <p class="mt-6 text-primary font-semibold">Perhatikan ilustrasi berikut!</p>
-        <p class="mt-1">
-          Bayangkan kamu mempunyai sebuah senter yang bisa memperbesar ukuran suatu benda
-        </p>
-
-        <button id="tombolSenter" class="py-1 px-3 bg-green-600 text-white rounded-md mt-4">
-          Nyala
-        </button>
-
-        <div class="w-72 h-64 flex items-center mx-auto relative -ml-3 md:mx-auto px-5">
-          <img src="../img/Dilatasi/Senter.png" alt="" class="w-8 h-8 rotate-45 ml-9" />
-          <img src="../img/Dilatasi/Macan.png" alt="" class="w-20 h-20 ml-12 z-10" id="macan" />
-          <svg
-            width="207"
-            height="139"
-            viewBox="0 0 207 139"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="absolute ml-14 -mt-2 hidden cahayaSenter"
-          >
-            <path d="M0 66L207 0V139L0 83.5V66Z" fill="#FFFCE5" />
-          </svg>
+        <div
+          class="flex mt-10 max-w-[500px] md:mx-auto items-center"
+          dat-aos="zoom-in-right"
+          dat-aos-duration="800"
+        >
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 rounded-lg mr-3 rounded-tr-none">
+              Bagus, kamu telah membantu anak tersebut!
+            </div>
+            <div
+              class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 mt-1 rounded-lg mr-3 rounded-tr-none"
+            >
+              Seperti biasa kejadian di atas akan jadi pembahasan kita kali ini yakni Dilatasi
+            </div>
+          </div>
+          <img src="../img/Grafis/Senang.png" alt="" class="w-28 md:w-36" />
         </div>
 
-        <p class="mt-6">Dilatasi pada transformasi geometri memiliki konsep yang serupa</p>
-
-        <div class="mt-3" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="50">
+        <div
+          class="mt-16 md:px-20"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          data-aos-delay="50"
+        >
           <p class="border-l-8 border-hijau font-semibold pl-2 leading-relaxed text-primary">
             <span class="font-bold text-hijau">Dilatasi</span> adalah bentuk transformasi geometri
             yang mengubah ukuran suatu objek tanpa mengubah bentuknya dengan titik pusat dan skala
             tertentu
           </p>
         </div>
+        <hr class="bg-hijau h-1 mt-16" />
       </div>
       <!-- Akhir Hero Section -->
 
       <!-- Pusat Dilatasi -->
-      <div
-        class="md:mx-auto px-5 max-w-4xl bg-white md:px-8 md:mt-8 md:pb-10 border-b-2 pb-16 pt-14 md:pt-8"
-      >
-        <h2
-          class="md:-ml-3 h-14 w-44 shadow-custom flex items-center pl-3 font-bold text-primary text-base rounded-md border-l-2 border-b-2 border-hijau -ml-1"
+      <div class="md:mx-auto px-5 max-w-4xl bg-[#FBFDFE] md:px-8 md:pb-10 pb-16 pt-14 md:pt-8">
+        <div
+          class="flex max-w-[500px] md:ml-24 items-center"
+          dat-aos="zoom-in"
+          dat-aos-duration="800"
         >
-          Pusat Dilatasi
-        </h2>
-        <p class="mt-6">
-          <span class="text-hijau font-semibold">Pusat dilatasi</span> adalah titik acuan tetap
-          dimana dilatasi dilakukan. Objek yang dilatasikan bergerak menuju atau menjauhi pusat dan
-          akan tetap proporsional.
-        </p>
-        <p class="mt-4">
-          Pusat dilatasi bisa berada di dalam objek, juga bisa berada diluar objeknya.
-        </p>
-
-        <div class="mt-4 leading-5">
+          <img src="../img/Grafis/tanya3.png" alt="" class="w-28 md:w-36" />
           <div>
-            <div class="flex items-center">
-              <img src="../img/Point.png" alt="" class="w-8 h-8" />
-              <div class="ml-2">
-                Pusat dilatasi <span class="font-semibold text-hijau">di tengah objek</span>
-              </div>
-            </div>
-            <div
-              class="w-72 h-60 mt-4 ml-10 rounded-md relative flex justify-center items-center"
-              id=""
-            >
-              <img src="../img/blackboard_11246638.png" class="absolute w-full h-full" alt="" />
-              <div class="w-[8px] h-[8px] rounded-full bg-red absolute z-20"></div>
-              <svg
-                width="52"
-                height="45"
-                viewBox="0 0 52 45"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute -mt-3 ml-[2px] pusatTengah"
-              >
-                <path d="M0.885262 44.5L26 0.999999L51.1147 44.5H0.885262Z" stroke="#7BFFD0" />
-              </svg>
-              <svg
-                width="88"
-                height="75"
-                viewBox="0 0 88 75"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute -mt-5"
-              >
-                <path d="M1.56476 74.5L44 1L86.4352 74.5H1.56476Z" stroke="#D9D9D9" />
-              </svg>
-            </div>
-
-            <div class="flex items-center mt-8">
-              <img src="../img/Point.png" alt="" class="w-8 h-8" />
-              <div class="ml-2">
-                Pusat dilatasi
-                <span class="font-semibold text-hijau">di luar objek</span>
-              </div>
-            </div>
-            <div class="w-72 h-60 mt-0 ml-10 rounded-md relative px-7 py-7" id="">
-              <img
-                src="../img/blackboard_11246638.png"
-                class="absolute w-full h-full top-4 left-0"
-                alt=""
-              />
-              <div class="w-[8px] h-[8px] rounded-full bg-red absolute z-20 bottom-7"></div>
-              <svg
-                width="35"
-                height="86"
-                viewBox="0 0 35 86"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute bottom-7 left-24 z-20 pusatLuar"
-              >
-                <path
-                  d="M33.8566 58.619L1.55739 83.5356L18.76 4.17173L33.8566 58.619Z"
-                  stroke="#7BFFD0"
-                  stroke-width="2"
-                />
-              </svg>
-
-              <svg
-                width="35"
-                height="86"
-                viewBox="0 0 35 86"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute bottom-7 left-24"
-              >
-                <path
-                  d="M34.4283 58.8095L0.778696 84.7678L18.7005 2.08587L34.4283 58.8095Z"
-                  stroke="#D9D9D9"
-                />
-              </svg>
-
-              <div class="h-[2px] w-[0px] bg-blue garisLuar1 opacity-40 absolute bottom-7"></div>
-              <div
-                class="h-[2px] w-[0px] bg-blue garisLuar2 opacity-40 absolute bottom-7 origin-bottom-left -rotate-[44deg]"
-              ></div>
-              <div
-                class="h-[2px] w-[0px] bg-blue garisLuar3 opacity-40 absolute bottom-7 origin-bottom-left -rotate-[15deg]"
-              ></div>
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none">
+              Saat kita mengubah ukuran foto dari 2x3 menjadi 4x6, kita memperbesar ukurannya
+              sebesar?
             </div>
           </div>
         </div>
+        <div
+          class="mt-4 md:-mt-0 flex flex-wrap gap-7 md:gap-10 justify-center max-w-[500px] md:mx-auto items-center"
+          id="fotoContainer"
+        >
+          <div class="text-center w-32 h-32 relative">
+            <div class="mt-3 hidden" id="sectionFotoContent">
+              <img src="../img/photo_3781932.png" class="w-28 ubahFoto" alt="" />
+              <div class="absolute text-hijau ssuw opacity-100 -top-5 left-[49px] mt-3">2</div>
+              <div class="absolute text-hijau ssuw opacity-100 ke-empat top-10 left-[106px] mt-3">
+                3
+              </div>
+              <div class="absolute text-hijau opacity-0 wuss2 -top-11 left-[49px] mt-3">4</div>
+              <div class="absolute text-hijau opacity-0 wuss2 ke-empat top-10 left-[130px] mt-3">
+                6
+              </div>
+            </div>
+            <div
+              id="lihatFoto"
+              class="w-full cursor-pointer leading-5 h-full mb-4 flex flex-col justify-center items-center gap-3 border-2 p-2 rounded-lg"
+            >
+              <svg
+                width="25px"
+                height="25px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.4086 9.35258C23.5305 10.5065 23.5305 13.4935 21.4086 14.6474L8.59662 21.6145C6.53435 22.736 4 21.2763 4 18.9671L4 5.0329C4 2.72368 6.53435 1.26402 8.59661 2.38548L21.4086 9.35258Z"
+                  fill="#C8A5A5"
+                />
+              </svg>
+              <div>Klik untuk melihat</div>
+            </div>
+          </div>
+          <div id="byg60">
+            <div
+              class="flex gap-3 mx-auto items-center cursor-pointer"
+              onclick="byg61()"
+              id="byg61"
+            >
+              <div
+                class="h-10 w-10 rounded-full bg-[#8CEBE9] font-semibold flex items-center justify-center"
+              >
+                A
+              </div>
+              <div
+                class="w-28 bg-coklat text-white rounded-md px-4 py-2 md:py-3 font-medium leading-5"
+              >
+                2 kali lipat
+              </div>
+            </div>
+            <div
+              class="flex gap-3 mx-auto mt-2 items-center cursor-pointer"
+              onclick="byg62()"
+              id="byg62"
+            >
+              <div
+                class="h-10 w-10 rounded-full bg-[#8CEBE9] font-semibold flex items-center justify-center"
+              >
+                B
+              </div>
+              <div
+                class="w-28 bg-coklat text-white rounded-md px-4 py-2 md:py-3 font-medium leading-5"
+              >
+                3 kali lipat
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex mt-16 max-w-[500px] md:mx-auto items-center"
+          dat-aos="zoom-in"
+          dat-aos-duration="800"
+        >
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tr-none">
+              Bagaimana jika kita mengubah ukuran foto dari 6x8 menjadi 3x4 ? Maka kita memperkecil
+              ukurannya sebesar?
+            </div>
+          </div>
+          <img src="../img/Grafis/Tanya.png" alt="" class="w-24 md:w-32 scale-x-[-1]" />
+        </div>
+        <div
+          class="mt-4 md:-mt-0 flex flex-wrap gap-7 md:gap-10 justify-center max-w-[500px] md:mx-auto items-center"
+          id="foto4x6"
+        >
+          <div id="byg70">
+            <div
+              class="flex gap-3 mx-auto items-center cursor-pointer"
+              onclick="byg71()"
+              id="byg71"
+            >
+              <div
+                class="h-10 w-10 rounded-full bg-[#8CEBE9] font-semibold flex items-center justify-center"
+              >
+                A
+              </div>
+              <div
+                class="w-28 bg-coklat text-white rounded-md px-4 py-2 md:py-3 font-medium leading-5"
+              >
+                ½ kali lipat
+              </div>
+            </div>
+            <div
+              class="flex gap-3 mx-auto mt-2 items-center cursor-pointer"
+              onclick="byg72()"
+              id="byg72"
+            >
+              <div
+                class="h-10 w-10 rounded-full bg-[#8CEBE9] font-semibold flex items-center justify-center"
+              >
+                B
+              </div>
+              <div
+                class="w-28 bg-coklat text-white rounded-md px-4 py-2 md:py-3 font-medium leading-5"
+              >
+                2 kali lipat
+              </div>
+            </div>
+          </div>
+          <div class="text-center w-32 h-32 relative">
+            <div class="hidden" id="sectionFoto4x6">
+              <img src="../img/photo_3781932.png" class="w-32 kecilFoto scale-150" alt="" />
+              <div class="absolute text-hijau opacity-0 wuss3 -translate-y-20 mt-3">3</div>
+              <div
+                class="absolute text-hijau opacity-0 wuss3 ke-empat -translate-y-2 translate-x-16 mt-3"
+              >
+                4
+              </div>
+              <div class="absolute text-hijau opacity-0 wuss4 -top-8 left-[60px] mt-3">3</div>
+              <div class="absolute text-hijau opacity-0 wuss4 ke-empat top-10 left-[123px] mt-3">
+                4
+              </div>
+              <div class="absolute text-hijau opacity-100 ssuw2 -translate-y-28 mt-3 text-lg">
+                6
+              </div>
+              <div
+                class="absolute text-hijau opacity-100 ssuw2 -translate-y-2 translate-x-[90px] text-lg mt-3"
+              >
+                8
+              </div>
+            </div>
+            <div
+              id="lihatFoto4x6"
+              class="w-full cursor-pointer leading-5 h-full mb-4 flex flex-col justify-center items-center gap-3 border-2 p-2 rounded-lg"
+            >
+              <svg
+                width="25px"
+                height="25px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.4086 9.35258C23.5305 10.5065 23.5305 13.4935 21.4086 14.6474L8.59662 21.6145C6.53435 22.736 4 21.2763 4 18.9671L4 5.0329C4 2.72368 6.53435 1.26402 8.59661 2.38548L21.4086 9.35258Z"
+                  fill="#C8A5A5"
+                />
+              </svg>
+              <div>Klik untuk melihat</div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex max-w-[500px] mt-12 md:ml-24 items-center"
+          dat-aos="zoom-in"
+          dat-aos-duration="800"
+        >
+          <img src="../img/Grafis/Nih.png" alt="" class="w-28 scale-x-[-1] mr-2 md:w-36" />
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none">
+              Jawaban 2 pertanyaan di atas disebut SKALA DILATASI atau faktor yang menggambarkan
+              perubahan ukuran pada objek
+            </div>
+          </div>
+        </div>
+        <hr class="bg-hijau h-1 mt-16" />
       </div>
       <!-- Akhir Pusat Dilatasi -->
 
       <!-- Skala Dilatasi -->
-      <div
-        class="md:mx-auto px-5 max-w-4xl bg-white md:px-8 border-b-2 pt-14 pb-16 md:pb-8 md:mt-8 md:pt-8"
-      >
-        <h2
-          class="md:-ml-3 h-14 w-44 shadow-custom flex items-center pl-3 font-bold text-primary text-base rounded-md border-l-2 border-b-2 border-hijau -ml-1"
+      <div class="md:mx-auto px-5 max-w-4xl bg-[#FBFDFE] md:px-8 border-b-2 pb-20 md:pb-8 md:pt-8">
+        <div
+          class="flex max-w-[500px] md:ml-24 items-center"
+          dat-aos="zoom-in"
+          dat-aos-duration="800"
         >
-          Skala Dilatasi
-        </h2>
-        <p class="mt-6">
-          <span class="text-hijau font-semibold">Faktor skala</span> menentukan apakah suatu
-          dilatasi merupakan pembesaran atau pengecilan.
-        </p>
-
-        <p class="mt-6">
-          <span class="text-hijau font-semibold">Faktor skala</span> menggambarkan perubahan ukuran
-          pada objek, misalnya:
-        </p>
-        <ul class="list-disc list-outside ml-6">
-          <li>Skala 2 artinya objek akan berukuran 2 kali dari ukuran aslinya</li>
-          <li>Skala 0.5 atau 1/2 artinya objek akan berukuran setengah dari ukuran aslinya</li>
-        </ul>
-
-        <p class="mt-4">
-          Kita akan melambangkan faktor skala dengan huruf
-          <span class="italic font-semibold text-hijau">k</span>. Jika
-          <span class="italic font-semibold text-hijau">k</span> = 1 maka ukuran objek tidak berubah
-        </p>
-
-        <div class="mt-4 leading-5">
+          <img src="../img/Grafis/ide.png" alt="" class="w-36 md:w-40" />
           <div>
-            <div class="flex items-center">
-              <img src="../img/Point.png" alt="" class="w-8 h-8" />
-              <div class="ml-2">
-                Jika <span class="italic font-semibold text-hijau">k</span> > 1 maka terjadi
-                <span class="font-semibold text-hijau">pembesaran</span> dan objek menjauh dari
-                titik pusat
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none">
+              Dilatasi yang kita lalukan di atas, sebenarnya memiliki titik acuan loh.
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex max-w-[500px] md:-mt-6 mt-4 mx-auto justify-center gap-6 md:gap-8"
+          id="pusatDilatasicontainer"
+        >
+          <div class="text-center w-32 h-32 relative">
+            <div class="mt-3 hidden" id="pusatDilatasi">
+              <img src="../img/ide.png" class="w-28 absolute" alt="" />
+              <img
+                src="../img/photo_3781932.png"
+                class="w-28 ubahFoto absolute z-20 opacity-80"
+                alt=""
+              />
+              <div class="absolute text-hijau ssuw opacity-100 -top-5 left-[49px] mt-3">2</div>
+              <div class="absolute text-hijau ssuw opacity-100 ke-empat top-10 left-[106px] mt-3">
+                3
               </div>
+              <div class="absolute text-hijau opacity-0 wuss2 -top-11 left-[49px] mt-3">4</div>
+              <div class="absolute text-hijau opacity-0 wuss2 ke-empat top-10 left-[130px] mt-3">
+                6
+              </div>
+              <div class="w-2 h-2 bg-red rounded-full absolute top-1/2 left-[52px]"></div>
+              <div
+                class="h-[2px] pusatDilatasi w-[0px] origin-left top-1/2 bg-red opacity-80 left-[53px] absolute -rotate-[132deg]"
+              ></div>
+              <div
+                class="h-[2px] pusatDilatasi w-[0px] origin-left top-[70px] bg-red opacity-80 left-[53px] absolute -rotate-[229deg]"
+              ></div>
+              <div
+                class="h-[2px] pusatDilatasi w-[0px] origin-left top-1/2 bg-red opacity-80 left-[60px] absolute -rotate-[49deg]"
+              ></div>
+              <div
+                class="h-[2px] pusatDilatasi w-[0px] origin-left top-[70px] bg-red opacity-80 left-[58px] absolute rotate-[49deg]"
+              ></div>
+              <div class="absolute -bottom-12 left-2 text-hijau">Skala Dilatasi 2</div>
             </div>
             <div
-              class="w-72 h-60 mt-4 ml-10 border-2 rounded-md relative px-7 py-7"
-              id="pembesaranK"
+              id="lihatpusatDilatasi"
+              class="w-full cursor-pointer leading-5 h-full mb-4 flex flex-col justify-center items-center gap-3 border-2 p-2 rounded-lg"
             >
-              <div class="w-full h-full hidden" id="animasipembesaranK">
-                <div class="w-[8px] h-[8px] rounded-full bg-red absolute z-20 bottom-[105px]"></div>
-                <svg
-                  width="81"
-                  height="83"
-                  viewBox="0 0 81 83"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="absolute top-[60px] left-[80px] mt-5"
-                >
-                  <path
-                    d="M1.56142 15.8949L57.195 1.10996L79.5842 81.0833L1.56142 15.8949Z"
-                    stroke="#D9D9D9"
-                  />
-                </svg>
-
-                <svg
-                  width="81"
-                  height="83"
-                  viewBox="0 0 81 83"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="absolute top-[60px] left-[80px] mt-5 pembesaran"
-                >
-                  <path
-                    d="M1.56142 15.8949L57.195 1.10996L79.5842 81.0833L1.56142 15.8949Z"
-                    stroke="#7BFFD0"
-                  />
-                </svg>
-
-                <div
-                  class="h-[2px] w-[67px] bg-blue garisBesar1 opacity-40 absolute bottom-[108px] origin-bottom-left -rotate-[30deg]"
-                ></div>
-                <div
-                  class="h-[2px] w-[120px] bg-blue garisBesar2 opacity-40 absolute bottom-[108px] origin-bottom-left -rotate-[23deg]"
-                ></div>
-                <div
-                  class="h-[2px] w-[135px] bg-blue garisBesar3 opacity-40 absolute bottom-[108px] origin-bottom-left rotate-[15deg]"
-                ></div>
-              </div>
-              <div id="playback">
-                <img
-                  src="../img/again_9365052.png"
-                  alt=""
-                  class="w-7 h-7 absolute bottom-2 right-2 cursor-pointer"
+              <svg
+                width="25px"
+                height="25px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.4086 9.35258C23.5305 10.5065 23.5305 13.4935 21.4086 14.6474L8.59662 21.6145C6.53435 22.736 4 21.2763 4 18.9671L4 5.0329C4 2.72368 6.53435 1.26402 8.59661 2.38548L21.4086 9.35258Z"
+                  fill="#C8A5A5"
                 />
-              </div>
-            </div>
-
-            <div class="flex items-center mt-8">
-              <img src="../img/Point.png" alt="" class="w-8 h-8" />
-              <div class="ml-2">
-                Jika 0 < <span class="italic font-semibold text-hijau">k</span> < 1 maka terjadi
-                <span class="font-semibold text-hijau">pengecilan</span> dan objek mendekat dari
-                titik pusat
-              </div>
-            </div>
-            <div
-              class="w-72 h-60 mt-4 ml-10 border-2 rounded-md relative px-7 py-7"
-              id="pengecilanK"
-            >
-              <div class="w-full h-full hidden" id="animasipengecilanK">
-                <div class="w-[8px] h-[8px] rounded-full bg-red absolute z-20 bottom-[105px]"></div>
-                <svg
-                  width="81"
-                  height="83"
-                  viewBox="0 0 81 83"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="absolute top-[60px] left-[80px] mt-5"
-                >
-                  <path
-                    d="M1.56142 15.8949L57.195 1.10996L79.5842 81.0833L1.56142 15.8949Z"
-                    stroke="#D9D9D9"
-                  />
-                </svg>
-
-                <svg
-                  width="81"
-                  height="83"
-                  viewBox="0 0 81 83"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="absolute top-[60px] left-[80px] mt-5 pengecilan"
-                >
-                  <path
-                    d="M1.56142 15.8949L57.195 1.10996L79.5842 81.0833L1.56142 15.8949Z"
-                    stroke="#7BFFD0"
-                  />
-                </svg>
-
-                <div
-                  class="h-[2px] w-[67px] bg-blue garisKecil1 opacity-40 absolute bottom-[108px] origin-bottom-left -rotate-[30deg]"
-                ></div>
-                <div
-                  class="h-[2px] w-[120px] bg-blue garisKecil2 opacity-40 absolute bottom-[108px] origin-bottom-left -rotate-[23deg]"
-                ></div>
-                <div
-                  class="h-[2px] w-[135px] bg-blue garisKecil3 opacity-40 absolute bottom-[108px] origin-bottom-left rotate-[15deg]"
-                ></div>
-              </div>
-              <div id="playback1">
-                <img
-                  src="../img/again_9365052.png"
-                  alt=""
-                  class="w-7 h-7 absolute bottom-2 right-2 cursor-pointer"
-                />
-              </div>
+              </svg>
+              <div>Klik untuk melihat</div>
             </div>
           </div>
         </div>
 
-        <p class="mt-6">
-          Fungsi garis biru di animasi untuk menunjukkan bahwa hasil dilatasi objek proporsional
-          terhada objek aslinya
-        </p>
+        <div
+          class="flex max-w-[500px] md:mx-auto mt-24 items-center"
+          dat-aos="zoom-in"
+          dat-aos-duration="800"
+        >
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tr-none">
+              Titik acuan berwarna merah ditengah itu merupakan PUSAT DILATASI.
+            </div>
+            <div class="bg-[#8CEBE9] px-3 py-3 mt-1 rounded-lg rounded-tr-none">
+              Pusat dilatasi bisa berada di luar objek juga!
+            </div>
+          </div>
+          <img src="../img/Grafis/ooo.png" alt="" class="scale-x-[-1] w-32 md:w-36" />
+        </div>
+        <div class="flex max-w-[500px] md:mt-10 mt-20 mx-auto justify-center gap-6 md:gap-8">
+          <div class="text-center w-52 h-32 relative">
+            <div class="hidden -translate-x-4" id="pusatLuar">
+              <img
+                src="../img/photo_3781932.png"
+                class="w-28 left-16 absolute opacity-50 z-10"
+                alt=""
+              />
+              <img
+                src="../img/photo_3781932.png"
+                class="w-28 left-16 absolute pusatLuar opacity-80 z-20"
+                alt=""
+              />
+              <div class="w-2 h-2 bg-red rounded-full absolute top-[55px]"></div>
+              <div
+                class="h-[2px] w-[0px] garisPusat1 origin-left top-[58px] -rotate-[37deg] bg-red opacity-80 left-1 absolute"
+              ></div>
+              <div
+                class="h-[2px] w-[0px] garisPusat2 origin-left top-[58px] -rotate-[18deg] bg-red opacity-80 left-1 absolute"
+              ></div>
+              <div
+                class="h-[2px] w-[0px] garisPusat1 origin-left top-[58px] rotate-[35deg] bg-red opacity-80 left-1 absolute"
+              ></div>
+              <div
+                class="h-[2px] w-[0px] garisPusat2 origin-left top-[58px] rotate-[17deg] bg-red opacity-80 left-1 absolute"
+              ></div>
+            </div>
+            <div
+              id="lihatPusatLuar"
+              class="w-32 cursor-pointer mx-auto leading-5 h-32 mb-4 flex flex-col justify-center items-center gap-3 border-2 p-2 rounded-lg"
+            >
+              <svg
+                width="25px"
+                height="25px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.4086 9.35258C23.5305 10.5065 23.5305 13.4935 21.4086 14.6474L8.59662 21.6145C6.53435 22.736 4 21.2763 4 18.9671L4 5.0329C4 2.72368 6.53435 1.26402 8.59661 2.38548L21.4086 9.35258Z"
+                  fill="#C8A5A5"
+                />
+              </svg>
+              <div>Klik untuk melihat</div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- Akhir Skala Dilatasi -->
 
       <!-- Tes Pemahaman 1 -->
-      <div class="md:mx-auto px-5 max-w-4xl bg-white md:px-8 pt-8 md:mt-8 md:pt-8 md:pb-8">
+      <div
+        class="md:mx-auto px-5 md:pl-24 max-w-4xl pb-16 border-b-2 bg-[#FBFDFE] md:px-8 pt-12 md:pt-8 md:pb-8"
+      >
         <div class="max-w-md">
           <div class="flex items-center">
             <img src="../img/tespemahaman.png" alt="" class="w-16 h-16" />
@@ -953,7 +729,7 @@
                 class="flex items-center cursor-pointer mt-3 absolute right-0 top-3"
                 id="playback2"
               >
-                <p class="hover:text-gray-500 underline text-hijau">Reset</p>
+                <p class="hover:text-gray-500 underline text-hijau">Animasi</p>
                 <img src="../img/again_9365052.png" alt="" class="w-6 h-6 ml-1" />
               </div>
             </div>
@@ -1011,16 +787,16 @@
 
                 <div class="hidden" id="garisMuncul">
                   <div
-                    class="w-[1px] h-[0px] garistes1 bg-blue absolute left-[125px] bottom-[90px] origin-bottom -rotate-6"
+                    class="w-[1px] h-[0px] garistes1 bg-red absolute left-[125px] bottom-[90px] origin-bottom -rotate-6"
                   ></div>
                   <div
-                    class="w-[1px] h-[0px] garistes2 bg-blue rounded-full absolute left-[125px] bottom-[90px] origin-bottom rotate-[35deg]"
+                    class="w-[1px] h-[0px] garistes2 bg-red rounded-full absolute left-[125px] bottom-[90px] origin-bottom rotate-[35deg]"
                   ></div>
                   <div
-                    class="w-[1px] h-[0px] garistes3 bg-blue rounded-full absolute left-[125px] bottom-[90px] origin-bottom rotate-[40deg]"
+                    class="w-[1px] h-[0px] garistes3 bg-red rounded-full absolute left-[125px] bottom-[90px] origin-bottom rotate-[40deg]"
                   ></div>
                   <div
-                    class="w-[1px] h-[0px] garistes4 bg-blue rounded-full absolute left-[125px] bottom-[90px] origin-bottom -rotate-[52deg]"
+                    class="w-[1px] h-[0px] garistes4 bg-red rounded-full absolute left-[125px] bottom-[90px] origin-bottom -rotate-[52deg]"
                   ></div>
                 </div>
 
@@ -1082,7 +858,7 @@
                 class="flex items-center cursor-pointer mt-3 absolute right-0 top-3"
                 id="playback3"
               >
-                <p class="hover:text-gray-500 underline text-hijau">Reset</p>
+                <p class="hover:text-gray-500 underline text-hijau">Animasi</p>
                 <img src="../img/again_9365052.png" alt="" class="w-6 h-6 ml-1" />
               </div>
             </div>
@@ -1093,24 +869,69 @@
 
       <!-- Kordinat Dilatasi -->
       <div
-        class="md:mx-auto px-5 max-w-4xl bg-white md:px-8 pt-16 border-b-2 pb-16 md:pb-8 md:pt-8 md:mt-8"
+        class="md:mx-auto px-5 max-w-4xl bg-[#FBFDFE] md:px-8 pt-16 border-b-2 pb-16 md:pb-8 md:pt-8"
       >
-        <h2
-          class="md:-ml-3 h-14 w-44 shadow-custom flex items-center pl-3 font-bold text-primary text-base rounded-md border-l-2 border-b-2 border-hijau -ml-1"
-        >
-          Kordinat Dilatasi
-        </h2>
-        <p class="mt-6">
-          Sebelumnya kita hanya melihat sebuah bangun yang didilatasi, apakah bisa jika hanya titik
-          yang didilatasi?
-        </p>
-        <p class="mt-4">
-          Tentu bisa, dilatasi pada titik tentu tidak membuat tiitknya membesar atau mengecil. Namun
-          dilatasi akan membuat sebuah titik menjauh atau mendekati pusat dilatasi.
-        </p>
-        <button class="mt-6 text-lg text-primary font-semibold ml-2">Dilatasi Titik</button>
         <div
-          class="w-full relative border-t-2 border-hijau mt-2 py-2 px-2 max-w-md"
+          class="flex max-w-[500px] md:ml-24 items-center"
+          dat-aos="zoom-in"
+          dat-aos-duration="800"
+        >
+          <img src="../img/Grafis/boss.png" alt="" class="w-24 md:w-32" />
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none">
+              Silakan kamu eksplorasi tentang dilatasi pada bangun datar di bawah ini yaa!
+            </div>
+          </div>
+        </div>
+
+        <div class="max-w-[500px] mx-auto">
+          <div class="mt-8 w-72 md:ml-24 md:-mt-6 ml-6 justify-start gap-4 flex mx-auto">
+            <div class="">
+              <label for="scale" class="block cursor- text-sm text-primary font-bold"
+                >Skala Dilatasi:</label
+              >
+              <input
+                type="number"
+                id="scale"
+                step="0.1"
+                value="0"
+                class="mt-1 block w-40 py-[7px] pl-5 rounded-md border- border-2 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              />
+            </div>
+          </div>
+
+          <div
+            class="p-4 w-[280px] md:scale-110 mt-6 rounded-lg border-hijau border-2 mx-auto bg-[#FBFDFE]"
+          >
+            <div class="border-1.5 w-[250px] h-[250px]">
+              <canvas id="canvas9" width="250" height="250"></canvas>
+            </div>
+          </div>
+          <div class="w-40 mx-auto mt-3 md:mt-6">
+            <button id="dilate-btn" class="px-4 py-2 mb-4 text-white bg-blue rounded">
+              Dilatasi
+            </button>
+            <button id="reset-btn" class="px-4 py-2 mb-4 bg-red text-white rounded">Reset</button>
+          </div>
+        </div>
+
+        <div
+          class="flex mt-12 md:mt-0 md:ml-24 max-w-[500px] items-center"
+          data-aos="zoom-in-right"
+          data-aos-duration="800"
+        >
+          <img src="../img/Grafis/nangisbget.png" alt="" class="w-28 md:w-36 scale-x-[-1]" />
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none">
+              Terakhir banget ayo perhatikan beberapa contoh dilatasi di kordinat kartesius!
+            </div>
+          </div>
+        </div>
+        <button class="mt-12 text-lg text-primary font-semibold ml-2 md:ml-24">
+          Dilatasi Titik
+        </button>
+        <div
+          class="w-full relative md:ml-24 border-t-2 border-hijau mt-2 py-2 px-2 max-w-md"
           id="contohPertama"
         >
           <p class="leading-7">
@@ -1180,9 +1001,11 @@
           </div>
         </div>
 
-        <button class="mt-12 text-lg text-primary font-semibold ml-2">Dilatasi Bangun Datar</button>
+        <button class="mt-12 text-lg md:ml-24 text-primary font-semibold ml-2">
+          Dilatasi Bangun Datar
+        </button>
         <div
-          class="w-full relative border-t-2 border-hijau mt-2 py-2 px-2 max-w-md"
+          class="w-full relative md:ml-24 border-t-2 border-hijau mt-2 py-2 px-2 max-w-md"
           id="contohKedua"
         >
           <p class="leading-7">
@@ -1236,13 +1059,13 @@
                   </div>
                 </div>
                 <div
-                  class="w-[1px] h-[0px] garisSkaladua1 bg-blue rounded-full absolute right-[36px] bottom-[36px] origin-bottom rotate-[-45deg]"
+                  class="w-[1px] h-[0px] garisSkaladua1 bg-red rounded-full absolute right-[36px] bottom-[36px] origin-bottom rotate-[-45deg]"
                 ></div>
                 <div
-                  class="w-[1px] h-[0px] garisSkaladua2 bg-blue rounded-full absolute right-[36px] bottom-[36px] origin-bottom rotate-[-72deg]"
+                  class="w-[1px] h-[0px] garisSkaladua2 bg-red rounded-full absolute right-[36px] bottom-[36px] origin-bottom rotate-[-72deg]"
                 ></div>
                 <div
-                  class="w-[1px] h-[0px] garisSkaladua2 bg-blue rounded-full absolute right-[36px] bottom-[36px] origin-bottom rotate-[-18deg]"
+                  class="w-[1px] h-[0px] garisSkaladua2 bg-red rounded-full absolute right-[36px] bottom-[36px] origin-bottom rotate-[-18deg]"
                 ></div>
               </div>
             </div>
@@ -1285,7 +1108,7 @@
       <!-- Akhir Kordinat Rotasi -->
 
       <!-- Tes Pemahaman 2 -->
-      <div class="md:mx-auto px-5 md:px-8 bg-white pt-8 md:pb-8 md:mt-8">
+      <div class="md:mx-auto px-5 md:px-8 bg-[#FBFDFE] pt-8 md:pb-8 md:pl-24">
         <div class="flex items-center mt-8 md:mt-0">
           <img src="../img/tespemahaman.png" alt="" class="w-16 h-16" />
           <div class="text-xl font-semibold tracking-wides text-hijau ml-2">Tes Pemahaman</div>
@@ -1331,7 +1154,7 @@
           <p class="ml-3 font-semibold text-red hidden" id="salah4">Salah X</p>
         </div>
       </div>
-      <div class="md:mx-auto px-5 max-w-4xl bg-white md:px-8 pb-40 pt-4">
+      <div class="md:mx-auto px-5 max-w-4xl bg-[#FBFDFE] md:px-8 md:pl-24 pb-40 pt-4">
         <div
           class="mt-3 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative pb-4 max-w-md"
           id="TesPertama1"
@@ -1368,7 +1191,7 @@
       <!-- AKhir Tes Pemahaman 2 -->
     </div>
 
-    <script src="../java/script5.js"></script>
+    <script src="../java/script5.js" async></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
     <script>
