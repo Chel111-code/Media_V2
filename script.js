@@ -1,3 +1,80 @@
+document.getElementById('lihatPopup').addEventListener('click', function () {
+  document.getElementById('popUp').classList.remove('hidden');
+  document.getElementById('popUp').classList.add('zoomIn');
+});
+
+document.getElementById('closePopup').addEventListener('click', function () {
+  document.getElementById('popUp').classList.add('hidden');
+});
+
+document.getElementById('lihatPopup2').addEventListener('click', function () {
+  document.getElementById('popUp2').classList.remove('hidden');
+  document.getElementById('popUp2').classList.add('zoomIn');
+});
+
+document.getElementById('closePopup2').addEventListener('click', function () {
+  document.getElementById('popUp2').classList.add('hidden');
+});
+
+document.getElementById('lihatEs').addEventListener('click', function () {
+  document.getElementById('es').classList.remove('hidden');
+  document.getElementById('es').classList.add('zoomIn');
+  document.getElementById('lihatEs').classList.add('hidden');
+});
+
+function removeanimateTescuy1() {
+  var animateTescuy1 = document.getElementById('animateTescuy1');
+  animateTescuy1.classList.remove('hidden');
+
+  var play2 = document.getElementById('play2');
+  play2.classList.add('hidden');
+}
+
+function transformA() {
+  const popupSalah = document.getElementById('popupSalah');
+  popupSalah.classList.remove('hidden');
+  popupSalah.classList.add('zoomIn');
+  setTimeout(() => {
+    popupSalah.classList.add('hidden');
+  }, 1500);
+
+  document.getElementById('transformA').classList.add('hidden');
+}
+
+function transformB() {
+  document.getElementById('transfomasiABC').classList.add('hidden');
+  document.getElementById('imgbenar').classList.remove('hidden');
+  document.getElementById('imgbenar').classList.add('zoomIn');
+}
+
+function transformC() {
+  const popupSalah = document.getElementById('popupSalah');
+  popupSalah.classList.remove('hidden');
+  popupSalah.classList.add('zoomIn');
+  setTimeout(() => {
+    popupSalah.classList.add('hidden');
+  }, 1500);
+
+  document.getElementById('transformC').classList.add('hidden');
+}
+
+function byg() {
+  document.getElementById('bygFull').classList.add('hidden');
+  document.getElementById('imgbenar2').classList.remove('hidden');
+  document.getElementById('imgbenar2').classList.add('zoomIn');
+}
+
+function byg2() {
+  document.getElementById('byg2').classList.add('hidden');
+
+  const popupSalah = document.getElementById('popupSalah');
+  popupSalah.classList.remove('hidden');
+  setTimeout(() => {
+    popupSalah.classList.add('hidden');
+  }, 1500);
+  popupSalah.classList.add('zoomIn');
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   const canvas = document.getElementById('geometryCanvas');
   const ctx = canvas.getContext('2d');
@@ -223,14 +300,6 @@ function removeOhini() {
 
   var play1 = document.getElementById('play1');
   play1.classList.add('hidden');
-}
-
-function removeanimateTescuy1() {
-  var animateTescuy1 = document.getElementById('animateTescuy1');
-  animateTescuy1.classList.remove('hidden');
-
-  var play2 = document.getElementById('play2');
-  play2.classList.add('hidden');
 }
 
 const checkButton = document.getElementById('Check1');

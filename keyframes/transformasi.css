@@ -1,4 +1,137 @@
-@keyframes transisi {
+@keyframes transformShapes {
+  0%,
+  100% {
+    border-radius: 0; /* Persegi */
+    transform: rotate(0deg) skew(0deg, 0deg);
+  }
+  20% {
+    border-radius: 50%; /* Lingkaran */
+    transform: rotate(0deg) skew(0deg, 0deg);
+  }
+  40% {
+    border-radius: 0;
+    transform: skewX(20deg); /* Jajar genjang */
+  }
+  60% {
+    border-radius: 0;
+    transform: skewX(-20deg) scaleY(1.1); /* Trapesium */
+  }
+  80% {
+    border-radius: 0;
+    transform: rotate(45deg) scale(1.1); /* Layang-layang */
+  }
+}
+
+.animate-shapes {
+  animation: transformShapes 10s infinite ease-in-out;
+  transition: all 2s ease-in-out;
+}
+
+@keyframes meta {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.aspect-ratio-iframe1 {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; /* 4:3 aspect ratio */
+}
+
+.aspect-ratio-iframe1 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  animation: zoomIn 1s linear;
+}
+
+@keyframes leleh {
+  50% {
+    opacity: 1;
+    height: 110px;
+    transform-origin: bottom;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 0;
+    height: 10px;
+    transform-origin: bottom;
+    transform: translateY(80px);
+  }
+}
+
+.popup-background {
+  background-color: rgba(255, 255, 255, 0.8); /* White transparent background */
+  padding: 20px; /* Padding from screen edges */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#popUp.show {
+  display: flex; /* Use flex to center the content */
+}
+
+/* Popup Content */
+.popup-content {
+  background-color: #daffef; /* Background color of the actual popup */
+  border-radius: 8px;
+  padding: 16px; /* Internal padding of the popup content */
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* Max width for the popup */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.satu {
+  animation: meta 5s ease-in-out;
+}
+.dua {
+  animation: leleh 3s ease-in-out;
+  animation-delay: 3s;
+}
+.tiga {
+  animation: muncul 1s ease-in-out forwards;
+  animation-delay: 6s;
+}
+
+. @keyframes transisi {
   0% {
     transform: scale(0);
   }
@@ -12,56 +145,61 @@
 }
 
 @keyframes transisi2 {
-  0% {
-    transform: scale(0) translateX(-300px);
+  50% {
+    transform: translateX(150px);
   }
+  0%,
   100% {
-    transform: scale(1) translateX(-20px);
+    transform: translateX(0);
   }
 }
 
 .transisi2 {
-  animation: transisi2 1s forwards;
+  animation: transisi2 2s infinite linear;
 }
 
 @keyframes transisi3 {
-  100% {
+  50% {
     transform: translateX(180%);
+  }
+  0%,
+  100% {
+    transform: translateX(0);
   }
 }
 
 .transisi3 {
-  animation: transisi3 1s forwards;
+  animation: transisi3 1s infinite;
 }
 
-@keyframes transisi4 {
+@keyframes trans {
   0% {
-    transform: translateY(150px);
+    transform: translateX(0px);
   }
-  33% {
-    transform: translateY(-150px);
-  }
-  66% {
-    transform: translateY(50px);
-  }
+
   100% {
-    transform: translateY(0px);
+    transform: translateX(170px);
   }
 }
 
-.transisi4 {
-  animation: transisi4 4s forwards;
+.trans {
+  animation: trans 2s forwards;
+  animation-delay: 3s;
 }
 
 @keyframes scale {
+  0%,
   100% {
-    transform: scale(2) translateY(-10px);
+    transform: scale(1) translateY(0px);
+  }
+  50% {
+    transform: scale(1.5) translateY(-10px);
   }
 }
 
 .ikan {
-  animation: scale 1s forwards;
-  animation-delay: 5s;
+  animation: scale 2s infinite linear;
+  animation-delay: 0s;
 }
 
 #kotak1:active {
@@ -154,6 +292,11 @@
 .titikzz {
   animation: muncul 2s ease-in forwards;
   animation-delay: 10s;
+}
+
+.titiktrans {
+  animation: muncul 1s ease-in forwards;
+  animation-delay: 5s;
 }
 
 .green-border {
