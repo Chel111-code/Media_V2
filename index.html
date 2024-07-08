@@ -6,368 +6,107 @@
     <title>Media Pembelajaran untuk Materi Transformasi Geometri</title>
     <link rel="stylesheet" href="src/output.css" />
     <link rel="stylesheet" href="keyframes/index.css" />
+    <style>
+      @font-face {
+        font-family: 'Lato';
+        src: url('font/Lato-Regular.ttf') format('truetype');
+      }
+      @font-face {
+        font-family: 'Poppins';
+        src: url('font/Poppins-Regular.ttf') format('truetype');
+      }
+    </style>
   </head>
 
-  <style>
-    @font-face {
-      font-family: 'Poppins';
-      src: url('../font/Poppins-Regular.ttf') format('truetype');
-    }
-
-    @font-face {
-      font-family: 'Lato';
-      src: url('../font/Lato-Regular.ttf') format('truetype');
-    }
-  </style>
-
-  <body class="bg-[#FBFDFE]">
+  <body class="bg-[#FBFDFE] font-lato">
     <nav class="w-full flex justify-center">
       <div
-        class="container flex flex-wrap px-2 top-0 py-5 flex-row items-center justify-between max-w-4xl md:px-4 z-50 bg-white bg-opacity-90 fixed"
+        class="container flex flex-wrap px-2 top-0 py-5 flex-row items-center justify-between max-w-4xl md:px-4 z-50 bg-opacity-90 fixed"
       >
         <a class="flex font-bold justify-center mx-auto items-center text-primary tras" id="judul">
           <img src="img/logo.png" class="w-10" alt="" />
-          <span
-            class="ml-3 text-base font-extrabold relative font-poppins tracking-wider text-hijauMuda"
+          <span class="ml-3 text-lg font-extrabold relative font-lato tracking-wider text-hijauMuda"
             >Transformasi Geometri</span
           >
         </a>
-
-        <div
-          class="fixed top-4 text-right right-0 shadow-custom font-medium text-sm translate-x-full rounded-lg transition duration-300 ease-in-out w-48 bg-[#F3F4F6] text-primary p-5 md:relative md:rounded-none md:transform-none md:w-auto md:bg-transparent md:text-primary md:p-0 md:h-11 md:top-0 md:shadow-none"
-          id="sidebar"
-        >
-          <ul class="flex flex-col md:flex-row md:space-x-5">
-            <li class="mb-3 md:my-0">
-              <a
-                href="content/transformasi.html"
-                class="block p-2 hover:bg-white rounded md:hover:bg-transparent"
-                >Dasar Transformasi</a
-              >
-            </li>
-            <li class="mb-3 md:my-0">
-              <a
-                href="content/translasi.html"
-                class="block p-2 hover:bg-white rounded md:hover:bg-transparent"
-                >Translasi</a
-              >
-            </li>
-            <li class="mb-3 md:my-0">
-              <a
-                href="content/refleksi.html"
-                class="block p-2 hover:bg-white rounded md:hover:bg-transparent"
-                >Pencerminan</a
-              >
-            </li>
-            <li class="mb-3 md:my-0">
-              <a
-                href="content/rotasi.html"
-                class="block p-2 hover:bg-white rounded md:hover:bg-transparent"
-                >Rotasi</a
-              >
-            </li>
-            <li class="md:my-0">
-              <a
-                href="content/dilatasi.html"
-                class="block p-2 hover:bg-white rounded md:hover:bg-transparent"
-                >Dilatasi</a
-              >
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
 
     <section
-      class="text-gray-600 relative bg-white body-font mx-auto container text-[14px] font-medium leading-6 tracking-wide w-full max-w-4xl h-screen flex items-center -mt-12"
-      id="ahuy"
+      class="text-gray-600 relative overflow-hidden mx-auto container text-[14px] font-medium leading-6 tracking-wide max-w-7xl h-screen justify-center flex items-center"
     >
+      <img
+        src="img/bocilduduk.png"
+        class="absolute w-7xl hidden -z-20 md:block opacity-15"
+        alt=""
+      />
       <div
-        class="container mx-auto md:pl-10 md:mx-auto flex py-6 md:flex-row md:justify-center flex-col items-center w-full max-w-4xl md:bg-white"
+        class="container mx-auto md:pl-10 md:mx-auto flex py-6 md:flex-row md:justify-center flex-col items-center w-full max-w-4xl"
       >
-        <div class="mb-3 md:w-1/3 md:mb-0 w-1/2 md:order-2">
-          <img class="object-cover md:w-64" alt="hero" src="img/transformasi.png" />
+        <div class="mb-3 md:order-2 md:hidden">
+          <img class="object-cover w-64" alt="hero" src="img/bocilduduk.png" />
         </div>
         <div
-          class="md:w-1/2 flex flex-col md:items-start md:text-left items-center text-center md:order-1 md:mt-8"
+          class="flex flex-col md:justify-center md:text-left items-center mx-auto text-center md:mt-8"
         >
           <h1
-            class="title-font sm:text-3xl text-xl mb-3 md:mt-0 font-bold text-primary tracking-wider md:px-8"
+            class="title-font sm:text-xl text-xl md:text-2xl text-center leading-8 tracking-wide font-lato mb-3 mt-6 md:mt-0 font-bold text-primary md:px-8"
           >
-            TRANSFORMASI <br />
-            GEOMETRI
+            Media Pembelajaran Transformasi Geometri <br class="hidden md:block" />
+            Berbasis Web
           </h1>
-          <p class="mb-8 leading-relaxed px-10 md:px-8 text-[15px] font-semibold text-secondary">
-            Selamat datang di media pembelajaran berbasis web yang akan membantu kamu dalam
-            memvisualisasikan perubahan bentuk geometri
-          </p>
-        </div>
-        <button class="absolute bottom-16 mt-96" onclick="scrollToElement()" id="buttonaw">
-          <div
-            class="h-9 w-9 mx-auto rounded-full border shadow-custom flex justify-center items-center animate-bounce"
+          <button
+            class="bg-[#6AEB6A] py-2 mt-4 px-16 text-white font-semibold rounded-md text-[13px] shadow-lg"
           >
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 18 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+            MULAI
+          </button>
+          <button
+            class="bg-opacity-0 border-2 py-2 px-[35px] border-gray-300 font-semibold text-hijau mt-3 inline-block rounded-md text-[13px] shadow-lg"
+          >
+            DAFTAR MATERI
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative mx-auto container text-[14px] font-medium leading-6 w-full">
+      <div class="h-screen w-full bg-[#FFFFFB]">
+        <div
+          class="max-w-4xl h-full gap-10 md:px- flex justify-center flex-col md:flex-row items-center mx-auto px-7"
+        >
+          <div class="md:w-1/2">
+            <h2
+              class="text-xl md:text-2xl text-hijauMuda font-poppins font-extrabold md:font-[1100] md:self-start text-left"
             >
-              <path
-                d="M18 9L16.4138 7.41375L10.125 13.6913V0H7.875V13.6913L1.5975 7.4025L0 9L9 18L18 9Z"
-                fill="#C4B5FD"
-              />
-            </svg>
-          </div>
-          <p class="text-gray-300 mt-3">Klik untuk melihat materi</p>
-        </button>
-      </div>
-    </section>
-
-    <section
-      class="text-gray-600 body-font px-8 max-w-4xl md:mx-auto pt-24 bg-white md:px-8 pb-12 md:pb-10 hidden"
-      id="targetElement"
-    >
-      <div
-        class="px-5 pt-6 pb-3 flex flex-wrap bg-white rounded-lg border-2 shadow-custom max-xl md:border-none md:shadow-none md:px-24"
-      >
-        <div class="flex relative pt-6 pb-14 sm:items-center md:w-2/3">
-          <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
-            <div class="h-full w-1 bg-indigo-100 pointer-events-none"></div>
-          </div>
-          <div
-            class="flex-shrink-0 w-6 h-6 rounded-full mt-[26px] sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm"
-          >
-            1
-          </div>
-          <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-            <div
-              class="md:hidden flex-shrink-0 w-16 h-16 bg-indigo-100 rounded-full inline-flex items-center justify-center animate-transformation"
-            ></div>
-            <div class="flex-grow sm:pl-6 mt-5 sm:mt-0">
-              <h2 class="font-semibold title-font text-primary mb-1 text-lg">Dasar Transformasi</h2>
-              <p class="leading-relaxed text-secondary text-[15px]">
-                Pada bagian ini kamu akan mempelajari transformasi, titik, garis, dan bangun ruang.
-              </p>
-              <a
-                href="content/transformasi.html"
-                class="mt-1 text-indigo-500 inline-flex items-center text-[15px]"
-                >Materi
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  class="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
+              <span class="text-[26px]">Transformasi</span> : Mengubah Bentuk dan Posisi Objek
+            </h2>
+            <img src="img/EsHD.png" class="w-52 mt-3 mx-auto md:self-end md:hidden" alt="" />
+            <div class="font-semibold text-secondary md:text-[15px] text-justify mt-3">
+              Pelajari dasar-dasar transformasi geometri untuk memahami bagaimana objek dapat diubah
+              dalam bentuk dan posisi tanpa kehilangan sifat-sifat esensialnya
+            </div>
+            <div class="flex gap-2 items-center mt-2 md:mt- self-start">
+              <div class="text-hijau font-bold md:text-base">Materi</div>
+              <svg
+                width="20"
+                height="11"
+                viewBox="0 0 20 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="mt-[2px]"
+              >
+                <path
+                  d="M15.0125 4.125H0V6.875H15.0125V11L20 5.5L15.0125 0V4.125Z"
+                  fill="#079292"
+                />
+              </svg>
             </div>
           </div>
-        </div>
-
-        <div class="flex relative pb-14 sm:items-center md:w-2/3">
-          <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
-            <div class="h-full w-1 bg-indigo-100 pointer-events-none"></div>
-          </div>
-          <div
-            class="flex-shrink-0 w-6 h-6 rounded-full mt-[26px] sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm"
-          >
-            2
-          </div>
-          <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-            <div
-              class="md:hidden flex-shrink-0 w-16 h-16 bg-indigo-100 text-indigo-500 rounded-lg inline-flex items-center justify-center animate-translate"
-            ></div>
-            <div class="flex-grow sm:pl-6 mt-5 sm:mt-0">
-              <h2 class="font-semibold title-font text-primary mb-1 text-lg">Translasi</h2>
-              <p class="leading-relaxed text-secondary text-[15px]">
-                Di sini kamu akan belajar cara menggeser objek sepanjang garis lurus tanpa mengubah
-                ukuran atau bentuknya.
-              </p>
-              <a
-                class="mt-1 text-indigo-500 inline-flex items-center text-[15px]"
-                href="content/translasi.html"
-                >Materi
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  class="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex relative pb-14 sm:items-center md:w-2/3">
-          <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
-            <div class="h-full w-1 bg-indigo-100 pointer-events-none"></div>
-          </div>
-          <div
-            class="flex-shrink-0 w-6 h-6 rounded-full mt-[26px] sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm"
-          >
-            3
-          </div>
-          <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-            <div class="flex w-[120px] justify-center md:hidden">
-              <div class="mx-5 w-16 h-16 bg-indigo-100 rounded-lg object-to-reflect"></div>
-              <div class="bg-indigo-300 w-[1px]"></div>
-            </div>
-
-            <div class="flex-grow sm:pl-6 mt-5 sm:mt-0">
-              <h2 class="font-semibold title-font text-primary mb-1 text-lg">Pencerminan</h2>
-              <p class="leading-relaxed text-secondary text-[15px]">
-                Tahap ini akan mempelajari Pencerminan objek sehingga objek dan bayangannya simetris
-                terhadap cerminnya.
-              </p>
-              <a
-                class="mt-1 text-indigo-500 inline-flex items-center text-[15px]"
-                href="content/refleksi.html"
-                >Materi
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  class="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex relative pb-14 sm:items-center md:w-2/3">
-          <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
-            <div class="h-full w-1 bg-indigo-100 pointer-events-none"></div>
-          </div>
-          <div
-            class="flex-shrink-0 w-6 h-6 rounded-full mt-[26px] sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm"
-          >
-            4
-          </div>
-          <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-            <div
-              class="md:hidden flex-shrink-0 w-16 h-16 bg-indigo-100 rounded-lg inline-flex items-center justify-center rotasi ml-2"
-            ></div>
-            <div class="flex-grow sm:pl-6 mt-5 sm:mt-0">
-              <h2 class="font-semibold title-font text-primary mb-1 text-lg">Rotasi</h2>
-              <p class="leading-relaxed text-secondary text-[15px]">
-                Selanjutnya, kamu akan belajar cara memutar objek sudut tertentu mengelilingi sebuah
-                titik pusat.
-              </p>
-              <a
-                class="mt-1 text-indigo-500 inline-flex items-center text-[15px]"
-                href="content/rotasi.html"
-                >Materi
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  class="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex relative pb-14 sm:items-center md:w-2/3">
-          <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
-            <div class="h-full w-1 bg-indigo-100 pointer-events-none"></div>
-          </div>
-          <div
-            class="flex-shrink-0 w-6 h-6 rounded-full mt-[26px] sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm"
-          >
-            5
-          </div>
-          <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-            <div
-              class="md:hidden flex-shrink-0 w-14 h-14 bg-indigo-100 rounded-lg inline-flex items-center justify-center dilatasi ml-3"
-            ></div>
-            <div class="flex-grow sm:pl-6 mt-5 sm:mt-0">
-              <h2 class="font-semibold title-font text-primary mb-1 text-lg">Dilatasi</h2>
-              <p class="leading-relaxed text-secondary text-[15px]">
-                Terakhir, kita akan memperbesar atau memperkecil suatu objek dengan faktor skala
-                tertentu.
-              </p>
-              <a
-                class="mt-1 text-indigo-500 inline-flex items-center text-base"
-                href="content/dilatasi.html"
-                >Materi
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  class="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
+          <div class=""><img src="img/EsHD.png" class="hidden w-96 md:block" alt="" /></div>
         </div>
       </div>
     </section>
 
-    <script>
-      function toggleNavbar() {
-        var sidebar = document.getElementById('sidebar');
-        var wacawbutton = document.getElementById('sidebarToggle');
-        var homeButton = document.getElementById('home');
-        var judul = document.getElementById('judul');
-
-        sidebar.classList.toggle('translate-x-full');
-        sidebar.classList.toggle('translate-x-0');
-
-        // Menggunakan kelas 'translate' yang telah didefinisikan
-        wacawbutton.classList.toggle('translate-x-4');
-        homeButton.classList.toggle('translate-x-4');
-
-        judul.classList.toggle('hidden');
-      }
-
-      function scrollToElement() {
-        // Tampilkan elemen target
-        var element = document.getElementById('targetElement');
-        if (element) {
-          element.classList.remove('hidden');
-
-          // Menghitung posisi elemen dari atas halaman
-          var offsetTop = element.offsetTop;
-
-          // Menscroll halaman ke posisi elemen
-          window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth', // Animasi smooth scroll
-          });
-
-          // Sembunyikan tombol setelah diklik
-          var button = document.getElementById('buttonaw');
-          if (button) {
-            button.classList.add('hidden');
-          }
-        }
-      }
-    </script>
+    <script></script>
   </body>
 </html>

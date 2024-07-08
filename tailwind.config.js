@@ -6,7 +6,11 @@ module.exports = {
       fontFamily: {
         custom: ['Montserrat', 'sans'],
         lato: ['Lato', 'sans'],
-        poppins: ['Poppins', 'lato'],
+        poppins: ['Poppins', 'sans'],
+      },
+
+      backgroundImage: {
+        'custom-image': "url('img/bocilduduk.png')",
       },
 
       colors: {
