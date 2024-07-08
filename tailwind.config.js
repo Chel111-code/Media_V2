@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         custom: ['Montserrat', 'sans'],
         lato: ['Lato', 'sans'],
+        poppins: ['Poppins', 'lato'],
       },
 
       colors: {
@@ -16,6 +17,7 @@ module.exports = {
         red: '#EF4565',
         hijau: '#079292',
         coklat: '#C8A5A5',
+        hijauMuda: '#2AC32A',
       },
 
       boxShadow: {

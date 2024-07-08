@@ -194,11 +194,78 @@
   }
 }
 
+.custom-utility {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-left: 1.25rem; /* 20px */
+  padding-right: 1.25rem; /* 20px */
+  background-color: rgba(247, 250, 252, 0.5); /* bg-gray-100 dengan bg-opacity-50 */
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  animation: zoomIn 1s linear;
+}
+
+.zoomIn4 {
+  animation: zoomIn 1s forwards;
+  animation-delay: 4s;
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+.zoomOut {
+  animation: zoomOut 1s forwards;
+}
+
+@keyframes zoomOut9 {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+}
+.zoomOut9 {
+  animation: zoomOut9 1s forwards;
+}
+
 .delayed-animation {
   animation-name: panjangGaris3Translasi;
   animation-duration: 3s;
   animation-fill-mode: forwards;
-  animation-delay: 3s;
+  animation-delay: 1s;
   opacity: 0;
 }
 
@@ -206,7 +273,7 @@
   animation-duration: 3s;
   animation-fill-mode: forwards;
   opacity: 0;
-  animation-delay: 3s;
+  animation-delay: 1s;
 }
 
 @keyframes titikMuncul_Translasi {
@@ -218,13 +285,27 @@
   }
 }
 
+@keyframes swa {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(calc(100% + 96px)); /* Swap positions */
+  }
+}
+
+.swap-animation {
+  animation: swap 3s infinite;
+}
+
 .titikMuncul_Translasi {
   animation: titikMuncul_Translasi 1.5s forwards;
 }
 
 .animate-iniya {
   animation: iniya 4s forwards;
-  animation-delay: 18s;
+  animation-delay: 8s;
 }
 
 @keyframes iniya {
@@ -234,6 +315,39 @@
   100% {
     transform: translateX(129px) translateY(-31px);
   }
+}
+
+.delaySatu {
+  animation: fadeIn 3s ease-in-out backwards;
+  animation-delay: 1s;
+}
+.delaySatuu {
+  animation: fadeIn 3s ease-in-out backwards;
+  animation-delay: 3s;
+}
+.delaySatuuu {
+  animation: fadeIn 3s ease-in-out backwards;
+  animation-delay: 5s;
+}
+.delayDua {
+  animation: fadeIn 2s ease-in-out backwards;
+  animation-delay: 2s;
+}
+.delayDuaa {
+  animation: titikMuncul_Translasi 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+.delayDuaaa {
+  animation: titikMuncul_Translasi 2s ease-in-out forwards;
+  animation-delay: 4s;
+}
+.delayDuaaaa {
+  animation: titikMuncul_Translasi 2s ease-in-out forwards;
+  animation-delay: 6s;
+}
+.delayTiga {
+  animation: fadeIn 1s ease-in-out backwards;
+  animation-delay: 3s;
 }
 
 .delay-1 {
@@ -366,21 +480,21 @@
 
 .jarakKedua {
   animation: jarakKedua 3s forwards;
-  animation-delay: 7s;
+  animation-delay: 5s;
 }
 
 @keyframes jarakKetiga {
   50% {
-    transform: translateX(-40px);
+    transform: translateX(-65px);
   }
   100% {
-    transform: translateX(-40px) translateY(119px);
+    transform: translateX(-65px) translateY(-31px);
   }
 }
 
 .jarakKetiga {
   animation: jarakKetiga 3s forwards;
-  animation-delay: 11s;
+  animation-delay: 5s;
 }
 
 @keyframes transisi {
@@ -465,35 +579,63 @@
 
 @keyframes gerakline7 {
   50% {
-    transform: translateX(120px) translateY(0px);
+    transform: translateX(0px) translateY(-147px);
   }
   100% {
-    transform: translateX(120px) translateY(-80px);
+    transform: translateX(71px) translateY(-147px);
   }
 }
 
 .gerakline7 {
-  animation: gerakline7 5s forwards;
-  animation-delay: 5s;
+  animation: gerakline7 6s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes gerakline777 {
+  50% {
+    transform: translateX(0px) translateY(-147px);
+  }
+  100% {
+    transform: translateX(-30px) translateY(-147px);
+  }
+}
+
+.gerakline777 {
+  animation: gerakline777 6s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes gerakline77 {
+  50% {
+    transform: translateX(0px) translateY(-95px);
+  }
+  100% {
+    transform: translateX(30px) translateY(-95px);
+  }
+}
+
+.gerakline77 {
+  animation: gerakline77 6s forwards;
+  animation-delay: 1s;
 }
 
 .munculine7 {
   animation: titikMuncul_Translasi 1s forwards;
-  animation-delay: 15s;
+  animation-delay: 0s;
 }
 
 @keyframes gerakline11 {
   50% {
-    transform: translateX(121px) translateY(0px);
+    transform: translateX(0px) translateY(-137px);
   }
   100% {
-    transform: translateX(121px) translateY(91px);
+    transform: translateX(-85px) translateY(-137px) skewX(26deg);
   }
 }
 
 .gerakline11 {
   animation: gerakline11 5s forwards;
-  animation-delay: 5s;
+  animation-delay: 1s;
 }
 
 .gerakline12 {
@@ -503,16 +645,16 @@
 
 @keyframes gerak2line11 {
   50% {
-    transform: translateY(121px) translateY(0px);
+    transform: translateX(135px) translateY(0px);
   }
   100% {
-    transform: translateY(121px) translateX(-107px) scaleX(1.5);
+    transform: translateY(-69px) translateX(135px);
   }
 }
 
 .gerak2line11 {
   animation: gerak2line11 5s forwards;
-  animation-delay: 6s;
+  animation-delay: 1s;
 }
 
 .munculine11 {
@@ -523,4 +665,29 @@
 .muncul2line11 {
   animation: titikMuncul_Translasi 1s forwards;
   animation-delay: 18s;
+}
+
+@keyframes munculSkew {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.munculSkewA {
+  animation: munculSkew 1s forwards;
+  animation-delay: 4s;
+}
+
+@keyframes kewkew {
+  100% {
+    transform: skewX(-26deg);
+  }
+}
+
+.kewkew {
+  animation: kewkew 1s forwards;
+  animation-delay: 4s;
 }

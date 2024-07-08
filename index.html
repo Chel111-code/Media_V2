@@ -5,130 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Media Pembelajaran untuk Materi Transformasi Geometri</title>
     <link rel="stylesheet" href="src/output.css" />
+    <link rel="stylesheet" href="keyframes/index.css" />
   </head>
+
   <style>
-    @keyframes pencerminan {
-      0%,
-      25% {
-        transform: rotateY(0);
-      }
-      75%,
-      100% {
-        transform: translateX(106px) rotateY(180deg);
-      }
+    @font-face {
+      font-family: 'Poppins';
+      src: url('../font/Poppins-Regular.ttf') format('truetype');
     }
 
-    .object-to-reflect {
-      animation: pencerminan 6s linear infinite alternate;
-    }
-
-    @keyframes rotasi {
-      0% {
-        transform: rotate(0deg);
-        background-color: rgb(224 231 255);
-      }
-      25% {
-        transform: rotate(90deg);
-        background-color: rgb(195, 186, 248);
-      }
-      50% {
-        transform: rotate(180deg);
-        background-color: rgb(179, 166, 252);
-      }
-      75% {
-        transform: rotate(270deg);
-        background-color: rgb(195, 186, 248);
-      }
-      100% {
-        transform: rotate(360deg);
-        background-color: rgb(224 231 255);
-      }
-    }
-
-    .rotasi {
-      animation: rotasi 5s linear infinite;
-    }
-
-    @keyframes dilatasi {
-      0% {
-        transform: scale(1);
-        background-color: rgb(224 231 255);
-      }
-      25% {
-        transform: scale(1.3);
-        background-color: rgb(195, 186, 248);
-      }
-      50% {
-        transform: scale(1);
-        background-color: rgb(179, 166, 252);
-      }
-      75% {
-        transform: scale(0.7);
-        background-color: rgb(195, 186, 248);
-      }
-      100% {
-        transform: scale(1);
-        background-color: rgb(224 231 255);
-      }
-    }
-
-    .dilatasi {
-      animation: dilatasi 5s linear infinite;
+    @font-face {
+      font-family: 'Lato';
+      src: url('../font/Lato-Regular.ttf') format('truetype');
     }
   </style>
 
-  <body class="md:bg-gray-100">
+  <body class="bg-[#FBFDFE]">
     <nav class="w-full flex justify-center">
       <div
         class="container flex flex-wrap px-2 top-0 py-5 flex-row items-center justify-between max-w-4xl md:px-4 z-50 bg-white bg-opacity-90 fixed"
       >
-        <a class="flex font-bold items-center text-primary tras" id="judul">
-          <span class="ml-3 text-lg relative">Transformasi Geometri</span>
+        <a class="flex font-bold justify-center mx-auto items-center text-primary tras" id="judul">
+          <img src="img/logo.png" class="w-10" alt="" />
+          <span
+            class="ml-3 text-base font-extrabold relative font-poppins tracking-wider text-hijauMuda"
+            >Transformasi Geometri</span
+          >
         </a>
-
-        <div class="flex">
-          <div class="md:hidden mr-3">
-            <a
-              class="p-[10px] rounded-full bg-[#FFF5F5] shadow-custom inline-block"
-              id="home"
-              href="index.html"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="20"
-                viewBox="0 0 30 25"
-                fill="none"
-              >
-                <path
-                  d="M15 3.95588L22.5 10.5735V22.0588H19.5V13.2353H10.5V22.0588H7.5V10.5735L15 3.95588ZM15 0L0 13.2353H4.5V25H13.5V16.1765H16.5V25H25.5V13.2353H30L15 0Z"
-                  fill="#094067"
-                />
-              </svg>
-            </a>
-          </div>
-
-          <div class="md:hidden">
-            <button
-              class="p-[13px] rounded-full bg-[#FFF5F5] shadow-custom"
-              id="sidebarToggle"
-              onclick="toggleNavbar()"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="19"
-                height="15"
-                viewBox="0 0 20 17"
-                fill="none"
-              >
-                <path
-                  d="M0 10.2H2.22222V6.8H0V10.2ZM0 17H2.22222V13.6H0V17ZM0 3.4H2.22222V0H0V3.4ZM4.44444 10.2H20V6.8H4.44444V10.2ZM4.44444 17H20V13.6H4.44444V17ZM4.44444 0V3.4H20V0H4.44444Z"
-                  fill="#094067"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
 
         <div
           class="fixed top-4 text-right right-0 shadow-custom font-medium text-sm translate-x-full rounded-lg transition duration-300 ease-in-out w-48 bg-[#F3F4F6] text-primary p-5 md:relative md:rounded-none md:transform-none md:w-auto md:bg-transparent md:text-primary md:p-0 md:h-11 md:top-0 md:shadow-none"
