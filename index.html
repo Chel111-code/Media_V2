@@ -22,7 +22,7 @@
     <nav class="w-full flex justify-center">
       <div
         id="navbar"
-        class="container flex flex-wrap px-2 top-0 py-5 flex-row items-center justify-between w-screen md:px-4 z-50 fixed"
+        class="container flex flex-wrap px-2 top-0 py-3 flex-row items-center justify-between w-screen md:px-4 z-50 fixed"
       >
         <a class="flex font-bold justify-center mx-auto items-center text-primary tras" id="judul">
           <img src="img/logo.png" class="w-10" alt="" />
@@ -48,7 +48,7 @@
           <img class="object-cover w-64" alt="hero" src="img/bocilduduk.png" />
         </div>
         <div
-          class="flex flex-col md:justify-center md:text-left items-center mx-auto text-center md:mt-8"
+          class="flex flex-col px-5 md:justify-center md:text-left items-center mx-auto text-center md:mt-8"
         >
           <h1
             class="title-font sm:text-xl text-xl md:text-2xl text-center leading-8 tracking-wide font-lato mb-3 mt-6 md:mt-0 font-bold text-primary md:px-8"
@@ -56,13 +56,15 @@
             Media Pembelajaran Transformasi Geometri <br class="hidden md:block" />
             Berbasis Web
           </h1>
-          <button
-            class="bg-[#6AEB6A] py-2 mt-3 px-16 text-white font-semibold rounded-md text-[13px] shadow-lg"
+          <a
+            href="content/transformasi.html"
+            class="bg-[#6AEB6A] py-2 mt-3 px-16 text-hijau font-semibold rounded-md text-[12px] shadow-lg"
           >
             MULAI
-          </button>
+          </a>
           <button
-            class="bg-opacity-0 border-2 py-2 px-[35px] border-gray-300 font-semibold text-hijau mt-3 inline-block rounded-md text-[13px] shadow-lg"
+            id="buttonDaftar"
+            class="bg-opacity-0 border-2 py-2 px-[35px] border-gray-300 font-semibold text-hijau mt-3 inline-block rounded-md text-[12px] shadow-lg"
           >
             DAFTAR MATERI
           </button>
@@ -70,7 +72,10 @@
       </div>
     </section>
 
-    <section class="relative mx-auto container text-[14px] font-medium leading-6 w-full">
+    <section
+      class="relative mx-auto container text-[14px] font-medium leading-6 w-full"
+      id="daftarMateri"
+    >
       <div class="h-screen w-full bg-[#FFFFFB]">
         <div
           class="max-w-4xl h-full gap-10 md:px- flex justify-center flex-col md:flex-row items-center mx-auto px-7"
@@ -216,6 +221,10 @@
         } else {
           navbar.classList.remove('border-b-2', 'bg-opacity-90', 'bg-[#FBFDFE]');
         }
+      });
+
+      document.getElementById('buttonDaftar').addEventListener('click', function () {
+        document.getElementById('daftarMateri').scrollIntoView({ behavior: 'smooth' });
       });
     </script>
   </body>
