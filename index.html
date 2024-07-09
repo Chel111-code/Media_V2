@@ -21,11 +21,12 @@
   <body class="bg-[#FBFDFE] font-lato">
     <nav class="w-full flex justify-center">
       <div
-        class="container flex flex-wrap px-2 top-0 py-5 flex-row items-center justify-between max-w-4xl md:px-4 z-50 bg-opacity-90 fixed"
+        id="navbar"
+        class="container flex flex-wrap px-2 top-0 py-5 flex-row items-center justify-between w-screen md:px-4 z-50 fixed"
       >
         <a class="flex font-bold justify-center mx-auto items-center text-primary tras" id="judul">
           <img src="img/logo.png" class="w-10" alt="" />
-          <span class="ml-3 text-lg font-extrabold relative font-lato tracking-wider text-hijauMuda"
+          <span class="ml-3 text-lg font-extrabold relative font-lato tracking-wide text-hijauMuda"
             >Transformasi Geometri</span
           >
         </a>
@@ -56,7 +57,7 @@
             Berbasis Web
           </h1>
           <button
-            class="bg-[#6AEB6A] py-2 mt-4 px-16 text-white font-semibold rounded-md text-[13px] shadow-lg"
+            class="bg-[#6AEB6A] py-2 mt-3 px-16 text-white font-semibold rounded-md text-[13px] shadow-lg"
           >
             MULAI
           </button>
@@ -76,37 +77,146 @@
         >
           <div class="md:w-1/2">
             <h2
-              class="text-xl md:text-2xl text-hijauMuda font-poppins font-extrabold md:font-[1100] md:self-start text-left"
+              class="text-xl md:text-2xl text-hijauMuda leading-8 font-poppins font-extrabold md:font-[1100] md:self-start text-left"
             >
-              <span class="text-[26px]">Transformasi</span> : Mengubah Bentuk dan Posisi Objek
+              <span class="text-[21px] md:text-[24px]">Transformasi</span> : Mengubah Bentuk dan
+              Posisi Objek
             </h2>
             <img src="img/EsHD.png" class="w-52 mt-3 mx-auto md:self-end md:hidden" alt="" />
-            <div class="font-semibold text-secondary md:text-[15px] text-justify mt-3">
+            <div class="font- text-secondary font- max-w-xl md:text-[15px] text- mt-2">
               Pelajari dasar-dasar transformasi geometri untuk memahami bagaimana objek dapat diubah
               dalam bentuk dan posisi tanpa kehilangan sifat-sifat esensialnya
             </div>
-            <div class="flex gap-2 items-center mt-2 md:mt- self-start">
-              <div class="text-hijau font-bold md:text-base">Materi</div>
-              <svg
-                width="20"
-                height="11"
-                viewBox="0 0 20 11"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="mt-[2px]"
-              >
-                <path
-                  d="M15.0125 4.125H0V6.875H15.0125V11L20 5.5L15.0125 0V4.125Z"
-                  fill="#079292"
-                />
-              </svg>
+            <div class="flex gap-2 items-center mt-3 md:mt- self-start">
+              <div class="px-3 py-1 cursor-pointer bg-hijauMuda text-[13px] text-white rounded-md">
+                Materi
+              </div>
             </div>
           </div>
           <div class=""><img src="img/EsHD.png" class="hidden w-96 md:block" alt="" /></div>
         </div>
       </div>
+      <div class="h-screen w-full bg-[#EFF7F6]">
+        <div
+          class="max-w-4xl h-full gap-16 md:px- flex justify-center flex-col md:flex-row items-center mx-auto px-7"
+        >
+          <div class=""><img src="img/jalan.jpeg" class="hidden w-72 md:block" alt="" /></div>
+          <div class="md:w-1/2">
+            <h2
+              class="text-xl md:text-2xl text-jus text-hijauMuda leading-8 font-poppins font-extrabold md:font-[1100] md:self-start text-left"
+            >
+              <span class="text-[21px] md:text-[24px]">Translasi</span> : Memindahkan Objek
+            </h2>
+            <img src="img/jalan.jpeg" class="w-52 mt-8 mx-auto md:self-end md:hidden" alt="" />
+            <div
+              class="font- text-secondary font- max-w-xl md:text-[15px] md:mt-2 text-justify mt-6"
+            >
+              Kenali konsep translasi di mana objek dipindahkan secara linier, menjaga bentuk
+              aslinya sambil berpindah dari satu tempat ke tempat lain
+            </div>
+            <div class="flex gap-2 items-center mt-3 md:mt- self-start">
+              <div class="px-3 py-1 cursor-pointer bg-hijauMuda text-[13px] text-white rounded-md">
+                Materi
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="h-screen w-full bg-[#EDF6F9]">
+        <div
+          class="max-w-4xl h-full gap-16 md:px- flex justify-center flex-col md:flex-row items-center mx-auto px-7"
+        >
+          <div class="md:w-1/2">
+            <h2
+              class="text-xl md:text-2xl text-jus text-hijauMuda leading-8 font-poppins font-extrabold md:font-[1100] md:self-start text-left"
+            >
+              <span class="text-[21px] md:text-[24px]">Refleksi</span> : Cermin dalam Geometri
+            </h2>
+            <img src="img/cerminHD.png" class="w-28 mt-8 mx-auto md:self-end md:hidden" alt="" />
+            <div
+              class="font- text-secondary font- max-w-xl md:text-[15px] md:mt-2 text-justify mt-8"
+            >
+              Pahami refleksi sebagai cermin dalam geometri, di mana objek dibalik sesuai dengan
+              sumbu simetri, menciptakan bayangan yang sempurna
+            </div>
+            <div class="flex gap-2 items-center mt-3 md:mt- self-start">
+              <div class="px-3 py-1 cursor-pointer bg-hijauMuda text-[13px] text-white rounded-md">
+                Materi
+              </div>
+            </div>
+          </div>
+          <div class=""><img src="img/cerminHD.png" class="hidden w-44 md:block" alt="" /></div>
+        </div>
+      </div>
+      <div class="h-screen w-full bg-[#EFF7F6]">
+        <div
+          class="max-w-4xl h-full gap-16 md:px- flex justify-center flex-col md:flex-row items-center mx-auto px-7"
+        >
+          <div class="">
+            <img src="img/spinnerHD.png" class="hidden w-80 -mt-20 md:block" alt="" />
+          </div>
+          <div class="md:w-1/2">
+            <h2
+              class="text-xl md:text-2xl text-jus text-hijauMuda leading-8 font-poppins font-extrabold md:font-[1100] md:self-start text-left"
+            >
+              <span class="text-[21px] md:text-[24px]">Rotasi</span> : Memutar Objek di Sekitar
+              Titik
+            </h2>
+            <img src="img/spinnerHD.png" class="w-52 mt-0 mx-auto md:self-end md:hidden" alt="" />
+            <div
+              class="font- text-secondary font- max-w-xl md:text-[15px] md:mt-2 text-justify mt-8"
+            >
+              Temukan bagaimana objek dapat diputar di sekitar titik tetap dengan sudut tertentu,
+              mempertahankan bentuk dan ukuran aslinya
+            </div>
+            <div class="flex gap-2 items-center mt-3 md:mt- self-start">
+              <div class="px-3 py-1 cursor-pointer bg-hijauMuda text-[13px] text-white rounded-md">
+                Materi
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="h-screen w-full bg-[#FFFFFB]">
+        <div
+          class="max-w-4xl h-full gap-16 md:px- flex justify-center flex-col md:flex-row items-center mx-auto px-7"
+        >
+          <div class="md:w-1/2">
+            <h2
+              class="text-xl md:text-2xl text-jus text-hijauMuda leading-8 font-poppins font-extrabold md:font-[1100] md:self-start text-left"
+            >
+              <span class="text-[21px] md:text-[24px]">Dilatasi</span> : Mengubah Ukuran dengan
+              Proporsi
+            </h2>
+            <img src="img/potooo.png" class="w-52 mt-2 mx-auto md:self-end md:hidden" alt="" />
+            <div
+              class="font- text-secondary font- max-w-xl md:text-[15px] md:mt-2 text-justify mt-2"
+            >
+              Jelajahi konsep dilatasi yang memungkinkan objek diperbesar atau diperkecil dengan
+              skala tertentu, sambil tetap menjaga proporsi dan bentuk aslinya.
+            </div>
+            <div class="flex gap-2 items-center mt-3 md:mt- self-start">
+              <div class="px-3 py-1 cursor-pointer bg-hijauMuda text-[13px] text-white rounded-md">
+                Materi
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <img src="img/potooo.png" class="hidden w-80 md:block" alt="" />
+          </div>
+        </div>
+      </div>
     </section>
 
-    <script></script>
+    <script>
+      window.addEventListener('scroll', function () {
+        var navbar = document.getElementById('navbar');
+        if (window.scrollY > 0) {
+          navbar.classList.add('border-b-2', 'bg-opacity-90', 'bg-[#FBFDFE]');
+        } else {
+          navbar.classList.remove('border-b-2', 'bg-opacity-90', 'bg-[#FBFDFE]');
+        }
+      });
+    </script>
   </body>
 </html>
