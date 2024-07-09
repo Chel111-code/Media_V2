@@ -73,7 +73,7 @@
     </section>
 
     <section
-      class="relative mx-auto container text-[14px] font-medium leading-6 w-full"
+      class="relative mx-auto hidden container text-[14px] font-medium leading-6 w-full"
       id="daftarMateri"
     >
       <div class="h-screen w-full bg-[#FFFFFB]">
@@ -93,9 +93,12 @@
               dalam bentuk dan posisi tanpa kehilangan sifat-sifat esensialnya
             </div>
             <div class="flex gap-2 items-center mt-3 md:mt- self-start">
-              <div class="px-3 py-1 cursor-pointer bg-hijauMuda text-[13px] text-white rounded-md">
+              <a
+                href="content/transformasi.html"
+                class="px-3 py-1 cursor-pointer bg-hijauMuda text-[13px] text-white rounded-md"
+              >
                 Materi
-              </div>
+              </a>
             </div>
           </div>
           <div class=""><img src="img/EsHD.png" class="hidden w-96 md:block" alt="" /></div>
@@ -120,9 +123,12 @@
               aslinya sambil berpindah dari satu tempat ke tempat lain
             </div>
             <div class="flex gap-2 items-center mt-3 md:mt- self-start">
-              <div class="px-3 py-1 cursor-pointer bg-hijauMuda text-[13px] text-white rounded-md">
+              <a
+                href="content/translasi.html"
+                class="px-3 py-1 cursor-pointer bg-hijauMuda text-[13px] text-white rounded-md"
+              >
                 Materi
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -145,9 +151,12 @@
               sumbu simetri, menciptakan bayangan yang sempurna
             </div>
             <div class="flex gap-2 items-center mt-3 md:mt- self-start">
-              <div class="px-3 py-1 cursor-pointer bg-hijauMuda text-[13px] text-white rounded-md">
+              <a
+                href="content/refleksi.html"
+                class="px-3 py-1 cursor-pointer bg-hijauMuda text-[13px] text-white rounded-md"
+              >
                 Materi
-              </div>
+              </a>
             </div>
           </div>
           <div class=""><img src="img/cerminHD.png" class="hidden w-44 md:block" alt="" /></div>
@@ -175,9 +184,12 @@
               mempertahankan bentuk dan ukuran aslinya
             </div>
             <div class="flex gap-2 items-center mt-3 md:mt- self-start">
-              <div class="px-3 py-1 cursor-pointer bg-hijauMuda text-[13px] text-white rounded-md">
+              <a
+                href="content/rotasi.html"
+                class="px-3 py-1 cursor-pointer bg-hijauMuda text-[13px] text-white rounded-md"
+              >
                 Materi
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -201,9 +213,12 @@
               skala tertentu, sambil tetap menjaga proporsi dan bentuk aslinya.
             </div>
             <div class="flex gap-2 items-center mt-3 md:mt- self-start">
-              <div class="px-3 py-1 cursor-pointer bg-hijauMuda text-[13px] text-white rounded-md">
+              <a
+                href="content/dilatasi.html"
+                class="px-3 py-1 cursor-pointer bg-hijauMuda text-[13px] text-white rounded-md"
+              >
                 Materi
-              </div>
+              </a>
             </div>
           </div>
           <div class="">
@@ -224,7 +239,9 @@
       });
 
       document.getElementById('buttonDaftar').addEventListener('click', function () {
-        document.getElementById('daftarMateri').scrollIntoView({ behavior: 'smooth' });
+        const daftarMateri = document.getElementById('daftarMateri');
+        daftarMateri.classList.remove('hidden');
+        daftarMateri.scrollIntoView({ behavior: 'smooth' });
       });
     </script>
   </body>

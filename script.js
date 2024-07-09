@@ -1,3 +1,26 @@
+window.addEventListener('scroll', function () {
+  var navbar = document.getElementById('navbar');
+  if (window.scrollY > 0) {
+    navbar.classList.add('border-b-2', 'bg-opacity-90', 'bg-[#FBFDFE]');
+  } else {
+    navbar.classList.remove('border-b-2', 'bg-opacity-90', 'bg-[#FBFDFE]');
+  }
+});
+
+function toggleNavbar() {
+  var sidebar = document.getElementById('sidebar');
+  var judul = document.getElementById('judul');
+  var sidebarToggle = document.getElementById('sidebarToggle');
+
+  sidebar.classList.toggle('translate-x-full');
+  sidebarToggle.classList.toggle('-translate-x-44');
+  sidebar.classList.toggle('translate-x-0');
+  sidebar.classList.toggle('text-primary');
+
+  // Menambahkan atau menghapus kelas 'hidden'
+  judul.classList.toggle('hidden');
+}
+
 document.getElementById('lihatPopup').addEventListener('click', function () {
   document.getElementById('popUp').classList.remove('hidden');
   document.getElementById('popUp').classList.add('zoomIn');
@@ -384,24 +407,6 @@ setTimeout(function () {
     delay: 3, // Menunda animasi agar dimulai setelah animasi sebelumnya selesai
   });
 }, 0);
-
-function toggleNavbar() {
-  var sidebar = document.getElementById('sidebar');
-  var wacawbutton = document.getElementById('sidebarToggle');
-  var homeButton = document.getElementById('home');
-  var judul = document.getElementById('judul');
-
-  sidebar.classList.toggle('translate-x-full');
-  sidebar.classList.toggle('translate-x-0');
-  sidebar.classList.toggle('text-primary');
-  sidebar.classList.toggle('text-white');
-
-  // Menggunakan kelas 'translate' yang telah didefinisikan
-  wacawbutton.classList.toggle('translate-x-4');
-  homeButton.classList.toggle('translate-x-4');
-
-  judul.classList.toggle('hidden');
-}
 
 document.addEventListener('DOMContentLoaded', function () {
   var shape = document.getElementById('shape');

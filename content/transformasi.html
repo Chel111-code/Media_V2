@@ -15,55 +15,43 @@
       font-family: 'Lato';
       src: url('../font/Lato-Regular.ttf') format('truetype');
     }
+    @font-face {
+      font-family: 'Poppins';
+      src: url('../font/Poppins-Regular.ttf') format('truetype');
+    }
   </style>
 
   <body class="bg-[#edf6f9]">
-    <nav class="w-full flex justify-center">
+    <nav class="fixed top-0 w-full z-50" id="navbar">
       <div
-        class="container flex flex-wrap px-2 top-0 py-5 flex-row items-center justify-between max-w-4xl md:px-4 z-50 bg-[#FBFDFE] bg-opacity-90 fixed"
+        class="container bg-[#FBFDFE] bg-opacity-90 mx-auto flex flex-wrap py-3 px-5 items-center justify-between max-w-4xl md:px-10"
       >
-        <a class="flex font-bold items-center text-primary tras" id="judul">
-          <span class="ml-3 text-lg relative">Transformasi Geometri</span>
-        </a>
-
-        <div class="flex">
-          <div class="md:hidden mr-3">
-            <a
-              class="p-[10px] rounded-full bg-[#FFF5F5] shadow-custom inline-block"
-              id="home"
-              href="../index.html"
+        <div>
+          <a
+            class="flex font-bold justify-center mx-auto items-center text-primary tras"
+            id="judul"
+          >
+            <img src="../img/logo.png" class="w-10" alt="" />
+            <span
+              class="ml-3 text-base font-extrabold relative font-lato tracking-wide text-hijauMuda"
+              >Transformasi Geometri</span
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="20"
-                viewBox="0 0 30 25"
-                fill="none"
-              >
-                <path
-                  d="M15 3.95588L22.5 10.5735V22.0588H19.5V13.2353H10.5V22.0588H7.5V10.5735L15 3.95588ZM15 0L0 13.2353H4.5V25H13.5V16.1765H16.5V25H25.5V13.2353H30L15 0Z"
-                  fill="#094067"
-                />
-              </svg>
-            </a>
-          </div>
+          </a>
+        </div>
 
+        <div class="flex items-center">
           <div class="md:hidden">
-            <button
-              class="p-[13px] rounded-full bg-[#FFF5F5] shadow-custom"
-              id="sidebarToggle"
-              onclick="toggleNavbar()"
-            >
+            <button class="mt-1 mr-2" id="sidebarToggle" onclick="toggleNavbar()">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="19"
-                height="15"
-                viewBox="0 0 20 17"
+                width="30"
+                height="35"
+                viewBox="0 0 30 35"
                 fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M0 10.2H2.22222V6.8H0V10.2ZM0 17H2.22222V13.6H0V17ZM0 3.4H2.22222V0H0V3.4ZM4.44444 10.2H20V6.8H4.44444V10.2ZM4.44444 17H20V13.6H4.44444V17ZM4.44444 0V3.4H20V0H4.44444Z"
-                  fill="#094067"
+                  d="M3.75 18.9583H6.25V16.0416H3.75V18.9583ZM3.75 24.7916H6.25V21.875H3.75V24.7916ZM3.75 13.125H6.25V10.2083H3.75V13.125ZM8.75 18.9583H26.25V16.0416H8.75V18.9583ZM8.75 24.7916H26.25V21.875H8.75V24.7916ZM8.75 10.2083V13.125H26.25V10.2083H8.75Z"
+                  fill="#2AC32A"
                 />
               </svg>
             </button>
@@ -71,7 +59,7 @@
         </div>
 
         <div
-          class="fixed top-4 text-right right-0 shadow-custom font-medium text-sm translate-x-full rounded-lg transition duration-300 ease-in-out w-48 bg-[#F3F4F6] text-primary p-5 md:relative md:rounded-none md:transform-none md:w-auto md:bg-transparent md:text-primary md:p-0 md:h-11 md:top-0 md:shadow-none"
+          class="fixed top-4 text-right font-poppins text-[#808080] right-0 shadow-custom text-xs font-medium translate-x-full rounded-lg transition duration-300 ease-in-out w-48 bg-[#F3F4F6] p-5 md:relative md:rounded-none md:transform-none md:w-auto md:bg-transparent md:p-0 md:top-0 md:shadow-none"
           id="sidebar"
         >
           <ul class="flex flex-col md:flex-row md:space-x-5">
@@ -131,7 +119,7 @@
     </div>
 
     <div
-      class="container mx-auto font-semibold max-w-4xl font-lato pt-[70px] text-[14px] relative px-5 font-medium text-secondary leading-6 tracking-wide w-full bg-[#FBFDFE]"
+      class="container mx-auto font-semibold max-w-4xl font-lato pt-[70px] text-[14px] relative px-5 text-secondary leading-6 tracking-wide w-full bg-[#FBFDFE]"
     >
       <div
         class="max-w-[400px] h-44 rounded-2xl mt-16 border-2 border-hijau md:px-8 py-7 gap-5 shadow-xl flex justify-around items-center md:mx-auto"
