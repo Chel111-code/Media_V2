@@ -252,7 +252,7 @@
 
 .rotasiBerlawanan {
   animation: rotasiBerlawanan 3s forwards;
-  animation-delay: 5s;
+  animation-delay: 2s;
 }
 
 @keyframes rotateSatuduapuluh {

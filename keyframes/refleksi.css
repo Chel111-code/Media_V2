@@ -153,14 +153,14 @@
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 100%; /* 4:3 aspect ratio */
+  padding-bottom: 120%; /* 4:3 aspect ratio */
 }
 
 .aspect-ratio-iframe2 {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 85%; /* 4:3 aspect ratio */
+  padding-bottom: 110%; /* 4:3 aspect ratio */
 }
 
 .aspect-ratio-iframe2 iframe {

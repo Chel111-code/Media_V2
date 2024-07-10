@@ -37,7 +37,7 @@ function drawGrid() {
 }
 
 // Draw the square
-function drawSquare(sq, color, labelColor = '#8FBFFF') {
+function drawSquare(sq, color, labelColor = '#D9D9D9') {
   ctx.strokeStyle = color;
   ctx.fillStyle = color;
   ctx.beginPath();
@@ -73,9 +73,9 @@ function drawPointP(point, color) {
 function draw() {
   ctx.clearRect(0, 0, canvas9.width, canvas9.height);
   drawGrid();
-  drawSquare(square, '#8FBFFF');
+  drawSquare(square, '#D9D9D9');
   if (rotatedSquare.length > 0) {
-    drawSquare(rotatedSquare, '#079292', '#079292');
+    drawSquare(rotatedSquare, '#2AC32A', '#2AC32A');
   }
   drawPointP(pointP, 'red');
 }
@@ -801,19 +801,15 @@ buttonsTesKedua1.forEach((button) => {
 
 function toggleNavbar() {
   var sidebar = document.getElementById('sidebar');
-  var wacawbutton = document.getElementById('sidebarToggle');
-  var homeButton = document.getElementById('home');
   var judul = document.getElementById('judul');
+  var sidebarToggle = document.getElementById('sidebarToggle');
 
   sidebar.classList.toggle('translate-x-full');
+  sidebarToggle.classList.toggle('-translate-x-44');
   sidebar.classList.toggle('translate-x-0');
   sidebar.classList.toggle('text-primary');
-  sidebar.classList.toggle('text-white');
 
-  // Menggunakan kelas 'translate' yang telah didefinisikan
-  wacawbutton.classList.toggle('translate-x-4');
-  homeButton.classList.toggle('translate-x-4');
-
+  // Menambahkan atau menghapus kelas 'hidden'
   judul.classList.toggle('hidden');
 }
 
