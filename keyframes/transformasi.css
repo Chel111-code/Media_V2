@@ -184,7 +184,7 @@
 
 .trans {
   animation: trans 2s forwards;
-  animation-delay: 3s;
+  animation-delay: 1.5s;
 }
 
 @keyframes scale {

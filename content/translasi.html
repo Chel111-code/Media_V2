@@ -15,55 +15,44 @@
       font-family: 'Lato';
       src: url('../font/Lato-Regular.ttf') format('truetype');
     }
+    @font-face {
+      font-family: 'Poppins';
+      src: url('../font/Poppins-Regular.ttf') format('truetype');
+    }
   </style>
 
-  <body class="bg-gray-100">
-    <nav class="w-full flex justify-center">
+  <body class="bg-[#edf6f9]">
+    <nav class="fixed top-0 w-full z-50" id="navbar">
       <div
-        class="container flex flex-wrap px-2 top-0 py-5 flex-row items-center justify-between max-w-4xl md:px-4 z-50 bg-white bg-opacity-90 fixed"
+        class="container bg-[#FBFDFE] bg-opacity-90 mx-auto flex flex-wrap py-3 px-5 items-center justify-between max-w-4xl md:px-10"
       >
-        <a class="flex font-bold items-center text-primary tras" id="judul" href="../index.html">
-          <span class="ml-3 text-lg relative">Transformasi Geometri</span>
-        </a>
-
-        <div class="flex">
-          <div class="md:hidden mr-3">
-            <a
-              class="p-[10px] rounded-full bg-[#FFF5F5] shadow-custom inline-block"
-              id="home"
-              href="../index.html"
+        <div>
+          <a
+            href="../index.html"
+            class="flex font-bold justify-center mx-auto items-center text-primary tras"
+            id="judul"
+          >
+            <img src="../img/logo.png" class="w-10" alt="" />
+            <span
+              class="ml-3 text-base font-extrabold relative font-lato tracking-wide text-hijauMuda"
+              >Transformasi Geometri</span
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="20"
-                viewBox="0 0 30 25"
-                fill="none"
-              >
-                <path
-                  d="M15 3.95588L22.5 10.5735V22.0588H19.5V13.2353H10.5V22.0588H7.5V10.5735L15 3.95588ZM15 0L0 13.2353H4.5V25H13.5V16.1765H16.5V25H25.5V13.2353H30L15 0Z"
-                  fill="#094067"
-                />
-              </svg>
-            </a>
-          </div>
+          </a>
+        </div>
 
+        <div class="flex items-center">
           <div class="md:hidden">
-            <button
-              class="p-[13px] rounded-full bg-[#FFF5F5] shadow-custom"
-              id="sidebarToggle"
-              onclick="toggleNavbar()"
-            >
+            <button class="mt-1 mr-2" id="sidebarToggle" onclick="toggleNavbar()">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="19"
-                height="15"
-                viewBox="0 0 20 17"
+                width="30"
+                height="35"
+                viewBox="0 0 30 35"
                 fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M0 10.2H2.22222V6.8H0V10.2ZM0 17H2.22222V13.6H0V17ZM0 3.4H2.22222V0H0V3.4ZM4.44444 10.2H20V6.8H4.44444V10.2ZM4.44444 17H20V13.6H4.44444V17ZM4.44444 0V3.4H20V0H4.44444Z"
-                  fill="#094067"
+                  d="M3.75 18.9583H6.25V16.0416H3.75V18.9583ZM3.75 24.7916H6.25V21.875H3.75V24.7916ZM3.75 13.125H6.25V10.2083H3.75V13.125ZM8.75 18.9583H26.25V16.0416H8.75V18.9583ZM8.75 24.7916H26.25V21.875H8.75V24.7916ZM8.75 10.2083V13.125H26.25V10.2083H8.75Z"
+                  fill="#2AC32A"
                 />
               </svg>
             </button>
@@ -71,7 +60,7 @@
         </div>
 
         <div
-          class="fixed top-4 text-right right-0 shadow-custom font-medium text-sm translate-x-full rounded-lg transition duration-300 ease-in-out w-48 bg-[#F3F4F6] text-primary p-5 md:relative md:rounded-none md:transform-none md:w-auto md:bg-transparent md:text-primary md:p-0 md:h-11 md:top-0 md:shadow-none"
+          class="fixed top-2 text-right font-poppins text-[#808080] right-0 shadow-custom text-xs font-medium translate-x-full rounded-lg transition duration-300 ease-in-out w-48 bg-[#F3F4F6] p-5 md:relative md:rounded-none md:transform-none md:w-auto md:bg-transparent md:p-0 md:top-0 md:shadow-none"
           id="sidebar"
         >
           <ul class="flex flex-col md:flex-row md:space-x-5">
@@ -114,15 +103,17 @@
     </nav>
 
     <div
-      class="container font-lato font-semibold pt-[70px] text-[14px] max-w-4xl md:mx-auto text-secondary leading-6 tracking-wide w-full"
+      class="container font-lato font-semibold pt-[60px] text-[14px] max-w-4xl md:mx-auto text-secondary leading-6 tracking-wide w-full"
     >
       <div>
         <!-- Judul -->
-        <h2 class="text-xs text-hijau font-bold pt-8 md:mx-auto max-w-4xl md:px-8 px-5 bg-white">
+        <h2
+          class="text-xs text-hijau font-bold pt-8 md:mx-auto max-w-4xl md:px-8 px-5 bg-[#FBFDFE]"
+        >
           Jenis transformasi
         </h2>
         <h1
-          class="text-[22px] px-5 font-extrabold text-primary tracking-wide pt-1 md:mx-auto max-w-4xl md:px-8 bg-white"
+          class="text-[22px] px-5 font-extrabold text-primary tracking-wide pt-1 md:mx-auto max-w-4xl md:px-8 bg-[#FBFDFE]"
         >
           Translasi / Pergeseran
         </h1>
@@ -146,27 +137,27 @@
         </div>
 
         <!-- Hero Section -->
-        <div class="md:mx-auto bg-white md:px-8 px-5 pt-6 pb-8 md:pb-16">
+        <div class="md:mx-auto bg-[#FBFDFE] md:px-8 px-5 pt-6 pb-8 md:pb-16">
           <div
-            class="max-w-[400px] rounded-2xl border-2 border-hijau px-5 mt-4 md:px-8 py-10 shadow-xl flex items-center md:mx-auto relative overflow-hidden"
+            class="max-w-[400px] rounded-2xl border-2 border-hijauMuda px-5 mt-4 md:px-8 py-10 shadow-xl flex items-center md:mx-auto relative overflow-hidden"
           >
-            <img src="../img/swap_16698024.png" alt="" class="w-24 swap-animation" />
+            <img src="../img/geser.jpeg" alt="" class="w-24 swap-animation" />
             <div class="ml-7 text-hijau text-[15px] swap-animation">
               <span class="text-xl font-bold inline-block mb-1">Geser</span>, <br />
               memindahkan sesuatu dari satu tempat ke tempat lain
             </div>
           </div>
           <div
-            class="flex items-center mt-10 max-w-[500px] md:ml-24"
+            class="flex items-center mt-10 max-w-[500px] md:ml-36"
             data-aos="zoom-in-right"
             data-aos-duration="800"
           >
             <img src="../img/Grafis/halo.png" alt="" class="w-28 scale-x-[-1] md:w-36" />
             <div class="ml-1">
-              <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 rounded-lg rounded-tl-none">
+              <div class="bg-[#8CEBE9] px-3 py-3 md:px-4 md:py-4 rounded-lg rounded-tl-none">
                 Hi, ketemu lagi sama Ali.
               </div>
-              <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 rounded-lg mt-1 rounded-tl-none">
+              <div class="bg-[#8CEBE9] px-3 py-3 md:px-4 md:py-4 rounded-lg mt-1 rounded-tl-none">
                 Saat ini Ali mau berjalan ke rumah nenek.
               </div>
             </div>
@@ -178,7 +169,7 @@
           </div>
           <hr class="mt-16" />
           <div
-            class="flex mt-12 max-w-[500px] md:ml-24 items-center"
+            class="flex mt-12 max-w-[500px] md:ml-36 items-center"
             data-aos="zoom-in-right"
             data-aos-duration="800"
           >
@@ -194,12 +185,12 @@
             </div>
           </div>
           <div
-            class="flex max-w-[500px] flex-wrap justify-center gap-6 mt-10 md:mt-0 mx-auto"
+            class="flex max-w-[500px] flex-wrap justify-center gap-6 mt-10 md:mt-6 mx-auto"
             id="choiceui"
           >
             <div
               id="holeA"
-              class="w-[230px] shadow-lg md:w-40 h-48 border-2 border-coklat rounded-md flex items-center overflow-hidden cursor-pointer"
+              class="w-[230px] shadow-lg h-48 border-2 border-coklat rounded-md flex items-center overflow-hidden cursor-pointer"
             >
               <div
                 id="choiceA"
@@ -244,7 +235,7 @@
             </div>
             <div
               id="holeB"
-              class="w-[230px] shadow-lg md:w-40 h-48 border-2 border-coklat rounded-md flex items-center overflow-hidden cursor-pointer"
+              class="w-[230px] shadow-lg h-48 border-2 border-coklat rounded-md flex items-center overflow-hidden cursor-pointer"
             >
               <div
                 id="choiceB"
@@ -289,7 +280,7 @@
             </div>
             <div
               id="holeC"
-              class="w-[230px] shadow-lg md:w-40 h-48 border-2 border-coklat rounded-md flex items-center overflow-hidden cursor-pointer"
+              class="w-[230px] shadow-lg h-48 border-2 border-coklat rounded-md flex items-center overflow-hidden cursor-pointer"
             >
               <div
                 id="choiceC"
@@ -344,13 +335,13 @@
 
           <hr class="mt-16" />
           <div
-            class="flex mt-12 ml-1 max-w-[500px] md:ml-24 items-center"
+            class="flex mt-12 ml-1 max-w-[400px] md:mx-auto items-center"
             dat-aos="zoom-in-right"
             dat-aos-duration="800"
           >
-            <img src="../img/Grafis/Tanya.png" alt="" class="w-28 md:w-40" />
+            <img src="../img/Grafis/Tanya.png" alt="" class="w-28 md:w-32" />
             <div>
-              <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none ml-1 md:ml-4">
+              <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none md:ml-4">
                 Berapakah jarak yang di tempuh Ali ke rumah neneknya?
               </div>
             </div>
@@ -403,16 +394,20 @@
           <hr class="mt-16" />
 
           <div
-            class="flex mt-16 max-w-[500px] md:ml-24 items-center"
+            class="flex mt-12 max-w-[400px] md:mx-auto items-center"
             dat-aos="zoom-in-right"
             dat-aos-duration="800"
           >
-            <img src="../img/Grafis/ooo.png" alt="" class="-translate-x-2 w-36 md:w-40" />
             <div>
-              <div class="bg-[#8CEBE9] -ml-3 px-3 py-3 md:px-5 md:py-5 rounded-lg rounded-tl-none">
+              <div class="bg-[#8CEBE9] -mr-4 px-3 py-3 md:px-4 md:py-4 rounded-lg rounded-tr-none">
                 Peristiwa di atas merupakan contoh translasi loh!
               </div>
             </div>
+            <img
+              src="../img/Grafis/ooo.png"
+              alt=""
+              class="-translate-x-2 scale-x-[-1] w-36 md:w-40 -mr-7"
+            />
           </div>
 
           <div class="w-60 border-4 mt-16 relative mx-auto border-hijau shadow-lg p-6 rounded-lg">
@@ -422,7 +417,12 @@
             <img src="../img/Transformasi/lamp.png" class="absolute w-16 -top-10 -left-6" alt="" />
           </div>
 
-          <div class="mt-10" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="50">
+          <div
+            class="mt-10 md:ml-20"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            data-aos-delay="50"
+          >
             <p class="border-l-8 border-hijau font-semibold pl-2 leading-relaxed text-primary">
               <span class="font-bold text-hijau">Translasi</span> adalah proses memindahkan semua
               titik pada bangun datar dengan jarak dan arah yang sama.
@@ -432,11 +432,11 @@
           <hr class="bg-hijau h-1 mt-16" />
 
           <div
-            class="flex mt-12 ml-1 max-w-[500px] md:ml-24 items-center"
+            class="flex mt-12 ml-1 max-w-[400px] md:mx-auto items-center"
             dat-aos="zoom-in-right"
             dat-aos-duration="800"
           >
-            <img src="../img/Grafis/hmm.png" alt="" class="w-32 md:w-40" />
+            <img src="../img/Grafis/hmm.png" alt="" class="w-32 md:w-36" />
             <div>
               <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none ml-1 md:ml-4">
                 Coba kamu tebak berapa jarak dan arah translasi titik A di bawah!
@@ -447,7 +447,7 @@
           <div class="">
             <div
               id="lihatTrans1"
-              class="w-32 cursor-pointer mx-auto mt-6 leading-5 h-32 mb-4 text-center flex flex-col justify-center items-center gap-3 border-2 p-2 rounded-lg"
+              class="w-32 cursor-pointer mx-auto mt-6 md:-mt-4 leading-5 h-32 mb-4 text-center flex flex-col justify-center items-center gap-3 border-2 p-2 rounded-lg"
             >
               <svg
                 width="25px"
@@ -467,7 +467,7 @@
               <div class="custom-utility" id="popTrans1">
                 <div
                   id="isiTrans1"
-                  class="w-56 bg-[#DAFFEF] rounded-md p-3 mx-auto relative shadow-lg md:mt-0 mt-6 md:left-14"
+                  class="w-56 bg-[#DAFFEF] rounded-md p-3 mx-auto relative shadow-lg md:mt-0 mt-6"
                 >
                   <img src="../img/Grid.jpeg" class="shadow-inner" alt="" />
                   <div class="absolute flex top-[75px] left-[53px]">
@@ -496,7 +496,7 @@
           </div>
 
           <div
-            class="mt-10 md:-mt-0 flex flex-wrap gap-7 md:gap-10 justify-center max-w-[500px] md:mx-auto items-center"
+            class="mt-10 md: flex flex-wrap gap-7 md:gap-10 justify-center max-w-[500px] md:mx-auto items-center"
             id="fotoContainer"
           >
             <div id="trans1ABC">
@@ -557,16 +557,16 @@
           <hr class="mt-16" />
 
           <div
-            class="flex mt-16 max-w-[500px] md:ml-24 items-center"
+            class="flex mt-16 max-w-[500px] md:ml-36 items-center"
             dat-aos="zoom-in-right"
             dat-aos-duration="800"
           >
-            <img src="../img/Grafis/Tanya.png" alt="" class="mr-2 w-28 md:w-36" />
+            <img src="../img/Grafis/Tanya.png" alt="" class="mr-2 w-28 md:w-32" />
             <div>
-              <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 rounded-lg rounded-tl-none">
+              <div class="bg-[#8CEBE9] px-3 py-3 md:px-4 md:py-4 rounded-lg rounded-tl-none">
                 Benar, jadi setiap kotak dihitung 1 satuan.
               </div>
-              <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 mt-1 rounded-lg rounded-tl-none">
+              <div class="bg-[#8CEBE9] px-3 py-3 md:px-4 md:py-4 mt-1 rounded-lg rounded-tl-none">
                 Bagaimana dengan jarak dan arah translasi titik B di bawah?
               </div>
             </div>
@@ -575,7 +575,7 @@
           <div class="">
             <div
               id="lihatTrans2"
-              class="w-32 cursor-pointer mx-auto mt-6 leading-5 h-32 mb-4 text-center flex flex-col justify-center items-center gap-3 border-2 p-2 rounded-lg"
+              class="w-32 cursor-pointer mx-auto mt-6 md:-mt-4 leading-5 h-32 mb-4 text-center flex flex-col justify-center items-center gap-3 border-2 p-2 rounded-lg"
             >
               <svg
                 width="25px"
@@ -595,7 +595,7 @@
               <div class="custom-utility" id="popTrans2">
                 <div
                   id="isiTrans2"
-                  class="w-56 bg-[#DAFFEF] shadow-lg rounded-md p-4 mx-auto relative md:mt-0 mt-6 md:left-14"
+                  class="w-56 bg-[#DAFFEF] shadow-lg rounded-md p-4 mx-auto relative md:mt-0 mt-6"
                 >
                   <img src="../img/Grid6.jpeg" class="shadow-inner" alt="" />
                   <div class="absolute flex top-[130px] left-[80px]">
@@ -623,7 +623,7 @@
           </div>
 
           <div
-            class="mt-10 md:-mt-0 flex flex-wrap gap-7 md:gap-10 justify-center max-w-[500px] md:mx-auto items-center"
+            class="mt-10 flex flex-wrap gap-7 md:gap-10 justify-center max-w-[500px] md:mx-auto items-center"
             id="fotoContainer"
           >
             <div id="trans2AB">
@@ -670,13 +670,13 @@
           <hr class="mt-16" />
 
           <div
-            class="flex mt-16 max-w-[500px] md:ml-24 items-center"
+            class="flex mt-16 max-w-[500px] md:ml-36 items-center"
             dat-aos="zoom-in-right"
             dat-aos-duration="800"
           >
             <img src="../img/Grafis/Senang.png" alt="" class="mr-2 scale-x-[-1] w-28 md:w-36" />
             <div>
-              <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 rounded-lg rounded-tl-none">
+              <div class="bg-[#8CEBE9] px-3 py-3 md:px-4 md:py-4 ml-1 rounded-lg rounded-tl-none">
                 Jadi, titik B ditranslasi sejauh 2 satuan ke kiri dan 1 satuan ke atas atau
                 <svg
                   width="31"
@@ -704,8 +704,10 @@
                   />
                 </svg>
               </div>
-              <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 mt-1 rounded-lg rounded-tl-none">
-                Kamu bingung? Cobalah konten di bawah!
+              <div
+                class="bg-[#8CEBE9] px-3 py-3 md:px-4 md:py-4 ml-1 mt-1 rounded-lg rounded-tl-none"
+              >
+                Jika kamu bingung? Cobalah konten di bawah!
               </div>
             </div>
           </div>
@@ -803,181 +805,201 @@
           <hr class="bg-hijau h-1 mt-16" />
 
           <div
-            class="flex mt-16 max-w-[500px] md:ml-24 items-center"
+            class="flex mt-16 max-w-[450px] md:mx-auto items-center"
             dat-aos="zoom-in-right"
             dat-aos-duration="800"
           >
-            <img src="../img/Grafis/ide.png" alt="" class="mr-2 w-36 md:w-36" />
             <div>
-              <div class="bg-[#8CEBE9] px-3 py-3 -ml-2 md:px-5 md:py-5 rounded-lg rounded-tl-none">
+              <div class="bg-[#8CEBE9] px-3 py-3 -mr-4 md:px-4 md:py-4 rounded-lg rounded-tr-none">
                 Saatnya mengetes pemahaman kamu terkait jarak dan arah translasi!
               </div>
             </div>
+            <img src="../img/Grafis/ide.png" alt="" class="w-36 scale-x-[-1] -mr-4 md:w-48" />
           </div>
+          <div class="md:mx-auto bg-[#FBFDFE] max-w-[500px] md:px-8 px-2 md:pt-8 mt-4 md:pb-8 pt-6">
+            <div class="flex items-center mt-0">
+              <img src="../img/tespemahaman.png" alt="" class="w-16 h-16" />
+              <div class="text-xl font-semibold tracking-wides text-hijau ml-2">Tes Pemahaman</div>
+            </div>
+            <div
+              class="w-full mt-3 pb-4 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative max-w-md"
+              id="TesPertama1"
+            >
+              <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40 mb-2">
+                TES PERTAMA
+              </p>
+              <p class="mt-3 inline">Titik A ditranslasikan sejauh</p>
+              <svg
+                width="33"
+                height="38"
+                viewBox="0 0 33 38"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="inline-block ml-1 mb-1"
+              >
+                <path
+                  d="M10.6553 8.372V6.872H14.0513V8.372H10.6553ZM15.0673 9.236V7.928L19.0273 2.6H21.0673L17.1913 7.928L16.2433 7.652H22.8553V9.236H15.0673ZM19.5913 11V9.236L19.6513 7.652V6.08H21.4873V11H19.5913Z"
+                  fill="#1F7FFF"
+                />
+                <path
+                  d="M15.9144 35V27.32L16.7544 28.16H14.2344V26.6H17.8584V35H15.9144Z"
+                  fill="#FF6868"
+                />
+                <path
+                  d="M5.04 37.76C3.57333 35.3333 2.44 32.5333 1.64 29.36C0.866667 26.1867 0.48 22.7467 0.48 19.04C0.48 15.3333 0.866667 11.88 1.64 8.68C2.44 5.45333 3.57333 2.66666 5.04 0.319998H6.96C5.38667 2.98667 4.24 5.86667 3.52 8.96C2.8 12.0533 2.44 15.4133 2.44 19.04C2.44 22.6667 2.8 26.0267 3.52 29.12C4.24 32.2133 5.38667 35.0933 6.96 37.76H5.04Z"
+                  fill="#5F6C7B"
+                />
+                <path
+                  d="M27.8 37.76H25.92C27.4667 35.0933 28.6 32.2133 29.32 29.12C30.04 26.0267 30.4 22.6667 30.4 19.04C30.4 15.4133 30.04 12.0533 29.32 8.96C28.6 5.86667 27.4667 2.98667 25.92 0.319998H27.8C29.2667 2.66666 30.4 5.45333 31.2 8.68C32 11.88 32.4 15.3333 32.4 19.04C32.4 22.7467 32 26.1867 31.2 29.36C30.4 32.5333 29.2667 35.3333 27.8 37.76Z"
+                  fill="#5F6C7B"
+                />
+              </svg>
+              <p class="inline">. Tentukan jarak dan arah yang dimaksud!</p>
+
+              <div
+                class="flex items-center border-t-2 border-b-2 py-[12px] cursor-pointer mt-3"
+                id=""
+              >
+                <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="">
+                  A
+                </button>
+                <div class="ml-6">
+                  <p>1 satuan kearah kiri</p>
+                  <p>4 satuan kearah atas</p>
+                </div>
+              </div>
+
+              <div class="flex items-center border-b-2 py-[12px] cursor-pointer" id="">
+                <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="">
+                  B
+                </button>
+                <div class="ml-6">
+                  <p>4 satuan kearah kanan</p>
+                  <p>1 satuan kearah bawah</p>
+                </div>
+              </div>
+
+              <div class="flex items-center border-b-2 py-[12px] cursor-pointer" id="C1">
+                <button
+                  class="h-7 w-7 border-2 border-primary rounded-full text-black"
+                  id="buttonC1"
+                >
+                  C
+                </button>
+                <div class="ml-6">
+                  <p>4 satuan kearah kiri</p>
+                  <p>1 satuan kearah atas</p>
+                </div>
+              </div>
+
+              <div class="flex items-center border-b-2 py-[12px] cursor-pointer" id="">
+                <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="">
+                  D
+                </button>
+                <div class="ml-6">
+                  <p>1 satuan kearah kanan</p>
+                  <p>4 satuan kearah bawah</p>
+                </div>
+              </div>
+
+              <button
+                class="py-2 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]"
+                disabled
+                id="Check1"
+              >
+                Check
+              </button>
+
+              <p class="ml-3 font-semibold text-hijau hidden" id="benar1">Benar 🗸</p>
+              <p class="ml-3 font-semibold text-red hidden" id="salah1">Salah X</p>
+            </div>
+          </div>
+
+          <div class="md:mx-auto bg-[#FBFDFE] max-w-[500px] md:px-8 px-2 pt-8 md:pt-2">
+            <div
+              class="bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative pb-4 max-w-md"
+              id=""
+            >
+              <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40 mb-1">TES KEDUA</p>
+              <p class="mt-2 inline">
+                Terdapat titik A ( -3 , -2 ). Jika titik A ditranslasikan sejauh
+              </p>
+              <svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="inline-block mt-1 ml-1"
+              >
+                <path
+                  d="M14.7556 10.144C14.1716 10.144 13.5916 10.068 13.0156 9.916C12.4476 9.756 11.9596 9.532 11.5516 9.244L12.3196 7.756C12.6396 7.988 13.0076 8.172 13.4236 8.308C13.8476 8.444 14.2756 8.512 14.7076 8.512C15.1956 8.512 15.5796 8.416 15.8596 8.224C16.1396 8.032 16.2796 7.764 16.2796 7.42C16.2796 7.204 16.2236 7.012 16.1116 6.844C15.9996 6.676 15.7996 6.548 15.5116 6.46C15.2316 6.372 14.8356 6.328 14.3236 6.328H12.1756L12.6076 1.6H17.7316V3.16H13.3036L14.3116 2.272L14.0116 5.644L13.0036 4.756H14.7796C15.6116 4.756 16.2796 4.872 16.7836 5.104C17.2956 5.328 17.6676 5.636 17.8996 6.028C18.1316 6.42 18.2476 6.864 18.2476 7.36C18.2476 7.856 18.1236 8.316 17.8756 8.74C17.6276 9.156 17.2436 9.496 16.7236 9.76C16.2116 10.016 15.5556 10.144 14.7556 10.144Z"
+                  fill="#1F7FFF"
+                />
+                <path
+                  d="M14.6412 28.144C14.0572 28.144 13.4772 28.068 12.9012 27.916C12.3252 27.756 11.8372 27.532 11.4372 27.244L12.1932 25.756C12.5132 25.988 12.8852 26.172 13.3092 26.308C13.7332 26.444 14.1612 26.512 14.5932 26.512C15.0812 26.512 15.4652 26.416 15.7452 26.224C16.0252 26.032 16.1652 25.768 16.1652 25.432C16.1652 25.112 16.0412 24.86 15.7932 24.676C15.5452 24.492 15.1452 24.4 14.5932 24.4H13.7052V23.116L16.0452 20.464L16.2612 21.16H11.8572V19.6H17.7372V20.86L15.4092 23.512L14.4252 22.948H14.9892C16.0212 22.948 16.8012 23.18 17.3292 23.644C17.8572 24.108 18.1212 24.704 18.1212 25.432C18.1212 25.904 17.9972 26.348 17.7492 26.764C17.5012 27.172 17.1212 27.504 16.6092 27.76C16.0972 28.016 15.4412 28.144 14.6412 28.144Z"
+                  fill="#FF6868"
+                />
+                <path
+                  d="M4.232 30.208C3.05867 28.2667 2.152 26.0267 1.512 23.488C0.893333 20.9493 0.584 18.1973 0.584 15.232C0.584 12.2667 0.893333 9.504 1.512 6.944C2.152 4.36267 3.05867 2.13333 4.232 0.255999H5.768C4.50933 2.38933 3.592 4.69333 3.016 7.168C2.44 9.64267 2.152 12.3307 2.152 15.232C2.152 18.1333 2.44 20.8213 3.016 23.296C3.592 25.7707 4.50933 28.0747 5.768 30.208H4.232Z"
+                  fill="#5F6C7B"
+                />
+                <path
+                  d="M27.04 30.208H25.536C26.7733 28.0747 27.68 25.7707 28.256 23.296C28.832 20.8213 29.12 18.1333 29.12 15.232C29.12 12.3307 28.832 9.64267 28.256 7.168C27.68 4.69333 26.7733 2.38933 25.536 0.255999H27.04C28.2133 2.13333 29.12 4.36267 29.76 6.944C30.4 9.504 30.72 12.2667 30.72 15.232C30.72 18.1973 30.4 20.9493 29.76 23.488C29.12 26.0267 28.2133 28.2667 27.04 30.208Z"
+                  fill="#5F6C7B"
+                />
+              </svg>
+              <p class="inline">. Tentukan kordinat titik A'</p>
+
+              <div
+                id="content"
+                class="w-[240px] h-[240px] relative bg-[url('../img/Rotasi/Grapik.jpg')] bg-cover mx-auto mt-4"
+              >
+                <canvas id="canvas" width="240" height="240"></canvas>
+                <div
+                  class="w-[8px] h-[8px] bg-gray-500 rounded-full absolute bottom-[68px] left-[45px]"
+                ></div>
+                <div class="text-[12px] absolute bottom-[72px] left-[44px]">A</div>
+                <div
+                  class="text-[12px] absolute top-[73px] right-[65px] text-hijau hidden"
+                  id="benarA"
+                >
+                  A'
+                </div>
+              </div>
+              <p class="mt-4">
+                Klik pada kordinat untuk memunculkan titik lalu cek jawabanmu pada tombol "Check"
+              </p>
+
+              <button class="py-1 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]" id="Check2">
+                Check
+              </button>
+
+              <p class="ml-3 font-semibold text-hijau hidden" id="benar2">Benar 🗸</p>
+              <p class="ml-3 font-semibold text-red hidden" id="salah2">Salah X</p>
+            </div>
+          </div>
+          <hr class="bg-hijau h-1 mt-16" />
         </div>
       </div>
 
       <!-- Tes Pemahaman 1 -->
-      <div class="md:mx-auto bg-white md:px-8 px-8 md:pt-8 md:pb-8 md:mt-8 pt-6">
-        <div class="flex items-center mt-0 md:mt-0">
-          <img src="../img/tespemahaman.png" alt="" class="w-16 h-16" />
-          <div class="text-xl font-semibold tracking-wides text-hijau ml-2">Tes Pemahaman</div>
-        </div>
-        <div
-          class="w-full mt-3 pb-4 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative max-w-md"
-          id="TesPertama1"
-        >
-          <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40 mb-2">TES PERTAMA</p>
-          <p class="mt-3 inline">Titik A ditranslasikan sejauh</p>
-          <svg
-            width="33"
-            height="38"
-            viewBox="0 0 33 38"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="inline-block ml-1 mb-1"
-          >
-            <path
-              d="M10.6553 8.372V6.872H14.0513V8.372H10.6553ZM15.0673 9.236V7.928L19.0273 2.6H21.0673L17.1913 7.928L16.2433 7.652H22.8553V9.236H15.0673ZM19.5913 11V9.236L19.6513 7.652V6.08H21.4873V11H19.5913Z"
-              fill="#1F7FFF"
-            />
-            <path
-              d="M15.9144 35V27.32L16.7544 28.16H14.2344V26.6H17.8584V35H15.9144Z"
-              fill="#FF6868"
-            />
-            <path
-              d="M5.04 37.76C3.57333 35.3333 2.44 32.5333 1.64 29.36C0.866667 26.1867 0.48 22.7467 0.48 19.04C0.48 15.3333 0.866667 11.88 1.64 8.68C2.44 5.45333 3.57333 2.66666 5.04 0.319998H6.96C5.38667 2.98667 4.24 5.86667 3.52 8.96C2.8 12.0533 2.44 15.4133 2.44 19.04C2.44 22.6667 2.8 26.0267 3.52 29.12C4.24 32.2133 5.38667 35.0933 6.96 37.76H5.04Z"
-              fill="#5F6C7B"
-            />
-            <path
-              d="M27.8 37.76H25.92C27.4667 35.0933 28.6 32.2133 29.32 29.12C30.04 26.0267 30.4 22.6667 30.4 19.04C30.4 15.4133 30.04 12.0533 29.32 8.96C28.6 5.86667 27.4667 2.98667 25.92 0.319998H27.8C29.2667 2.66666 30.4 5.45333 31.2 8.68C32 11.88 32.4 15.3333 32.4 19.04C32.4 22.7467 32 26.1867 31.2 29.36C30.4 32.5333 29.2667 35.3333 27.8 37.76Z"
-              fill="#5F6C7B"
-            />
-          </svg>
-          <p class="inline">. Tentukan jarak dan arah yang dimaksud!</p>
 
-          <div class="flex items-center border-t-2 border-b-2 py-[12px] cursor-pointer mt-3" id="">
-            <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="">A</button>
-            <div class="ml-6">
-              <p>1 satuan kearah kiri</p>
-              <p>4 satuan kearah atas</p>
-            </div>
-          </div>
-
-          <div class="flex items-center border-b-2 py-[12px] cursor-pointer" id="">
-            <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="">B</button>
-            <div class="ml-6">
-              <p>4 satuan kearah kanan</p>
-              <p>1 satuan kearah bawah</p>
-            </div>
-          </div>
-
-          <div class="flex items-center border-b-2 py-[12px] cursor-pointer" id="C1">
-            <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="buttonC1">
-              C
-            </button>
-            <div class="ml-6">
-              <p>4 satuan kearah kiri</p>
-              <p>1 satuan kearah atas</p>
-            </div>
-          </div>
-
-          <div class="flex items-center border-b-2 py-[12px] cursor-pointer" id="">
-            <button class="h-7 w-7 border-2 border-primary rounded-full text-black" id="">D</button>
-            <div class="ml-6">
-              <p>1 satuan kearah kanan</p>
-              <p>4 satuan kearah bawah</p>
-            </div>
-          </div>
-
-          <button
-            class="py-2 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]"
-            disabled
-            id="Check1"
-          >
-            Check
-          </button>
-
-          <p class="ml-3 font-semibold text-hijau hidden" id="benar1">Benar 🗸</p>
-          <p class="ml-3 font-semibold text-red hidden" id="salah1">Salah X</p>
-        </div>
-      </div>
-
-      <div class="md:mx-auto bg-white md:px-8 px-8 pt-8">
-        <div class="bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative pb-4 max-w-md" id="">
-          <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40 mb-1">TES KEDUA</p>
-          <p class="mt-2 inline">
-            Terdapat titik A ( -3 , -2 ). Jika titik A ditranslasikan sejauh
-          </p>
-          <svg
-            width="31"
-            height="31"
-            viewBox="0 0 31 31"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="inline-block mt-1 ml-1"
-          >
-            <path
-              d="M14.7556 10.144C14.1716 10.144 13.5916 10.068 13.0156 9.916C12.4476 9.756 11.9596 9.532 11.5516 9.244L12.3196 7.756C12.6396 7.988 13.0076 8.172 13.4236 8.308C13.8476 8.444 14.2756 8.512 14.7076 8.512C15.1956 8.512 15.5796 8.416 15.8596 8.224C16.1396 8.032 16.2796 7.764 16.2796 7.42C16.2796 7.204 16.2236 7.012 16.1116 6.844C15.9996 6.676 15.7996 6.548 15.5116 6.46C15.2316 6.372 14.8356 6.328 14.3236 6.328H12.1756L12.6076 1.6H17.7316V3.16H13.3036L14.3116 2.272L14.0116 5.644L13.0036 4.756H14.7796C15.6116 4.756 16.2796 4.872 16.7836 5.104C17.2956 5.328 17.6676 5.636 17.8996 6.028C18.1316 6.42 18.2476 6.864 18.2476 7.36C18.2476 7.856 18.1236 8.316 17.8756 8.74C17.6276 9.156 17.2436 9.496 16.7236 9.76C16.2116 10.016 15.5556 10.144 14.7556 10.144Z"
-              fill="#1F7FFF"
-            />
-            <path
-              d="M14.6412 28.144C14.0572 28.144 13.4772 28.068 12.9012 27.916C12.3252 27.756 11.8372 27.532 11.4372 27.244L12.1932 25.756C12.5132 25.988 12.8852 26.172 13.3092 26.308C13.7332 26.444 14.1612 26.512 14.5932 26.512C15.0812 26.512 15.4652 26.416 15.7452 26.224C16.0252 26.032 16.1652 25.768 16.1652 25.432C16.1652 25.112 16.0412 24.86 15.7932 24.676C15.5452 24.492 15.1452 24.4 14.5932 24.4H13.7052V23.116L16.0452 20.464L16.2612 21.16H11.8572V19.6H17.7372V20.86L15.4092 23.512L14.4252 22.948H14.9892C16.0212 22.948 16.8012 23.18 17.3292 23.644C17.8572 24.108 18.1212 24.704 18.1212 25.432C18.1212 25.904 17.9972 26.348 17.7492 26.764C17.5012 27.172 17.1212 27.504 16.6092 27.76C16.0972 28.016 15.4412 28.144 14.6412 28.144Z"
-              fill="#FF6868"
-            />
-            <path
-              d="M4.232 30.208C3.05867 28.2667 2.152 26.0267 1.512 23.488C0.893333 20.9493 0.584 18.1973 0.584 15.232C0.584 12.2667 0.893333 9.504 1.512 6.944C2.152 4.36267 3.05867 2.13333 4.232 0.255999H5.768C4.50933 2.38933 3.592 4.69333 3.016 7.168C2.44 9.64267 2.152 12.3307 2.152 15.232C2.152 18.1333 2.44 20.8213 3.016 23.296C3.592 25.7707 4.50933 28.0747 5.768 30.208H4.232Z"
-              fill="#5F6C7B"
-            />
-            <path
-              d="M27.04 30.208H25.536C26.7733 28.0747 27.68 25.7707 28.256 23.296C28.832 20.8213 29.12 18.1333 29.12 15.232C29.12 12.3307 28.832 9.64267 28.256 7.168C27.68 4.69333 26.7733 2.38933 25.536 0.255999H27.04C28.2133 2.13333 29.12 4.36267 29.76 6.944C30.4 9.504 30.72 12.2667 30.72 15.232C30.72 18.1973 30.4 20.9493 29.76 23.488C29.12 26.0267 28.2133 28.2667 27.04 30.208Z"
-              fill="#5F6C7B"
-            />
-          </svg>
-          <p class="inline">. Tentukan kordinat titik A'</p>
-
-          <div
-            id="content"
-            class="w-[240px] h-[240px] relative bg-[url('../img/Rotasi/Grapik.jpg')] bg-cover mx-auto mt-4"
-          >
-            <canvas id="canvas" width="240" height="240"></canvas>
-            <div
-              class="w-[8px] h-[8px] bg-gray-500 rounded-full absolute bottom-[68px] left-[45px]"
-            ></div>
-            <div class="text-[12px] absolute bottom-[72px] left-[44px]">A</div>
-            <div class="text-[12px] absolute top-[73px] right-[65px] text-hijau hidden" id="benarA">
-              A'
-            </div>
-          </div>
-          <p class="mt-4">
-            Klik pada kordinat untuk memunculkan titik lalu cek jawabanmu pada tombol "Check"
-          </p>
-
-          <button class="py-1 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]" id="Check2">
-            Check
-          </button>
-
-          <p class="ml-3 font-semibold text-hijau hidden" id="benar2">Benar 🗸</p>
-          <p class="ml-3 font-semibold text-red hidden" id="salah2">Salah X</p>
-        </div>
-      </div>
       <!-- Akhir Tes Pemahaman 1 -->
 
       <!-- Translasi Bangun Datar -->
-      <div class="md:mx-auto bg-white md:px-8 px-5 md:pb-8 md:mt-8">
-        <hr class="bg-hijau h-1 mt-16" />
-
+      <div class="md:mx-auto bg-[#FBFDFE] pt-8 md:px-8 px-5 md md:pb-8">
         <div
-          class="flex mt-16 max-w-[500px] md:ml-24 items-center"
+          class="flex max-w-[450px] md:mx-auto md:-mt-8 items-center"
           dat-aos="zoom-in-right"
           dat-aos-duration="800"
         >
-          <img src="../img/Grafis/Nih.png" alt="" class="mr-2 scale-x-[-1] w-32 md:w-36" />
+          <img src="../img/Grafis/Nih.png" alt="" class="mr-2 scale-x-[-1] w-32 md:w-40" />
           <div>
-            <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 rounded-lg rounded-tl-none">
+            <div class="bg-[#8CEBE9] px-3 py-3 md:px-4 md:py-4 rounded-lg rounded-tl-none">
               Bangun datar pasti memiliki beberapa titik sudut kan, seperti di segitiga.
             </div>
-            <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 mt-1 rounded-lg rounded-tl-none">
+            <div class="bg-[#8CEBE9] px-3 py-3 md:px-4 md:py-4 mt-1 rounded-lg rounded-tl-none">
               Segitiga dibawah memiliki titik sudut A, B, dan C.
             </div>
           </div>
@@ -1074,37 +1096,44 @@
             </div>
           </div>
         </div>
+        <hr class="mt-16" />
 
         <div
-          class="flex mt-16 max-w-[500px] md:ml-24 items-center"
+          class="flex mt-12 max-w-[500px] md:ml-36 items-center"
           dat-aos="zoom-in-right"
           dat-aos-duration="800"
         >
-          <img src="../img/Grafis/supermen.png" alt="" class="mr-2 w-32 md:w-36" />
+          <img src="../img/Grafis/supermen.png" alt="" class="mr-2 w-32 md:w-40" />
           <div>
-            <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 rounded-lg rounded-tl-none">
+            <div class="bg-[#8CEBE9] px-3 py-3 md:px-4 md:py-4 rounded-lg rounded-tl-none">
               Ayo kita bahas translasi pada bangun datar.
             </div>
-            <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 mt-1 rounded-lg rounded-tl-none">
+            <div class="bg-[#8CEBE9] px-3 py-3 md:px-4 md:py-4 mt-1 rounded-lg rounded-tl-none">
               Ali tampilin lagi yah definisi translasi!
             </div>
           </div>
         </div>
-        <div class="mt-10" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="50">
+        <div
+          class="mt-10 md:mx-auto max-w-[400px] md:translate-x-10"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          data-aos-delay="50"
+        >
           <p class="border-l-8 border-hijau font-semibold pl-2 leading-relaxed text-primary">
             <span class="font-bold text-hijau">Translasi</span> adalah proses memindahkan semua
             titik pada bangun datar dengan jarak dan arah yang sama.
           </p>
         </div>
+        <hr class="mt-16" />
 
         <div
-          class="flex mt-16 max-w-[500px] md:ml-24 items-center"
+          class="flex mt-12 max-w-[500px] md:ml-36 items-center"
           dat-aos="zoom-in-right"
           dat-aos-duration="800"
         >
-          <img src="../img/Grafis/Unyu.png" alt="" class="mr-2 w-32 md:w-36" />
+          <img src="../img/Grafis/Unyu.png" alt="" class="mr-2 w-32 md:w-40" />
           <div>
-            <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 rounded-lg rounded-tl-none">
+            <div class="bg-[#8CEBE9] px-3 py-3 md:px-4 md:py-4 rounded-lg rounded-tl-none">
               Menurutmu, apakah semua titik sudut
               <span class="font-bold text-hijau">persegi ABCD</span> mengalami pergeseran dengan
               jarak dan arah yang sama?
@@ -1113,7 +1142,7 @@
         </div>
 
         <div
-          class="mt-4 md:-mt-0 flex flex-wrap gap-7 md:gap-10 justify-center md:mx-auto items-center"
+          class="mt-4 md:-mt-4 flex flex-wrap gap-7 md:gap-10 justify-center md:mx-auto items-center"
         >
           <div class="text-center hidden relative px-5" id="ABCD">
             <div id="popABCD" class="custom-utility">
@@ -1225,7 +1254,7 @@
         </div>
 
         <div
-          class="mt-5 md:-mt-0 flex flex-wrap gap-7 md:gap-10 justify-center max-w-[500px] md:mx-auto items-center"
+          class="mt-5 md:mt-8 flex flex-wrap gap-7 md:gap-10 justify-center max-w-[500px] md:mx-auto items-center"
           id="fotoContainer"
         >
           <div id="bangunAB">
@@ -1240,7 +1269,7 @@
                 A
               </div>
               <div
-                class="w-[160px] bg-coklat text-white rounded-md px-4 py-2 md:py-3 font-medium leading-5"
+                class="w-[160px] md:w-[210px] bg-coklat text-white rounded-md px-4 py-2 md:py-3 font-medium leading-5"
               >
                 Jarak dan arahnya sama
               </div>
@@ -1256,7 +1285,7 @@
                 B
               </div>
               <div
-                class="w-[160px] bg-coklat text-white rounded-md px-4 py-2 md:py-3 font-medium leading-5"
+                class="w-[160px] md:w-[210px] bg-coklat text-white rounded-md px-4 py-2 md:py-3 font-medium leading-5"
               >
                 Jarak dan arahnya berbeda
               </div>
@@ -1266,26 +1295,27 @@
             <img src="../img/pencerminan/Benar.png" class="w-32" alt="" />
           </div>
         </div>
+        <hr class="mt-16" />
 
         <div
-          class="flex mt-16 max-w-[500px] md:ml-24 items-center"
+          class="flex mt-12 max-w-[500px] md:ml-36 items-center"
           dat-aos="zoom-in-right"
           dat-aos-duration="800"
         >
-          <img src="../img/Grafis/ooo.png" alt="" class="mr-2 w-32 md:w-36" />
+          <img src="../img/Grafis/ooo.png" alt="" class="mr-2 w-32 md:w-40" />
           <div>
-            <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 rounded-lg rounded-tl-none">
+            <div class="bg-[#8CEBE9] px-3 py-3 md:px-4 md:py-4 rounded-lg rounded-tl-none">
               Karena jarak dan arah pergeserannya berbeda maka
               <span class="font-bold text-hijau">persegi ABCD</span> tidak mengalami translasi
             </div>
-            <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 mt-1 rounded-lg rounded-tl-none">
+            <div class="bg-[#8CEBE9] px-3 py-3 md:px-4 md:py-4 mt-1 rounded-lg rounded-tl-none">
               Apakah <span class="font-bold text-hijau">persegi EFGH</span> mengalami translasi?
             </div>
           </div>
         </div>
 
         <div
-          class="mt-4 md:-mt-0 flex flex-wrap gap-7 md:gap-10 justify-center md:mx-auto items-center"
+          class="mt-4 md:-mt-4 flex flex-wrap gap-7 md:gap-10 justify-center md:mx-auto items-center"
         >
           <div class="text-center hidden relative px-5" id="EFGH">
             <div id="popEFGH" class="custom-utility">
@@ -1389,7 +1419,7 @@
         </div>
 
         <div
-          class="mt-5 md:-mt-0 flex flex-wrap gap-7 md:gap-10 justify-center max-w-[500px] md:mx-auto items-center"
+          class="mt-5 md:mt-8 flex flex-wrap gap-7 md:gap-10 justify-center max-w-[500px] md:mx-auto items-center"
           id="fotoContainer"
         >
           <div id="bangunCD">
@@ -1434,25 +1464,29 @@
         <hr class="bg-hijau h-1 mt-16" />
 
         <div
-          class="flex mt-16 max-w-[500px] md:ml-24 items-center"
+          class="flex mt-16 max-w-[450px] md:mx-auto items-center"
           dat-aos="zoom-in-right"
           dat-aos-duration="800"
         >
-          <img src="../img/Grafis/Halo.png" alt="" class="mr-2 scale-x-[-1] w-28 md:w-36" />
           <div>
-            <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 rounded-lg rounded-tl-none">
+            <div class="bg-[#8CEBE9] px-3 py-3 md:px-4 md:py-4 rounded-lg rounded-tr-none">
               Dibawah ini kamu bisa lihat contoh translasi bangun datar di kordinat kartesius dan
               tes pemahaman!
             </div>
           </div>
+          <img src="../img/Grafis/Halo.png" alt="" class="ml-2 w-28 md:w-32" />
         </div>
 
-        <div class="flex items-center mt-16">
-          <button class="text-lg text-hijau font-bold ml-2 text-left">
+        <div class="flex items-center max-w-[400px] text-center mt-16 md:mx-auto">
+          <img src="../img/pencil_7904963.png" alt="" class="w-8" />
+          <button class="text-xl text-hijau font- font-bold ml-3 text-left">
             Contoh translasi bangun datar
           </button>
         </div>
-        <div class="w-full border-t-2 border-hijau mt-2 py-2 px-2 max-w-md" id="pusatTitik">
+        <div
+          class="mt-4 bg-[#F5F5F5] md:mx-auto max-w-[400px] border-t-[2px] border-b-[2px] px-4 relative pb-4"
+          id="pusatTitik"
+        >
           <p class="leading-10 inline">
             Segitiga ABC dengan kordinat
             <span class="text-hijau font-semibold">A ( -4 , 1 )</span>,
@@ -1486,7 +1520,10 @@
             />
           </svg>
 
-          <div class="w-80 h-[300px] scale-90 mx-auto relative" id="divBaru">
+          <div
+            class="w-80 h-[300px] scale-75 mx-auto -translate-x-6 md:-translate-x-0 -translate-y-6 relative"
+            id="divBaru"
+          >
             <div id="ohiniya" class="opacity-30">
               <img src="../img/TranslasiBangun.jpg" alt="" class="w-full h-full absolute" />
             </div>
@@ -1612,7 +1649,7 @@
               />
             </svg>
           </div>
-          <div class="flex items-start mt-6 pb-4 border-b-2">
+          <div class="flex items-start mt-0 pb-4 border-b-2">
             <p class="text-primary font-semibold">Diketahui:</p>
             <p class="ml-4">
               Jarak dan arah translasinya adalah
@@ -1631,89 +1668,93 @@
             </p>
           </div>
         </div>
+
+        <div class="md:mx-auto bg-[#FBFDFE] max-w-[400px] mx-auto pt-12">
+          <div class="flex items-center md:mt-0">
+            <img src="../img/tespemahaman.png" alt="" class="w-16 h-16" />
+            <div class="text-xl font-semibold tracking-wides text-hijau ml-2">Tes Pemahaman</div>
+          </div>
+          <div
+            class="mt-3 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative pb-4 max-w-md"
+            id="TesPertama1"
+          >
+            <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40">TES KETIGA</p>
+            <p class="mt-1 inline">
+              Terdapat segitiga ABC. Jika segitiga ABC ditranslasikan sejauh
+            </p>
+            <svg
+              width="31"
+              height="31"
+              viewBox="0 0 31 31"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="inline ml-1"
+            >
+              <path
+                d="M9.74119 7.372V5.872H13.1372V7.372H9.74119ZM17.0701 10.144C16.4861 10.144 15.9061 10.068 15.3301 9.916C14.7621 9.756 14.2741 9.532 13.8661 9.244L14.6341 7.756C14.9541 7.988 15.3221 8.172 15.7381 8.308C16.1621 8.444 16.5901 8.512 17.0221 8.512C17.5101 8.512 17.8941 8.416 18.1741 8.224C18.4541 8.032 18.5941 7.764 18.5941 7.42C18.5941 7.204 18.5381 7.012 18.4261 6.844C18.3141 6.676 18.1141 6.548 17.8261 6.46C17.5461 6.372 17.1501 6.328 16.6381 6.328H14.4901L14.9221 1.6H20.0461V3.16H15.6181L16.6261 2.272L16.3261 5.644L15.3181 4.756H17.0941C17.9261 4.756 18.5941 4.872 19.0981 5.104C19.6101 5.328 19.9821 5.636 20.2141 6.028C20.4461 6.42 20.5621 6.864 20.5621 7.36C20.5621 7.856 20.4381 8.316 20.1901 8.74C19.9421 9.156 19.5581 9.496 19.0381 9.76C18.5261 10.016 17.8701 10.144 17.0701 10.144Z"
+                fill="#1F7FFF"
+              />
+              <path
+                d="M11.8569 28V26.74L15.0969 23.68C15.3529 23.448 15.5409 23.24 15.6609 23.056C15.7809 22.872 15.8609 22.704 15.9009 22.552C15.9489 22.4 15.9729 22.26 15.9729 22.132C15.9729 21.796 15.8569 21.54 15.6249 21.364C15.4009 21.18 15.0689 21.088 14.6289 21.088C14.2769 21.088 13.9489 21.156 13.6449 21.292C13.3489 21.428 13.0969 21.64 12.8889 21.928L11.4729 21.016C11.7929 20.536 12.2409 20.156 12.8169 19.876C13.3929 19.596 14.0569 19.456 14.8089 19.456C15.4329 19.456 15.9769 19.56 16.4409 19.768C16.9129 19.968 17.2769 20.252 17.5329 20.62C17.7969 20.988 17.9289 21.428 17.9289 21.94C17.9289 22.212 17.8929 22.484 17.8209 22.756C17.7569 23.02 17.6209 23.3 17.4129 23.596C17.2129 23.892 16.9169 24.224 16.5249 24.592L13.8369 27.124L13.4649 26.416H18.2049V28H11.8569Z"
+                fill="#FF6868"
+              />
+              <path
+                d="M4.232 30.208C3.05867 28.2667 2.152 26.0267 1.512 23.488C0.893333 20.9493 0.584 18.1973 0.584 15.232C0.584 12.2667 0.893333 9.504 1.512 6.944C2.152 4.36267 3.05867 2.13333 4.232 0.255999H5.768C4.50933 2.38933 3.592 4.69333 3.016 7.168C2.44 9.64267 2.152 12.3307 2.152 15.232C2.152 18.1333 2.44 20.8213 3.016 23.296C3.592 25.7707 4.50933 28.0747 5.768 30.208H4.232Z"
+                fill="#5F6C7B"
+              />
+              <path
+                d="M27.04 30.208H25.536C26.7733 28.0747 27.68 25.7707 28.256 23.296C28.832 20.8213 29.12 18.1333 29.12 15.232C29.12 12.3307 28.832 9.64267 28.256 7.168C27.68 4.69333 26.7733 2.38933 25.536 0.255999H27.04C28.2133 2.13333 29.12 4.36267 29.76 6.944C30.4 9.504 30.72 12.2667 30.72 15.232C30.72 18.1973 30.4 20.9493 29.76 23.488C29.12 26.0267 28.2133 28.2667 27.04 30.208Z"
+                fill="#5F6C7B"
+              />
+            </svg>
+            <p class="inline">, tentukan kordinat segitiga A'B'C'</p>
+
+            <div
+              id="content"
+              class="w-[240px] h-[240px] relative bg-[url('../img/Rotasi/Grapik.jpg')] bg-cover mx-auto mt-4"
+            >
+              <canvas id="geometryCanvas"></canvas>
+              <div id="notification"></div>
+              <div class="text-[12px] absolute top-[74px] right-[43px]">A</div>
+              <div class="text-[12px] absolute bottom-[85px] right-[100px]">B</div>
+              <div class="text-[12px] absolute bottom-[50px] right-[20px]">C</div>
+            </div>
+            <p class="mt-4">
+              Pindahkan titik-titik sudut segitiga hijau hingga membentuk kordinat segitiga A'B'C'
+            </p>
+
+            <button class="py-1 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]" id="Check3">
+              Check
+            </button>
+
+            <p class="ml-3 font-semibold text-hijau hidden" id="benar3">Benar 🗸</p>
+            <p class="ml-3 font-semibold text-red hidden" id="salah3">Salah X</p>
+          </div>
+        </div>
+        <hr class="bg-hijau h-1 mt-16" />
+
+        <div class="md:mx-auto bg-[#FBFDFE] md:px-8 px-5 md:pb-8 pb-40 md:mt-8">
+          <div
+            class="flex mt-16 max-w-[500px] md:ml-36 items-center"
+            dat-aos="zoom-in-right"
+            dat-aos-duration="800"
+          >
+            <img src="../img/Grafis/boss.png" alt="" class="mr-2 w-28 md:w-36" />
+            <div>
+              <div class="bg-[#8CEBE9] px-3 py-3 md:px-4 md:py-4 rounded-lg rounded-tl-none">
+                Berakhir sudah pembahasan kita di translasi
+              </div>
+              <div class="bg-[#8CEBE9] px-3 py-3 md:px-4 md:py-4 mt-1 rounded-lg rounded-tl-none">
+                Selanjutnya kita akan membahas jenis transformasi refleksi
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- Translasi Bangun Datar -->
 
       <!-- Tes Pemahaman 2 -->
-      <div class="md:mx-auto bg-white md:px-8 px-5 pt-8 md:mt-8">
-        <div class="flex items-center mt-8 md:mt-0">
-          <img src="../img/tespemahaman.png" alt="" class="w-16 h-16" />
-          <div class="text-xl font-semibold tracking-wides text-hijau ml-2">Tes Pemahaman</div>
-        </div>
-        <div
-          class="mt-3 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative pb-4 max-w-md"
-          id="TesPertama1"
-        >
-          <p class="tracking-wider font-semibold text-[10px] mt-1 opacity-40">TES KETIGA</p>
-          <p class="mt-1 inline">Terdapat segitiga ABC. Jika segitiga ABC ditranslasikan sejauh</p>
-          <svg
-            width="31"
-            height="31"
-            viewBox="0 0 31 31"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="inline ml-1"
-          >
-            <path
-              d="M9.74119 7.372V5.872H13.1372V7.372H9.74119ZM17.0701 10.144C16.4861 10.144 15.9061 10.068 15.3301 9.916C14.7621 9.756 14.2741 9.532 13.8661 9.244L14.6341 7.756C14.9541 7.988 15.3221 8.172 15.7381 8.308C16.1621 8.444 16.5901 8.512 17.0221 8.512C17.5101 8.512 17.8941 8.416 18.1741 8.224C18.4541 8.032 18.5941 7.764 18.5941 7.42C18.5941 7.204 18.5381 7.012 18.4261 6.844C18.3141 6.676 18.1141 6.548 17.8261 6.46C17.5461 6.372 17.1501 6.328 16.6381 6.328H14.4901L14.9221 1.6H20.0461V3.16H15.6181L16.6261 2.272L16.3261 5.644L15.3181 4.756H17.0941C17.9261 4.756 18.5941 4.872 19.0981 5.104C19.6101 5.328 19.9821 5.636 20.2141 6.028C20.4461 6.42 20.5621 6.864 20.5621 7.36C20.5621 7.856 20.4381 8.316 20.1901 8.74C19.9421 9.156 19.5581 9.496 19.0381 9.76C18.5261 10.016 17.8701 10.144 17.0701 10.144Z"
-              fill="#1F7FFF"
-            />
-            <path
-              d="M11.8569 28V26.74L15.0969 23.68C15.3529 23.448 15.5409 23.24 15.6609 23.056C15.7809 22.872 15.8609 22.704 15.9009 22.552C15.9489 22.4 15.9729 22.26 15.9729 22.132C15.9729 21.796 15.8569 21.54 15.6249 21.364C15.4009 21.18 15.0689 21.088 14.6289 21.088C14.2769 21.088 13.9489 21.156 13.6449 21.292C13.3489 21.428 13.0969 21.64 12.8889 21.928L11.4729 21.016C11.7929 20.536 12.2409 20.156 12.8169 19.876C13.3929 19.596 14.0569 19.456 14.8089 19.456C15.4329 19.456 15.9769 19.56 16.4409 19.768C16.9129 19.968 17.2769 20.252 17.5329 20.62C17.7969 20.988 17.9289 21.428 17.9289 21.94C17.9289 22.212 17.8929 22.484 17.8209 22.756C17.7569 23.02 17.6209 23.3 17.4129 23.596C17.2129 23.892 16.9169 24.224 16.5249 24.592L13.8369 27.124L13.4649 26.416H18.2049V28H11.8569Z"
-              fill="#FF6868"
-            />
-            <path
-              d="M4.232 30.208C3.05867 28.2667 2.152 26.0267 1.512 23.488C0.893333 20.9493 0.584 18.1973 0.584 15.232C0.584 12.2667 0.893333 9.504 1.512 6.944C2.152 4.36267 3.05867 2.13333 4.232 0.255999H5.768C4.50933 2.38933 3.592 4.69333 3.016 7.168C2.44 9.64267 2.152 12.3307 2.152 15.232C2.152 18.1333 2.44 20.8213 3.016 23.296C3.592 25.7707 4.50933 28.0747 5.768 30.208H4.232Z"
-              fill="#5F6C7B"
-            />
-            <path
-              d="M27.04 30.208H25.536C26.7733 28.0747 27.68 25.7707 28.256 23.296C28.832 20.8213 29.12 18.1333 29.12 15.232C29.12 12.3307 28.832 9.64267 28.256 7.168C27.68 4.69333 26.7733 2.38933 25.536 0.255999H27.04C28.2133 2.13333 29.12 4.36267 29.76 6.944C30.4 9.504 30.72 12.2667 30.72 15.232C30.72 18.1973 30.4 20.9493 29.76 23.488C29.12 26.0267 28.2133 28.2667 27.04 30.208Z"
-              fill="#5F6C7B"
-            />
-          </svg>
-          <p class="inline">, tentukan kordinat segitiga A'B'C'</p>
 
-          <div
-            id="content"
-            class="w-[240px] h-[240px] relative bg-[url('../img/Rotasi/Grapik.jpg')] bg-cover mx-auto mt-4"
-          >
-            <canvas id="geometryCanvas"></canvas>
-            <div id="notification"></div>
-            <div class="text-[12px] absolute top-[74px] right-[43px]">A</div>
-            <div class="text-[12px] absolute bottom-[85px] right-[100px]">B</div>
-            <div class="text-[12px] absolute bottom-[50px] right-[20px]">C</div>
-          </div>
-          <p class="mt-4">
-            Pindahkan titik-titik sudut segitiga hijau hingga membentuk kordinat segitiga A'B'C'
-          </p>
-
-          <button class="py-1 px-3 bg-hijau rounded-md text-white mt-4 text-[12px]" id="Check3">
-            Check
-          </button>
-
-          <p class="ml-3 font-semibold text-hijau hidden" id="benar3">Benar 🗸</p>
-          <p class="ml-3 font-semibold text-red hidden" id="salah3">Salah X</p>
-        </div>
-        <hr class="bg-hijau h-1 mt-16" />
-      </div>
-
-      <div class="md:mx-auto bg-white md:px-8 px-5 md:pb-8 pb-40 md:mt-8">
-        <div
-          class="flex mt-16 max-w-[500px] md:ml-24 items-center"
-          dat-aos="zoom-in-right"
-          dat-aos-duration="800"
-        >
-          <img src="../img/Grafis/boss.png" alt="" class="mr-2 w-28 md:w-36" />
-          <div>
-            <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 rounded-lg rounded-tl-none">
-              Berakhir sudah pembahasan kita di translasi
-            </div>
-            <div class="bg-[#8CEBE9] px-3 py-3 md:px-5 md:py-5 mt-1 rounded-lg rounded-tl-none">
-              Selanjutnya kita akan membahas jenis transformasi refleksi
-            </div>
-          </div>
-        </div>
-      </div>
       <!-- Akhir Tes Pemahaman 2 -->
     </div>
 

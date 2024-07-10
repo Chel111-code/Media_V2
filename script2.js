@@ -103,7 +103,6 @@ document.getElementById('lihatBoyA').addEventListener('click', function () {
   // Add the zoomOut class after 4 seconds, then hide the sectionSegitiga element after the animation
   setTimeout(function () {
     popBoyA.classList.remove('custom-utility');
-
     isiBoyA.classList.add('zoomOut9');
     isiBoyA.classList.remove('scale-[1.6]');
     // Match the duration of the zoomOut animation
@@ -291,9 +290,9 @@ function bangunC() {
 document.getElementById('choiceC').addEventListener('click', handleClick);
 document.getElementById('isiBoyC').addEventListener('click', handleClick);
 document.getElementById('choiceB').addEventListener('click', handleClick2);
-document.getElementById('isiBoyB').addEventListener('click', handleClick2);
+document.getElementById('isiBoyA').addEventListener('click', handleClick2);
 document.getElementById('choiceA').addEventListener('click', handleClick3);
-document.getElementById('isiBoyA').addEventListener('click', handleClick3);
+document.getElementById('isiBoyB').addEventListener('click', handleClick3);
 
 function handleClick() {
   const popupSalah = document.getElementById('popupSalah');
@@ -877,17 +876,15 @@ function animateElement() {
 
 function toggleNavbar() {
   var sidebar = document.getElementById('sidebar');
-  var wacawbutton = document.getElementById('sidebarToggle');
-  var homeButton = document.getElementById('home');
   var judul = document.getElementById('judul');
+  var sidebarToggle = document.getElementById('sidebarToggle');
 
   sidebar.classList.toggle('translate-x-full');
+  sidebarToggle.classList.toggle('-translate-x-44');
   sidebar.classList.toggle('translate-x-0');
+  sidebar.classList.toggle('text-primary');
 
-  // Menggunakan kelas 'translate' yang telah didefinisikan
-  wacawbutton.classList.toggle('translate-x-4');
-  homeButton.classList.toggle('translate-x-4');
-
+  // Menambahkan atau menghapus kelas 'hidden'
   judul.classList.toggle('hidden');
 }
 
