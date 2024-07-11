@@ -3,6 +3,27 @@ document.getElementById('tombolFoto').addEventListener('click', function () {
   document.getElementById('2x3').classList.add('hidden');
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const TesPertama1 = document.getElementById('TesPertama1');
+  const pilihanTespertama = document.getElementById('pilihanTespertama');
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.target === TesPertama1 && entry.intersectionRatio >= 1) {
+          observer.unobserve(TesPertama1);
+          pilihanTespertama.classList.remove('hidden');
+        }
+      });
+    },
+    {
+      threshold: 1,
+    }
+  );
+
+  observer.observe(TesPertama1);
+});
+
 document.getElementById('lihatFoto').addEventListener('click', function () {
   const lihatFoto = document.getElementById('lihatFoto');
   const sectionFotoContent = document.getElementById('sectionFotoContent');
@@ -102,7 +123,7 @@ function drawGrid() {
 }
 
 // Draw the triangle
-function drawTriangle(tri, color, labelColor = 'blue', labels = ['A', 'B', 'C']) {
+function drawTriangle(tri, color, labelColor = '#5F6C7B', labels = ['A', 'B', 'C']) {
   ctx.strokeStyle = color;
   ctx.fillStyle = color;
   ctx.beginPath();
@@ -130,7 +151,7 @@ function drawPointP(point, color) {
   ctx.arc(point.x, point.y, 5, 0, 2 * Math.PI);
   ctx.fill();
   ctx.stroke();
-  ctx.fillStyle = 'blue';
+  ctx.fillStyle = '#5F6C7B';
   ctx.fillText(point.label, point.x + 5, point.y - 5);
 }
 
@@ -138,9 +159,9 @@ function drawPointP(point, color) {
 function draw() {
   ctx.clearRect(0, 0, canvas9.width, canvas9.height);
   drawGrid();
-  drawTriangle(triangle, 'blue');
+  drawTriangle(triangle, '#5F6C7B');
   if (dilatedTriangle.length > 0) {
-    drawTriangle(dilatedTriangle, 'green', 'green', ["A'", "B'", "C'"]);
+    drawTriangle(dilatedTriangle, '#2AC32A', '#2AC32A', ["A'", "B'", "C'"]);
   }
   drawPointP(pointP, 'red');
 }
@@ -246,54 +267,6 @@ function handleMouseUp() {
       dilatedTriangle = dilateTriangle();
     }
   }
-}
-
-canvas9.addEventListener('mousedown', handleMouseDown);
-canvas9.addEventListener('mousemove', handleMouseMove);
-canvas9.addEventListener('mouseup', handleMouseUp);
-
-canvas9.addEventListener(
-  'touchstart',
-  (e) => {
-    e.preventDefault();
-    const touch = e.touches[0];
-    const mouseEvent = new MouseEvent('mousedown', {
-      clientX: touch.clientX,
-      clientY: touch.clientY,
-    });
-    canvas9.dispatchEvent(mouseEvent);
-  },
-  false
-);
-
-canvas9.addEventListener(
-  'touchmove',
-  (e) => {
-    e.preventDefault();
-    const touch = e.touches[0];
-    const mouseEvent = new MouseEvent('mousemove', {
-      clientX: touch.clientX,
-      clientY: touch.clientY,
-    });
-    canvas9.dispatchEvent(mouseEvent);
-  },
-  false
-);
-
-canvas9.addEventListener(
-  'touchend',
-  (e) => {
-    const mouseEvent = new MouseEvent('mouseup', {});
-    canvas9.dispatchEvent(mouseEvent);
-  },
-  false
-);
-
-function snapToGrid(point) {
-  return {
-    x: Math.round(point.x / gridSize) * gridSize,
-    y: Math.round(point.y / gridSize) * gridSize,
-  };
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -760,27 +733,6 @@ document.addEventListener('DOMContentLoaded', function () {
   );
 
   observer.observe(pengecilanK);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const TesPertama1 = document.getElementById('TesPertama1');
-  const pilihanTespertama = document.getElementById('pilihanTespertama');
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.target === TesPertama1 && entry.intersectionRatio >= 1) {
-          observer.unobserve(TesPertama1);
-          pilihanTespertama.classList.remove('hidden');
-        }
-      });
-    },
-    {
-      threshold: 1,
-    }
-  );
-
-  observer.observe(TesPertama1);
 });
 
 document.addEventListener('DOMContentLoaded', function () {

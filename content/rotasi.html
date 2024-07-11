@@ -13,6 +13,10 @@
       font-family: 'Lato';
       src: url('../font/Lato-Regular.ttf') format('truetype');
     }
+    @font-face {
+      font-family: 'Poppins';
+      src: url('../font/Poppins-Regular.ttf') format('truetype');
+    }
   </style>
 
   <body class="md:bg-[#edf6f9]">
@@ -758,6 +762,7 @@
             <p class="ml-3 font-semibold text-red hidden" id="salah2">Salah X</p>
           </div>
         </div>
+        <hr class="mt-12" />
         <div
           class="flex max-w-[450px] md:mx-auto mt-12 items-center"
           dat-aos="zoom-in"
@@ -770,8 +775,19 @@
             </div>
           </div>
         </div>
+
+        <div class="w-[280px] bg-[#EDEDB2] mt-10 md:mt-6 mx-auto p-3 rounded-lg shadow-lg relative">
+          <div
+            class="bg-[#FBFDFE] border-[1px] text-[13px] py-3 px-[18px] text-center shadow-inner text-primary font-bold rounded-lg"
+          >
+            Masukkan derajat dan <br />
+            pilih arah rotasi lalu tekanlah tombol Rotasi
+          </div>
+          <img src="../img/info.png" class="absolute w-[70px] -top-6 -left-6" alt="" />
+        </div>
+
         <div class="max-w-[500px] mx-auto">
-          <div class="mt-8 md:mt-4 w-72 justify-center gap-4 flex mx-auto">
+          <div class="mt-12 md:mt-12 w-72 justify-center md:gap-7 gap-4 flex mx-auto">
             <div>
               <label for="degrees" class="block cursor- text-sm text-primary font-bold"
                 >Derajat Rotasi</label
@@ -802,13 +818,14 @@
               <canvas id="canvas9" width="250" height="250"></canvas>
             </div>
           </div>
-          <div class="w-40 mx-auto mt-3 md:mt-6">
+          <div class="w-40 mx-auto mt-3 md:mt-10">
             <button id="rotate-btn" class="px-4 py-2 mb-4 text-white bg-hijauMuda rounded">
               Rotasi
             </button>
             <button id="reset-btn" class="px-4 py-2 mb-4 bg-red text-white rounded">Reset</button>
           </div>
         </div>
+        <hr class="bg-hijau h-1 mt-16" />
       </div>
       <!-- Akhir Arah Rotasi -->
 
@@ -821,28 +838,31 @@
       <!-- Akhir Tes Pemahaman 1 -->
 
       <!-- Kordinat Rotasi -->
-      <div class="md:mx-auto bg-[#FBFDFE] md:px-8 md:pb-8">
+      <div class="md:mx-auto w-full bg-[#FBFDFE] md:px-8 md:pb-8 px-5">
         <div
-          class="flex mt-6 md:mt-0 md:ml-32 max-w-[500px] items-center"
+          class="flex md:pt-6 md:ml-32 max-w-[500px] items-center"
           data-aos="zoom-in-right"
           data-aos-duration="800"
         >
-          <img src="../img/Grafis/Halooo.png" alt="" class="w-36 md:w-44 scale-x-[-1]" />
+          <img src="../img/Grafis/Halooo.png" alt="" class="w-36 md:w-48 scale-x-[-1]" />
           <div>
             <div class="bg-[#8CEBE9] px-3 py-3 rounded-lg rounded-tl-none">
               Terakhir lihatlah beberapa contoh rotasi di kordinat kartesius!
             </div>
           </div>
         </div>
-        <div class="border-2 mx-auto max-w-[500px] p-7 mt-8 border-coklat shadow-custom rounded-lg">
-          <div class="flex items-center mt-1">
-            <img src="../img/pencerminan/one_8921537.png" alt="" class="w-6 h-6 mr-2" />
-            <button class="text-base text-primary font-semibold ml-2">
+        <div class="max-w-[500px] md:px-8 mx-auto">
+          <div class="flex items-center gap-1 md:gap-3 mt-12">
+            <img src="../img/pencerminan/one_8921537.png" alt="" class="w-8 h-8 mr-2" />
+            <button class="text-base text-hijau md:text-lg font- font-bold text-left">
               Contoh titik yang berotasi
             </button>
           </div>
-          <div class="relative border-t-2 border-hijau mt-2 py-2 px-2 max-w-md" id="contohPertama">
-            <p class="leading-7">
+          <div
+            class="w-full mt-3 pb-4 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative max-w-md"
+            id="contohPertama"
+          >
+            <p class="leading-7 mt-4">
               Titik <span class="text-hijau font-semibold">A ( 0 , -2 ) </span> dirotasikan dengan
               pusat titik <span class="text-red">P ( 0 , 1 )</span> sejauh -90°.
             </p>
@@ -921,17 +941,18 @@
           </div>
         </div>
 
-        <div
-          class="border-2 mx-auto p-7 max-w-[500px] mt-16 border-coklat shadow-custom rounded-lg"
-        >
-          <div class="flex items-center mt-1">
-            <img src="../img/pencerminan/two_8921602.png" alt="" class="w-6 h-6 mr-2" />
-            <button class="text-base text-primary font-semibold ml-2">
+        <div class="mt-4 max-w-[500px] md:px-8 mx-auto">
+          <div class="flex items-center gap-1 md:gap-3 mt-12">
+            <img src="../img/pencerminan/two_8921602.png" alt="" class="w-8 h-8 mr-2" />
+            <button class="text-base text-hijau md:text-lg font- font-bold text-left">
               Contoh bangun datar yang berotasi
             </button>
           </div>
-          <div class="border-t-2 border-hijau mt-2 py-2 px-2 max-w-md" id="bangunDatar">
-            <p class="leading-7">
+          <div
+            class="w-full mt-3 pb-4 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative max-w-md"
+            id="bangunDatar"
+          >
+            <p class="leading-7 mt-4">
               Segitiga ABC dengan kordinat
               <span class="font-semibold text-hijau">A ( -1 , -2 ), B ( 2 , -2 ), C ( 2 , 0)</span>
               dirotasikan terhadap titik P sejauh 180°
@@ -1087,17 +1108,18 @@
           </div>
         </div>
 
-        <div
-          class="border-2 mx-auto p-7 max-w-[500px] mt-16 border-coklat shadow-custom rounded-lg"
-        >
-          <div class="flex items-center mt-1">
-            <img src="../img/pencerminan/three_8921657.png" alt="" class="w-6 h-6 mr-2" />
-            <button class="text-base text-primary font-semibold ml-2 text-left">
+        <div class="mt-4 max-w-[500px] md:px-8 mx-auto">
+          <div class="flex items-center gap-1 md:gap-3 mt-12">
+            <img src="../img/pencerminan/three_8921657.png" alt="" class="w-8 h-8 mr-2" />
+            <button class="text-base text-hijau md:text-lg font- font-bold text-left">
               Contoh pusat rotasi pada titik sudut bangun datar
             </button>
           </div>
-          <div class="border-t-2 border-hijau mt-2 py-2 px-2 max-w-md" id="pusatTitik">
-            <p class="leading-7">
+          <div
+            class="w-full mt-3 pb-4 bg-[#F5F5F5] border-t-[2px] border-b-[2px] px-4 relative max-w-md"
+            id="pusatTitik"
+          >
+            <p class="leading-7 mt-4">
               Trapesium ABCD dengan kordinat
               <span class="font-semibold text-hijau"
                 >A ( 0 , 0 ), B ( 0 , 2 ), C ( 2 , 2) , C ( 3 , 0)</span
@@ -1220,8 +1242,25 @@
           </div>
         </div>
 
+        <hr class="mt-12" />
+
+        <div
+          class="flex mt-12 max-w-[450px] md:ml-36 items-center"
+          dat-aos="zoom-in-right"
+          dat-aos-duration="800"
+        >
+          <img src="../img/Grafis/boss.png" alt="" class="mr-2 w-28 md:w-32" />
+          <div>
+            <div class="bg-[#8CEBE9] px-3 py-3 md:px-4 md:py-4 rounded-lg rounded-tl-none">
+              Selanjutnya kita akan mempelajari Dilatasi
+            </div>
+            <div class="bg-[#8CEBE9] px-3 py-3 md:px-4 md:py-4 mt-1 rounded-lg rounded-tl-none">
+              Namun setelah kamu kerjakan tes pemahaman di bawah ya!
+            </div>
+          </div>
+        </div>
         <div class="md:mx-auto max-w-[500px] md:px-8 bg-white pt-8">
-          <div class="flex items-center mt-8 md:mt-10">
+          <div class="flex items-center">
             <img src="../img/tespemahaman.png" alt="" class="w-16 h-16" />
             <div class="text-xl font-semibold tracking-wides text-hijau ml-2">Tes Pemahaman</div>
           </div>
@@ -1312,6 +1351,208 @@
     </div>
 
     <script src="../java/script4.js"></script>
+    <script>
+      const canvasElement = document.getElementById('canvas9');
+      const canvasContext = canvasElement.getContext('2d');
+      const degreesInputElement = document.getElementById('degrees');
+      const directionSelectElement = document.getElementById('direction');
+      const rotateButton = document.getElementById('rotate-btn');
+      const resetButton = document.getElementById('reset-btn');
+      const gridSpacing = 25;
+
+      let isRotationAllowed = true;
+
+      // Initial positions for the square and point P
+      let squareVertices = [
+        { x: 50, y: 50, label: 'A' },
+        { x: 100, y: 50, label: 'B' },
+        { x: 100, y: 100, label: 'C' },
+        { x: 50, y: 100, label: 'D' },
+      ];
+      let pivotPoint = { x: 125, y: 125, label: 'P' };
+
+      let rotatedVertices = [];
+
+      // Draw the grid
+      function renderGrid() {
+        canvasContext.strokeStyle = '#ddd';
+        for (let x = 0; x <= canvasElement.width; x += gridSpacing) {
+          canvasContext.beginPath();
+          canvasContext.moveTo(x, 0);
+          canvasContext.lineTo(x, canvasElement.height);
+          canvasContext.stroke();
+        }
+        for (let y = 0; y <= canvasElement.height; y += gridSpacing) {
+          canvasContext.beginPath();
+          canvasContext.moveTo(0, y);
+          canvasContext.lineTo(canvasElement.width, y);
+          canvasContext.stroke();
+        }
+      }
+
+      // Draw the square
+      function renderSquare(vertices, color, labelColor = '#D9D9D9') {
+        canvasContext.strokeStyle = color;
+        canvasContext.fillStyle = color;
+        canvasContext.beginPath();
+        canvasContext.moveTo(vertices[0].x, vertices[0].y);
+        vertices.forEach((point) => canvasContext.lineTo(point.x, point.y));
+        canvasContext.closePath();
+        canvasContext.stroke();
+
+        // Draw corner points and labels
+        canvasContext.fillStyle = labelColor;
+        vertices.forEach((point) => {
+          canvasContext.beginPath();
+          canvasContext.arc(point.x, point.y, 5, 0, 2 * Math.PI);
+          canvasContext.fill();
+          canvasContext.stroke();
+          canvasContext.fillText(point.label, point.x + 5, point.y - 5);
+        });
+      }
+
+      // Draw point P
+      function renderPivotPoint(point, color) {
+        canvasContext.strokeStyle = color;
+        canvasContext.fillStyle = color;
+        canvasContext.beginPath();
+        canvasContext.arc(point.x, point.y, 5, 0, 2 * Math.PI);
+        canvasContext.fill();
+        canvasContext.stroke();
+        canvasContext.fillStyle = 'black';
+        canvasContext.fillText(point.label, point.x + 5, point.y - 5);
+      }
+
+      // Draw everything on the canvas
+      function renderScene() {
+        canvasContext.clearRect(0, 0, canvasElement.width, canvasElement.height);
+        renderGrid();
+        renderSquare(squareVertices, '#D9D9D9');
+        if (rotatedVertices.length > 0) {
+          renderSquare(rotatedVertices, '#2AC32A', '#2AC32A');
+        }
+        renderPivotPoint(pivotPoint, 'red');
+      }
+
+      renderScene();
+
+      // Utility function to rotate a point around another point
+      function rotateVertex(vertex, center, angle, direction) {
+        const radians = (Math.PI / 180) * angle * (direction === 'cw' ? -1 : 1);
+        const cosine = Math.cos(radians);
+        const sine = Math.sin(radians);
+        const newX = cosine * (vertex.x - center.x) + sine * (vertex.y - center.y) + center.x;
+        const newY = cosine * (vertex.y - center.y) - sine * (vertex.x - center.x) + center.y;
+        return { x: newX, y: newY, label: vertex.label };
+      }
+
+      // Rotate the square
+      function rotateVertices() {
+        const angle = parseFloat(degreesInputElement.value);
+        const direction = directionSelectElement.value;
+        return squareVertices.map((vertex) => rotateVertex(vertex, pivotPoint, angle, direction));
+      }
+
+      // Animate rotation
+      function animateRotation(startAngle, endAngle, direction, duration = 1000) {
+        const startTime = performance.now();
+
+        function animate(time) {
+          const elapsedTime = time - startTime;
+          const progress = Math.min(elapsedTime / duration, 1);
+          const currentAngle = startAngle + (endAngle - startAngle) * progress;
+          rotatedVertices = squareVertices.map((vertex) =>
+            rotateVertex(vertex, pivotPoint, currentAngle, direction)
+          );
+          // Update labels to M, N, O, P
+          const labels = ["A'", "B'", "C'", "D'"];
+          rotatedVertices.forEach((vertex, index) => (vertex.label = labels[index]));
+          renderScene();
+
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          }
+        }
+
+        requestAnimationFrame(animate);
+      }
+
+      // Rotate button click handler
+      rotateButton.addEventListener('click', () => {
+        if (isRotationAllowed) {
+          const startAngle = 0;
+          const endAngle = parseFloat(degreesInputElement.value);
+          const direction = directionSelectElement.value;
+          animateRotation(startAngle, endAngle, direction);
+          isRotationAllowed = false;
+          rotateButton.classList.add('disabled');
+          rotateButton.classList.add('opacity-30', 'cursor-not-allowed');
+        }
+      });
+
+      // Reset button click handler
+      resetButton.addEventListener('click', () => {
+        squareVertices = [
+          { x: 50, y: 50, label: 'A' },
+          { x: 100, y: 50, label: 'B' },
+          { x: 100, y: 100, label: 'C' },
+          { x: 50, y: 100, label: 'D' },
+        ];
+        pivotPoint = { x: 125, y: 125, label: 'P' };
+        rotatedVertices = [];
+        renderScene();
+        isRotationAllowed = true;
+        rotateButton.classList.remove('disabled', 'opacity-30', 'cursor-not-allowed');
+      });
+
+      // Drag and drop functionality for square points and point P
+      let draggedVertex = null;
+
+      function getMousePosition(canvas, evt) {
+        const rect = canvas.getBoundingClientRect();
+        return {
+          x: evt.clientX - rect.left,
+          y: evt.clientY - rect.top,
+        };
+      }
+
+      function getDraggedVertex(mousePosition) {
+        const allPoints = [...squareVertices, pivotPoint];
+        return allPoints.find(
+          (point) =>
+            Math.sqrt((point.x - mousePosition.x) ** 2 + (point.y - mousePosition.y) ** 2) < 10
+        );
+      }
+
+      function handleMouseDown(e) {
+        const mousePosition = getMousePosition(canvasElement, e);
+        draggedVertex = getDraggedVertex(mousePosition);
+      }
+
+      function handleMouseMove(e) {
+        if (!draggedVertex) return;
+        const mousePosition = getMousePosition(canvasElement, e);
+        draggedVertex.x = mousePosition.x;
+        draggedVertex.y = mousePosition.y;
+        renderScene();
+        if (rotatedVertices.length > 0) {
+          rotatedVertices = rotateVertices();
+        }
+      }
+
+      function handleMouseUp() {
+        if (draggedVertex) {
+          const snappedPosition = snapToGrid(draggedVertex);
+          draggedVertex.x = snappedPosition.x;
+          draggedVertex.y = snappedPosition.y;
+          draggedVertex = null;
+          renderScene();
+          if (rotatedVertices.length > 0) {
+            rotatedVertices = rotateVertices();
+          }
+        }
+      }
+    </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
