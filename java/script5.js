@@ -854,20 +854,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function toggleNavbar() {
   var sidebar = document.getElementById('sidebar');
-  var wacawbutton = document.getElementById('sidebarToggle');
-  var homeButton = document.getElementById('home');
   var judul = document.getElementById('judul');
+  var sidebarToggle = document.getElementById('sidebarToggle');
 
   sidebar.classList.toggle('translate-x-full');
+  sidebarToggle.classList.toggle('-translate-x-44');
   sidebar.classList.toggle('translate-x-0');
+  sidebar.classList.toggle('text-primary');
 
-  // Menggunakan kelas 'translate' yang telah didefinisikan
-  wacawbutton.classList.toggle('translate-x-4');
-  homeButton.classList.toggle('translate-x-4');
-
+  // Menambahkan atau menghapus kelas 'hidden'
   judul.classList.toggle('hidden');
 }
-
 document.getElementById('playback').addEventListener('click', function () {
   location.reload(); // Reload halaman
 });
