@@ -4145,6 +4145,16 @@ video {
   border-color: rgb(239 69 101 / var(--tw-border-opacity));
 }
 
+.border-teal-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(45 212 191 / var(--tw-border-opacity));
+}
+
+.border-teal-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(153 246 228 / var(--tw-border-opacity));
+}
+
 .bg-\[\#3DCCC7\] {
   --tw-bg-opacity: 1;
   background-color: rgb(61 204 199 / var(--tw-bg-opacity));
@@ -4574,6 +4584,11 @@ video {
 .py-\[8px\] {
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-12 {

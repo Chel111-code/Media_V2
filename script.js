@@ -280,6 +280,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Jika belum diklik, tidak melakukan apa-apa
       return;
     }
+     
 
     // Memeriksa apakah setiap titik berada dalam jarak tertentu dari titik target
     const tolerance = 10; // Jarak toleransi
